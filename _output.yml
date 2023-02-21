@@ -1,0 +1,24 @@
+bookdown::gitbook:
+ # split_by:  section
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">Learning NASEM Dairy (2021)</a></li>
+      after: | 
+        <b> Contributors:</b>
+        <li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
+        <li><a href="https://andysci.wisc.edu/directory/michel-wattiaux/" target="blank">Michel A. Wattiaux</a></li>
+        <li><a href="https://www.dasc.vt.edu/people/faculty/hanigan.html" target="blank">Mark D. Hanigan</a></li>
+        <li><a href="https://www.marinadanes.com" target="blank">Marina A.C. Danes </a></li>
+      
+# <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+# edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
