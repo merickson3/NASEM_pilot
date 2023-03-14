@@ -168,7 +168,7 @@ div.csl-indent {
 </div>
 <div id="a-brief-history" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> A brief history<a href="introduction-to-nutritional-models.html#a-brief-history" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="images/depictions_of_cattle.jpg" alt="Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)" width="85%" />
 <p class="caption">
 Figure 2.1: Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)
@@ -249,8 +249,8 @@ Figure 2.1: Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza U
 <div id="data-collection-through-observation-or-experimentation" class="section level3 hasAnchor" number="2.5.2">
 <h3><span class="header-section-number">2.5.2</span> Data collection through observation (or experimentation)<a href="introduction-to-nutritional-models.html#data-collection-through-observation-or-experimentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To learn more about the hypothesized relationship between body size and feed intake, the researcher decides to find a larger group of cattle to collect observational data. They collect two pieces of information in each observation: 1) the animal’s body weight (BW), and 2) the animal’s dry matter intake (DMI). They use the data to create a plot:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="_main_files/figure-html/unnamed-chunk-2-1.png" alt="DMI vs BW for 300 observations from lactating cows" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="_main_files/figure-html/unnamed-chunk-3-1.png" alt="DMI vs BW for 300 observations from lactating cows" width="85%" />
 <p class="caption">
 Figure 2.2: DMI vs BW for 300 observations from lactating cows
 </p>
@@ -259,8 +259,8 @@ Figure 2.2: DMI vs BW for 300 observations from lactating cows
 <p><strong>Test Yourself:</strong> What would you conclude from the plot?</p>
 </div>
 <p>After looking at the plot, the researcher believes that it supports their hypothesis: DMI and BW are positively related. In other words, if an animal’s BW is known, its DMI can be guessed with some accuracy. The researcher decides to convert this observed relationship to a mathematical model. Because the relationship seems to follow a line, they fit a regression with the linear form <span class="math inline">\(y = mx + b\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<img src="_main_files/figure-html/unnamed-chunk-3-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="_main_files/figure-html/unnamed-chunk-4-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
 <p class="caption">
 Figure 2.3: Fitted regression model predicting DMI from BW for lactating cows
 </p>
@@ -271,8 +271,8 @@ Figure 2.3: Fitted regression model predicting DMI from BW for lactating cows
 <p>By fitting a regression model to the observed points, they get an estimate of the slope (0.03) that relates BW and DMI. In other words, the average DMI observed was 3% of the animal BW. This single mathematical expression is a very simple nutritional model: <span class="math inline">\(DMI = 0.03 * BW\)</span></p>
 <p>The researcher thinks the model will be useful for prediction. They decide to test the predictive performance of the model by buying a new lactating cow. They record the cow’s BW as 625 kg.</p>
 <p><img src="images/image-1264450838.png" /></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="_main_files/figure-html/unnamed-chunk-4-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="_main_files/figure-html/unnamed-chunk-5-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
 <p class="caption">
 Figure 2.4: Fitted regression model predicting DMI from BW for lactating cows
 </p>
@@ -285,8 +285,8 @@ Figure 2.4: Fitted regression model predicting DMI from BW for lactating cows
 <h3><span class="header-section-number">2.5.4</span> Model verification<a href="introduction-to-nutritional-models.html#model-verification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To predict the DMI of the new cow, the researcher enters the known information (cow’s BW) into the nutritional model: <span class="math inline">\(DMI = 0.03 * 625\)</span>. The model predicts the cow’s DMI will be 18.75 kg. Tracing up from the x-axis, the intersection of the red dashed line with the blue line shows the predicted DMI for an animal with BW = 625.</p>
 <p>Next, the researcher decides to verify their model by measuring the animal’s actual DMI.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="_main_files/figure-html/unnamed-chunk-5-1.png" alt="Actual DMI for a new observation (red point) of a cow with BW = 625 kg" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="_main_files/figure-html/unnamed-chunk-6-1.png" alt="Actual DMI for a new observation (red point) of a cow with BW = 625 kg" width="85%" />
 <p class="caption">
 Figure 2.5: Actual DMI for a new observation (red point) of a cow with BW = 625 kg
 </p>
@@ -300,8 +300,8 @@ Figure 2.5: Actual DMI for a new observation (red point) of a cow with BW = 625 
 <div id="model-refinement-re-starting-the-process" class="section level3 hasAnchor" number="2.5.5">
 <h3><span class="header-section-number">2.5.5</span> Model refinement (re-starting the process)<a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Generally, scientists take the second option. In our example, the researcher might go back to their notebook and consider… what other factors could be affecting DMI aside from BW? Eventually, they would develop a new hypothesis, for example: younger, first-lactation animals will consume less than more mature animals with two or more lactations. They plot the data again, including information about the animals’ parity:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
-<img src="_main_files/figure-html/unnamed-chunk-7-1.png" alt="DMI vs BW for 300 observations from lactating cows, by parity" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="_main_files/figure-html/unnamed-chunk-8-1.png" alt="DMI vs BW for 300 observations from lactating cows, by parity" width="85%" />
 <p class="caption">
 Figure 2.6: DMI vs BW for 300 observations from lactating cows, by parity
 </p>

@@ -32,4 +32,3 @@ model-development
 model-verification
 model-refinement-re-starting-the-process
 conclusions-and-additional-complexity
-fig:unnamed-chunk-7
