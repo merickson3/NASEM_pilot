@@ -22,9 +22,9 @@ contribute-to-this-module
 license-details
 introduction-to-nutritional-models
 a-brief-history
-nasem-2021-and-other-dairy-nutrition-models
 definition
 usefulness
+nasem-2021-and-other-dairy-nutrition-models
 lets-develop-a-simple-nutritional-model
 hypothesis-generation
 data-collection-through-observation-or-experimentation
