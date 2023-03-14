@@ -13,12 +13,16 @@ fig:unnamed-chunk-15
 about-this-module
 purpose
 structure-of-the-module-and-materials-for-teachers
+intended-audience
 assumptions-about-prior-knowledge
 technology-requirements
-accessing-the-nasem-2021-consensus-report
-the-narrative
+accessing-the-nasem-2021-book
 the-nasem-dairy-8-software
-suggested-citation
+running-a-simulation
+known-discrepancies
+software-updates-and-bugs
+inconsistencies-between-the-book-and-software
+suggested-citations
 contribute-to-this-module
 license-details
 introduction-to-nutritional-models
@@ -50,4 +54,3 @@ regression-on-productive-performance
 breakpoint-analysis-or-broken-stick-response
 curvlinear-response
 activities
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
