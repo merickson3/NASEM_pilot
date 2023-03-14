@@ -34,7 +34,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="requirements.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -132,29 +132,6 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusions-and-additional-complexity"><i class="fa fa-check"></i><b>2.6</b> Conclusions and additional complexity</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="requirements.html"><a href="requirements.html"><i class="fa fa-check"></i><b>3</b> Requirements</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-requirement"><i class="fa fa-check"></i><b>3.1</b> Defining “nutrient requirement”</a>
-<ul>
-<li class="chapter" data-level="3.1.1" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>3.1.1</b> Requirement definitions in human and dairy nutrition</a></li>
-<li class="chapter" data-level="3.1.2" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>3.1.2</b> Absorbed and metabolizable amounts</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="requirements.html"><a href="requirements.html#dietary-reference-intakes"><i class="fa fa-check"></i><b>3.2</b> Dietary reference intakes</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="requirements.html"><a href="requirements.html#protecting-against-underfeeding-with-safety-factors"><i class="fa fa-check"></i><b>3.2.1</b> Protecting against underfeeding with “safety factors”</a></li>
-<li class="chapter" data-level="3.2.2" data-path="requirements.html"><a href="requirements.html#protecting-against-overfeeding"><i class="fa fa-check"></i><b>3.2.2</b> Protecting against overfeeding</a></li>
-<li class="chapter" data-level="3.2.3" data-path="requirements.html"><a href="requirements.html#accounting-for-uncertainty"><i class="fa fa-check"></i><b>3.2.3</b> Accounting for uncertainty</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="requirements.html"><a href="requirements.html#modeling-nutrient-requirements-and-supplies"><i class="fa fa-check"></i><b>3.3</b> Modeling nutrient requirements and supplies</a></li>
-<li class="chapter" data-level="3.4" data-path="requirements.html"><a href="requirements.html#types-of-literature-used-by-nasem--nasem8"><i class="fa fa-check"></i><b>3.4</b> Types of literature used by NASEM <span class="citation">(2021)</span></a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="requirements.html"><a href="requirements.html#measuring-composition-of-inputs-body-tissues-and-outputs"><i class="fa fa-check"></i><b>3.4.1</b> Measuring composition of inputs, body tissues, and outputs</a></li>
-<li class="chapter" data-level="3.4.2" data-path="requirements.html"><a href="requirements.html#measuring-losses-when-intake-is-minimal"><i class="fa fa-check"></i><b>3.4.2</b> Measuring losses when intake is minimal</a></li>
-<li class="chapter" data-level="3.4.3" data-path="requirements.html"><a href="requirements.html#studying-symptoms-of-deficiency-and-toxicity"><i class="fa fa-check"></i><b>3.4.3</b> Studying symptoms of deficiency and toxicity</a></li>
-<li class="chapter" data-level="3.4.4" data-path="requirements.html"><a href="requirements.html#regression-on-productive-performance"><i class="fa fa-check"></i><b>3.4.4</b> Regression on productive performance</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="requirements.html"><a href="requirements.html#activities"><i class="fa fa-check"></i><b>3.5</b> Activities</a></li>
-</ul></li>
 <li class="divider"></li>
 <b> Contributors:</b>
 <li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
@@ -191,7 +168,7 @@ div.csl-indent {
 </div>
 <div id="a-brief-history" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> A brief history<a href="introduction-to-nutritional-models.html#a-brief-history" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="images/depictions_of_cattle.jpg" alt="Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)" width="85%" />
 <p class="caption">
 Figure 2.1: Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)
@@ -272,8 +249,8 @@ Figure 2.1: Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza U
 <div id="data-collection-through-observation-or-experimentation" class="section level3 hasAnchor" number="2.5.2">
 <h3><span class="header-section-number">2.5.2</span> Data collection through observation (or experimentation)<a href="introduction-to-nutritional-models.html#data-collection-through-observation-or-experimentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To learn more about the hypothesized relationship between body size and feed intake, the researcher decides to find a larger group of cattle to collect observational data. They collect two pieces of information in each observation: 1) the animal’s body weight (BW), and 2) the animal’s dry matter intake (DMI). They use the data to create a plot:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<img src="_main_files/figure-html/unnamed-chunk-3-1.png" alt="DMI vs BW for 300 observations from lactating cows" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="_main_files/figure-html/unnamed-chunk-2-1.png" alt="DMI vs BW for 300 observations from lactating cows" width="85%" />
 <p class="caption">
 Figure 2.2: DMI vs BW for 300 observations from lactating cows
 </p>
@@ -282,8 +259,8 @@ Figure 2.2: DMI vs BW for 300 observations from lactating cows
 <p><strong>Test Yourself:</strong> What would you conclude from the plot?</p>
 </div>
 <p>After looking at the plot, the researcher believes that it supports their hypothesis: DMI and BW are positively related. In other words, if an animal’s BW is known, its DMI can be guessed with some accuracy. The researcher decides to convert this observed relationship to a mathematical model. Because the relationship seems to follow a line, they fit a regression with the linear form <span class="math inline">\(y = mx + b\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="_main_files/figure-html/unnamed-chunk-4-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="_main_files/figure-html/unnamed-chunk-3-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
 <p class="caption">
 Figure 2.3: Fitted regression model predicting DMI from BW for lactating cows
 </p>
@@ -294,8 +271,8 @@ Figure 2.3: Fitted regression model predicting DMI from BW for lactating cows
 <p>By fitting a regression model to the observed points, they get an estimate of the slope (0.03) that relates BW and DMI. In other words, the average DMI observed was 3% of the animal BW. This single mathematical expression is a very simple nutritional model: <span class="math inline">\(DMI = 0.03 * BW\)</span></p>
 <p>The researcher thinks the model will be useful for prediction. They decide to test the predictive performance of the model by buying a new lactating cow. They record the cow’s BW as 625 kg.</p>
 <p><img src="images/image-1264450838.png" /></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="_main_files/figure-html/unnamed-chunk-5-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="_main_files/figure-html/unnamed-chunk-4-1.png" alt="Fitted regression model predicting DMI from BW for lactating cows" width="85%" />
 <p class="caption">
 Figure 2.4: Fitted regression model predicting DMI from BW for lactating cows
 </p>
@@ -308,8 +285,8 @@ Figure 2.4: Fitted regression model predicting DMI from BW for lactating cows
 <h3><span class="header-section-number">2.5.4</span> Model verification<a href="introduction-to-nutritional-models.html#model-verification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To predict the DMI of the new cow, the researcher enters the known information (cow’s BW) into the nutritional model: <span class="math inline">\(DMI = 0.03 * 625\)</span>. The model predicts the cow’s DMI will be 18.75 kg. Tracing up from the x-axis, the intersection of the red dashed line with the blue line shows the predicted DMI for an animal with BW = 625.</p>
 <p>Next, the researcher decides to verify their model by measuring the animal’s actual DMI.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="_main_files/figure-html/unnamed-chunk-6-1.png" alt="Actual DMI for a new observation (red point) of a cow with BW = 625 kg" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="_main_files/figure-html/unnamed-chunk-5-1.png" alt="Actual DMI for a new observation (red point) of a cow with BW = 625 kg" width="85%" />
 <p class="caption">
 Figure 2.5: Actual DMI for a new observation (red point) of a cow with BW = 625 kg
 </p>
@@ -323,8 +300,8 @@ Figure 2.5: Actual DMI for a new observation (red point) of a cow with BW = 625 
 <div id="model-refinement-re-starting-the-process" class="section level3 hasAnchor" number="2.5.5">
 <h3><span class="header-section-number">2.5.5</span> Model refinement (re-starting the process)<a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Generally, scientists take the second option. In our example, the researcher might go back to their notebook and consider… what other factors could be affecting DMI aside from BW? Eventually, they would develop a new hypothesis, for example: younger, first-lactation animals will consume less than more mature animals with two or more lactations. They plot the data again, including information about the animals’ parity:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="_main_files/figure-html/unnamed-chunk-8-1.png" alt="DMI vs BW for 300 observations from lactating cows, by parity" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="_main_files/figure-html/unnamed-chunk-7-1.png" alt="DMI vs BW for 300 observations from lactating cows, by parity" width="85%" />
 <p class="caption">
 Figure 2.6: DMI vs BW for 300 observations from lactating cows, by parity
 </p>
@@ -338,6 +315,17 @@ Figure 2.6: DMI vs BW for 300 observations from lactating cows, by parity
 <p>Our model involved the relationships between three variables, DMI, BW, and parity, making it relatively simple. In the subsequent chapters, we will discuss models that contain hundreds of variables, related by many types of mathematical expressions. Our simple example used a linear relationship, but nutritional models can also contain non-linear relationships. In our example, the effects of BW and Parity were independent and additive. Most nutritional models also include mathematical terms that describe interactions between variables.</p>
 <p>If this sounds complex, it’s because it is complex! People have devoted entire careers to refining small subcomponents of the nutritional models we use. It’s important to remember that our goal in this module is to gain a general understanding of nutritional models. If you are interested to learn all the details…maybe graduate school is a good fit for you.</p>
 
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Coffey, D., K. Dawson, P. Ferket, and A. Connolly. 2016. <span>“Review of the Feed Industry from a Historical Perspective and Implications for Its Future.”</span> <em>Journal of Applied Animal Nutrition</em> 4: e3. <a href="https://doi.org/10.1017/JAN.2015.11">https://doi.org/10.1017/JAN.2015.11</a>.
+</div>
+<div class="csl-entry">
+Engineering, and Medicine National Academies of Sciences. 2021. <span>“Nutrient Requirements of Dairy Cattle: Eighth Revised Edition.”</span> <em>Nutrient Requirements of Dairy Cattle</em>, August. <a href="https://doi.org/10.17226/25806">https://doi.org/10.17226/25806</a>.
+</div>
+<div class="csl-entry">
+Ullrey, Duane E. 2001. <em>Landmark and Historic Contributions of NRC’s Committee on Animal Nutrition</em>. <em>Scientific Advances in Animal Nutrition</em>. National Academies Press. <a href="https://doi.org/10.17226/10299">https://doi.org/10.17226/10299</a>.
+</div>
+</div>
 </div>
 </div>
 <h3>References</h3>
@@ -357,8 +345,8 @@ Ullrey, Duane E. 2001. <em>Landmark and Historic Contributions of NRC’s Commit
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="requirements.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
