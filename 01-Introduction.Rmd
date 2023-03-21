@@ -237,7 +237,7 @@ It appears there is some variation explained by parity. In this way, the researc
 
 ## Conclusions and additional complexity
 
-Congratulations - you created and used your first nutritional model! 
+Congratulations - you created and used a nutritional model! 
 
 Our model involved the relationships between three variables, DMI, BW, and parity, making it relatively simple. In the subsequent chapters, we will discuss models that contain hundreds of variables, related by many types of mathematical expressions. Our simple example used a linear relationship, but nutritional models can also contain non-linear relationships. In our example, the effects of BW and Parity were independent and additive. Most nutritional models also include mathematical terms that describe interactions between variables.
 
