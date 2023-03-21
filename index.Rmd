@@ -30,7 +30,6 @@ The NASEM (2021) "Nutrient Requirements of Dairy Cattle" consensus report is a d
 
 Our online module and its accompanying resources for teachers are intended to promote learning from the NASEM (2021) materials. Because the NASEM (2021) narrative and software were designed for advanced dairy nutrition practitioners, they may be difficult for less-experienced learners. Our module is designed to highlight core concepts that will assist learners in understanding the NASEM narrative and utilizing the mathematical model in practice. 
 
-
 ::: {.lo}
 **Learning Objectives of this Module**
 
@@ -40,11 +39,11 @@ Our online module and its accompanying resources for teachers are intended to pr
 
 ## Structure of the module and materials for teachers
 
-## Intended audience
+**Intended audience**
 
 This module is for anyone interested in learning about nutritional science and nutritional modeling. Although is discusses a dairy cattle nutritional model, it is NOT designed solely for dairy-interested learners. As the "Requirements" chapter illustrates, there is substantial overlap in how scientists describe nutritional processes for humans and other animal species. Throughout the module, we emphasized critical thinking about nutritional science rather than memorization of any particular dairy cattle nutrition facts. Therefore, we hope this module will be interesting and relevant for learners regardless of their interest in dairy cattle. 
 
-## Assumptions about prior knowledge
+**Assumptions about prior knowledge**
 
 This module can be used by anyone, but it has been designed with the assumption that learners have some prior knowledge. Before starting this module, we suggest that learners should have:
 
@@ -54,7 +53,7 @@ This module can be used by anyone, but it has been designed with the assumption 
 
 - Basic skills with statistics and math (mean, standard deviation, regression)
 
-## Technology requirements
+**Technology requirements**
 
 - To read the narrative and complete activities, need a computer and stable internet connection
 - To run NASEM-8 software, need Windows operating system
@@ -110,7 +109,6 @@ It is also possible to download the Windows software for NRC (2001), although NA
 
 ::: 
 
-## Running a simulation
 
 The easiest way to get started running NASEM-8 is to Load a pre-defined simulation.The software comes with several pre-defined simulations for different classes of animals (e.g., "Example Lactating Cow 100 DIM"). Loading a pre-defined simulation pre-loads all of the inputs describing an example animal, management scenario, and diet. This can be helpful to avoid entering unrealistic inputs. 
 
@@ -138,7 +136,7 @@ Some of the most common mistakes when using NASEM dairy-8 relate to improper inp
 
 The software is under continual improvement, whereas the book is static. According to the NASEM-8 software "help" documentation, the latest software and R code contains the most correct and up-to-date version of the NASEM model. **To avoid confusion, our module will use the NASEM model equations given in the software.**
 
-### Software updates and bugs
+**Software updates and bugs**
 
 Since the software was released, several updates have been made. Users should ensure they have the latest version of NASEM-8 downloaded to avoid any errors. The errors below may be encountered with older versions:
 
@@ -146,7 +144,7 @@ Since the software was released, several updates have been made. Users should en
 1. In certain cases, the NEL balance in the sidebar does not match the Word document output. 
 1. In certain versions of the NASEM-8 software, manure volatile solids was overwritten by manure water in tabular output in Word.
 
-### Inconsistencies between the book and software
+**Inconsistencies between the book and software**
 
 The most recent software is more up-to-date than the equations in the Consensus Report book. Most discrepancies result in relatively small differences in predictions as a result of fine-tuning parameters. Known discrepancies between the book and software include:
 
@@ -173,7 +171,6 @@ Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Teaching with the narr
 **Cite the consensus report:**
 
 National Academies of Sciences, Engineering, and Medicine. (2021). Nutrient Requirements of Dairy Cattle: Eighth Revised Edition. Washington, DC: The National Academies Press. https://doi.org/10.17226/25806.
-
 
 
 ::: 
