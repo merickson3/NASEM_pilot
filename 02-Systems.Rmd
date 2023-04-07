@@ -11,6 +11,8 @@ editor_options:
 knitr::include_graphics("images/image-1405176793.png")
 ```
 
+
+
 ::: lo
 **Learning Objectives**
 
@@ -21,6 +23,7 @@ knitr::include_graphics("images/image-1405176793.png")
 3.  Give specific examples of 1) inputs, 2) outputs, and 3) means by
     which the system is transformed for a dairy ruminant.
 :::
+
 
 ## The animal nutritional system
 

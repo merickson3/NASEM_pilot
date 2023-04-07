@@ -1,0 +1,74 @@
+---
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+  word_document: default
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Model machinery
+
+```{r, echo = F, fig.align = "center", fig.cap = "Re-creating a dairy cow with machinery is not as easy as you might think. Source: <http://blog.modernmechanix.com>"}
+knitr::include_graphics("images/image-1217922456.png")
+library(webexercises)
+
+selected_feeds = c("Corn silage, typical", "Legume silage, mid-maturity",
+                        "Rye annual hay, mature", 
+                        "Pasture grass", "Legume silage, immature",
+                        "Legume silage, mature",
+                        "Cool season grass hay, mature",
+                        "Cool season grass silage", 
+                        "Corn grain dry, fine grind",
+                        "Wheat grain", "Oat grain", "Wheat straw",
+                        "Fat, corn oil", "Fat, canola oil", "Molasses", 
+                        "Fat, soybean oil", "Canola meal", 
+                        "Soybean meal, solvent 48CP", "DDGS, high protein", 
+                        "Calcium carbonate", "Iron oxide", "Limestone")
+
+
+library(ggplot2)
+library(dplyr)
+library(dairynasem)
+library(plotly)
+
+```
+
+::: lo
+**Learning Objectives**
+
+1.  List some of the "machinery" (mathematical operations) used in
+    nutritional models.
+
+2.  Discuss model descriptors such as empirical and mechanistic.
+
+3.  Discuss limitations of nutritional models.
+:::
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = '', echo = F, message = F, warning = F, cache = TRUE,
+  out.width = '85%', fig.align = 'center', dpi = 300
+)
+```
+
+In the last chapter, we learned about some of the core parameters in the
+NASEM model: supplies and requirements. In this chapter, we will roll up
+our sleeves and look under the hood of the NASEM model to learn more
+about other types of parameters beyond supplies and requirements. We
+will also discuss some of the core mathematical concepts that underlie
+the NASEM model functioning. The chapter is titled "Model machinery"
+because it discusses some of the fundamental math that makes the NASEM
+model work.
+
+Nutrition involves primarily practical mathematical and statistical
+problems. Animal nutritionists use nutritional modeling software to do
+the "heavy lifting" for many types of calculations. We will consider
+three categories of math and statistics that are used often by
+nutritionists, as these also form the basis of many nutritional models.
+
+1.  Basic mathematics
+2.  Predictive models
+3.  Optimization
