@@ -336,59 +336,6 @@ nutritionists, as these also form the basis of many nutritional models.</p>
 <li>Predictive models</li>
 <li>Optimization</li>
 </ol>
-<div class="tab">
-<button class="tablinks" onclick="unrolltab(event, &#39;London&#39;)">
-London
-</button>
-<button class="tablinks" onclick="unrolltab(event, &#39;Paris&#39;)">
-Paris
-</button>
-<button class="tablinks" onclick="unrolltab(event, &#39;Tokyo&#39;)">
-Tokyo
-</button>
-<div id="London" class="tabcontent">
-<div id="london" class="section level4 unnumbered hasAnchor">
-<h4>London<a href="model-machinery.html#london" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>London is the capital city of England</p>
-</div>
-</div>
-<div id="Paris" class="tabcontent">
-<div id="paris" class="section level4 unnumbered hasAnchor">
-<h4>Paris<a href="model-machinery.html#paris" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Paris is the capital city of France</p>
-</div>
-</div>
-<div id="Tokyo" class="tabcontent">
-<div id="tokyo" class="section level4 unnumbered hasAnchor">
-<h4>Tokyo<a href="model-machinery.html#tokyo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Tokyo is the capital city of Japan</p>
-</div>
-</div>
-</div>
-<div id="London" class="tabcontent">
-<h3>
-London
-</h3>
-<p>
-London is the capital city of England.
-</p>
-</div>
-<div id="Paris" class="tabcontent">
-<h3>
-Paris
-</h3>
-<p>
-Paris is the capital of France.
-</p>
-</div>
-<div id="Tokyo" class="tabcontent">
-<h3>
-Tokyo
-</h3>
-<p>
-Tokyo is the capital of Japan.
-</p>
-</div>
 <div id="basic-nutrition-math" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Basic nutrition math<a href="model-machinery.html#basic-nutrition-math" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Under the hood, some parts of the NASEM model are basic operations such
@@ -563,21 +510,17 @@ to know:</p>
 <li><p>The nutrient content of the feed</p></li>
 </ol>
 <p>It can help to write down everything you know, including units.</p>
-<p><span class="math display">\[ 15 \text{ %CP, as-is basis} = \frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} \\[16pt]
+<p><span class="math display">\[15 \text{ %CP, as-is basis} = \frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} \\[16pt]
 50\text{% DM as-is basis} = \frac{50 \text{ kg feed DM}}{100\text{ kg feed DM}}\]</span></p>
 <p>To convert to a DM basis, we need to think about our desired units: kg
 CP / kg DM. Thinking backwards, we can use the other information we have
 (the DM content of the feed). Ratios are useful, because we can invert
 them (flip them) whichever way we need, as long as we keep track of the
 units.</p>
-$$
-<span class="math display">\[\begin{aligned}
-\frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} * \frac{\text{100 kg feed as-is}}{\text{50 kg feed DM}} &amp;=\\[6pt]
-
-\frac{15 \text{ kg feed CP}}{50 \text{kg feed DM}}&amp; = \\[6pt]
+<p><span class="math display">\[\begin{aligned}
+\frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} * \frac{\text{100 kg feed as-is}}{\text{50 kg feed DM}} &amp;=\\[6pt] \frac{15 \text{ kg feed CP}}{50 \text{kg feed DM}}&amp; = \\[6pt]
 \frac{30 \text{ kg feed CP}}{100 \text{ kg feed DM}} &amp;= 30 \text{% CP on a DM basis}
-\end{aligned}\]</span>
-<p>$$</p>
+\end{aligned}\]</span></p>
 <p>To go in the reverse direction, we can convert back to an as-is basis.
 <span class="math display">\[
 \begin{aligned}
@@ -804,32 +747,32 @@ R Example
 </button>
 <div id="r" class="section level4 hasAnchor" number="5.2.1.2">
 <h4><span class="header-section-number">5.2.1.2</span> R<a href="model-machinery.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="model-machinery.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a function to estimate DMI using the NASEM equation</span></span>
-<span id="cb7-2"><a href="model-machinery.html#cb7-2" aria-hidden="true" tabindex="-1"></a>DMI_est <span class="ot">&lt;-</span> <span class="cf">function</span>(Parity, BW, BCS, DIM, MilkE) {</span>
-<span id="cb7-3"><a href="model-machinery.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-4"><a href="model-machinery.html#cb7-4" aria-hidden="true" tabindex="-1"></a>  Dt_DMIn_Lact1 <span class="ot">&lt;-</span> (<span class="fl">3.7</span> <span class="sc">+</span> <span class="fl">5.7</span> <span class="sc">*</span> Parity <span class="sc">+</span></span>
-<span id="cb7-5"><a href="model-machinery.html#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.305</span> <span class="sc">*</span> MilkE <span class="sc">+</span> <span class="fl">0.022</span> <span class="sc">*</span> BW <span class="sc">+</span></span>
-<span id="cb7-6"><a href="model-machinery.html#cb7-6" aria-hidden="true" tabindex="-1"></a>    (<span class="sc">-</span><span class="fl">0.689</span> <span class="sc">-</span> <span class="fl">1.87</span> <span class="sc">*</span> Parity) <span class="sc">*</span> BCS) <span class="sc">*</span></span>
-<span id="cb7-7"><a href="model-machinery.html#cb7-7" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">-</span> (<span class="fl">0.212</span> <span class="sc">+</span> <span class="fl">0.136</span> <span class="sc">*</span> Parity) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.053</span> <span class="sc">*</span> DIM))</span>
-<span id="cb7-8"><a href="model-machinery.html#cb7-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-9"><a href="model-machinery.html#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(Dt_DMIn_Lact1)</span>
-<span id="cb7-10"><a href="model-machinery.html#cb7-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-11"><a href="model-machinery.html#cb7-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-12"><a href="model-machinery.html#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)</span></span>
-<span id="cb7-13"><a href="model-machinery.html#cb7-13" aria-hidden="true" tabindex="-1"></a>Parity <span class="ot">=</span> <span class="dv">1</span> <span class="co"># proportion of multiparous cows</span></span>
-<span id="cb7-14"><a href="model-machinery.html#cb7-14" aria-hidden="true" tabindex="-1"></a>MilkE <span class="ot">=</span> <span class="dv">29</span> <span class="co"># milk net energy, Mcal</span></span>
-<span id="cb7-15"><a href="model-machinery.html#cb7-15" aria-hidden="true" tabindex="-1"></a>BW <span class="ot">=</span> <span class="dv">700</span> <span class="co"># animal BW, kg</span></span>
-<span id="cb7-16"><a href="model-machinery.html#cb7-16" aria-hidden="true" tabindex="-1"></a>BCS <span class="ot">=</span> <span class="fl">3.5</span> <span class="co"># animal Body condition score, 1 (thin) to 5 (obese)</span></span>
-<span id="cb7-17"><a href="model-machinery.html#cb7-17" aria-hidden="true" tabindex="-1"></a>DIM <span class="ot">=</span> <span class="dv">100</span> <span class="co"># days in milk, d</span></span>
-<span id="cb7-18"><a href="model-machinery.html#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="model-machinery.html#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the function</span></span>
-<span id="cb7-20"><a href="model-machinery.html#cb7-20" aria-hidden="true" tabindex="-1"></a>est_DMI_kg <span class="ot">=</span> <span class="fu">DMI_est</span>(<span class="at">Parity =</span> Parity, </span>
-<span id="cb7-21"><a href="model-machinery.html#cb7-21" aria-hidden="true" tabindex="-1"></a>                   <span class="at">MilkE =</span> MilkE,</span>
-<span id="cb7-22"><a href="model-machinery.html#cb7-22" aria-hidden="true" tabindex="-1"></a>                   <span class="at">BW =</span> BW, </span>
-<span id="cb7-23"><a href="model-machinery.html#cb7-23" aria-hidden="true" tabindex="-1"></a>                   <span class="at">BCS =</span> BCS, </span>
-<span id="cb7-24"><a href="model-machinery.html#cb7-24" aria-hidden="true" tabindex="-1"></a>                   <span class="at">DIM =</span> DIM)</span>
-<span id="cb7-25"><a href="model-machinery.html#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the result</span></span>
-<span id="cb7-26"><a href="model-machinery.html#cb7-26" aria-hidden="true" tabindex="-1"></a>est_DMI_kg</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="model-machinery.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a function to estimate DMI using the NASEM equation</span></span>
+<span id="cb3-2"><a href="model-machinery.html#cb3-2" aria-hidden="true" tabindex="-1"></a>DMI_est <span class="ot">&lt;-</span> <span class="cf">function</span>(Parity, BW, BCS, DIM, MilkE) {</span>
+<span id="cb3-3"><a href="model-machinery.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-4"><a href="model-machinery.html#cb3-4" aria-hidden="true" tabindex="-1"></a>  Dt_DMIn_Lact1 <span class="ot">&lt;-</span> (<span class="fl">3.7</span> <span class="sc">+</span> <span class="fl">5.7</span> <span class="sc">*</span> Parity <span class="sc">+</span></span>
+<span id="cb3-5"><a href="model-machinery.html#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.305</span> <span class="sc">*</span> MilkE <span class="sc">+</span> <span class="fl">0.022</span> <span class="sc">*</span> BW <span class="sc">+</span></span>
+<span id="cb3-6"><a href="model-machinery.html#cb3-6" aria-hidden="true" tabindex="-1"></a>    (<span class="sc">-</span><span class="fl">0.689</span> <span class="sc">-</span> <span class="fl">1.87</span> <span class="sc">*</span> Parity) <span class="sc">*</span> BCS) <span class="sc">*</span></span>
+<span id="cb3-7"><a href="model-machinery.html#cb3-7" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">-</span> (<span class="fl">0.212</span> <span class="sc">+</span> <span class="fl">0.136</span> <span class="sc">*</span> Parity) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.053</span> <span class="sc">*</span> DIM))</span>
+<span id="cb3-8"><a href="model-machinery.html#cb3-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-9"><a href="model-machinery.html#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(Dt_DMIn_Lact1)</span>
+<span id="cb3-10"><a href="model-machinery.html#cb3-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-11"><a href="model-machinery.html#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-12"><a href="model-machinery.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)</span></span>
+<span id="cb3-13"><a href="model-machinery.html#cb3-13" aria-hidden="true" tabindex="-1"></a>Parity <span class="ot">=</span> <span class="dv">1</span> <span class="co"># proportion of multiparous cows</span></span>
+<span id="cb3-14"><a href="model-machinery.html#cb3-14" aria-hidden="true" tabindex="-1"></a>MilkE <span class="ot">=</span> <span class="dv">29</span> <span class="co"># milk net energy, Mcal</span></span>
+<span id="cb3-15"><a href="model-machinery.html#cb3-15" aria-hidden="true" tabindex="-1"></a>BW <span class="ot">=</span> <span class="dv">700</span> <span class="co"># animal BW, kg</span></span>
+<span id="cb3-16"><a href="model-machinery.html#cb3-16" aria-hidden="true" tabindex="-1"></a>BCS <span class="ot">=</span> <span class="fl">3.5</span> <span class="co"># animal Body condition score, 1 (thin) to 5 (obese)</span></span>
+<span id="cb3-17"><a href="model-machinery.html#cb3-17" aria-hidden="true" tabindex="-1"></a>DIM <span class="ot">=</span> <span class="dv">100</span> <span class="co"># days in milk, d</span></span>
+<span id="cb3-18"><a href="model-machinery.html#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="model-machinery.html#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the function</span></span>
+<span id="cb3-20"><a href="model-machinery.html#cb3-20" aria-hidden="true" tabindex="-1"></a>est_DMI_kg <span class="ot">=</span> <span class="fu">DMI_est</span>(<span class="at">Parity =</span> Parity, </span>
+<span id="cb3-21"><a href="model-machinery.html#cb3-21" aria-hidden="true" tabindex="-1"></a>                   <span class="at">MilkE =</span> MilkE,</span>
+<span id="cb3-22"><a href="model-machinery.html#cb3-22" aria-hidden="true" tabindex="-1"></a>                   <span class="at">BW =</span> BW, </span>
+<span id="cb3-23"><a href="model-machinery.html#cb3-23" aria-hidden="true" tabindex="-1"></a>                   <span class="at">BCS =</span> BCS, </span>
+<span id="cb3-24"><a href="model-machinery.html#cb3-24" aria-hidden="true" tabindex="-1"></a>                   <span class="at">DIM =</span> DIM)</span>
+<span id="cb3-25"><a href="model-machinery.html#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the result</span></span>
+<span id="cb3-26"><a href="model-machinery.html#cb3-26" aria-hidden="true" tabindex="-1"></a>est_DMI_kg</span></code></pre></div>
 </div>
 </div>
 <div class="webex-solution">
@@ -838,32 +781,32 @@ Python example
 </button>
 <div id="python" class="section level4 hasAnchor" number="5.2.1.3">
 <h4><span class="header-section-number">5.2.1.3</span> Python<a href="model-machinery.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="model-machinery.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a function to estimate DMI using the NASEM equation</span></span>
-<span id="cb8-2"><a href="model-machinery.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DMI_est(Parity, BW, BCS, DIM, MilkE):</span>
-<span id="cb8-3"><a href="model-machinery.html#cb8-3" aria-hidden="true" tabindex="-1"></a>    Dt_DMIn_Lact1 <span class="op">=</span> (<span class="fl">3.7</span> <span class="op">+</span> <span class="fl">5.7</span> <span class="op">*</span> Parity <span class="op">+</span></span>
-<span id="cb8-4"><a href="model-machinery.html#cb8-4" aria-hidden="true" tabindex="-1"></a>                     <span class="fl">0.305</span> <span class="op">*</span> MilkE <span class="op">+</span> <span class="fl">0.022</span> <span class="op">*</span> BW <span class="op">+</span></span>
-<span id="cb8-5"><a href="model-machinery.html#cb8-5" aria-hidden="true" tabindex="-1"></a>                     (<span class="op">-</span><span class="fl">0.689</span> <span class="op">-</span> <span class="fl">1.87</span> <span class="op">*</span> Parity) <span class="op">*</span> BCS) <span class="op">*</span> <span class="op">\</span></span>
-<span id="cb8-6"><a href="model-machinery.html#cb8-6" aria-hidden="true" tabindex="-1"></a>                    (<span class="dv">1</span> <span class="op">-</span> (<span class="fl">0.212</span> <span class="op">+</span> <span class="fl">0.136</span> <span class="op">*</span> Parity) <span class="op">*</span> np.exp(<span class="op">-</span><span class="fl">0.053</span> <span class="op">*</span> DIM))</span>
-<span id="cb8-7"><a href="model-machinery.html#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Dt_DMIn_Lact1</span>
-<span id="cb8-8"><a href="model-machinery.html#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="model-machinery.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-10"><a href="model-machinery.html#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="model-machinery.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)</span></span>
-<span id="cb8-12"><a href="model-machinery.html#cb8-12" aria-hidden="true" tabindex="-1"></a>Parity <span class="op">=</span> <span class="dv">1</span> <span class="co"># proportion of multiparous cows</span></span>
-<span id="cb8-13"><a href="model-machinery.html#cb8-13" aria-hidden="true" tabindex="-1"></a>MilkE <span class="op">=</span> <span class="dv">29</span> <span class="co"># milk net energy, Mcal</span></span>
-<span id="cb8-14"><a href="model-machinery.html#cb8-14" aria-hidden="true" tabindex="-1"></a>BW <span class="op">=</span> <span class="dv">700</span> <span class="co"># animal BW, kg</span></span>
-<span id="cb8-15"><a href="model-machinery.html#cb8-15" aria-hidden="true" tabindex="-1"></a>BCS <span class="op">=</span> <span class="fl">3.5</span> <span class="co"># animal Body condition score, 1 (thin) to 5 (obese)</span></span>
-<span id="cb8-16"><a href="model-machinery.html#cb8-16" aria-hidden="true" tabindex="-1"></a>DIM <span class="op">=</span> <span class="dv">100</span> <span class="co"># days in milk, d</span></span>
-<span id="cb8-17"><a href="model-machinery.html#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-18"><a href="model-machinery.html#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the function</span></span>
-<span id="cb8-19"><a href="model-machinery.html#cb8-19" aria-hidden="true" tabindex="-1"></a>est_DMI_kg <span class="op">=</span> DMI_est(Parity <span class="op">=</span> Parity, </span>
-<span id="cb8-20"><a href="model-machinery.html#cb8-20" aria-hidden="true" tabindex="-1"></a>                     MilkE <span class="op">=</span> MilkE,</span>
-<span id="cb8-21"><a href="model-machinery.html#cb8-21" aria-hidden="true" tabindex="-1"></a>                     BW <span class="op">=</span> BW, </span>
-<span id="cb8-22"><a href="model-machinery.html#cb8-22" aria-hidden="true" tabindex="-1"></a>                     BCS <span class="op">=</span> BCS, </span>
-<span id="cb8-23"><a href="model-machinery.html#cb8-23" aria-hidden="true" tabindex="-1"></a>                     DIM <span class="op">=</span> DIM)</span>
-<span id="cb8-24"><a href="model-machinery.html#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-25"><a href="model-machinery.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the result</span></span>
-<span id="cb8-26"><a href="model-machinery.html#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(est_DMI_kg)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="model-machinery.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a function to estimate DMI using the NASEM equation</span></span>
+<span id="cb4-2"><a href="model-machinery.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DMI_est(Parity, BW, BCS, DIM, MilkE):</span>
+<span id="cb4-3"><a href="model-machinery.html#cb4-3" aria-hidden="true" tabindex="-1"></a>    Dt_DMIn_Lact1 <span class="op">=</span> (<span class="fl">3.7</span> <span class="op">+</span> <span class="fl">5.7</span> <span class="op">*</span> Parity <span class="op">+</span></span>
+<span id="cb4-4"><a href="model-machinery.html#cb4-4" aria-hidden="true" tabindex="-1"></a>                     <span class="fl">0.305</span> <span class="op">*</span> MilkE <span class="op">+</span> <span class="fl">0.022</span> <span class="op">*</span> BW <span class="op">+</span></span>
+<span id="cb4-5"><a href="model-machinery.html#cb4-5" aria-hidden="true" tabindex="-1"></a>                     (<span class="op">-</span><span class="fl">0.689</span> <span class="op">-</span> <span class="fl">1.87</span> <span class="op">*</span> Parity) <span class="op">*</span> BCS) <span class="op">*</span> <span class="op">\</span></span>
+<span id="cb4-6"><a href="model-machinery.html#cb4-6" aria-hidden="true" tabindex="-1"></a>                    (<span class="dv">1</span> <span class="op">-</span> (<span class="fl">0.212</span> <span class="op">+</span> <span class="fl">0.136</span> <span class="op">*</span> Parity) <span class="op">*</span> np.exp(<span class="op">-</span><span class="fl">0.053</span> <span class="op">*</span> DIM))</span>
+<span id="cb4-7"><a href="model-machinery.html#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Dt_DMIn_Lact1</span>
+<span id="cb4-8"><a href="model-machinery.html#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="model-machinery.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-10"><a href="model-machinery.html#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="model-machinery.html#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)</span></span>
+<span id="cb4-12"><a href="model-machinery.html#cb4-12" aria-hidden="true" tabindex="-1"></a>Parity <span class="op">=</span> <span class="dv">1</span> <span class="co"># proportion of multiparous cows</span></span>
+<span id="cb4-13"><a href="model-machinery.html#cb4-13" aria-hidden="true" tabindex="-1"></a>MilkE <span class="op">=</span> <span class="dv">29</span> <span class="co"># milk net energy, Mcal</span></span>
+<span id="cb4-14"><a href="model-machinery.html#cb4-14" aria-hidden="true" tabindex="-1"></a>BW <span class="op">=</span> <span class="dv">700</span> <span class="co"># animal BW, kg</span></span>
+<span id="cb4-15"><a href="model-machinery.html#cb4-15" aria-hidden="true" tabindex="-1"></a>BCS <span class="op">=</span> <span class="fl">3.5</span> <span class="co"># animal Body condition score, 1 (thin) to 5 (obese)</span></span>
+<span id="cb4-16"><a href="model-machinery.html#cb4-16" aria-hidden="true" tabindex="-1"></a>DIM <span class="op">=</span> <span class="dv">100</span> <span class="co"># days in milk, d</span></span>
+<span id="cb4-17"><a href="model-machinery.html#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="model-machinery.html#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the function</span></span>
+<span id="cb4-19"><a href="model-machinery.html#cb4-19" aria-hidden="true" tabindex="-1"></a>est_DMI_kg <span class="op">=</span> DMI_est(Parity <span class="op">=</span> Parity, </span>
+<span id="cb4-20"><a href="model-machinery.html#cb4-20" aria-hidden="true" tabindex="-1"></a>                     MilkE <span class="op">=</span> MilkE,</span>
+<span id="cb4-21"><a href="model-machinery.html#cb4-21" aria-hidden="true" tabindex="-1"></a>                     BW <span class="op">=</span> BW, </span>
+<span id="cb4-22"><a href="model-machinery.html#cb4-22" aria-hidden="true" tabindex="-1"></a>                     BCS <span class="op">=</span> BCS, </span>
+<span id="cb4-23"><a href="model-machinery.html#cb4-23" aria-hidden="true" tabindex="-1"></a>                     DIM <span class="op">=</span> DIM)</span>
+<span id="cb4-24"><a href="model-machinery.html#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="model-machinery.html#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the result</span></span>
+<span id="cb4-26"><a href="model-machinery.html#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(est_DMI_kg)</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1164,36 +1107,36 @@ optimize diets, nutritiously, economically and environmentally.
 <div id="optimization-using-software" class="section level3 hasAnchor" number="5.3.1">
 <h3><span class="header-section-number">5.3.1</span> Optimization using software<a href="model-machinery.html#optimization-using-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you are so inclined, the optimization problem can be solved in R.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="model-machinery.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lpSolve)</span>
-<span id="cb9-2"><a href="model-machinery.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="model-machinery.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of nutrient values for each feed (col) and each nutrient (row)</span></span>
-<span id="cb9-4"><a href="model-machinery.html#cb9-4" aria-hidden="true" tabindex="-1"></a>nutrient_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">50</span>, <span class="co"># protein</span></span>
-<span id="cb9-5"><a href="model-machinery.html#cb9-5" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">40</span>, <span class="dv">10</span>, <span class="dv">30</span>,  <span class="co"># NDF</span></span>
-<span id="cb9-6"><a href="model-machinery.html#cb9-6" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">40</span>, <span class="dv">10</span>, <span class="dv">30</span>, <span class="co"># NDF of x1, x2, x3</span></span>
-<span id="cb9-7"><a href="model-machinery.html#cb9-7" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, </span>
-<span id="cb9-8"><a href="model-machinery.html#cb9-8" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, </span>
-<span id="cb9-9"><a href="model-machinery.html#cb9-9" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, </span>
-<span id="cb9-10"><a href="model-machinery.html#cb9-10" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>), </span>
-<span id="cb9-11"><a href="model-machinery.html#cb9-11" aria-hidden="true" tabindex="-1"></a>                          <span class="at">nrow =</span> <span class="dv">7</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb9-12"><a href="model-machinery.html#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(nutrient_matrix) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Feed X1&quot;</span>, <span class="st">&quot;Feed X2&quot;</span>, <span class="st">&quot;Feed X3&quot;</span>)</span>
-<span id="cb9-13"><a href="model-machinery.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(nutrient_matrix) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Protein&quot;</span>, <span class="st">&quot;NDF&quot;</span>, <span class="st">&quot;Total Amount&quot;</span>,<span class="st">&quot;all feeds&quot;</span>, <span class="st">&quot;X1&quot;</span>, <span class="st">&quot;X2&quot;</span>, <span class="st">&quot;X3&quot;</span>)</span>
-<span id="cb9-14"><a href="model-machinery.html#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="model-machinery.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the optimization problem</span></span>
-<span id="cb9-16"><a href="model-machinery.html#cb9-16" aria-hidden="true" tabindex="-1"></a>obj <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.15</span>, <span class="fl">0.20</span>, <span class="fl">0.50</span>) <span class="co"># vector of feed costs USD/kg DM</span></span>
-<span id="cb9-17"><a href="model-machinery.html#cb9-17" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> nutrient_matrix <span class="co"># constraint matrix</span></span>
-<span id="cb9-18"><a href="model-machinery.html#cb9-18" aria-hidden="true" tabindex="-1"></a>dir <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;&gt;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>,<span class="st">&quot;&lt;=&quot;</span>, <span class="st">&quot;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>) <span class="co"># direction of constraints (greater than or equal to)</span></span>
-<span id="cb9-19"><a href="model-machinery.html#cb9-19" aria-hidden="true" tabindex="-1"></a>rhs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">35</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>) <span class="co"># right-hand side of constraints (nutrient requirements)</span></span>
-<span id="cb9-20"><a href="model-machinery.html#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-21"><a href="model-machinery.html#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve the optimization problem</span></span>
-<span id="cb9-22"><a href="model-machinery.html#cb9-22" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">lp</span>(<span class="st">&quot;min&quot;</span>, obj, con, dir, rhs)</span>
-<span id="cb9-23"><a href="model-machinery.html#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-24"><a href="model-machinery.html#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
-<span id="cb9-25"><a href="model-machinery.html#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(<span class="st">&quot;The least-cost ration is:&quot;</span>,</span>
-<span id="cb9-26"><a href="model-machinery.html#cb9-26" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st"> x1: &quot;</span>, result<span class="sc">$</span>solution[<span class="dv">1</span>], <span class="st">&quot; proportion feed 1 per kg diet DM&quot;</span>),</span>
-<span id="cb9-27"><a href="model-machinery.html#cb9-27" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st"> x2: &quot;</span>, result<span class="sc">$</span>solution[<span class="dv">2</span>], <span class="st">&quot; proportion feed 2 per kg diet DM&quot;</span>),</span>
-<span id="cb9-28"><a href="model-machinery.html#cb9-28" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st"> x3: &quot;</span>, result<span class="sc">$</span>solution[<span class="dv">3</span>], <span class="st">&quot; proportion feed 3 per kg diet DM&quot;</span>),</span>
-<span id="cb9-29"><a href="model-machinery.html#cb9-29" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">Total cost per kg diet DM: $&quot;</span>, result<span class="sc">$</span>objval),</span>
-<span id="cb9-30"><a href="model-machinery.html#cb9-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="model-machinery.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lpSolve)</span>
+<span id="cb5-2"><a href="model-machinery.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="model-machinery.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of nutrient values for each feed (col) and each nutrient (row)</span></span>
+<span id="cb5-4"><a href="model-machinery.html#cb5-4" aria-hidden="true" tabindex="-1"></a>nutrient_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">50</span>, <span class="co"># protein</span></span>
+<span id="cb5-5"><a href="model-machinery.html#cb5-5" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">40</span>, <span class="dv">10</span>, <span class="dv">30</span>,  <span class="co"># NDF</span></span>
+<span id="cb5-6"><a href="model-machinery.html#cb5-6" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">40</span>, <span class="dv">10</span>, <span class="dv">30</span>, <span class="co"># NDF of x1, x2, x3</span></span>
+<span id="cb5-7"><a href="model-machinery.html#cb5-7" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, </span>
+<span id="cb5-8"><a href="model-machinery.html#cb5-8" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, </span>
+<span id="cb5-9"><a href="model-machinery.html#cb5-9" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, </span>
+<span id="cb5-10"><a href="model-machinery.html#cb5-10" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>), </span>
+<span id="cb5-11"><a href="model-machinery.html#cb5-11" aria-hidden="true" tabindex="-1"></a>                          <span class="at">nrow =</span> <span class="dv">7</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-12"><a href="model-machinery.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(nutrient_matrix) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Feed X1&quot;</span>, <span class="st">&quot;Feed X2&quot;</span>, <span class="st">&quot;Feed X3&quot;</span>)</span>
+<span id="cb5-13"><a href="model-machinery.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(nutrient_matrix) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Protein&quot;</span>, <span class="st">&quot;NDF&quot;</span>, <span class="st">&quot;Total Amount&quot;</span>,<span class="st">&quot;all feeds&quot;</span>, <span class="st">&quot;X1&quot;</span>, <span class="st">&quot;X2&quot;</span>, <span class="st">&quot;X3&quot;</span>)</span>
+<span id="cb5-14"><a href="model-machinery.html#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="model-machinery.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the optimization problem</span></span>
+<span id="cb5-16"><a href="model-machinery.html#cb5-16" aria-hidden="true" tabindex="-1"></a>obj <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.15</span>, <span class="fl">0.20</span>, <span class="fl">0.50</span>) <span class="co"># vector of feed costs USD/kg DM</span></span>
+<span id="cb5-17"><a href="model-machinery.html#cb5-17" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> nutrient_matrix <span class="co"># constraint matrix</span></span>
+<span id="cb5-18"><a href="model-machinery.html#cb5-18" aria-hidden="true" tabindex="-1"></a>dir <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;&gt;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>,<span class="st">&quot;&lt;=&quot;</span>, <span class="st">&quot;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>, <span class="st">&quot;&gt;=&quot;</span>) <span class="co"># direction of constraints (greater than or equal to)</span></span>
+<span id="cb5-19"><a href="model-machinery.html#cb5-19" aria-hidden="true" tabindex="-1"></a>rhs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">35</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>) <span class="co"># right-hand side of constraints (nutrient requirements)</span></span>
+<span id="cb5-20"><a href="model-machinery.html#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="model-machinery.html#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve the optimization problem</span></span>
+<span id="cb5-22"><a href="model-machinery.html#cb5-22" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">lp</span>(<span class="st">&quot;min&quot;</span>, obj, con, dir, rhs)</span>
+<span id="cb5-23"><a href="model-machinery.html#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="model-machinery.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
+<span id="cb5-25"><a href="model-machinery.html#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(<span class="st">&quot;The least-cost ration is:&quot;</span>,</span>
+<span id="cb5-26"><a href="model-machinery.html#cb5-26" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st"> x1: &quot;</span>, result<span class="sc">$</span>solution[<span class="dv">1</span>], <span class="st">&quot; proportion feed 1 per kg diet DM&quot;</span>),</span>
+<span id="cb5-27"><a href="model-machinery.html#cb5-27" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st"> x2: &quot;</span>, result<span class="sc">$</span>solution[<span class="dv">2</span>], <span class="st">&quot; proportion feed 2 per kg diet DM&quot;</span>),</span>
+<span id="cb5-28"><a href="model-machinery.html#cb5-28" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st"> x3: &quot;</span>, result<span class="sc">$</span>solution[<span class="dv">3</span>], <span class="st">&quot; proportion feed 3 per kg diet DM&quot;</span>),</span>
+<span id="cb5-29"><a href="model-machinery.html#cb5-29" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">Total cost per kg diet DM: $&quot;</span>, result<span class="sc">$</span>objval),</span>
+<span id="cb5-30"><a href="model-machinery.html#cb5-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>))</span></code></pre></div>
 <pre><code>The least-cost ration is: 
  x1: 0.75 proportion feed 1 per kg diet DM 
  x2: 0.25 proportion feed 2 per kg diet DM 

@@ -74,40 +74,6 @@ nutritionists, as these also form the basis of many nutritional models.
 2.  Predictive models
 3.  Optimization
 
-::: {.tab}
-<button class="tablinks" onclick="unrolltab(event, 'London')">London</button>
-<button class="tablinks" onclick="unrolltab(event, 'Paris')">Paris</button>
-<button class="tablinks" onclick="unrolltab(event, 'Tokyo')">Tokyo</button>
-::: {#London .tabcontent}
-#### London {-}
-London is the capital city of England
-:::
-::: {#Paris .tabcontent}
-#### Paris  {-}
-Paris is the capital city of France
-:::
-::: {#Tokyo .tabcontent}
-#### Tokyo  {-}
-Tokyo is the capital city of Japan
-:::
-:::
-
-
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
 ## Basic nutrition math
 
 Under the hood, some parts of the NASEM model are basic operations such
@@ -287,7 +253,7 @@ to know:
 
 It can help to write down everything you know, including units.
 
-$$ 15 \text{ %CP, as-is basis} = \frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} \\[16pt]
+$$15 \text{ %CP, as-is basis} = \frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} \\[16pt]
 50\text{% DM as-is basis} = \frac{50 \text{ kg feed DM}}{100\text{ kg feed DM}}$$
 
 To convert to a DM basis, we need to think about our desired units: kg
@@ -297,9 +263,7 @@ them (flip them) whichever way we need, as long as we keep track of the
 units.
 
 $$\begin{aligned}
-\frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} * \frac{\text{100 kg feed as-is}}{\text{50 kg feed DM}} &=\\[6pt]
-
-\frac{15 \text{ kg feed CP}}{50 \text{kg feed DM}}& = \\[6pt]
+\frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} * \frac{\text{100 kg feed as-is}}{\text{50 kg feed DM}} &=\\[6pt] \frac{15 \text{ kg feed CP}}{50 \text{kg feed DM}}& = \\[6pt]
  \frac{30 \text{ kg feed CP}}{100 \text{ kg feed DM}} &= 30 \text{% CP on a DM basis}
 \end{aligned}$$
 
