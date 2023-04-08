@@ -56,8 +56,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
-<script src="libs/panelset-0.2.6/panelset.js"></script>
 <script>
   function unrolltab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -265,14 +263,20 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="model-machinery.html"><a href="model-machinery.html#predictive-models"><i class="fa fa-check"></i><b>5.2</b> Predictive models</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.1</b> Prediction using software</a></li>
-<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetics"><i class="fa fa-check"></i><b>5.2.2</b> Exponential growth kinetics</a></li>
-<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics"><i class="fa fa-check"></i><b>5.2.3</b> Saturable growth kinetics</a></li>
-<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.2.4</b> Allometric equations</a></li>
+<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#predictive-model-descriptors"><i class="fa fa-check"></i><b>5.2.1</b> Predictive model descriptors</a></li>
+<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#simple-linear-model-empirical-input-output"><i class="fa fa-check"></i><b>5.2.2</b> Simple linear model (empirical, input-output)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetic-model-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.3</b> Exponential growth kinetic model (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.4</b> Saturable growth kinetics (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="model-machinery.html"><a href="model-machinery.html#dmi-prediction-in-nasem"><i class="fa fa-check"></i><b>5.2.5</b> DMI prediction in NASEM</a></li>
+<li class="chapter" data-level="5.2.6" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.6</b> Prediction using software</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="model-machinery.html"><a href="model-machinery.html#optimization"><i class="fa fa-check"></i><b>5.3</b> Optimization</a>
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="model-machinery.html"><a href="model-machinery.html#optimization-using-software"><i class="fa fa-check"></i><b>5.3.1</b> Optimization using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="model-machinery.html"><a href="model-machinery.html#other-important-concepts"><i class="fa fa-check"></i><b>5.4</b> Other important concepts</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.4.1</b> Allometric equations</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="conclusions-1.html"><a href="conclusions-1.html"><i class="fa fa-check"></i><b>6</b> Conclusions</a></li>
@@ -312,10 +316,12 @@ Figure 5.1: Re-creating a dairy cow with machinery is not as easy as you might t
 <div class="lo">
 <p><strong>Learning Objectives</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>List some of the "machinery" (mathematical operations) used in
+<li><p>List and describe some of the "machinery" (mathematical operations) used in
 nutritional models.</p></li>
-<li><p>Discuss model descriptors such as empirical and mechanistic.</p></li>
-<li><p>Discuss limitations of nutritional models.</p></li>
+<li><p>Use basic math to solve nutritional problems such as converting units, converting basis, scaling, and weighting.</p></li>
+<li><p>Use a predictive model, in software, to generate estimates.</p></li>
+<li><p>Discuss some of the types of predictive models used in dairy nutrition work.</p></li>
+<li><p>Set up and solve a diet optimization problem.</p></li>
 </ol>
 </div>
 <p>In the last chapter, we learned about some of the core parameters in the
@@ -673,13 +679,114 @@ variable. When new data become available, nutritionists will often want
 to update the predictive models. As a result, the sections of
 nutritional models that have been developed through statistical analysis
 are continually changing.</p>
+<div id="predictive-model-descriptors" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Predictive model descriptors<a href="model-machinery.html#predictive-model-descriptors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Empirical vs. theoretical</strong>
+Empirical and theoretical are two ends of a spectrum used to describe
+models. These terms refer to the way in which a model was developed.
+When a model is more empirical, it is typically based on observed data
+and simple relationships. The word "empirical" means that it is based on experience. Conversely, theoretical models are more based on logic and abstract ideas, rather than observations in practice.</p>
+<p><strong>Input-output vs. mechanistic</strong>
+Some models are concerned only with observed inputs and outputs. Their structure is something like INPUT -&gt; Black Box -&gt; OUTPUT, meaning that the mechanisms between input and output are not well-characterized. These models are often more empirical rather than theoretical. Conversely, when a model is
+more <strong>mechanistic</strong>, it depicts the processes and intermediates in
+great detail. Mechanistic models can be thought of as INPUT -&gt; Detailed
+Process -&gt; OUTPUT models. Mechanistic models often involve more theory.</p>
+<p>These terms are used in the NASEM narrative and more broadly to describe the types of predictive models. Most predictive models are some combination of the terms above. In other words, models fall somewhere on a spectrum rather than splitting into discrete categories.</p>
+<div class="lo">
+<p><strong>Test yourself</strong></p>
+<p>A (An) <select class='webex-select'><option value='blank'></option><option value=''>input-output</option><option value='answer'>mechanistic</option></select> model represents processes in great detail.</p>
+<p>An <select class='webex-select'><option value='blank'></option><option value='answer'>empirical</option><option value=''>imperial</option></select> model is based on observed relationships.</p>
+</div>
+</div>
+<div id="simple-linear-model-empirical-input-output" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Simple linear model (empirical, input-output)<a href="model-machinery.html#simple-linear-model-empirical-input-output" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As an example, we previously used a predictive model: <span class="math inline">\(DMI \space (kg) = 0.03 * BW\)</span>. To use it, we plugged in known values to the right-hand side (independent variables).</p>
 <p><span class="math inline">\(DMI\)</span> = ?</p>
 <p><span class="math inline">\(0.03\)</span> a coefficient relating DMI and BW determined in past research</p>
 <p><span class="math inline">\(BW\)</span> = 702</p>
 <p><span class="math inline">\(DMI = 0.03*702\)</span></p>
 <p><span class="math inline">\(DMI = 21.06 kg\)</span></p>
-<p>Of course, some of the actual models in NASEM are a bit more complex. For example, an actual equation for predicting DMI in NASEM (p. 12, eq. 2-1) uses parity, BW, body condition score (BCS), day in lactation, and milk net energy production. Researchers observed 3,143 lactations where roughly
+<p>This model is more empirical, because it is based on observations. It is more input-output, because it does not represent any of the reasons or mechanisms behind why greater BW could lead to greater DMI.</p>
+</div>
+<div id="exponential-growth-kinetic-model-theoretical-mechanistic" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Exponential growth kinetic model (theoretical, mechanistic)<a href="model-machinery.html#exponential-growth-kinetic-model-theoretical-mechanistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="green">
+<p><strong>Think to yourself</strong></p>
+<p>If you raised a newborn calf to its mature weight, and weighed it every day, what would it look like to plot its weight (Y) over time (X)? How would its growth rate (mass/time) change as it got larger?</p>
+</div>
+<p>The rate:state equation tells us the growth rate. The growth rate is
+expressed here as the difference in mass (<span class="math inline">\(dM\)</span>) per the difference in
+time (<span class="math inline">\(dt\)</span>). This is referred to as first order kinetics, because the
+mass (<span class="math inline">\(M\)</span>) is multiplied by a scalar <span class="math inline">\(a^1 = a\)</span>.</p>
+<p><span class="math display">\[ \frac{dM}{dt} = a M \]</span></p>
+<p>where <span class="math inline">\(a\)</span> is the growth constant. This equation suggests that as the
+mass grows, the "growth machinery" also grows. In other words, an animal
+that weighs 50 lbs might grow 0.5 lbs per day, but an animal at 500 lbs
+would grow at a faster rate (5 lbs per day) proportional to its mass.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="85%" style="display: block; margin: auto;" /></p>
+<p>Integrating the rate:state equation (finding the area underneath it)
+allows us to find the mass at any point in time. We find the definite
+integral from the start of the process <span class="math inline">\(t = 0\)</span> to another point in time
+<span class="math inline">\(t = t_1\)</span>. The integral tells us that the mass at a given time <span class="math inline">\(M\)</span> is
+equal to the initial mass <span class="math inline">\(M_0\)</span> times the exponential of <span class="math inline">\(at\)</span>, the
+growth constant multiplied by time.</p>
+<p><span class="math display">\[
+M = M_0e^{at}
+\]</span></p>
+<p>Functions similar to this integrated rate law appear in the NASEM model
+to predict the growth rate of the fetus during gestation. Importantly,
+the function is cut off after the time of calving (otherwise, the mass
+would continue to increase!).</p>
+<div class="green">
+<p><strong>Test yourself</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>First order kinetics means that the mass grows at a
+constant rate. <select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></p></li>
+<li><p>The exponential function (integrated
+rate equation) shown above would slow down after enough time had passed.
+<select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></p></li>
+</ol>
+</div>
+<div class="grey">
+<p><strong>Literature deep dive</strong></p>
+<p>France et al. (1996) described growth rates in animal science.</p>
+<p>France, J., Dijkstra, J., &amp; Dhanoa, M. S. (1996). Growth functions and
+their application in animal science. In Annales de zootechnie (Vol. 45,
+No. Suppl1, pp. 165-174).</p>
+</div>
+</div>
+<div id="saturable-growth-kinetics-theoretical-mechanistic" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Saturable growth kinetics (theoretical, mechanistic)<a href="model-machinery.html#saturable-growth-kinetics-theoretical-mechanistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Michaelis-Menten model describes a saturable growth process. A function
+is saturable when it reaches an upper or lower bound rather than
+continuing infinitely. This form of growth is used in NASEM to model microbial protein synthesis.</p>
+<p>The Michaelis-Menten equation uses the term velocity, which is a general term encompassing the changes in products <span class="math inline">\(\frac{d[P]}{dt}\)</span> and substrates <span class="math inline">\(\frac{d[S]}{dt}\)</span> over time.</p>
+<p><span class="math display">\[v = \frac{V_{max} [S]}{K_m + [S]}\]</span>
+where
+<span class="math inline">\(V\)</span> is the growth rate</p>
+<p><span class="math inline">\(S\)</span> is the substrate concentration</p>
+<p><span class="math inline">\(V_{max}\)</span> is the maximum velocity (max. reaction rate) and <span class="math inline">\(V_{max}/2\)</span> is half the maximum velocity. The velocity is <span class="math inline">\(V_{max}/2\)</span> when <span class="math inline">\(K_m = [S]\)</span>.</p>
+<p><span class="math inline">\(K_m\)</span> is the Michaelis constant, which is the concentration of substrate when the reaction velocity is 50% of the <span class="math inline">\(V_{max}\)</span></p>
+<p>At low concentrations the velocity is proportional to the concentration of substrate <span class="math inline">\(S\)</span>. One way to think of this is that <span class="math inline">\(K_m\)</span> is larger than <span class="math inline">\([S]\)</span>, so <span class="math inline">\(K_m + [S] \approx K_m\)</span>, so the velocity is affected by the ratio of <span class="math inline">\(\frac{[S]}{K_m}\)</span> times the maximum velocity. This is similar to first-order kinetics, where the growth rate (velocity) is a linear function of the growth machinery (e.g., the substrate concentration). At this point, the growth is not saturated.</p>
+<p>At high concentrations of substrate <span class="math inline">\(S\)</span>, the rate approaches a maximum velocity. This is because <span class="math inline">\([S]\)</span> has become larger than <span class="math inline">\(K_m\)</span>, and <span class="math inline">\(K_m + [S] \approx [S]\)</span>. The rate is <span class="math inline">\(\frac{[S]}{[S]}\)</span> times the maximum velocity ($ * V_{max}$. This is more similar to zeroth-order kinetics, because the growth rate is constant. The growth process becomes saturated as it gets closer and closer to <span class="math inline">\(V_{max}\)</span>.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="85%" style="display: block; margin: auto;" /></p>
+<div class="orange">
+<p><strong>Feeling confused? Click below for a more practical example.</strong> 🍞</p>
+<div class="webex-solution">
+<button>
+Tell me an analogy on saturable growth
+</button>
+<p>Imagine you owned a bakery of a certain size with 13 dedicated bakers (a baker's dozen! 👨‍🍳). You are in charge of providing the bakers ingredients (substrates).</p>
+<p>At first you give them no ingredients. The bakers make no bread, and sit around the bakery all day.</p>
+<p>Then, you decide to start giving them a small amount of ingredients every day. They are very excited and make as much bread as they can using the ingredients. At the end of the day, they still have some time to relax. The bakers send you a note - "We would be happy to make more bread if you give us more ingredients."</p>
+<p>You increase the amount of ingredients provided per day. The bakers are still very excited, and they make even more bread than ever before. They have less time to relax. At this stage, you start to think that the amount of bread made is proportional to the amount of ingredients provided. This is great news, you think, because if you simply provide more ingredients to the bakers, everyone will get more bread.</p>
+<p>You tell the bakers - it's time to push it to the limit. You offer them thousands of pounds of ingredients to use as fast as they can. The bakers spend all day making as much bread as they can, but at the end of the day there are still ingredients leftover. They can't seem to catch up! You keep giving them more ingredients, expecting more bread. The bakers work as fast as they can. In desperation, the bakers finally send you an angry note - "There is a limit to how fast we can make bread!!!"</p>
+</div>
+</div>
+</div>
+<div id="dmi-prediction-in-nasem" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> DMI prediction in NASEM<a href="model-machinery.html#dmi-prediction-in-nasem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let's take a look at an actual predictive models in NASEM. For example, an equation for predicting DMI in NASEM (p. 12, eq. 2-1) uses parity, BW, body condition score (BCS), day in lactation, and milk net energy production. Researchers observed 3,143 lactations where roughly
 half the observations represented primiparous cows and half were from
 multiparous cows. After testing different equations, they found one that
 provided a good fit with the data:</p>
@@ -714,15 +821,16 @@ a greater proportion of multiparous cows, greater milk energy
 production, andg greater bodyweight are predictive of greater DMI
 (positive relationship). The last part of the equation includes some
 complex terms where there are interactions. In an interaction, two variables (e.g., milk production and BW) are multiplied with each other rather than added. Additionally, Euler's constant <span class="math inline">\(e\)</span> appears in the expression <span class="math inline">\(e^{(-0.053*DIM)}\)</span>. This part is an adjustment for depressed intake in early lactation.</p>
-<div id="prediction-using-software" class="section level3 hasAnchor" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Prediction using software<a href="model-machinery.html#prediction-using-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="prediction-using-software" class="section level3 hasAnchor" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> Prediction using software<a href="model-machinery.html#prediction-using-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Although this math can be done on paper or with a calculator, if you are so inclined, you can try this in your favorite computer program. The program makes it easier to plug in values and generate an estimate.</p>
 <div class="webex-solution">
 <button>
 NASEM dairy-8 Example
 </button>
-<div id="nasem-dairy-8" class="section level4 hasAnchor" number="5.2.1.1">
-<h4><span class="header-section-number">5.2.1.1</span> NASEM dairy-8<a href="model-machinery.html#nasem-dairy-8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="nasem-dairy-8" class="section level4 hasAnchor" number="5.2.6.1">
+<h4><span class="header-section-number">5.2.6.1</span> NASEM dairy-8<a href="model-machinery.html#nasem-dairy-8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Open the dairy-8 program.</li>
 <li>Click File &gt; Load Simulation and load an example simulation for a lactating cow, such as "Example-Lactating-Cow-DIM-100.nd8"</li>
@@ -745,8 +853,8 @@ NASEM dairy-8 Example
 <button>
 R Example
 </button>
-<div id="r" class="section level4 hasAnchor" number="5.2.1.2">
-<h4><span class="header-section-number">5.2.1.2</span> R<a href="model-machinery.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="r" class="section level4 hasAnchor" number="5.2.6.2">
+<h4><span class="header-section-number">5.2.6.2</span> R<a href="model-machinery.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="model-machinery.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a function to estimate DMI using the NASEM equation</span></span>
 <span id="cb3-2"><a href="model-machinery.html#cb3-2" aria-hidden="true" tabindex="-1"></a>DMI_est <span class="ot">&lt;-</span> <span class="cf">function</span>(Parity, BW, BCS, DIM, MilkE) {</span>
 <span id="cb3-3"><a href="model-machinery.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  </span>
@@ -779,8 +887,8 @@ R Example
 <button>
 Python example
 </button>
-<div id="python" class="section level4 hasAnchor" number="5.2.1.3">
-<h4><span class="header-section-number">5.2.1.3</span> Python<a href="model-machinery.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="python" class="section level4 hasAnchor" number="5.2.6.3">
+<h4><span class="header-section-number">5.2.6.3</span> Python<a href="model-machinery.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="model-machinery.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a function to estimate DMI using the NASEM equation</span></span>
 <span id="cb4-2"><a href="model-machinery.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DMI_est(Parity, BW, BCS, DIM, MilkE):</span>
 <span id="cb4-3"><a href="model-machinery.html#cb4-3" aria-hidden="true" tabindex="-1"></a>    Dt_DMIn_Lact1 <span class="op">=</span> (<span class="fl">3.7</span> <span class="op">+</span> <span class="fl">5.7</span> <span class="op">*</span> Parity <span class="op">+</span></span>
@@ -808,213 +916,6 @@ Python example
 <span id="cb4-25"><a href="model-machinery.html#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the result</span></span>
 <span id="cb4-26"><a href="model-machinery.html#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(est_DMI_kg)</span></code></pre></div>
 </div>
-</div>
-</div>
-<div id="exponential-growth-kinetics" class="section level3 hasAnchor" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Exponential growth kinetics<a href="model-machinery.html#exponential-growth-kinetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="green">
-<p><strong>Think to yourself</strong></p>
-<p>If you raised a newborn calf to its mature weight, and weighed it every day, what would it look like to plot its weight (Y) over time (X)? How would its growth rate (mass/time) change as it got larger?</p>
-</div>
-<p>The rate:state equation tells us the growth rate. The growth rate is
-expressed here as the difference in mass (<span class="math inline">\(dM\)</span>) per the difference in
-time (<span class="math inline">\(dt\)</span>). This is referred to as first order kinetics, because the
-mass (<span class="math inline">\(M\)</span>) is multiplied by a scalar <span class="math inline">\(a^1 = a\)</span>.</p>
-<p><span class="math display">\[ \frac{dM}{dt} = a M \]</span></p>
-<p>where <span class="math inline">\(a\)</span> is the growth constant. This equation suggests that as the
-mass grows, the "growth machinery" also grows. In other words, an animal
-that weighs 50 lbs might grow 0.5 lbs per day, but an animal at 500 lbs
-would grow at a faster rate (5 lbs per day) proportional to its mass.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="85%" style="display: block; margin: auto;" /></p>
-<p>Integrating the rate:state equation (finding the area underneath it)
-allows us to find the mass at any point in time. We find the definite
-integral from the start of the process <span class="math inline">\(t = 0\)</span> to another point in time
-<span class="math inline">\(t = t_1\)</span>. The integral tells us that the mass at a given time <span class="math inline">\(M\)</span> is
-equal to the initial mass <span class="math inline">\(M_0\)</span> times the exponential of <span class="math inline">\(at\)</span>, the
-growth constant multiplied by time.</p>
-<p><span class="math display">\[
-M = M_0e^{at}
-\]</span></p>
-<p>Functions similar to this integrated rate law appear in the NASEM model
-to predict the growth rate of the fetus during gestation. Importantly,
-the function is cut off after the time of calving (otherwise, the mass
-would continue to increase!).</p>
-<div class="green">
-<p><strong>Test yourself</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>First order kinetics means that the mass grows at a
-constant rate. <select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></p></li>
-<li><p>The exponential function (integrated
-rate equation) shown above would slow down after enough time had passed.
-<select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></p></li>
-</ol>
-</div>
-<div class="grey">
-<p><strong>Literature deep dive</strong></p>
-<p>France et al. (1996) described growth rates in animal science.</p>
-<p>France, J., Dijkstra, J., &amp; Dhanoa, M. S. (1996). Growth functions and
-their application in animal science. In Annales de zootechnie (Vol. 45,
-No. Suppl1, pp. 165-174).</p>
-</div>
-</div>
-<div id="saturable-growth-kinetics" class="section level3 hasAnchor" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> Saturable growth kinetics<a href="model-machinery.html#saturable-growth-kinetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The Michaelis-Menten model describes a saturable growth process. A function
-is saturable when it reaches an upper or lower bound rather than
-continuing infinitely. This form of growth is used in NASEM to model microbial protein synthesis.</p>
-<p>The Michaelis-Menten equation uses the term velocity, which is a general term encompassing the changes in products <span class="math inline">\(\frac{d[P]}{dt}\)</span> and substrates <span class="math inline">\(\frac{d[S]}{dt}\)</span> over time.</p>
-<p><span class="math display">\[v = \frac{V_{max} [S]}{K_m + [S]}\]</span>
-where
-<span class="math inline">\(V\)</span> is the growth rate</p>
-<p><span class="math inline">\(S\)</span> is the substrate concentration</p>
-<p><span class="math inline">\(V_{max}\)</span> is the maximum velocity (max. reaction rate) and <span class="math inline">\(V_{max}/2\)</span> is half the maximum velocity. The velocity is <span class="math inline">\(V_{max}/2\)</span> when <span class="math inline">\(K_m = [S]\)</span>.</p>
-<p><span class="math inline">\(K_m\)</span> is the Michaelis constant, which is the concentration of substrate when the reaction velocity is 50% of the <span class="math inline">\(V_{max}\)</span></p>
-<p>At low concentrations the velocity is proportional to the concentration of substrate <span class="math inline">\(S\)</span>. One way to think of this is that <span class="math inline">\(K_m\)</span> is larger than <span class="math inline">\([S]\)</span>, so <span class="math inline">\(K_m + [S] \approx K_m\)</span>, so the velocity is affected by the ratio of <span class="math inline">\(\frac{[S]}{K_m}\)</span> times the maximum velocity. This is similar to first-order kinetics, where the growth rate (velocity) is a linear function of the growth machinery (e.g., the substrate concentration). At this point, the growth is not saturated.</p>
-<p>At high concentrations of substrate <span class="math inline">\(S\)</span>, the rate approaches a maximum velocity. This is because <span class="math inline">\([S]\)</span> has become larger than <span class="math inline">\(K_m\)</span>, and <span class="math inline">\(K_m + [S] \approx [S]\)</span>. The rate is <span class="math inline">\(\frac{[S]}{[S]}\)</span> times the maximum velocity ($ * V_{max}$. This is more similar to zeroth-order kinetics, because the growth rate is constant. The growth process becomes saturated as it gets closer and closer to <span class="math inline">\(V_{max}\)</span>.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="85%" style="display: block; margin: auto;" /></p>
-<div class="orange">
-<p><strong>Feeling confused? Click below for a more practical example.</strong> 🍞</p>
-<div class="webex-solution">
-<button>
-Tell me an analogy on saturable growth
-</button>
-<p>Imagine you owned a bakery of a certain size with 13 dedicated bakers (a baker's dozen! 👨‍🍳). You are in charge of providing the bakers ingredients (substrates).</p>
-<p>At first you give them no ingredients. The bakers make no bread, and sit around the bakery all day.</p>
-<p>Then, you decide to start giving them a small amount of ingredients every day. They are very excited and make as much bread as they can using the ingredients. At the end of the day, they still have some time to relax. The bakers send you a note - "We would be happy to make more bread if you give us more ingredients."</p>
-<p>You increase the amount of ingredients provided per day. The bakers are still very excited, and they make even more bread than ever before. They have less time to relax. At this stage, you start to think that the amount of bread made is proportional to the amount of ingredients provided. This is great news, you think, because if you simply provide more ingredients to the bakers, everyone will get more bread.</p>
-<p>You tell the bakers - it's time to push it to the limit. You offer them thousands of pounds of ingredients to use as fast as they can. The bakers spend all day making as much bread as they can, but at the end of the day there are still ingredients leftover. They can't seem to catch up! You keep giving them more ingredients, expecting more bread. The bakers work as fast as they can. In desperation, the bakers finally send you an angry note - "There is a limit to how fast we can make bread!!!"</p>
-</div>
-</div>
-</div>
-<div id="allometric-equations" class="section level3 hasAnchor" number="5.2.4">
-<h3><span class="header-section-number">5.2.4</span> Allometric equations<a href="model-machinery.html#allometric-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>An animal's nutritional processes are clearly affected by its body
-weight (BW). Yet the relationship is not necessarily linear. Instead,
-nutritionists use allometric equations to estimate how body processes
-(e.g., basal metabolic rate) will scale to animals with different body
-weights.</p>
-<p>Allometric equations are those that relate body weight to physiological
-and anatomical features. They have the general form <span class="math inline">\(y = a * BW^b\)</span>,
-where <span class="math inline">\(a\)</span> is the intercept when <span class="math inline">\(BW\)</span> = 1, <span class="math inline">\(BW\)</span> is the body weight, and
-<span class="math inline">\(b\)</span> is the scaling parameter.</p>
-<p>There are two major theories explaining allometric scaling:</p>
-<p>In 1883, Rubner proposed that surface area was an important
-determinant of metabolic rate. Smaller animals have a greater
-surface area to volume ratio than larger animals, and therefore
-require a faster metabolic rate. Heat is dissipated through the
-surface. This led to a scaling of metabolic rate of <span class="math inline">\(BW^{0.67}\)</span>.</p>
-<p>In the 1930s, Kleiber originally empirically derived the <span class="math inline">\(BW^{0.75}\)</span>
-scaling relationship across mammals. West and Brown (2005) proposed
-that the fluid dynamics of blood within the fractal branching of the
-circulatory system determine the metabolic rate. This leads to
-metabolic scaling of <span class="math inline">\(BW^{0.75}\)</span> in most animals. In very small
-animals, they proposed that blood viscosity increasingly determines
-blood flow, leading to a scaling of metabolic rate closer to
-<span class="math inline">\(BW^{0.67}\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
-<img src="_main_files/figure-html/unnamed-chunk-33-1.png" alt="Surface area and volume for cubes with increasing side length" width="85%" />
-<p class="caption">
-Figure 5.2: Surface area and volume for cubes with increasing side length
-</p>
-</div>
-<p>The idea of surface area and volume scaling differently might make more sense if we consider a cube of increasing size.</p>
-<p><span class="math inline">\(Surface \space Area \space (A) = 6s^2\)</span></p>
-<p><span class="math inline">\(Volume \space (V) = s^3\)</span></p>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Side Length (s)</strong></th>
-<th><strong>Surface Area (A)</strong></th>
-<th><strong>Volume (V)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>6</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>24</td>
-<td>8</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>54</td>
-<td>27</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>96</td>
-<td>64</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>150</td>
-<td>125</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>216</td>
-<td>216</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>294</td>
-<td>343</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>384</td>
-<td>512</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>486</td>
-<td>729</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>600</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
-<img src="_main_files/figure-html/unnamed-chunk-34-1.png" alt="Allometric scaling example for cattle" width="85%" />
-<p class="caption">
-Figure 5.3: Allometric scaling example for cattle
-</p>
-</div>
-<p>West and Brown's (2005) BW^0.75 concept is somewhat harder to visualize. Still, we can picture somewhat how it works by imagining the fractal branching of the circulatory system.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
-<img src="_main_files/figure-html/unnamed-chunk-35-1.png" alt="A fractal tree illustrating branching similar to circulation in the animal. Source code for this fractal tree thanks to Martin Stefan:  https://rpubs.com/mstefan-rpubs/fractals" width="85%" />
-<p class="caption">
-Figure 5.4: A fractal tree illustrating branching similar to circulation in the animal. Source code for this fractal tree thanks to Martin Stefan: <a href="https://rpubs.com/mstefan-rpubs/fractals" class="uri">https://rpubs.com/mstefan-rpubs/fractals</a>
-</p>
-</div>
-<div class="green">
-<strong>Test yourself</strong> In what situation would allometric scaling be helpful?
-<div id="radio_WARKPKEUSM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WARKPKEUSM" value=""></input> <span>Converting from bodyweight to body condition score</span></label><label><input type="radio" autocomplete="off" name="radio_WARKPKEUSM" value="answer"></input> <span>Predicting basal energy expenditure of animals with differing body size</span></label><label><input type="radio" autocomplete="off" name="radio_WARKPKEUSM" value=""></input> <span>Calculating energy content of milk</span></label>
-</div>
-</div>
-<div class="grey">
-<p><strong>Literature deep dive</strong></p>
-<p>For an in-depth review of allometric scaling in reference to different
-species of ruminants (including exotics!), see Hackmann and Spain
-(2010).</p>
-<p>Hackmann, T. J., &amp; Spain, J. N. (2010). Invited review: ruminant ecology
-and evolution: perspectives useful to ruminant livestock research and
-production. Journal of dairy science, 93(4), 1320--1334.
-<a href="https://doi.org/10.3168/jds.2009-2071" class="uri">https://doi.org/10.3168/jds.2009-2071</a></p>
-<p>For an explanation of the derivation of allometric scaling (more
-complex) see West and Brown (2005).</p>
-<p>West, G. B., &amp; Brown, J.H. (2005). The origin of allometric scaling laws
-in biology from genomes to ecosystems: towards a quantitative unifying
-theory of biological structure and organization. J Exp Biol 1 May 2005;
-208 (9): 1575--1592. doi: <a href="https://doi.org/10.1242/jeb.01589" class="uri">https://doi.org/10.1242/jeb.01589</a></p>
 </div>
 </div>
 </div>
@@ -1142,6 +1043,140 @@ optimize diets, nutritiously, economically and environmentally.
  x2: 0.25 proportion feed 2 per kg diet DM 
  x3: 0 proportion feed 3 per kg diet DM 
 Total cost per kg diet DM: $0.1625</code></pre>
+</div>
+</div>
+<div id="other-important-concepts" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Other important concepts<a href="model-machinery.html#other-important-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="allometric-equations" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Allometric equations<a href="model-machinery.html#allometric-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An animal's nutritional processes are clearly affected by its body
+weight (BW). Yet the relationship is not necessarily linear. Instead,
+nutritionists use allometric equations to estimate how body processes
+(e.g., basal metabolic rate) will scale to animals with different body
+weights.</p>
+<p>Allometric equations are those that relate body weight to physiological
+and anatomical features. They have the general form <span class="math inline">\(y = a * BW^b\)</span>,
+where <span class="math inline">\(a\)</span> is the intercept when <span class="math inline">\(BW\)</span> = 1, <span class="math inline">\(BW\)</span> is the body weight, and
+<span class="math inline">\(b\)</span> is the scaling parameter.</p>
+<p>There are two major theories explaining allometric scaling:</p>
+<p>In 1883, Rubner proposed that surface area was an important
+determinant of metabolic rate. Smaller animals have a greater
+surface area to volume ratio than larger animals, and therefore
+require a faster metabolic rate. Heat is dissipated through the
+surface. This led to a scaling of metabolic rate of <span class="math inline">\(BW^{0.67}\)</span>.</p>
+<p>In the 1930s, Kleiber originally empirically derived the <span class="math inline">\(BW^{0.75}\)</span>
+scaling relationship across mammals. West and Brown (2005) proposed
+that the fluid dynamics of blood within the fractal branching of the
+circulatory system determine the metabolic rate. This leads to
+metabolic scaling of <span class="math inline">\(BW^{0.75}\)</span> in most animals. In very small
+animals, they proposed that blood viscosity increasingly determines
+blood flow, leading to a scaling of metabolic rate closer to
+<span class="math inline">\(BW^{0.67}\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
+<img src="_main_files/figure-html/unnamed-chunk-34-1.png" alt="Surface area and volume for cubes with increasing side length" width="85%" />
+<p class="caption">
+Figure 5.2: Surface area and volume for cubes with increasing side length
+</p>
+</div>
+<p>The idea of surface area and volume scaling differently might make more sense if we consider a cube of increasing size.</p>
+<p><span class="math inline">\(Surface \space Area \space (A) = 6s^2\)</span></p>
+<p><span class="math inline">\(Volume \space (V) = s^3\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Side Length (s)</strong></th>
+<th><strong>Surface Area (A)</strong></th>
+<th><strong>Volume (V)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>6</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>24</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>54</td>
+<td>27</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>96</td>
+<td>64</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>150</td>
+<td>125</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>216</td>
+<td>216</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>294</td>
+<td>343</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>384</td>
+<td>512</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>486</td>
+<td>729</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>600</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
+<img src="_main_files/figure-html/unnamed-chunk-35-1.png" alt="Allometric scaling example for cattle" width="85%" />
+<p class="caption">
+Figure 5.3: Allometric scaling example for cattle
+</p>
+</div>
+<p>West and Brown's (2005) BW^0.75 concept is somewhat harder to visualize. Still, we can picture somewhat how it works by imagining the fractal branching of the circulatory system.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
+<img src="_main_files/figure-html/unnamed-chunk-36-1.png" alt="A fractal tree illustrating branching similar to circulation in the animal. Source code for this fractal tree thanks to Martin Stefan:  https://rpubs.com/mstefan-rpubs/fractals" width="85%" />
+<p class="caption">
+Figure 5.4: A fractal tree illustrating branching similar to circulation in the animal. Source code for this fractal tree thanks to Martin Stefan: <a href="https://rpubs.com/mstefan-rpubs/fractals" class="uri">https://rpubs.com/mstefan-rpubs/fractals</a>
+</p>
+</div>
+<div class="green">
+<strong>Test yourself</strong> In what situation would allometric scaling be helpful?
+<div id="radio_WARKPKEUSM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WARKPKEUSM" value=""></input> <span>Converting from bodyweight to body condition score</span></label><label><input type="radio" autocomplete="off" name="radio_WARKPKEUSM" value="answer"></input> <span>Predicting basal energy expenditure of animals with differing body size</span></label><label><input type="radio" autocomplete="off" name="radio_WARKPKEUSM" value=""></input> <span>Calculating energy content of milk</span></label>
+</div>
+</div>
+<div class="grey">
+<p><strong>Literature deep dive</strong></p>
+<p>For an in-depth review of allometric scaling in reference to different
+species of ruminants (including exotics!), see Hackmann and Spain
+(2010).</p>
+<p>Hackmann, T. J., &amp; Spain, J. N. (2010). Invited review: ruminant ecology
+and evolution: perspectives useful to ruminant livestock research and
+production. Journal of dairy science, 93(4), 1320--1334.
+<a href="https://doi.org/10.3168/jds.2009-2071" class="uri">https://doi.org/10.3168/jds.2009-2071</a></p>
+<p>For an explanation of the derivation of allometric scaling (more
+complex) see West and Brown (2005).</p>
+<p>West, G. B., &amp; Brown, J.H. (2005). The origin of allometric scaling laws
+in biology from genomes to ecosystems: towards a quantitative unifying
+theory of biological structure and organization. J Exp Biol 1 May 2005;
+208 (9): 1575--1592. doi: <a href="https://doi.org/10.1242/jeb.01589" class="uri">https://doi.org/10.1242/jeb.01589</a></p>
+</div>
 </div>
 </div>
 </div>

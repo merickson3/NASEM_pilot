@@ -1,5 +1,5 @@
 # Requirements
-```{r, echo = F, fig.align = "center", fig.width = 8, fig.cap = "Which one of us did you have in mind when you formulated this diet?"}
+```{r, echo = F, fig.align = "center",  fig.cap = "Which one of us did you have in mind when you formulated this diet?"}
 knitr::include_graphics("images/Cow face distribution.png")
 library(webexercises)
 library(ggplot2)

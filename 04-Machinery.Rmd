@@ -45,12 +45,17 @@ library(plotly)
 ::: lo
 **Learning Objectives**
 
-1.  List some of the "machinery" (mathematical operations) used in
+1.  List and describe some of the "machinery" (mathematical operations) used in
     nutritional models.
 
-2.  Discuss model descriptors such as empirical and mechanistic.
+2.  Use basic math to solve nutritional problems such as converting units, converting basis, scaling, and weighting. 
 
-3.  Discuss limitations of nutritional models.
+3.  Use a predictive model, in software, to generate estimates.
+
+4.  Discuss some of the types of predictive models used in dairy nutrition work. 
+
+5.  Set up and solve a diet optimization problem. 
+
 :::
 
 
@@ -456,6 +461,33 @@ to update the predictive models. As a result, the sections of
 nutritional models that have been developed through statistical analysis
 are continually changing.
 
+### Predictive model descriptors
+
+**Empirical vs. theoretical**
+Empirical and theoretical are two ends of a spectrum used to describe
+models. These terms refer to the way in which a model was developed.
+When a model is more empirical, it is typically based on observed data
+and simple relationships. The word "empirical" means that it is based on experience. Conversely, theoretical models are more based on logic and abstract ideas, rather than observations in practice. 
+
+**Input-output vs. mechanistic**
+Some models are concerned only with observed inputs and outputs. Their structure is something like INPUT -> Black Box -> OUTPUT, meaning that the mechanisms between input and output are not well-characterized. These models are often more empirical rather than theoretical.  Conversely, when a model is
+more **mechanistic**, it depicts the processes and intermediates in
+great detail. Mechanistic models can be thought of as INPUT -> Detailed
+Process -> OUTPUT models. Mechanistic models often involve more theory.
+
+These terms are used in the NASEM narrative and more broadly to describe the types of predictive models. Most predictive models are some combination of the terms above. In other words, models fall somewhere on a spectrum rather than splitting into discrete categories. 
+
+::: lo
+**Test yourself** 
+
+A (An) `r mcq(c("input-output",answer =  "mechanistic"))` model represents processes in great detail. 
+
+An `r mcq(c(answer = "empirical", "imperial"))` model is based on observed relationships.
+
+:::
+
+### Simple linear model (empirical, input-output)
+
 As an example, we previously used a predictive model:  $DMI \space (kg) = 0.03 * BW$. To use it, we plugged in known values to the right-hand side (independent variables). 
 
 $DMI$ = ?
@@ -468,148 +500,9 @@ $DMI = 0.03*702$
 
 $DMI = 21.06 kg$
 
-Of course, some of the actual models in NASEM are a bit more complex. For example, an actual equation for predicting DMI in NASEM (p. 12, eq. 2-1) uses parity, BW, body condition score (BCS), day in lactation, and milk net energy production. Researchers observed 3,143 lactations where roughly
-half the observations represented primiparous cows and half were from
-multiparous cows. After testing different equations, they found one that
-provided a good fit with the data:
+This model is more empirical, because it is based on observations. It is more input-output, because it does not represent any of the reasons or mechanisms behind why greater BW could lead to greater DMI. 
 
-$$\begin{aligned}
-DMI (kg/d) &= [3.7 + (5.7*Parity) + \\
-&\quad (0.305*MilkE) + \\
-&\quad (0.022*BW) + \\ 
-&\quad   (-0.689-1.87*Parity)*BCS]*\\
-&\quad  [1-(0.212+0.136*Parity)*e^{(-0.053*DIM)}]
-\end{aligned}$$
-
-Oh my! It's much more complex than our simple example. In this equation, we have a few more terms: 
-
-$Parity$ is the proportion of cows that are multiparous (ranges from 0
-to 1)
-
-$BCS$ is the body condition score from 1 (thin) to 5 (obese)
-
-$BW$ is the bodyweight in kg
-
-$MilkE$ is the energy produced in milk, in Mcal/d
-
-$DIM$ is the day in milk, an integer number of days since the start of
-lactation
-
-::: green
-**Test yourself** Which term is the intercept in this equation?
-`r mcq(c("BW", "1", answer = "3.7"))`
-:::
-
-On the one hand, we can use this equation without knowing how it works...we just plug in values for the known variables and get our estimate of DMI. Woohoo! But to be responsible animal nutritionists, we should probably dig a bit deeper into the relationships implied by the equation. 
-
-The intercept tells us the
-expected value of the dependent variable (Y) when all of the independent
-variables (Xs) are set to zero. In this case, the intercept suggests that there is a small amount of DMI (3.7 kg) predicted even if all other variables are entered as zeroes. 
-
-Each regression coefficient describes
-the magnitude and direction of a relationship between an independent
-variable and the dependent variable. In this equation, there are several
-terms with positive coefficients (Parity, MilkE, BW). These suggest that
-a greater proportion of multiparous cows, greater milk energy
-production, andg greater bodyweight are predictive of greater DMI
-(positive relationship). The last part of the equation includes some
-complex terms where there are interactions. In an interaction, two variables (e.g., milk production and BW) are multiplied with each other rather than added. Additionally, Euler's constant $e$ appears in the expression $e^{(-0.053*DIM)}$. This part is an adjustment for depressed intake in early lactation.
-
-```{r panel-setup, include = FALSE}
-# remotes::install_github("gadenbuie/xaringanExtra")
-xaringanExtra::use_panelset()
-xaringanExtra::style_panelset_tabs(font_family = "inherit")
-```
-### Prediction using software 
-
-Although this math can be done on paper or with a calculator, if you are so inclined, you can try this in your favorite computer program. The program makes it easier to plug in values and generate an estimate. 
-
-`r hide("NASEM dairy-8 Example")`
-#### NASEM dairy-8
-
-1. Open the dairy-8 program.
-1. Click File > Load Simulation and load an example simulation for a lactating cow, such as "Example-Lactating-Cow-DIM-100.nd8"
-1. Click to the "Animal Description/Management" tab in Inputs.
-1. Enter the following information
-- Percent first parity = 100 - the percent of multiparous cows
-- Mature weight = 700 kg
-- Condition score = 3.5
-- Days in Milk = 100
-1. Click the "Production" tab in Inputs. Enter Milk Production = 42.64 kg, which is the equivalent of 29 Mcal milk net energy using the default milk component concentrations. 
-1. Click the square at the top for the Ration. At the bottom of the screen, you will see "Estimated Intake Based on Animal. This is the estimated DMI given the input data. 
-`r unhide()` 
-
-`r hide("R Example")`
-
-#### R
-```{r, echo = TRUE, eval = F}
-# Write a function to estimate DMI using the NASEM equation
-DMI_est <- function(Parity, BW, BCS, DIM, MilkE) {
-  
-  Dt_DMIn_Lact1 <- (3.7 + 5.7 * Parity +
-    0.305 * MilkE + 0.022 * BW +
-    (-0.689 - 1.87 * Parity) * BCS) *
-    (1 - (0.212 + 0.136 * Parity) * exp(-0.053 * DIM))
-  
-  return(Dt_DMIn_Lact1)
-    
-}
-# Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)
-Parity = 1 # proportion of multiparous cows
-MilkE = 29 # milk net energy, Mcal
-BW = 700 # animal BW, kg
-BCS = 3.5 # animal Body condition score, 1 (thin) to 5 (obese)
-DIM = 100 # days in milk, d
-
-# Use the function
-est_DMI_kg = DMI_est(Parity = Parity, 
-                   MilkE = MilkE,
-                   BW = BW, 
-                   BCS = BCS, 
-                   DIM = DIM)
-# Show the result
-est_DMI_kg
-```
-
-`r unhide()` 
-
-`r hide("Python example")`
-
-#### Python
-
-```{python, echo = T, eval = F, python.reticulate = FALSE}
-# Write a function to estimate DMI using the NASEM equation
-def DMI_est(Parity, BW, BCS, DIM, MilkE):
-    Dt_DMIn_Lact1 = (3.7 + 5.7 * Parity +
-                     0.305 * MilkE + 0.022 * BW +
-                     (-0.689 - 1.87 * Parity) * BCS) * \
-                    (1 - (0.212 + 0.136 * Parity) * np.exp(-0.053 * DIM))
-    return Dt_DMIn_Lact1
-
-import numpy as np
-
-# Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)
-Parity = 1 # proportion of multiparous cows
-MilkE = 29 # milk net energy, Mcal
-BW = 700 # animal BW, kg
-BCS = 3.5 # animal Body condition score, 1 (thin) to 5 (obese)
-DIM = 100 # days in milk, d
-
-# Use the function
-est_DMI_kg = DMI_est(Parity = Parity, 
-                     MilkE = MilkE,
-                     BW = BW, 
-                     BCS = BCS, 
-                     DIM = DIM)
-
-# Show the result
-print(est_DMI_kg)
-
-```
-
-`r unhide()` 
-
-### Exponential growth kinetics
+### Exponential growth kinetic model (theoretical, mechanistic)
 
 ::: {.green}
 
@@ -704,7 +597,7 @@ their application in animal science. In Annales de zootechnie (Vol. 45,
 No. Suppl1, pp. 165-174).
 :::
 
-### Saturable growth kinetics
+### Saturable growth kinetics (theoretical, mechanistic)
 
 The Michaelis-Menten model describes a saturable growth process. A function
 is saturable when it reaches an upper or lower bound rather than
@@ -772,6 +665,291 @@ You tell the bakers - it's time to push it to the limit. You offer them thousand
 `r unhide()` 
 
 :::  
+
+### DMI prediction in NASEM
+
+Let's take a look at an actual predictive models in NASEM. For example, an equation for predicting DMI in NASEM (p. 12, eq. 2-1) uses parity, BW, body condition score (BCS), day in lactation, and milk net energy production. Researchers observed 3,143 lactations where roughly
+half the observations represented primiparous cows and half were from
+multiparous cows. After testing different equations, they found one that
+provided a good fit with the data:
+
+$$\begin{aligned}
+DMI (kg/d) &= [3.7 + (5.7*Parity) + \\
+&\quad (0.305*MilkE) + \\
+&\quad (0.022*BW) + \\ 
+&\quad   (-0.689-1.87*Parity)*BCS]*\\
+&\quad  [1-(0.212+0.136*Parity)*e^{(-0.053*DIM)}]
+\end{aligned}$$
+
+Oh my! It's much more complex than our simple example. In this equation, we have a few more terms: 
+
+$Parity$ is the proportion of cows that are multiparous (ranges from 0
+to 1)
+
+$BCS$ is the body condition score from 1 (thin) to 5 (obese)
+
+$BW$ is the bodyweight in kg
+
+$MilkE$ is the energy produced in milk, in Mcal/d
+
+$DIM$ is the day in milk, an integer number of days since the start of
+lactation
+
+::: green
+**Test yourself** Which term is the intercept in this equation?
+`r mcq(c("BW", "1", answer = "3.7"))`
+:::
+
+On the one hand, we can use this equation without knowing how it works...we just plug in values for the known variables and get our estimate of DMI. Woohoo! But to be responsible animal nutritionists, we should probably dig a bit deeper into the relationships implied by the equation. 
+
+The intercept tells us the
+expected value of the dependent variable (Y) when all of the independent
+variables (Xs) are set to zero. In this case, the intercept suggests that there is a small amount of DMI (3.7 kg) predicted even if all other variables are entered as zeroes. 
+
+Each regression coefficient describes
+the magnitude and direction of a relationship between an independent
+variable and the dependent variable. In this equation, there are several
+terms with positive coefficients (Parity, MilkE, BW). These suggest that
+a greater proportion of multiparous cows, greater milk energy
+production, andg greater bodyweight are predictive of greater DMI
+(positive relationship). The last part of the equation includes some
+complex terms where there are interactions. In an interaction, two variables (e.g., milk production and BW) are multiplied with each other rather than added. Additionally, Euler's constant $e$ appears in the expression $e^{(-0.053*DIM)}$. This part is an adjustment for depressed intake in early lactation.
+
+### Prediction using software 
+
+Although this math can be done on paper or with a calculator, if you are so inclined, you can try this in your favorite computer program. The program makes it easier to plug in values and generate an estimate. 
+
+`r hide("NASEM dairy-8 Example")`
+#### NASEM dairy-8
+
+1. Open the dairy-8 program.
+1. Click File > Load Simulation and load an example simulation for a lactating cow, such as "Example-Lactating-Cow-DIM-100.nd8"
+1. Click to the "Animal Description/Management" tab in Inputs.
+1. Enter the following information
+- Percent first parity = 100 - the percent of multiparous cows
+- Mature weight = 700 kg
+- Condition score = 3.5
+- Days in Milk = 100
+1. Click the "Production" tab in Inputs. Enter Milk Production = 42.64 kg, which is the equivalent of 29 Mcal milk net energy using the default milk component concentrations. 
+1. Click the square at the top for the Ration. At the bottom of the screen, you will see "Estimated Intake Based on Animal. This is the estimated DMI given the input data. 
+`r unhide()` 
+
+`r hide("R Example")`
+
+#### R
+```{r, echo = TRUE, eval = F}
+# Write a function to estimate DMI using the NASEM equation
+DMI_est <- function(Parity, BW, BCS, DIM, MilkE) {
+  
+  Dt_DMIn_Lact1 <- (3.7 + 5.7 * Parity +
+    0.305 * MilkE + 0.022 * BW +
+    (-0.689 - 1.87 * Parity) * BCS) *
+    (1 - (0.212 + 0.136 * Parity) * exp(-0.053 * DIM))
+  
+  return(Dt_DMIn_Lact1)
+    
+}
+# Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)
+Parity = 1 # proportion of multiparous cows
+MilkE = 29 # milk net energy, Mcal
+BW = 700 # animal BW, kg
+BCS = 3.5 # animal Body condition score, 1 (thin) to 5 (obese)
+DIM = 100 # days in milk, d
+
+# Use the function
+est_DMI_kg = DMI_est(Parity = Parity, 
+                   MilkE = MilkE,
+                   BW = BW, 
+                   BCS = BCS, 
+                   DIM = DIM)
+# Show the result
+est_DMI_kg
+```
+
+`r unhide()` 
+
+`r hide("Python example")`
+
+#### Python
+
+```{python, echo = T, eval = F, python.reticulate = FALSE}
+# Write a function to estimate DMI using the NASEM equation
+def DMI_est(Parity, BW, BCS, DIM, MilkE):
+    Dt_DMIn_Lact1 = (3.7 + 5.7 * Parity +
+                     0.305 * MilkE + 0.022 * BW +
+                     (-0.689 - 1.87 * Parity) * BCS) * \
+                    (1 - (0.212 + 0.136 * Parity) * np.exp(-0.053 * DIM))
+    return Dt_DMIn_Lact1
+
+import numpy as np
+
+# Define inputs for the function (PLUG IN YOUR OWN VALUES HERE)
+Parity = 1 # proportion of multiparous cows
+MilkE = 29 # milk net energy, Mcal
+BW = 700 # animal BW, kg
+BCS = 3.5 # animal Body condition score, 1 (thin) to 5 (obese)
+DIM = 100 # days in milk, d
+
+# Use the function
+est_DMI_kg = DMI_est(Parity = Parity, 
+                     MilkE = MilkE,
+                     BW = BW, 
+                     BCS = BCS, 
+                     DIM = DIM)
+
+# Show the result
+print(est_DMI_kg)
+
+```
+
+`r unhide()` 
+
+
+## Optimization
+
+Nutritionists sometimes use mathematical techniques for optimization.
+Optimization involves writing an objective function describing the goal
+(e.g., the lowest cost ration, the most environmentally-favorable ration), 
+listing out a set of constraints (e.g., nutrient requirements, available feeds), and using an optimization
+technique (e.g., linear optimization) to find the best possible
+solution(s). As an example, we could write an objective function that minimizes the total cost of a ration containing $n$ feeds, where each feed $i$ has its own cost $c_i$ and a certain inclusion rate $x_i$ in the diet. 
+
+The "objective" function is a mathematical way of stating our ultimate goal (our objective). 
+
+$$
+\begin{equation*}
+\text{minimize } \sum_{i=1}^{n_i} c_i x_i
+\end{equation*}
+$$
+In other words if we have several feeds numbered 1 to $n$, we want to minimize the sum of the total diet cost. The total diet cost is calculated by weighting the feed ingredient costs ($c_i$) by the feed ingredient inclusion rate $x_i$. 
+
+$$= \text{minimize  }   c_1x_1 + c_2x_2 + ... + c_nx_n $$
+
+Next, we can write some constraints that express mathematically what we consider feasible diets. For example, we may want the nutrient composition to fall within a certain range. On a DM basis, we know that:
+
+- Feed 1 is 10% protein and 40% NDF. 
+
+- Feed 2 is 30% protein and 10% NDF. 
+
+- Feed 3 is 50% protein and 30% NDF. 
+
+Weighting by the inclusion rates, we can write an equation for the protein and NDF concentration in the diet: 
+Diet protein concentration (% of DM) = $10x_1 + 30x_2 + 50x_3$ 
+Diet NDF concentration (% of DM) = $40x_1 + 10x_2 + 30x_3 $
+Then we can set these equations to be greater or less than certain numbers to constrain the diet composition.
+
+We want our inclusion rates to add up to 1 so we have the proportion of each feed entering the diet.  Clearly, we cannot have negative inclusion rates for any feeds, so we need to add constraints to make sure all inclusion rates are greater than or equal to zero.
+
+To summarize the constraints: 
+
+$$
+\begin{align*}
+\text{Protein concentration} \quad & 10x_1 + 30x_2 + 50x_3 \geq 15 \\
+\text{NDF concentration} \quad & 40x_1 + 10x_2 + 30x_3 \geq 25 \\
+\text{NDF concentration} \quad & 40x_1 + 10x_2 + 30x_3 \leq 35 \\
+\text{Ingredient proportions sum} \quad & x_1 + x_2 + x_3 = 1 \\
+\text{amount of ingredients cannot be negative} \quad & 
+\begin{cases} 
+x_1 \geq 0 \\
+ x_2 \geq 0 \\
+ x_3 \geq 0
+\end{cases}
+\end{align*}
+$$
+
+
+
+![Feasible region for optimization
+example.](images/Feasible%20region%20optimization.png){width="377"}
+
+Only certain combinations of x1, x2, and x3 are feasible given our constraints.
+In three dimensions, our constraint equations form a polygonol plane - the feasible region. Unfeasible combinations that do not meet the constraints we specified fall outside
+of the blue shape. If we had more than three ingredients, we would have more than three dimensions, which becomes difficult to imagine. The constraints would form a polyhedron in n-dimensional space. 
+
+Set up as amounts per 100 kg of feed (in nutrient matrix and others)
+also get costs per 100 kg feed.
+
+Finally, to optimize, we need to know our feed costs (USD / kg feed DM). As usual, it is very important to keep track of the units and the basis (dry matter or as-is). 
+
+- Feed 1 = $0.15
+
+- Feed 2 = $0.20
+
+- Feed 3 = $0.50
+
+
+::: grey
+**Literature deep dive**
+
+Optimization is used widely in finance, engineering, economics, and
+other fields. Yet some of the first recorded uses of linear optimization
+are for nutrition.
+
+For example, during World War II, the mathematician George Dantzig took
+a leave from his doctoral program to serve as an analyst for the U.S.
+Air Force. Tasked with finding affordable and nutritionally-adequate
+meals, Dantzig used his mathematics training to design an algorithm that
+is still widely-used today. As summarized by Van Dooren (2018):
+
+> Dantzig tested his model on his own diet, constructing a database with
+> 50 foods. He wanted to reduce his caloric intake to 1,500 kcal and
+> programmed an objective function to maximize the feeling of being full
+> (operationalized as the weight per unit minus the weight of its water
+> content). The solution he found was a weird diet with 200 bouillon
+> cubes per day. This was possible because the former nutritional
+> requirements didn't show a limit to the amount of salt. These results
+> led to upper bounds being added to LP for the first time.
+
+This illustrates the complexity of setting up optimization problems, and
+the necessity for double-checking that the results are applicable to the
+real world!
+
+Van Dooren, C. (2018). A review of the use of linear programming to
+optimize diets, nutritiously, economically and environmentally.
+*Frontiers in nutrition*, *5*, 48.
+<https://doi.org/10.3389/fnut.2018.00048>
+:::
+
+### Optimization using software
+
+If you are so inclined, the optimization problem can be solved in R. 
+
+```{r, echo = TRUE}
+
+library(lpSolve)
+
+# Create a matrix of nutrient values for each feed (col) and each nutrient (row)
+nutrient_matrix <- matrix(c(10, 30, 50, # protein
+                            40, 10, 30,  # NDF
+                            40, 10, 30, # NDF of x1, x2, x3
+                            1, 1, 1, 
+                            1, 0, 0, 
+                            0, 1, 0, 
+                            0, 0, 1), 
+                          nrow = 7, byrow = TRUE)
+colnames(nutrient_matrix) <- c("Feed X1", "Feed X2", "Feed X3")
+rownames(nutrient_matrix) <- c("Protein", "NDF", "Total Amount","all feeds", "X1", "X2", "X3")
+
+# Set up the optimization problem
+obj <- c(0.15, 0.20, 0.50) # vector of feed costs USD/kg DM
+con <- nutrient_matrix # constraint matrix
+dir <- c(">=", ">=","<=", "=", ">=", ">=", ">=") # direction of constraints (greater than or equal to)
+rhs <- c(15, 25, 35, 1, 0, 0, 0) # right-hand side of constraints (nutrient requirements)
+
+# Solve the optimization problem
+result <- lp("min", obj, con, dir, rhs)
+
+# Print the solution
+cat(paste("The least-cost ration is:",
+          paste0("\n x1: ", result$solution[1], " proportion feed 1 per kg diet DM"),
+          paste0("\n x2: ", result$solution[2], " proportion feed 2 per kg diet DM"),
+          paste0("\n x3: ", result$solution[3], " proportion feed 3 per kg diet DM"),
+          paste0("\nTotal cost per kg diet DM: $", result$objval),
+          collapse = ""))
+
+```
+
+## Other important concepts
 
 ### Allometric equations
 
@@ -996,153 +1174,6 @@ theory of biological structure and organization. J Exp Biol 1 May 2005;
 208 (9): 1575--1592. doi: <https://doi.org/10.1242/jeb.01589>
 
 :::
-
-
-## Optimization
-
-Nutritionists sometimes use mathematical techniques for optimization.
-Optimization involves writing an objective function describing the goal
-(e.g., the lowest cost ration, the most environmentally-favorable ration), 
-listing out a set of constraints (e.g., nutrient requirements, available feeds), and using an optimization
-technique (e.g., linear optimization) to find the best possible
-solution(s). As an example, we could write an objective function that minimizes the total cost of a ration containing $n$ feeds, where each feed $i$ has its own cost $c_i$ and a certain inclusion rate $x_i$ in the diet. 
-
-The "objective" function is a mathematical way of stating our ultimate goal (our objective). 
-
-$$
-\begin{equation*}
-\text{minimize } \sum_{i=1}^{n_i} c_i x_i
-\end{equation*}
-$$
-In other words if we have several feeds numbered 1 to $n$, we want to minimize the sum of the total diet cost. The total diet cost is calculated by weighting the feed ingredient costs ($c_i$) by the feed ingredient inclusion rate $x_i$. 
-
-$$= \text{minimize  }   c_1x_1 + c_2x_2 + ... + c_nx_n $$
-
-Next, we can write some constraints that express mathematically what we consider feasible diets. For example, we may want the nutrient composition to fall within a certain range. On a DM basis, we know that:
-
-- Feed 1 is 10% protein and 40% NDF. 
-
-- Feed 2 is 30% protein and 10% NDF. 
-
-- Feed 3 is 50% protein and 30% NDF. 
-
-Weighting by the inclusion rates, we can write an equation for the protein and NDF concentration in the diet: 
-Diet protein concentration (% of DM) = $10x_1 + 30x_2 + 50x_3$ 
-Diet NDF concentration (% of DM) = $40x_1 + 10x_2 + 30x_3 $
-Then we can set these equations to be greater or less than certain numbers to constrain the diet composition.
-
-We want our inclusion rates to add up to 1 so we have the proportion of each feed entering the diet.  Clearly, we cannot have negative inclusion rates for any feeds, so we need to add constraints to make sure all inclusion rates are greater than or equal to zero.
-
-To summarize the constraints: 
-
-$$
-\begin{align*}
-\text{Protein concentration} \quad & 10x_1 + 30x_2 + 50x_3 \geq 15 \\
-\text{NDF concentration} \quad & 40x_1 + 10x_2 + 30x_3 \geq 25 \\
-\text{NDF concentration} \quad & 40x_1 + 10x_2 + 30x_3 \leq 35 \\
-\text{Ingredient proportions sum} \quad & x_1 + x_2 + x_3 = 1 \\
-\text{amount of ingredients cannot be negative} \quad & 
-\begin{cases} 
-x_1 \geq 0 \\
- x_2 \geq 0 \\
- x_3 \geq 0
-\end{cases}
-\end{align*}
-$$
-
-
-
-![Feasible region for optimization
-example.](images/Feasible%20region%20optimization.png){width="377"}
-
-Only certain combinations of x1, x2, and x3 are feasible given our constraints.
-In three dimensions, our constraint equations form a polygonol plane - the feasible region. Unfeasible combinations that do not meet the constraints we specified fall outside
-of the blue shape. If we had more than three ingredients, we would have more than three dimensions, which becomes difficult to imagine. The constraints would form a polyhedron in n-dimensional space. 
-
-Set up as amounts per 100 kg of feed (in nutrient matrix and others)
-also get costs per 100 kg feed.
-
-Finally, to optimize, we need to know our feed costs (USD / kg feed DM). As usual, it is very important to keep track of the units and the basis (dry matter or as-is). 
-
-- Feed 1 = $0.15
-
-- Feed 2 = $0.20
-
-- Feed 3 = $0.50
-
-
-::: grey
-**Literature deep dive**
-
-Optimization is used widely in finance, engineering, economics, and
-other fields. Yet some of the first recorded uses of linear optimization
-are for nutrition.
-
-For example, during World War II, the mathematician George Dantzig took
-a leave from his doctoral program to serve as an analyst for the U.S.
-Air Force. Tasked with finding affordable and nutritionally-adequate
-meals, Dantzig used his mathematics training to design an algorithm that
-is still widely-used today. As summarized by Van Dooren (2018):
-
-> Dantzig tested his model on his own diet, constructing a database with
-> 50 foods. He wanted to reduce his caloric intake to 1,500 kcal and
-> programmed an objective function to maximize the feeling of being full
-> (operationalized as the weight per unit minus the weight of its water
-> content). The solution he found was a weird diet with 200 bouillon
-> cubes per day. This was possible because the former nutritional
-> requirements didn't show a limit to the amount of salt. These results
-> led to upper bounds being added to LP for the first time.
-
-This illustrates the complexity of setting up optimization problems, and
-the necessity for double-checking that the results are applicable to the
-real world!
-
-Van Dooren, C. (2018). A review of the use of linear programming to
-optimize diets, nutritiously, economically and environmentally.
-*Frontiers in nutrition*, *5*, 48.
-<https://doi.org/10.3389/fnut.2018.00048>
-:::
-
-### Optimization using software
-
-If you are so inclined, the optimization problem can be solved in R. 
-
-```{r, echo = TRUE}
-
-library(lpSolve)
-
-# Create a matrix of nutrient values for each feed (col) and each nutrient (row)
-nutrient_matrix <- matrix(c(10, 30, 50, # protein
-                            40, 10, 30,  # NDF
-                            40, 10, 30, # NDF of x1, x2, x3
-                            1, 1, 1, 
-                            1, 0, 0, 
-                            0, 1, 0, 
-                            0, 0, 1), 
-                          nrow = 7, byrow = TRUE)
-colnames(nutrient_matrix) <- c("Feed X1", "Feed X2", "Feed X3")
-rownames(nutrient_matrix) <- c("Protein", "NDF", "Total Amount","all feeds", "X1", "X2", "X3")
-
-# Set up the optimization problem
-obj <- c(0.15, 0.20, 0.50) # vector of feed costs USD/kg DM
-con <- nutrient_matrix # constraint matrix
-dir <- c(">=", ">=","<=", "=", ">=", ">=", ">=") # direction of constraints (greater than or equal to)
-rhs <- c(15, 25, 35, 1, 0, 0, 0) # right-hand side of constraints (nutrient requirements)
-
-# Solve the optimization problem
-result <- lp("min", obj, con, dir, rhs)
-
-# Print the solution
-cat(paste("The least-cost ration is:",
-          paste0("\n x1: ", result$solution[1], " proportion feed 1 per kg diet DM"),
-          paste0("\n x2: ", result$solution[2], " proportion feed 2 per kg diet DM"),
-          paste0("\n x3: ", result$solution[3], " proportion feed 3 per kg diet DM"),
-          paste0("\nTotal cost per kg diet DM: $", result$objval),
-          collapse = ""))
-
-```
-
-
 
 # Conclusions
 
