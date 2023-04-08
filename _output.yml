@@ -38,6 +38,7 @@ bookdown::gitbook:
         <li><a href="https://www.dasc.vt.edu/people/faculty/hanigan.html" target="blank">Mark D. Hanigan</a></li>
         <li><a href="https://www.marinadanes.com" target="blank">Marina A.C. Danes </a></li>
   includes:
+    in_header: www/tabs.js
     after_body: www/webex.js
   md_extensions: -smart
 bookdown::pdf_book:

@@ -74,7 +74,23 @@ nutritionists, as these also form the basis of many nutritional models.
 2.  Predictive models
 3.  Optimization
 
-
+::: {.tab}
+<button class="tablinks" onclick="unrolltab(event, 'London')">London</button>
+<button class="tablinks" onclick="unrolltab(event, 'Paris')">Paris</button>
+<button class="tablinks" onclick="unrolltab(event, 'Tokyo')">Tokyo</button>
+::: {#London .tabcontent}
+#### London {-}
+London is the capital city of England
+:::
+::: {#Paris .tabcontent}
+#### Paris  {-}
+Paris is the capital city of France
+:::
+::: {#Tokyo .tabcontent}
+#### Tokyo  {-}
+Tokyo is the capital city of Japan
+:::
+:::
 
 ## Basic nutrition math
 
