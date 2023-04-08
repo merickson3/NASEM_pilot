@@ -477,7 +477,7 @@ Process -> OUTPUT models. Mechanistic models often involve more theory.
 
 These terms are used in the NASEM narrative and more broadly to describe the types of predictive models. Most predictive models are some combination of the terms above. In other words, models fall somewhere on a spectrum rather than splitting into discrete categories. 
 
-::: lo
+::: green
 **Test yourself** 
 
 A (An) `r mcq(c("input-output",answer =  "mechanistic"))` model represents processes in great detail. 
