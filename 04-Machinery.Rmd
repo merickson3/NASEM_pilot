@@ -256,8 +256,7 @@ to know:
 
 It can help to write down everything you know, including units.
 
-$$ 15 \text{ %CP, as-is basis} = \frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} \\
-\vskip{0.8in} \\
+$$ 15 \text{ %CP, as-is basis} = \frac{\text{15 kg feed CP}}{\text{100 kg feed as-is}} \\[16pt]
 50\text{% DM as-is basis} = \frac{50 \text{ kg feed DM}}{100\text{ kg feed DM}}$$
 
 To convert to a DM basis, we need to think about our desired units: kg
@@ -529,7 +528,6 @@ xaringanExtra::style_panelset_tabs(font_family = "inherit")
 ### Prediction using software 
 
 Although this math can be done on paper or with a calculator, if you are so inclined, you can try this in your favorite computer program. The program makes it easier to plug in values and generate an estimate. 
-
 
 `r hide("NASEM dairy-8 Example")`
 #### NASEM dairy-8
