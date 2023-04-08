@@ -531,6 +531,7 @@ xaringanExtra::style_panelset_tabs(font_family = "inherit")
 Although this math can be done on paper or with a calculator, if you are so inclined, you can try this in your favorite computer program. The program makes it easier to plug in values and generate an estimate. 
 
 
+`r hide("NASEM dairy-8 Example")`
 #### NASEM dairy-8
 
 1. Open the dairy-8 program.
@@ -543,7 +544,9 @@ Although this math can be done on paper or with a calculator, if you are so incl
 - Days in Milk = 100
 1. Click the "Production" tab in Inputs. Enter Milk Production = 42.64 kg, which is the equivalent of 29 Mcal milk net energy using the default milk component concentrations. 
 1. Click the square at the top for the Ration. At the bottom of the screen, you will see "Estimated Intake Based on Animal. This is the estimated DMI given the input data. 
+`r unhide()` 
 
+`r hide("R Example")`
 
 #### R
 ```{r, echo = TRUE, eval = F}
@@ -574,6 +577,10 @@ est_DMI_kg = DMI_est(Parity = Parity,
 # Show the result
 est_DMI_kg
 ```
+
+`r unhide()` 
+
+`r hide("Python example")`
 
 #### Python
 
@@ -606,6 +613,8 @@ est_DMI_kg = DMI_est(Parity = Parity,
 print(est_DMI_kg)
 
 ```
+
+`r unhide()` 
 
 ### Exponential growth kinetics
 
