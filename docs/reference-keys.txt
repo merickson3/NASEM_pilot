@@ -94,6 +94,3 @@ optimization
 optimization-using-software
 conclusions-1
 glossary
-fig:unnamed-chunk-3
-fig:unnamed-chunk-11
-fig:unnamed-chunk-12
