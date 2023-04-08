@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
-  <meta name="description" content="This book is intended to help independent learners and instructors working with the NASEM (2021) dairy nutrition model." />
+  <title>Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
+  <meta name="description" content="This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses." />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta property="og:title" content="Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This book is intended to help independent learners and instructors working with the NASEM (2021) dairy nutrition model." />
+  <meta property="og:description" content="This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta name="twitter:title" content="Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
   
-  <meta name="twitter:description" content="This book is intended to help independent learners and instructors working with the NASEM (2021) dairy nutrition model." />
+  <meta name="twitter:description" content="This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses." />
   
 
 <meta name="author" content="MaryGrace Erickson, University of Wisconsin--Madison" />
@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  <link rel="shortcut icon" href="&lt;"images/favicon.ico"&gt;" type="image/x-icon" />
+  
 
 <link rel="next" href="introduction-to-nutritional-models.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -56,8 +56,74 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+<script src="libs/panelset-0.2.6/panelset.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -99,16 +165,24 @@ div.csl-indent {
 <li><a href="./">Learning NASEM Dairy (2021)</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this module</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this interactive textbook</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#purpose"><i class="fa fa-check"></i><b>1.1</b> Purpose</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#structure-of-the-module-and-materials-for-teachers"><i class="fa fa-check"></i><b>1.2</b> Structure of the module and materials for teachers</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.3</b> Accessing the NASEM (2021) book</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#the-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.4</b> The NASEM-dairy-8 software</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#known-discrepancies"><i class="fa fa-check"></i><b>1.5</b> Known discrepancies</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#suggested-citations"><i class="fa fa-check"></i><b>1.6</b> Suggested citations</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#contribute-to-this-module"><i class="fa fa-check"></i><b>1.7</b> Contribute to this module</a></li>
-<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#license-details"><i class="fa fa-check"></i><b>1.8</b> License details</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#information-for-educators"><i class="fa fa-check"></i><b>1.2</b> Information for educators</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intended-audience"><i class="fa fa-check"></i><b>1.3</b> Intended audience</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assumptions-about-prior-knowledge"><i class="fa fa-check"></i><b>1.4</b> Assumptions about prior knowledge</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#technology-requirements"><i class="fa fa-check"></i><b>1.5</b> Technology requirements</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.6</b> Accessing the NASEM (2021) book</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#the-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.7</b> The NASEM-dairy-8 software</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#running-a-simulation"><i class="fa fa-check"></i><b>1.8</b> Running a simulation</a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#known-updates-discrepancies-in-book-vs.-software"><i class="fa fa-check"></i><b>1.9</b> Known updates (discrepancies in book vs. software)</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#nasem-dairy-8-software-updates-and-bugs"><i class="fa fa-check"></i><b>1.9.1</b> NASEM dairy-8 software updates and bugs</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#differences-between-the-book-and-software"><i class="fa fa-check"></i><b>1.9.2</b> Differences between the book and software</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#contribute-edits-and-suggestions"><i class="fa fa-check"></i><b>1.10</b> Contribute edits and suggestions</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.11</b> License</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#citations"><i class="fa fa-check"></i><b>1.12</b> Citations</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html"><i class="fa fa-check"></i><b>2</b> Introduction to nutritional models</a>
 <ul>
@@ -123,8 +197,11 @@ div.csl-indent {
 <li class="chapter" data-level="2.5.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-development"><i class="fa fa-check"></i><b>2.5.3</b> Model development</a></li>
 <li class="chapter" data-level="2.5.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-verification"><i class="fa fa-check"></i><b>2.5.4</b> Model verification</a></li>
 <li class="chapter" data-level="2.5.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process"><i class="fa fa-check"></i><b>2.5.5</b> Model refinement (re-starting the process)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#reflecting-on-our-example-model"><i class="fa fa-check"></i><b>2.5.6</b> Reflecting on our example model</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusions-and-additional-complexity"><i class="fa fa-check"></i><b>2.6</b> Conclusions and additional complexity</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#scaling-up-and-adding-complexity"><i class="fa fa-check"></i><b>2.6</b> Scaling up and adding complexity</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusion"><i class="fa fa-check"></i><b>2.7</b> Conclusion</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#r-code-for-figures"><i class="fa fa-check"></i><b>2.8</b> R code for figures</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="systems-concepts.html"><a href="systems-concepts.html"><i class="fa fa-check"></i><b>3</b> Systems concepts</a>
 <ul>
@@ -139,10 +216,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="requirements.html"><a href="requirements.html"><i class="fa fa-check"></i><b>4</b> Requirements</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-requirement"><i class="fa fa-check"></i><b>4.1</b> Defining "nutrient requirement"</a>
+<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-flows"><i class="fa fa-check"></i><b>4.1</b> Defining nutrient flows</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.1</b> Requirement definitions in human and dairy nutrition</a></li>
-<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.2</b> Absorbed and metabolizable amounts</a></li>
+<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#supplies-requirements-and-balances"><i class="fa fa-check"></i><b>4.1.1</b> Supplies, requirements, and balances</a></li>
+<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.2</b> Requirement definitions in human and dairy nutrition</a></li>
+<li class="chapter" data-level="4.1.3" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.3</b> Absorbed and metabolizable amounts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="requirements.html"><a href="requirements.html#dietary-reference-intakes"><i class="fa fa-check"></i><b>4.2</b> Dietary reference intakes</a>
 <ul>
@@ -150,7 +228,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.2.2" data-path="requirements.html"><a href="requirements.html#protecting-against-overfeeding"><i class="fa fa-check"></i><b>4.2.2</b> Protecting against overfeeding</a></li>
 <li class="chapter" data-level="4.2.3" data-path="requirements.html"><a href="requirements.html#accounting-for-uncertainty"><i class="fa fa-check"></i><b>4.2.3</b> Accounting for uncertainty</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#modeling-nutrient-requirements-and-supplies"><i class="fa fa-check"></i><b>4.3</b> Modeling nutrient requirements and supplies</a></li>
+<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#nasem-estimates-of-requirements"><i class="fa fa-check"></i><b>4.3</b> NASEM estimates of requirements</a></li>
 <li class="chapter" data-level="4.4" data-path="requirements.html"><a href="requirements.html#types-of-literature-used-by-nasem--nasem8"><i class="fa fa-check"></i><b>4.4</b> Types of literature used by NASEM <span class="citation">(2021)</span></a>
 <ul>
 <li class="chapter" data-level="4.4.1" data-path="requirements.html"><a href="requirements.html#measuring-composition-of-inputs-body-tissues-and-outputs"><i class="fa fa-check"></i><b>4.4.1</b> Measuring composition of inputs, body tissues, and outputs</a></li>
@@ -158,10 +236,32 @@ div.csl-indent {
 <li class="chapter" data-level="4.4.3" data-path="requirements.html"><a href="requirements.html#studying-symptoms-of-deficiency-and-toxicity"><i class="fa fa-check"></i><b>4.4.3</b> Studying symptoms of deficiency and toxicity</a></li>
 <li class="chapter" data-level="4.4.4" data-path="requirements.html"><a href="requirements.html#regression-on-productive-performance"><i class="fa fa-check"></i><b>4.4.4</b> Regression on productive performance</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#activities"><i class="fa fa-check"></i><b>4.5</b> Activities</a></li>
+<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#r-code-for-figures-1"><i class="fa fa-check"></i><b>4.5</b> R code for figures</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a></li>
-<li class="chapter" data-level="6" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>6</b> Glossary</a></li>
+<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-machinery.html"><a href="model-machinery.html#basic-nutrition-math"><i class="fa fa-check"></i><b>5.1</b> Basic nutrition math</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="model-machinery.html"><a href="model-machinery.html#using-ratios-percentages-proportions"><i class="fa fa-check"></i><b>5.1.1</b> Using ratios, percentages, proportions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="model-machinery.html"><a href="model-machinery.html#converting-units"><i class="fa fa-check"></i><b>5.1.2</b> Converting units</a></li>
+<li class="chapter" data-level="5.1.3" data-path="model-machinery.html"><a href="model-machinery.html#converting-basis"><i class="fa fa-check"></i><b>5.1.3</b> Converting basis</a></li>
+<li class="chapter" data-level="5.1.4" data-path="model-machinery.html"><a href="model-machinery.html#scaling"><i class="fa fa-check"></i><b>5.1.4</b> Scaling</a></li>
+<li class="chapter" data-level="5.1.5" data-path="model-machinery.html"><a href="model-machinery.html#weighting"><i class="fa fa-check"></i><b>5.1.5</b> Weighting</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="model-machinery.html"><a href="model-machinery.html#predictive-models"><i class="fa fa-check"></i><b>5.2</b> Predictive models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.1</b> Prediction using software</a></li>
+<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetics"><i class="fa fa-check"></i><b>5.2.2</b> Exponential growth kinetics</a></li>
+<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics"><i class="fa fa-check"></i><b>5.2.3</b> Saturable growth kinetics</a></li>
+<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.2.4</b> Allometric equations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="model-machinery.html"><a href="model-machinery.html#optimization"><i class="fa fa-check"></i><b>5.3</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="model-machinery.html"><a href="model-machinery.html#optimization-using-software"><i class="fa fa-check"></i><b>5.3.1</b> Optimization using software</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="conclusions-1.html"><a href="conclusions-1.html"><i class="fa fa-check"></i><b>6</b> Conclusions</a></li>
+<li class="chapter" data-level="7" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>7</b> Glossary</a></li>
 <li class="divider"></li>
 <b> Contributors:</b>
 <li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
@@ -178,7 +278,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
           </h1>
         </div>
 
@@ -187,53 +287,59 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</h1>
+<h1 class="title">Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</h1>
 <p class="author"><em>MaryGrace Erickson, University of Wisconsin--Madison</em></p>
 <p class="author"><em>Michel A. Wattiaux, University of Wisconsin--Madison</em></p>
 <p class="author"><em>Mark D. Hanigan, Virginia Polytechnic Institute and State University</em></p>
 <p class="author"><em>Marina A.C. Danes, Universidade Federal de Lavras</em></p>
 <p class="date"><em>2023-04-07</em></p>
 </div>
-<div id="about-this-module" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> About this module<a href="index.html#about-this-module" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="about-this-interactive-textbook" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> About this interactive textbook<a href="index.html#about-this-interactive-textbook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="images/nasem_book.jpg" alt="Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'" width="2000" />
 <p class="caption">
 Figure 1.1: Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'
 </p>
 </div>
-<div id="purpose" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Purpose<a href="index.html#purpose" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="overview" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The NASEM (2021) "Nutrient Requirements of Dairy Cattle" consensus report is a distillation of our collective knowledge about dairy cattle nutrition in the U.S. in the form of written text and mathematical equations. The most recent edition (8th), hereafter referred to as NASEM (2021), includes two parts. First, a 502 page consensus report book describes advancements in the dairy nutrition literature in recent decades in the form of narrative text and prediction equations. Second, a software for Windows enables users to evaluate diet adequacy for a given scenario based on the equations explained in the book.</p>
-<p>Our online module and its accompanying resources for teachers are intended to promote learning from the NASEM (2021) materials. Because the NASEM (2021) narrative and software were designed for advanced dairy nutrition practitioners, they may be difficult for less-experienced learners. Our module is designed to highlight core concepts that will assist learners in understanding the NASEM narrative and utilizing the mathematical model in practice.</p>
+<p>Our interactive textbook and its accompanying resources for teachers are intended to promote learning from the NASEM (2021) materials. Because the NASEM (2021) narrative and software were designed for advanced dairy nutrition practitioners, they may be difficult for less-experienced learners. Our interactive textbook is designed to highlight core concepts that will assist learners in understanding the NASEM narrative and utilizing the mathematical model in practice.</p>
 <div class="lo">
-<p><strong>Learning Objectives of this Module</strong></p>
+<p><strong>Learning Objectives of this interactive textbook</strong></p>
 <ol style="list-style-type: decimal">
 <li>Raise learners' knowledge and confidence working with nutritional models, using the example of the NASEM (2021) "Nutrient Requirements of Dairy Cattle"</li>
 </ol>
 </div>
 </div>
-<div id="structure-of-the-module-and-materials-for-teachers" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Structure of the module and materials for teachers<a href="index.html#structure-of-the-module-and-materials-for-teachers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Intended audience</strong></p>
-<p>This module is for anyone interested in learning about nutritional science and nutritional modeling. Although is discusses a dairy cattle nutritional model, it is NOT designed solely for dairy-interested learners. As the "Requirements" chapter illustrates, there is substantial overlap in how scientists describe nutritional processes for humans and other animal species. Throughout the module, we emphasized critical thinking about nutritional science rather than memorization of any particular dairy cattle nutrition facts. Therefore, we hope this module will be interesting and relevant for learners regardless of their interest in dairy cattle.</p>
-<p><strong>Assumptions about prior knowledge</strong></p>
-<p>This module can be used by anyone, but it has been designed with the assumption that learners have some prior knowledge. Before starting this module, we suggest that learners should have:</p>
+<div id="information-for-educators" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Information for educators<a href="index.html#information-for-educators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="intended-audience" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Intended audience<a href="index.html#intended-audience" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This interactive textbook is for anyone interested in learning about nutritional science and nutritional modeling. Although is discusses a dairy cattle nutritional model, it is NOT designed solely for dairy-interested learners. As the "Requirements" chapter illustrates, there is substantial overlap in how scientists describe nutritional processes for humans and other animal species. Throughout the textbook, we emphasized critical thinking about nutritional science rather than memorization of any particular dairy cattle nutrition facts. Therefore, we hope this interactive textbook will be interesting and relevant for learners regardless of their interest in dairy cattle.</p>
+</div>
+<div id="assumptions-about-prior-knowledge" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Assumptions about prior knowledge<a href="index.html#assumptions-about-prior-knowledge" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This textbook can be used by anyone, but it has been designed with the assumption that learners have some prior knowledge. Before starting this material, we suggest that learners should have:</p>
 <ul>
 <li><p>Intermediate understanding of nutritional physiology of ruminants, e.g., have taken an animal nutrition course</p></li>
 <li><p>Intermediate knowledge of dairy production systems, e.g., through an introductory animal science or management-focused course, or through personal/career-related experiences</p></li>
 <li><p>Basic skills with statistics and math (mean, standard deviation, regression)</p></li>
 </ul>
-<p><strong>Technology requirements</strong></p>
+</div>
+<div id="technology-requirements" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Technology requirements<a href="index.html#technology-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>To read the narrative and complete activities, need a computer and stable internet connection</li>
 <li>To run NASEM-8 software, need Windows operating system</li>
 </ul>
 </div>
-<div id="accessing-the-nasem-2021-book" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Accessing the NASEM (2021) book<a href="index.html#accessing-the-nasem-2021-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="accessing-the-nasem-2021-book" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Accessing the NASEM (2021) book<a href="index.html#accessing-the-nasem-2021-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The NASEM (2021) book provides a narrative that summarizes recent scientific literature on dairy nutrition and justifies choices made while developing the mathematical model. The narrative is rich with information on nutritional physiology, dairy herd management, dairy nutrition experimentation, and the model development process. Due to its information density and use of technical language, it may be overwhelming to read for less-experienced practitioners. For this reason, learners may find it helpful to read the NASEM (2021) book in a class or small-group setting where it is possible to ask questions and verify their understanding.</p>
-<p>Instructors and learners can work together to determine which sections of the text are appropriate to the learners' current comprehension level. For intermediate learners, it may be best to complete this module first before spending much time reading the NASEM (2021) narrative. Advanced learners may be able to read through the NASEM (2021) Consensus Report simultaneous to completing the activities in this module. In some cases, learners may benefit from approaching the narrative in an informal "Journal Club"-style setting (arranged either by teachers or students!).</p>
+<p>Instructors and learners can work together to determine which sections of the text are appropriate to the learners' current comprehension level. For intermediate learners, it may be best to read this interactive textbook first before spending much time reading the NASEM (2021) narrative. Advanced learners may be able to read through the NASEM (2021) Consensus Report simultaneous to completing the activities in it. In some cases, learners may benefit from approaching the narrative in an informal "Journal Club"-style setting (arranged either by teachers or students!).</p>
 <div class="blue">
 <p><strong>Accessing NASEM (2021) consensus report</strong></p>
 <p>At the time of writing, a print version of the NASEM 8th edition book is available for purchase at the link below. Eventually this material will be available to read for free online.
@@ -245,9 +351,9 @@ Figure 1.1: Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'
 <a href="https://nap.nationalacademies.org/catalog/9825/nutrient-requirements-of-dairy-cattle-seventh-revised-edition-2001" class="uri">https://nap.nationalacademies.org/catalog/9825/nutrient-requirements-of-dairy-cattle-seventh-revised-edition-2001</a></p>
 </div>
 </div>
-<div id="the-nasem-dairy-8-software" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> The NASEM-dairy-8 software<a href="index.html#the-nasem-dairy-8-software" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most of this module can be completed without using the NASEM-dairy-8 software. However, learners are encouraged to download and experiment with the NASEM dairy-8 software on their own time. Download instructions are available on the NASEM website.</p>
+<div id="the-nasem-dairy-8-software" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> The NASEM-dairy-8 software<a href="index.html#the-nasem-dairy-8-software" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most of this interactive textbook can be completed without using the NASEM-dairy-8 software. However, learners are encouraged to download and experiment with the NASEM dairy-8 software on their own time. Download instructions are available on the NASEM website.</p>
 <p>The NASEM dairy-8 software runs only on Windows operating system. Learners who wish to run NASEM dairy-8 can install it on a personal computer or a campus library computer. Learners with non-Windows operating system may be able to download the NASEM dairy-8 using virtual machines through platforms such as Virtual Box (<a href="https://www.virtualbox.org" class="uri">https://www.virtualbox.org</a>). However, this requires substantial computer expertise and may be inconvenient for everyday use.</p>
 <div class="blue">
 <p><strong>Accessing NASEM-dairy-8 software</strong></p>
@@ -258,6 +364,9 @@ Figure 1.1: Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'
 <p><strong>Earlier software, e.g., NASEM-dairy-7 </strong></p>
 <p>It is also possible to download the Windows software for NRC (2001), although NASEM recommendeds against having both NRC 2001 and NASEM 2021 software installed on the same computer. <a href="https://nap.nationalacademies.org/catalog/9825/nutrient-requirements-of-dairy-cattle-seventh-revised-edition-2001" class="uri">https://nap.nationalacademies.org/catalog/9825/nutrient-requirements-of-dairy-cattle-seventh-revised-edition-2001</a></p>
 </div>
+</div>
+<div id="running-a-simulation" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> Running a simulation<a href="index.html#running-a-simulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The easiest way to get started running NASEM-8 is to Load a pre-defined simulation.The software comes with several pre-defined simulations for different classes of animals (e.g., "Example Lactating Cow 100 DIM"). Loading a pre-defined simulation pre-loads all of the inputs describing an example animal, management scenario, and diet. This can be helpful to avoid entering unrealistic inputs.</p>
 <p>To run NASEM-8, users proceed through four sections:</p>
 <ol style="list-style-type: decimal">
@@ -271,17 +380,20 @@ Figure 1.1: Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'
 <p><strong>NOTE</strong>: Even with perfectly-matched inputs, the NASEM software is more up-to-date than the consensus report. For this reason, the outputs may differ slightly when using equations in the book versus the reports generated in the software. More details are given in the next section.</p>
 </div>
 </div>
-<div id="known-discrepancies" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Known discrepancies<a href="index.html#known-discrepancies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The software is under continual improvement, whereas the book is static. According to the NASEM-8 software "help" documentation, the latest software and R code contains the most correct and up-to-date version of the NASEM model. <strong>To avoid confusion, our module will use the NASEM model equations given in the software.</strong></p>
-<p><strong>Software updates and bugs</strong></p>
+<div id="known-updates-discrepancies-in-book-vs.-software" class="section level2 hasAnchor" number="1.9">
+<h2><span class="header-section-number">1.9</span> Known updates (discrepancies in book vs. software)<a href="index.html#known-updates-discrepancies-in-book-vs.-software" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The software is under continual improvement, whereas the book is static. According to the NASEM-8 software "help" documentation, the latest software and R code contains the most correct and up-to-date version of the NASEM model. <strong>To avoid confusion, our interactive textbook will use the NASEM model equations given in the software.</strong></p>
+<div id="nasem-dairy-8-software-updates-and-bugs" class="section level3 hasAnchor" number="1.9.1">
+<h3><span class="header-section-number">1.9.1</span> NASEM dairy-8 software updates and bugs<a href="index.html#nasem-dairy-8-software-updates-and-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Since the software was released, several updates have been made. Users should ensure they have the latest version of NASEM-8 downloaded to avoid any errors. The errors below may be encountered with older versions:</p>
 <ol style="list-style-type: decimal">
 <li>With versions of NASEM-8 software downloaded prior to 2023.03.11, user-entered target milk production, milk protein production, and milk fat were silently overridden with predicted values. This resulted in NEL, urine energy, and other values reported incorrectly. This bug has been fixed by the developer in subsequent releases.</li>
 <li>In certain cases, the NEL balance in the sidebar does not match the Word document output.</li>
 <li>In certain versions of the NASEM-8 software, manure volatile solids was overwritten by manure water in tabular output in Word.</li>
 </ol>
-<p><strong>Inconsistencies between the book and software</strong></p>
+</div>
+<div id="differences-between-the-book-and-software" class="section level3 hasAnchor" number="1.9.2">
+<h3><span class="header-section-number">1.9.2</span> Differences between the book and software<a href="index.html#differences-between-the-book-and-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The most recent software is more up-to-date than the equations in the Consensus Report book. Most discrepancies result in relatively small differences in predictions as a result of fine-tuning parameters. Known discrepancies between the book and software include:</p>
 <ol style="list-style-type: decimal">
 <li>The kg of CP in gravid uterus per kg of calf birth weight (CP_GrUtWt) differs from book p. 87.</li>
@@ -294,23 +406,30 @@ Figure 1.1: Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'
 <li>The intercept for the methane production of non-lactating dairy cows is positive in the book (p. 302; 14-1c) and negative in the software. Additionally, note that CF is crude fat, not crude fiber!</li>
 <li>In the book (eq. 13-4, p. 304) the CP:N factor is listed as 0.638. It is 0.634 (6.34) in the software. The 6.34 factor is consistent with the Protein chapter.</li>
 </ol>
+<p>Other notes (not discrepant, but maybe helpful to know).
+1. The book (eq. 6-13b, p. 87) gives an equation for the efficiency of AA use for non-pregnant animals. There is no corresponding equation for gestating animals in the book, but the software takes into account AA needs for gestation when appropriate.
+1. The book (eq. 6-4a) has a parentheses error. The end of the equation shows a calculation of total diet NDF intake as NDF/100 * DMI. The diet NDF intake should be multiplied by the entire equation preceding, not just the last term (1.51 * DMI). This is because the first part of the equation calculates the percentage of rumen-degradable NDF out of the diet NDF.</p>
 </div>
-<div id="suggested-citations" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> Suggested citations<a href="index.html#suggested-citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you use this module, please give credit by citing our work and the NASEM report.</p>
+</div>
+<div id="contribute-edits-and-suggestions" class="section level2 hasAnchor" number="1.10">
+<h2><span class="header-section-number">1.10</span> Contribute edits and suggestions<a href="index.html#contribute-edits-and-suggestions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Interested in editing or adding to this interactive textbook? Please share your ideas with our team (<a href="mailto:merickson3@wisc.edu" class="email">merickson3@wisc.edu</a>) so we can incorporate them and acknowledge you as a contributor. We could especially use suggested alternative text and activities to improve the accessibility of this resource.</p>
+</div>
+<div id="license" class="section level2 hasAnchor" number="1.11">
+<h2><span class="header-section-number">1.11</span> License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This work is licensed under a CC-BY-NC-SA license. This means you are free to use it for educational purposes or modify it, as long as you <strong>cite the original work (see below)</strong> and share your creation under a similar license.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> See here for more information on the license <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="uri">https://creativecommons.org/licenses/by-nc-sa/4.0/</a></p>
+</div>
+<div id="citations" class="section level2 hasAnchor" number="1.12">
+<h2><span class="header-section-number">1.12</span> Citations<a href="index.html#citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you use this interactive textbook, please give credit by citing our work and the NASEM report.</p>
 <div class="cit">
-<p><strong>Cite our abstract on this module:</strong></p>
-<p>Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Teaching with the narrative and model in NASEM (2021) "Nutrient Requirements of Dairy Cattle." Proceedings of the American Dairy Science Association Annual Meeting in Ottawa, Ontario, Canada.</p>
+<p><strong>Cite our interactive textbook:</strong></p>
+<p>Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Learning from the narrative and model in NASEM (2021) "Nutrient Requirements of Dairy Cattle": an interactive textbook. Version 1.0.0. Retrieved from <a href="https://merickson3.github.io/NASEM_pilot/" class="uri">https://merickson3.github.io/NASEM_pilot/</a></p>
 <p><strong>Cite the consensus report:</strong></p>
 <p>National Academies of Sciences, Engineering, and Medicine. (2021). Nutrient Requirements of Dairy Cattle: Eighth Revised Edition. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/25806" class="uri">https://doi.org/10.17226/25806</a>.</p>
 </div>
-</div>
-<div id="contribute-to-this-module" class="section level2 hasAnchor" number="1.7">
-<h2><span class="header-section-number">1.7</span> Contribute to this module<a href="index.html#contribute-to-this-module" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Interested in editing or adding to this instructional module? Please share your ideas with our team (<a href="mailto:merickson3@wisc.edu" class="email">merickson3@wisc.edu</a>) so we can incorporate them and acknowledge you as a contributor.</p>
-</div>
-<div id="license-details" class="section level2 hasAnchor" number="1.8">
-<h2><span class="header-section-number">1.8</span> License details<a href="index.html#license-details" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>

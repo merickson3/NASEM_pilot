@@ -21,46 +21,63 @@ theme_set(theme_classic())
 ::: 
 
 
-## Defining "nutrient requirement"
+## Defining nutrient flows
+
+### Supplies, requirements, and balances
+
+As we read earlier, nutritional models can be used for many different purposes. However, the core of a model like NASEM is its ability to predict two sets of parameters:  supplies and requirements. In order to design diets that support the animal's needs for a healthy, productive life, the nutritionist needs to know both sides:  the amount of nutrients that the diet **supplies**, and also the amount that is **required** by the animal given its physiological state and production characteristics. Having information about both supplies and requirements allows a nutritionist to evaluate the adequacy of a diet with respect to the animal needs. For a given nutrient (or for energy), the difference between the amount supplied and the amount required is referred to as the **balance.**
+
+Nutritional models typically consider nutrients that are most relevant to the animal's functioning. This includes nutrients present in both large and small quantities:
+
+-   **Macronutrients** are required in large amounts, and typically present in large amounts in feeds. Carbohydrates, proteins, and fats are macronutrients.
+
+-   **Micronutrients** are required in comparatively smaller amounts, yet deficiencies (even of a few grams!) can be catastrophic to the animal's functioning. Micronutrients include vitamins and minerals.
+
+In this chapter, we will get very specific about what is meant by the term "requirement." We will see some of the difficulties involved in formulating a diet that meets the needs of an entire group of animals, rather than a single animal. Additionally, we will discuss nutritional concepts and dietary reference intakes that help nutritionists protect against over- and underfeeding, each of which can have harmful effects. 
+
+
+::: blue
+**Is energy a nutrient?** Energy is not a nutrient *per se*. Instead, energy is a physical property that refers to the capacity to do work. Energy is derived from macronutrients (carbohydrates, proteins, fat). Animals require sufficient energy to maintain body functioning and performance, so energy supply and requirements are included in most nutritional models, including NASEM.
+:::
 
 ### Requirement definitions in human and dairy nutrition
 
-Previous editions of “Nutrient Requirements for Dairy Cattle” did not explicitly define the term **nutrient requirement**, but NASEM [-@NASEM8] includes an entire chapter delineating nutrient requirements and related terms. Much of this work is based on definitions used in human nutrition. NASEM's Food and Nutrition Board in the Institute of Medicine [@iom2006] defined a series of terms outlining what **nutrient requirement** means in the human nutrition context. The dairy nutrition committee selected from these terms for use with dairy cattle. 
+Previous editions of “Nutrient Requirements for Dairy Cattle” did not explicitly define the term **nutrient requirement**, but NASEM includes an entire chapter delineating nutrient requirements and related terms. Much of this work is based on definitions used in human nutrition. NASEM's Food and Nutrition Board in the Institute of Medicine [@iom2006] defined a series of terms outlining what **nutrient requirement** means in the human nutrition context. The dairy nutrition committee selected from these terms for use with dairy cattle. 
 
-The NASEM [-@NASEM8] book defines a nutrient requirement as **“the daily amount of a nutrient necessary to meet a healthy animal’s needs for maintenance, activity, growth, reproduction, and lactation without any changes in body reserves or status”** (NASEM, 2021, p. 4). Let's break down each part of this definition. 
+The NASEM book defines a nutrient requirement as **“the daily amount of a nutrient necessary to meet a healthy animal’s needs for maintenance, activity, growth, reproduction, and lactation without any changes in body reserves or status”** (NASEM, 2021, p. 4). Let's break down each part of this definition. 
 
 - **the daily amount of a nutrient** - In human and animal nutrition, nutrient requirements are often given in amounts per day. Thus, a requirement is a rate of amount consumed per unit time. The use of “day” as the denominator is practical. Per hour is too short a timescale, because animals do not *require* nutrients every hour to maintain their health and functioning. Yet per week is too long, because an animal deprived of a certain nutrient would probably show symptoms associated with that nutrient deficiency. Additionally, most cattle rations are mixed and fed once or twice daily, so farm operators need to know the amounts to feed once or twice daily. Therefore, amount per day is a logical choice of timescale for expressing the requirements of most nutrients.
 
-- **a healthy animal's needs** - NASEM [-@NASEM8] acknowledges that illnesses alter the physiological state of animals such that they have different nutrition requirements. However, each illness alters nutrient requirements differently. The committee decided that there was insufficient data to predict requirements for unhealthy animals presently. As such, requirements are based on the assumption that the animal is healthy. 
+- **a healthy animal's needs** - NASEM acknowledges that illnesses alter the physiological state of animals such that they have different nutrition requirements. However, each illness alters nutrient requirements differently. The committee decided that there was insufficient data to predict requirements for unhealthy animals presently. As such, requirements are based on the assumption that the animal is healthy. 
 
 - **for maintenance, activity, growth, reproduction, and lactation without any changes in body reserves or status** - This part explains that nutrient requirements are calculated to allow the animal to maintain various body functions without gaining or losing body reserves (e.g., losing fat or muscle mass) or status (e.g., losing milk production). Therefore, a nutrient requirement is specific to a given animal and scenario. 
 
 ::: {.green}
 
-**Test Yourself:  **
+**Think to Yourself:**
 How is the term **nutrient requirement** used colloquially, and how does this differ from its scientific definition?
 
 ::: 
 
 ### Absorbed and metabolizable amounts
 
-Before moving on, we need to add more detail to what is meant by **the daily amount of a nutrient**. We know that not all the energy and nutrients eaten by an animal can be actually used for the body functions listed above. This is because a fraction of the energy and nutrients is excreted in feces and urine, and another fraction is lost as gas and heat. When discussing requirements, NASEM [-@NASEM8] most often gives the amount of nutrient on a **metabolizable** basis. This means that when we define the daily amount of a nutrient required, we mean the amount that is actually available for the animal to use for body functions (metabolizable amount) rather than the total amount of intake (gross amount). This will be detailed in later chapters. Reporting requirements as metabolizable amounts applies to energy and most nutrients except minerals, which are considered on an **absorbed** basis. The committee most likely chose an absorbed basis for minerals due to data availability. Many mineral studies report the amount of circulating minerals in the blood (absorbed) and few studies analyze mineral content in excreta (feces and urine).
+Before moving on, we need to add more detail to what is meant by **the daily amount of a nutrient**. We know that not all the energy and nutrients eaten by an animal can be actually used for the body functions listed above. This is because a fraction of the energy and nutrients is excreted in feces and urine, and another fraction is lost as gas and heat. When discussing requirements, NASEM most often gives the amount of nutrient on a **metabolizable** basis. This means that when we define the daily amount of a nutrient required, we mean the amount that is actually available for the animal to use for body functions (metabolizable amount) rather than the total amount of intake (gross amount). This will be detailed in later chapters. Reporting requirements as metabolizable amounts applies to energy and most nutrients except minerals, which are considered on an **absorbed** basis. The committee most likely chose an absorbed basis for minerals due to data availability. Many mineral studies report the amount of circulating minerals in the blood (absorbed) and few studies analyze mineral content in excreta (feces and urine).
 
 ::: {.orange}
 
 **Just for fun:  ** 
+
 Check a human food label. Similar to reporting for dairy cattle nutrition, human nutrition labels typically show the amounts of metabolizable energy and nutrients.
 
 ::: 
 
-
 ## Dietary reference intakes
 
-We established a basic definition for a nutrient requirement. Estimating these average requirements is an important component of NASEM [-@NASEM8]. But NASEM Dairy-8 [-@NASEM8] not only helps determine the daily amount of nutrient required **on average** (the mean), it also gives information about the variability around the average (the variance). As a consequence, the estimated average requirement is just one parameter in a class of terms referred to as **dietary reference intakes**. These dietary reference intakes combine information about both the mean and variance in a requirement to assist nutritionists in formulating rations that protect against under- and over-supplying nutrients. 
+We established a basic definition for a nutrient requirement. Estimating these average requirements is an important component of NASEM [-@NASEM8]. But NASEM Dairy-8 not only helps determine the daily amount of nutrient required **on average** (the mean), it also gives information about the variability around the average (the variance). As a consequence, the estimated average requirement is just one parameter in a class of terms referred to as **dietary reference intakes**. These dietary reference intakes combine information about both the mean and variance in a requirement to assist nutritionists in formulating rations that protect against under- and over-supplying nutrients. 
 
 Dietary Reference Intakes include the estimated average requirement, the recommended daily allowance, adequate intake, and maximum tolerable level. Each of these will be defined in the subsequent sections. The dietary reference intakes are based on the principle that nutrient requirements are not a single fixed level of nutrient intake. Instead, nutrient requirements have both a mean and variance. In other words, a distribution. 
 
-NASEM [-@NASEM8] explains that within a given group of animals at a particular life stage, the distribution of responses to nutrient intake includes predictable and unpredictable variation. Predictable sources of variation are factors with a known effect on the animal's response to nutrient intake (e.g., stage of lactation, milk production, body weight).  Conversely, unpredictable variation represents both random variation and unmeasured variation. 
+NASEM explains that within a given group of animals at a particular life stage, the distribution of responses to nutrient intake includes predictable and unpredictable variation. Predictable sources of variation are factors with a known effect on the animal's response to nutrient intake (e.g., stage of lactation, milk production, body weight).  Conversely, unpredictable variation represents both random variation and unmeasured variation. 
 
 ### Protecting against underfeeding with "safety factors"
 
@@ -116,21 +133,33 @@ ggplot(NULL, aes(c(-5,5))) +
 **Test Yourself: **
 What proportion of the population is being underfed if nutrient intake is at the RDA (EAR + 2 standard deviations)?
 
-::: 
+`r hide("click here for an answer")`
 
 Because the RDA is set at 2 standard deviations above the EAR, when feeding at the RDA, only a small proportion (2-3%) of the population is being underfed. The majority (97-98%) of the population is being fed an adequate amount. This illustrates how nutritionists need to know both the mean and variance of a nutrient requirement to make informed decisions about the amount to feed. 
 
+`r unhide()` 
+
+::: 
+
+
+
 ### Protecting against overfeeding
 
-For dairy cattle, it is often preferable to overfeed nutrients than to underfeed. However, there are risks associated with overfeeding that nutritionists must guard against. For example, overfeeding energy could result in excessive body reserve gain leading to an increased risk of ketosis. Overfeeding the mineral selenium can cause acute toxicosis. Overfeeding crude protein is associated with reduced reproductive performance and (__________citation ) and an increase in negative environmental impacts. 
+For dairy cattle, it is often preferable to overfeed nutrients than to underfeed. However, there are risks associated with overfeeding that nutritionists must guard against. For example, overfeeding energy could result in excessive body reserve gain leading to an increased risk of ketosis. Overfeeding the mineral selenium can cause acute toxicosis. Overfeeding crude protein is associated with reduced reproductive performance and an increase in negative environmental impacts. 
 
-In cases where toxicities have been observed and adequate data are available, NASEM [-@NASEM8] provides the **maximum tolerable level (MTL)** of a nutrient. At the MTL, research has shown that symptoms of toxicity begin to occur. 
+In cases where toxicities have been observed and adequate data are available, NASEM provides the **maximum tolerable level (MTL)** of a nutrient. At the MTL, research has shown that symptoms of toxicity begin to occur. 
 Vary in requirement. Keeping in mind that feeds vary in composition and animals vary in their requirements, nutritionists should aim to create rations that are sufficiently below the MTL to reduce the chances of toxicities.
+
+::: {.green}
+
+**Test yourself**
+The maximum tolerable level is the amount of nutrient that would kill an average animal. `r torf(FALSE)` 
+::: 
 
 
 ### Accounting for uncertainty
 
-Finally, NASEM [-@NASEM8] acknowledged that there are certain cases where insufficient data are available to determine the mean and variance for a nutrient requirement. In these cases, the committee makes an educated guess on an appropriate level for the nutrient requirement. The best guess for the requirement is referred to not as an EAR, but instead as an **adequate intake (AI)**. This distinction helps nutritionists determine whether the requirement has been determined after substantial experimental studies (EAR) or whether the requirement is an educated guess by the committee (AI). 
+Finally, NASEM acknowledged that there are certain cases where insufficient data are available to determine the mean and variance for a nutrient requirement. In these cases, the committee makes an educated guess on an appropriate level for the nutrient requirement. The best guess for the requirement is referred to not as an EAR, but instead as an **adequate intake (AI)**. This distinction helps nutritionists determine whether the requirement has been determined after substantial experimental studies (EAR) or whether the requirement is an educated guess by the committee (AI). 
 
 Putting it all together, we can see all of the dietary reference intakes discussed so far:
 ```{r, echo = F, fig.asp = .4, fig.cap = "Population distribution of nutrient requirements with reference intakes annotated."}
@@ -158,24 +187,27 @@ ggplot(NULL, aes(c(-5,5))) +
 
 ::: {.green}
 
-**Test Yourself: **
+**Think to Yourself: **
 The figure shows several reference intake levels. What does each mean, and when might it be useful?
 
 ::: 
 
+## NASEM estimates of requirements
 
-## Modeling nutrient requirements and supplies
+To estimate nutrient requirements, NASEM calculates separate requirements for each different body functions: including requirements for maintenance, activity, growth, reproduction, lactation, and changes in body reserves. Summing these requirements gives the total requirement for each nutrition. This method for calculating requirements is referred to as a **factorial** approach because it sums the contributions of different factors to determine the total requirement.
 
-We established that nutrient requirements need to be considered as the absorbed or metabolizable amounts of nutrients in the intestine. Yet typically, nutritionists only have information about the nutrients in the feed before it enters the animal's mouth. 
+As an example, the net protein recommended for an animal equals the sum of its separate net protein requirements for maintenance, activity, growth, reproduction, and changes in body reserves.
 
-This raises two questions:
+$$
+NP_{total} = NP_{maintenance} + NP_{activity} + NP_{growth}+ NP_{reproduction} + NP_{bodyreserve} 
+$$
 
-1. Assuming we know the composition of the diet as it is fed, and we know about the animal we are feeding, how do we predict the amount of nutrient that will be absorbed or metabolizable at the intestine?
+::: {.lo}
 
-1. How do we predict what absorbed or metabolizable amount of nutrient is required for various body functions (e.g., maintenance, gestation, lactation, growth, and reserve gain)?
+**Test yourself**
+The factorial approach refers to summing across multiple factors. `r torf(TRUE)` 
 
-
-****Additional clarification to be added. ***
+::: 
 
 
 ## Types of literature used by NASEM [-@NASEM8]
@@ -259,7 +291,6 @@ Assume you have the data to plot the volume of milk production (Y) at different 
 
 ::: 
 
-
 ```{r, echo = F, fig.asp = .6, fig.cap = "Curvilinear response to nutrient X metaboliazble amounts"}
 x = c(11:30)
 y1 = c(25:34, rep(35, 10))
@@ -275,5 +306,88 @@ ggplot(dat,aes(x = x, y = y2)) +
   labs(y = "FPCM (kg)", x = "Intake amount of nutrient X") 
 ```
 
-## Activities
+## R code for figures
+```{r, echo = TRUE}
+library(ggplot2)
+theme_set(theme_classic())
+
+ggplot(NULL, aes(c(-5, 5))) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-5, -1)) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-1, 5)) +
+  labs(x = "Nutrient intake amount", y = "Proportion of Population", title = "") +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  geom_vline(xintercept = 0, color = "red") +
+  annotate(geom = "text", x = 1, y = .45, label = "EAR", color = "red")
+
+ggplot(NULL, aes(c(-5, 5))) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-5, -1)) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-1, 5)) +
+  labs(x = "Nutrient intake amount", y = "Proportion of Population", title = "") +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  geom_vline(xintercept = 0, color = "red") +
+  geom_vline(xintercept = 2, color = "red", linetype = "dashed") +
+  annotate(geom = "text", x = 0.35, y = .45, label = "EAR", color = "red") +
+  annotate(geom = "text", x = 2.35, y = .45, label = "RDA", color = "red")
+
+
+ggplot(NULL, aes(c(-5, 5))) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-5, -1)) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-1, 5)) +
+  labs(x = "Nutrient intake amount", y = "Proportion of Population", title = "") +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  geom_vline(xintercept = 0, color = "red") +
+  geom_vline(xintercept = 2, color = "red", linetype = "dashed") +
+  geom_vline(xintercept = 3, color = "purple", linetype = "dashed") +
+  annotate(geom = "segment", xend = 2.25, x = 3.4, y = .33, yend = .2, color = "green") +
+  annotate(geom = "text", x = 0.35, y = .45, label = "EAR", color = "red") +
+  annotate(geom = "text", x = 2.35, y = .45, label = "RDA", color = "red") +
+  annotate(geom = "text", x = 3.35, y = .45, label = "MTL", color = "purple") +
+  annotate(geom = "text", x = 3.45, y = .35, label = "?AI?", color = "green") +
+  annotate(geom = "rect", xmin = 0, xmax = 2.5, ymin = 0, ymax = .4, fill = "green", alpha = .1)
+
+
+x <- c(11:30)
+y1 <- c(25:34, rep(35, 10))
+e <- rnorm(n = 20, 0, 1)
+y2 <- y1 + e
+dat <- data.frame(x, y2)
+
+ggplot(dat, aes(x = x, y = y2)) +
+  geom_point() +
+  geom_vline(aes(xintercept = 22), color = "red") +
+  annotate(
+    geom = "text", x = 24.5, y = 37,
+    label = "Requirement of nutrient X", color = "red"
+  ) +
+  annotate(geom = "segment", xend = 10, x = 22, yend = 25, y = 35) +
+  annotate(geom = "segment", xend = 22, x = 30, yend = 35, y = 35) +
+  labs(y = "FPCM (kg)", x = "Intake amount of nutrient X")
+
+
+ggplot(dat, aes(x = x, y = y2)) +
+  geom_point() +
+  geom_vline(aes(xintercept = 26), color = "red") +
+  annotate(
+    geom = "text", x = 20, y = 37,
+    label = "Amount X when FPCM (Y) is optimized", color = "red"
+  ) +
+  geom_smooth(method = "lm", formula = y ~ poly(x, 2), se = F, color = "black") +
+  labs(y = "FPCM (kg)", x = "Intake amount of nutrient X")
+
+```
 

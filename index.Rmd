@@ -1,5 +1,5 @@
 --- 
-title: Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements
+title: Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements
   of Dairy Cattle'
 author:
 - "MaryGrace Erickson, University of Wisconsin--Madison"
@@ -13,41 +13,40 @@ bibliography:
 - book.bib
 - packages.bib
 description: |
-  This book is intended to help independent learners and instructors working with the NASEM (2021) dairy nutrition model.
+  This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses.
 link-citations: yes
-# https://bookdown.org/yihui/bookdown/html.html
-favicon: <"images/favicon.ico">
 ---
 
-# About this module
+# About this interactive textbook
 
 ```{r, echo = F, fig.align = "center", fig.cap = "Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'" }
 knitr::include_graphics("images/nasem_book.jpg")
 
 ```
 
-## Purpose
+## Overview
 
 The NASEM (2021) "Nutrient Requirements of Dairy Cattle" consensus report is a distillation of our collective knowledge about dairy cattle nutrition in the U.S. in the form of written text and mathematical equations. The most recent edition (8th), hereafter referred to as NASEM (2021), includes two parts. First, a 502 page consensus report book describes advancements in the dairy nutrition literature in recent decades in the form of narrative text and prediction equations. Second, a software for Windows enables users to evaluate diet adequacy for a given scenario based on the equations explained in the book.
 
-Our online module and its accompanying resources for teachers are intended to promote learning from the NASEM (2021) materials. Because the NASEM (2021) narrative and software were designed for advanced dairy nutrition practitioners, they may be difficult for less-experienced learners. Our module is designed to highlight core concepts that will assist learners in understanding the NASEM narrative and utilizing the mathematical model in practice. 
+Our interactive textbook and its accompanying resources for teachers are intended to promote learning from the NASEM (2021) materials. Because the NASEM (2021) narrative and software were designed for advanced dairy nutrition practitioners, they may be difficult for less-experienced learners. Our interactive textbook is designed to highlight core concepts that will assist learners in understanding the NASEM narrative and utilizing the mathematical model in practice. 
+
 
 ::: {.lo}
-**Learning Objectives of this Module**
+**Learning Objectives of this interactive textbook**
 
 1. Raise learners' knowledge and confidence working with nutritional models, using the example of the NASEM (2021) "Nutrient Requirements of Dairy Cattle"
 
 :::
 
-## Structure of the module and materials for teachers
+## Information for educators
 
-**Intended audience**
+## Intended audience
 
-This module is for anyone interested in learning about nutritional science and nutritional modeling. Although is discusses a dairy cattle nutritional model, it is NOT designed solely for dairy-interested learners. As the "Requirements" chapter illustrates, there is substantial overlap in how scientists describe nutritional processes for humans and other animal species. Throughout the module, we emphasized critical thinking about nutritional science rather than memorization of any particular dairy cattle nutrition facts. Therefore, we hope this module will be interesting and relevant for learners regardless of their interest in dairy cattle. 
+This interactive textbook is for anyone interested in learning about nutritional science and nutritional modeling. Although is discusses a dairy cattle nutritional model, it is NOT designed solely for dairy-interested learners. As the "Requirements" chapter illustrates, there is substantial overlap in how scientists describe nutritional processes for humans and other animal species. Throughout the  textbook, we emphasized critical thinking about nutritional science rather than memorization of any particular dairy cattle nutrition facts. Therefore, we hope this interactive textbook will be interesting and relevant for learners regardless of their interest in dairy cattle. 
 
-**Assumptions about prior knowledge**
+## Assumptions about prior knowledge
 
-This module can be used by anyone, but it has been designed with the assumption that learners have some prior knowledge. Before starting this module, we suggest that learners should have:
+This textbook can be used by anyone, but it has been designed with the assumption that learners have some prior knowledge. Before starting this material, we suggest that learners should have:
 
 - Intermediate understanding of nutritional physiology of ruminants, e.g., have taken an animal nutrition course
 
@@ -55,7 +54,7 @@ This module can be used by anyone, but it has been designed with the assumption 
 
 - Basic skills with statistics and math (mean, standard deviation, regression)
 
-**Technology requirements**
+## Technology requirements
 
 - To read the narrative and complete activities, need a computer and stable internet connection
 - To run NASEM-8 software, need Windows operating system
@@ -66,7 +65,7 @@ This module can be used by anyone, but it has been designed with the assumption 
 
 The NASEM (2021) book provides a narrative that summarizes recent scientific literature on dairy nutrition and justifies choices made while developing the mathematical model. The narrative is rich with information on nutritional physiology, dairy herd management, dairy nutrition experimentation, and the model development process. Due to its information density and use of technical language, it may be overwhelming to read for less-experienced practitioners. For this reason, learners may find it helpful to read the NASEM (2021) book in a class or small-group setting where it is possible to ask questions and verify their understanding. 
 
-Instructors and learners can work together to determine which sections of the text are appropriate to the learners' current comprehension level. For intermediate learners, it may be best to complete this module first before spending much time reading the NASEM (2021) narrative. Advanced learners may be able to read through the NASEM (2021) Consensus Report simultaneous to completing the activities in this module. In some cases, learners may benefit from approaching the narrative in an informal "Journal Club"-style setting (arranged either by teachers or students!).
+Instructors and learners can work together to determine which sections of the text are appropriate to the learners' current comprehension level. For intermediate learners, it may be best to read this interactive textbook first before spending much time reading the NASEM (2021) narrative. Advanced learners may be able to read through the NASEM (2021) Consensus Report simultaneous to completing the activities in it. In some cases, learners may benefit from approaching the narrative in an informal "Journal Club"-style setting (arranged either by teachers or students!).
 
 
 :::{.blue}
@@ -91,7 +90,7 @@ https://nap.nationalacademies.org/catalog/9825/nutrient-requirements-of-dairy-ca
 ## The NASEM-dairy-8 software
 
 
-Most of this module can be completed without using the NASEM-dairy-8 software. However, learners are encouraged to download and experiment with the NASEM dairy-8 software on their own time. Download instructions are available on the NASEM website.
+Most of this interactive textbook can be completed without using the NASEM-dairy-8 software. However, learners are encouraged to download and experiment with the NASEM dairy-8 software on their own time. Download instructions are available on the NASEM website.
 
 The NASEM dairy-8 software runs only on Windows operating system. Learners who wish to run NASEM dairy-8 can install it on a personal computer or a campus library computer. Learners with non-Windows operating system may be able to download the NASEM dairy-8 using virtual machines through platforms such as Virtual Box (https://www.virtualbox.org). However, this requires substantial computer expertise and may be inconvenient for everyday use. 
 
@@ -111,6 +110,7 @@ It is also possible to download the Windows software for NRC (2001), although NA
 
 ::: 
 
+## Running a simulation
 
 The easiest way to get started running NASEM-8 is to Load a pre-defined simulation.The software comes with several pre-defined simulations for different classes of animals (e.g., "Example Lactating Cow 100 DIM"). Loading a pre-defined simulation pre-loads all of the inputs describing an example animal, management scenario, and diet. This can be helpful to avoid entering unrealistic inputs. 
 
@@ -134,11 +134,11 @@ Some of the most common mistakes when using NASEM dairy-8 relate to improper inp
 ::: 
 
 
-## Known discrepancies
+## Known updates (discrepancies in book vs. software)
 
-The software is under continual improvement, whereas the book is static. According to the NASEM-8 software "help" documentation, the latest software and R code contains the most correct and up-to-date version of the NASEM model. **To avoid confusion, our module will use the NASEM model equations given in the software.**
+The software is under continual improvement, whereas the book is static. According to the NASEM-8 software "help" documentation, the latest software and R code contains the most correct and up-to-date version of the NASEM model. **To avoid confusion, our interactive textbook will use the NASEM model equations given in the software.**
 
-**Software updates and bugs**
+### NASEM dairy-8 software updates and bugs
 
 Since the software was released, several updates have been made. Users should ensure they have the latest version of NASEM-8 downloaded to avoid any errors. The errors below may be encountered with older versions:
 
@@ -146,7 +146,7 @@ Since the software was released, several updates have been made. Users should en
 1. In certain cases, the NEL balance in the sidebar does not match the Word document output. 
 1. In certain versions of the NASEM-8 software, manure volatile solids was overwritten by manure water in tabular output in Word.
 
-**Inconsistencies between the book and software**
+### Differences between the book and software
 
 The most recent software is more up-to-date than the equations in the Consensus Report book. Most discrepancies result in relatively small differences in predictions as a result of fine-tuning parameters. Known discrepancies between the book and software include:
 
@@ -160,26 +160,36 @@ The most recent software is more up-to-date than the equations in the Consensus 
 1. The intercept for the methane production of non-lactating dairy cows is positive in the book (p. 302; 14-1c) and negative in the software. Additionally, note that CF is crude fat, not crude fiber!
 1. In the book (eq. 13-4, p. 304) the CP:N factor is listed as 0.638. It is 0.634 (6.34) in the software. The 6.34 factor is consistent with the Protein chapter. 
 
-## Suggested citations
+Other notes (not discrepant, but maybe helpful to know).
+1. The book (eq. 6-13b, p. 87) gives an equation for the efficiency of AA use for non-pregnant animals. There is no corresponding equation for gestating animals in the book, but the software takes into account AA needs for gestation when appropriate. 
+1. The book (eq. 6-4a) has a parentheses error. The end of the equation shows a calculation of total diet NDF intake as NDF/100 * DMI. The diet NDF intake should be multiplied by the entire equation preceding, not just the last term (1.51 * DMI). This is because the first part of the equation calculates the percentage of rumen-degradable NDF out of the diet NDF. 
 
-If you use this module, please give credit by citing our work and the NASEM report. 
+
+## Contribute edits and suggestions
+
+Interested in editing or adding to this interactive textbook? Please share your ideas with our team (merickson3@wisc.edu) so we can incorporate them and acknowledge you as a contributor. We could especially use suggested alternative text and activities to improve the accessibility of this resource. 
+
+
+## License
+
+This work is licensed under a CC-BY-NC-SA license. This means you are free to use it for educational purposes or modify it, as long as you **cite the original work (see below)** and share your creation under a similar license. 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> See here for more information on the license <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+
+## Citations
+
+If you use this interactive textbook, please give credit by citing our work and the NASEM report. 
 
 ::: {.cit}
 
-**Cite our abstract on this module:**
+**Cite our interactive textbook:**
 
-Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Teaching with the narrative and model in NASEM (2021) "Nutrient Requirements of Dairy Cattle." Proceedings of the American Dairy Science Association Annual Meeting in Ottawa, Ontario, Canada. 
+Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Learning from the narrative and model in NASEM (2021) "Nutrient Requirements of Dairy Cattle":  an interactive textbook. Version 1.0.0. Retrieved from https://merickson3.github.io/NASEM_pilot/
 
 **Cite the consensus report:**
 
 National Academies of Sciences, Engineering, and Medicine. (2021). Nutrient Requirements of Dairy Cattle: Eighth Revised Edition. Washington, DC: The National Academies Press. https://doi.org/10.17226/25806.
 
-
 ::: 
-
-## Contribute to this module
-
-Interested in editing or adding to this instructional module? Please share your ideas with our team (merickson3@wisc.edu) so we can incorporate them and acknowledge you as a contributor. 
-
-
-## License details

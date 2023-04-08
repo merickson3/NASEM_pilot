@@ -7,3 +7,6 @@ magrittr
 ggplot2
 dairynasem
 plotly
+tidyr
+stringr
+lpSolve

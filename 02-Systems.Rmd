@@ -6,12 +6,10 @@ editor_options:
 
 # Systems concepts
 
-
 ```{r, echo = F, fig.align = "center", fig.cap = "Simplified representation of animal nutrition as a system"}
 knitr::include_graphics("images/image-1405176793.png")
+library(webexercises)
 ```
-
-
 
 ::: lo
 **Learning Objectives**
@@ -23,7 +21,6 @@ knitr::include_graphics("images/image-1405176793.png")
 3.  Give specific examples of 1) inputs, 2) outputs, and 3) means by
     which the system is transformed for a dairy ruminant.
 :::
-
 
 ## The animal nutritional system
 
@@ -83,7 +80,7 @@ and biological properties of the animal system.
 nutritional models.
 
 ::: orange
-**Nutrition is life itself**
+**Nutrition is life itself!**
 
 If you've ever known an animal you truly loved, you might be thinking -
 *an animal is more than just a nutritional system!* This is true. Yet
@@ -188,6 +185,7 @@ An animal was fed some feed containing 400 g/d of phosphorus (P). Later,
 the researcher analyzed the outputs (feces and urine) from the animal
 and recovered 350 g/d of P. Was this animal apparently at a steady
 state, or a transient state? How do you know?
+`r mcq(c(answer = "transient state", "steady state"))`
 :::
 
 ::: blue
@@ -195,6 +193,7 @@ state, or a transient state? How do you know?
 
 If you are a math appreciator, you may notice some opportunities to use
 systems of differential equations to answer nutritional questions.
+
 :::
 
 ## Biological principles: ordered processes
@@ -286,9 +285,9 @@ behavior. By the end, you will be able to use a nutritional model
 used in system transformation.
 
 ::: green
-**Don't lose your marbles**
+**Test yourself**
 
-Think about the illustration at the beginning showing how marbles flow
+Think about the illustration below showing how marbles flow
 through a series of blocks.
 
 1.  Can you draw an analogy to mass balance? A) Discuss input, output,
@@ -298,6 +297,16 @@ through a series of blocks.
 2.  In this system, all the marbles enter the same way. What determines
     where the marbles leave the system (which color tunnel) or where
     they get stuck in the system?
+    
+If you're losing your marbles, you can click below to see one interpretation of this marble sorter as a system.
+
+`r hide("Show an explanation")`
+
+Marbles are input at the top of the system and output at the bottom when they leave the blocks. A system transformation occurs when a marble gets stuck somewhere in the system, because it changes the form of the system and its reaction to new inputs. Steady state conditions would involve inputs equalling the outputs. In other words, the number of marbles in would equal the number of marbles out for a given period of time. Transient state conditions would involve the accumulation or decumulation of marbles, where the flow of inputs would not equal the flow of outputs. 
+
+In this system, the fates of marbles are determined by what blocks they run into, and possibly other factors such as the weight and size of the marble. 
+
+`r unhide()`
 
 ![](images/Xylophoe-Marble-Sorter-Trickshot.gif){align="center"}
 :::

@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction to nutritional models | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
-  <meta name="description" content="This book is intended to help independent learners and instructors working with the NASEM (2021) dairy nutrition model." />
+  <title>Chapter 2 Introduction to nutritional models | Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
+  <meta name="description" content="This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses." />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction to nutritional models | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta property="og:title" content="Chapter 2 Introduction to nutritional models | Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This book is intended to help independent learners and instructors working with the NASEM (2021) dairy nutrition model." />
+  <meta property="og:description" content="This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction to nutritional models | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta name="twitter:title" content="Chapter 2 Introduction to nutritional models | Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
   
-  <meta name="twitter:description" content="This book is intended to help independent learners and instructors working with the NASEM (2021) dairy nutrition model." />
+  <meta name="twitter:description" content="This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses." />
   
 
 <meta name="author" content="MaryGrace Erickson, University of Wisconsin--Madison" />
@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  <link rel="shortcut icon" href="&lt;"images/favicon.ico"&gt;" type="image/x-icon" />
+  
 <link rel="prev" href="index.html"/>
 <link rel="next" href="systems-concepts.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -56,8 +56,74 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+<script src="libs/panelset-0.2.6/panelset.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -99,16 +165,24 @@ div.csl-indent {
 <li><a href="./">Learning NASEM Dairy (2021)</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this module</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this interactive textbook</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#purpose"><i class="fa fa-check"></i><b>1.1</b> Purpose</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#structure-of-the-module-and-materials-for-teachers"><i class="fa fa-check"></i><b>1.2</b> Structure of the module and materials for teachers</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.3</b> Accessing the NASEM (2021) book</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#the-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.4</b> The NASEM-dairy-8 software</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#known-discrepancies"><i class="fa fa-check"></i><b>1.5</b> Known discrepancies</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#suggested-citations"><i class="fa fa-check"></i><b>1.6</b> Suggested citations</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#contribute-to-this-module"><i class="fa fa-check"></i><b>1.7</b> Contribute to this module</a></li>
-<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#license-details"><i class="fa fa-check"></i><b>1.8</b> License details</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#information-for-educators"><i class="fa fa-check"></i><b>1.2</b> Information for educators</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intended-audience"><i class="fa fa-check"></i><b>1.3</b> Intended audience</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assumptions-about-prior-knowledge"><i class="fa fa-check"></i><b>1.4</b> Assumptions about prior knowledge</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#technology-requirements"><i class="fa fa-check"></i><b>1.5</b> Technology requirements</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.6</b> Accessing the NASEM (2021) book</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#the-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.7</b> The NASEM-dairy-8 software</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#running-a-simulation"><i class="fa fa-check"></i><b>1.8</b> Running a simulation</a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#known-updates-discrepancies-in-book-vs.-software"><i class="fa fa-check"></i><b>1.9</b> Known updates (discrepancies in book vs. software)</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#nasem-dairy-8-software-updates-and-bugs"><i class="fa fa-check"></i><b>1.9.1</b> NASEM dairy-8 software updates and bugs</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#differences-between-the-book-and-software"><i class="fa fa-check"></i><b>1.9.2</b> Differences between the book and software</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#contribute-edits-and-suggestions"><i class="fa fa-check"></i><b>1.10</b> Contribute edits and suggestions</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.11</b> License</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#citations"><i class="fa fa-check"></i><b>1.12</b> Citations</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html"><i class="fa fa-check"></i><b>2</b> Introduction to nutritional models</a>
 <ul>
@@ -123,8 +197,11 @@ div.csl-indent {
 <li class="chapter" data-level="2.5.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-development"><i class="fa fa-check"></i><b>2.5.3</b> Model development</a></li>
 <li class="chapter" data-level="2.5.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-verification"><i class="fa fa-check"></i><b>2.5.4</b> Model verification</a></li>
 <li class="chapter" data-level="2.5.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process"><i class="fa fa-check"></i><b>2.5.5</b> Model refinement (re-starting the process)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#reflecting-on-our-example-model"><i class="fa fa-check"></i><b>2.5.6</b> Reflecting on our example model</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusions-and-additional-complexity"><i class="fa fa-check"></i><b>2.6</b> Conclusions and additional complexity</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#scaling-up-and-adding-complexity"><i class="fa fa-check"></i><b>2.6</b> Scaling up and adding complexity</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusion"><i class="fa fa-check"></i><b>2.7</b> Conclusion</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#r-code-for-figures"><i class="fa fa-check"></i><b>2.8</b> R code for figures</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="systems-concepts.html"><a href="systems-concepts.html"><i class="fa fa-check"></i><b>3</b> Systems concepts</a>
 <ul>
@@ -139,10 +216,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="requirements.html"><a href="requirements.html"><i class="fa fa-check"></i><b>4</b> Requirements</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-requirement"><i class="fa fa-check"></i><b>4.1</b> Defining "nutrient requirement"</a>
+<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-flows"><i class="fa fa-check"></i><b>4.1</b> Defining nutrient flows</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.1</b> Requirement definitions in human and dairy nutrition</a></li>
-<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.2</b> Absorbed and metabolizable amounts</a></li>
+<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#supplies-requirements-and-balances"><i class="fa fa-check"></i><b>4.1.1</b> Supplies, requirements, and balances</a></li>
+<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.2</b> Requirement definitions in human and dairy nutrition</a></li>
+<li class="chapter" data-level="4.1.3" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.3</b> Absorbed and metabolizable amounts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="requirements.html"><a href="requirements.html#dietary-reference-intakes"><i class="fa fa-check"></i><b>4.2</b> Dietary reference intakes</a>
 <ul>
@@ -150,7 +228,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.2.2" data-path="requirements.html"><a href="requirements.html#protecting-against-overfeeding"><i class="fa fa-check"></i><b>4.2.2</b> Protecting against overfeeding</a></li>
 <li class="chapter" data-level="4.2.3" data-path="requirements.html"><a href="requirements.html#accounting-for-uncertainty"><i class="fa fa-check"></i><b>4.2.3</b> Accounting for uncertainty</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#modeling-nutrient-requirements-and-supplies"><i class="fa fa-check"></i><b>4.3</b> Modeling nutrient requirements and supplies</a></li>
+<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#nasem-estimates-of-requirements"><i class="fa fa-check"></i><b>4.3</b> NASEM estimates of requirements</a></li>
 <li class="chapter" data-level="4.4" data-path="requirements.html"><a href="requirements.html#types-of-literature-used-by-nasem--nasem8"><i class="fa fa-check"></i><b>4.4</b> Types of literature used by NASEM <span class="citation">(2021)</span></a>
 <ul>
 <li class="chapter" data-level="4.4.1" data-path="requirements.html"><a href="requirements.html#measuring-composition-of-inputs-body-tissues-and-outputs"><i class="fa fa-check"></i><b>4.4.1</b> Measuring composition of inputs, body tissues, and outputs</a></li>
@@ -158,10 +236,32 @@ div.csl-indent {
 <li class="chapter" data-level="4.4.3" data-path="requirements.html"><a href="requirements.html#studying-symptoms-of-deficiency-and-toxicity"><i class="fa fa-check"></i><b>4.4.3</b> Studying symptoms of deficiency and toxicity</a></li>
 <li class="chapter" data-level="4.4.4" data-path="requirements.html"><a href="requirements.html#regression-on-productive-performance"><i class="fa fa-check"></i><b>4.4.4</b> Regression on productive performance</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#activities"><i class="fa fa-check"></i><b>4.5</b> Activities</a></li>
+<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#r-code-for-figures-1"><i class="fa fa-check"></i><b>4.5</b> R code for figures</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a></li>
-<li class="chapter" data-level="6" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>6</b> Glossary</a></li>
+<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-machinery.html"><a href="model-machinery.html#basic-nutrition-math"><i class="fa fa-check"></i><b>5.1</b> Basic nutrition math</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="model-machinery.html"><a href="model-machinery.html#using-ratios-percentages-proportions"><i class="fa fa-check"></i><b>5.1.1</b> Using ratios, percentages, proportions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="model-machinery.html"><a href="model-machinery.html#converting-units"><i class="fa fa-check"></i><b>5.1.2</b> Converting units</a></li>
+<li class="chapter" data-level="5.1.3" data-path="model-machinery.html"><a href="model-machinery.html#converting-basis"><i class="fa fa-check"></i><b>5.1.3</b> Converting basis</a></li>
+<li class="chapter" data-level="5.1.4" data-path="model-machinery.html"><a href="model-machinery.html#scaling"><i class="fa fa-check"></i><b>5.1.4</b> Scaling</a></li>
+<li class="chapter" data-level="5.1.5" data-path="model-machinery.html"><a href="model-machinery.html#weighting"><i class="fa fa-check"></i><b>5.1.5</b> Weighting</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="model-machinery.html"><a href="model-machinery.html#predictive-models"><i class="fa fa-check"></i><b>5.2</b> Predictive models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.1</b> Prediction using software</a></li>
+<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetics"><i class="fa fa-check"></i><b>5.2.2</b> Exponential growth kinetics</a></li>
+<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics"><i class="fa fa-check"></i><b>5.2.3</b> Saturable growth kinetics</a></li>
+<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.2.4</b> Allometric equations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="model-machinery.html"><a href="model-machinery.html#optimization"><i class="fa fa-check"></i><b>5.3</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="model-machinery.html"><a href="model-machinery.html#optimization-using-software"><i class="fa fa-check"></i><b>5.3.1</b> Optimization using software</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="conclusions-1.html"><a href="conclusions-1.html"><i class="fa fa-check"></i><b>6</b> Conclusions</a></li>
+<li class="chapter" data-level="7" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>7</b> Glossary</a></li>
 <li class="divider"></li>
 <b> Contributors:</b>
 <li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
@@ -178,7 +278,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
           </h1>
         </div>
 
@@ -188,6 +288,12 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="introduction-to-nutritional-models" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Introduction to nutritional models<a href="introduction-to-nutritional-models.html#introduction-to-nutritional-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="images/depictions_of_cattle.jpg" alt="Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)" width="2000" />
+<p class="caption">
+Figure 2.1: Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)
+</p>
+</div>
 <div class="lo">
 <p><strong>Learning Objectives</strong></p>
 <ol style="list-style-type: decimal">
@@ -198,17 +304,17 @@ div.csl-indent {
 </div>
 <div id="a-brief-history" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> A brief history<a href="introduction-to-nutritional-models.html#a-brief-history" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="images/depictions_of_cattle.jpg" alt="Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)" width="85%" />
-<p class="caption">
-Figure 2.1: Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza University of Rome)
-</p>
-</div>
-<p>Deliberate animal feeding began before recorded history with the advent of agriculture in Asia and Africa 12,000 years ago <span class="citation">(<a href="#ref-Coffey2016" role="doc-biblioref">Coffey et al. 2016</a>)</span>. Since this time, humans have carefully considered how to manage forages, grains, minerals, and other natural resources to provide nourishment for domesticated animals. In regions throughout the world, traditional and indigenous knowledge systems contain a wealth of information on animal nutritional management, yet very little of it is recorded in publications and books.</p>
+<p>Deliberate animal feeding began before recorded history with the advent of agriculture in Asia and Africa 12,000 years ago (Coffey, 2016). Since this time, humans have carefully considered how to manage forages, grains, minerals, and other natural resources to provide nourishment for domesticated animals. In regions throughout the world, traditional and indigenous knowledge systems contain a wealth of information on animal nutritional management, yet very little of it is recorded in publications and books.</p>
 <p>Primarily in the last 200 years, animal nutrition developed as a scientific discipline. The use of scientific methods enabled researchers to isolate the chemical components of feeds and to quantitatively relate dietary intakes to physiological effects. As nutrition science progressed, nutritional diseases that had once harmed or killed thousands of animals (and people) began to be curable. The productivity of agricultural animals began to increase. As per the scientific method, advances were recorded with detailed publications in the scientific literature to enable cumulative progress.</p>
-<p>In the United States, nutrition science was spurred by government efforts to reconstruct and reduce poverty after wars. In the aftermath of the Civil War and World Wars, the U.S. government chartered the National Academies of Sciences, Engineering, and Medicine (NASEM) and its subsidiary organization the National Research Council <span class="citation">(NRC, <a href="#ref-Ullrey2001" role="doc-biblioref">Ullrey 2001</a>)</span>. NASEM is a non-governmental, non-profit organization of academics whose mission is to translate scientific information into domestic policy and practice. In animal nutrition, NASEM is famous for organizing efforts to consolidate nutritional science knowledge into animal feeding recommendations by publishing consensus reports.</p>
+<p>In the United States, nutrition science was spurred by government efforts to reconstruct and reduce poverty after wars. In the aftermath of the Civil War and World Wars, the U.S. government chartered the National Academies of Sciences, Engineering, and Medicine (NASEM) and its subsidiary organization the National Research Council (NRC, Ullrey, 2001). NASEM is a non-governmental, non-profit organization of academics whose mission is to translate scientific information into domestic policy and practice. In animal nutrition, NASEM is famous for organizing efforts to consolidate nutritional science knowledge into animal feeding recommendations by publishing consensus reports.</p>
 <p>The first edition of "Nutrient Requirements of Dairy Cattle" was published by the NRC (NASEM's subsidiary) in 1945. In the eight decades following, researchers created seven more editions of this consensus report. Each edition uses the most up-to-date research on dairy cattle nutrition generated by researchers at universities and government institutions.</p>
+<div class="green">
+<p><strong>Test yourself</strong></p>
+<ol style="list-style-type: decimal">
+<li>The 7th edition is the most recent version of the Nutrient Requirements of Dairy Cattle. <select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></li>
+<li>The National Academies publishes consensus reports for other species besides dairy cattle. <select class='webex-select'><option value='blank'></option><option value='answer'>TRUE</option><option value=''>FALSE</option></select></li>
+</ol>
+</div>
 </div>
 <div id="definition" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Definition<a href="introduction-to-nutritional-models.html#definition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -244,13 +350,17 @@ Figure 2.1: Cattle painted circa 7000 years ago in the Libyan Sahara (Sapienza U
 </div>
 <div id="nasem-2021-and-other-dairy-nutrition-models" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> NASEM (2021) and other dairy nutrition models<a href="introduction-to-nutritional-models.html#nasem-2021-and-other-dairy-nutrition-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>NASEM <span class="citation">(<a href="#ref-NASEM8" role="doc-biblioref">2021</a>)</span> is one of several dairy cattle nutrition models. In most cases, models are intended to serve as decision support tools. In other words, the model estimates are intended to help dairy stakeholders, especially dairy farm managers, make more-informed decisions. The Cornell Net Protein and Carbohydrate System (CNCPS) is an alternative model upon which commercial ration formulation programs such as AMTS have been built. CNCPS also influence the development of The Large Ruminant Nutrition System (LRNS) by Texas A&amp;M researchers. In recent years, the importance of evaluating the environmental and economic impacts of dairy production have led to the development of models not just focused on the animal-level variables (as with NASEM), but instead integrating information about the entire farm system. These models, for example, the Ruminant Farm Systems (RuFaS) model, incorporate detailed information about local weather, soil characteristics, crop growth and storage, and prices of feedstuffs.</p>
-<p>Some programs allow users to optimize the inclusion rate of selected diet ingredients (e.g., least cost ration formulation; AMTS program). In contrast, NASEM <span class="citation">(<a href="#ref-NASEM8" role="doc-biblioref">2021</a>)</span> is designed to <strong>evaluate</strong> existing diets rather than <strong>formulate</strong> new diets that optimize user-defined parameters or meet user-defined constraints. Additionally, NASEM <span class="citation">(<a href="#ref-NASEM8" role="doc-biblioref">2021</a>)</span> predicts selected environmental impacts at the individual animal, predominantly based on dietary factors. Thus, NASEM <span class="citation">(<a href="#ref-NASEM8" role="doc-biblioref">2021</a>)</span> predictions of environmental impacts do not integrate farm system information to the same extent as other models, e.g., RuFaS.</p>
+<p>NASEM is one of several dairy cattle nutrition models. In most cases, models are intended to serve as decision support tools. In other words, the model estimates are intended to help dairy stakeholders, especially dairy farm managers, make more-informed decisions. The Cornell Net Protein and Carbohydrate System (CNCPS) is an alternative model upon which commercial ration formulation programs such as AMTS have been built. CNCPS also influence the development of The Large Ruminant Nutrition System (LRNS) by Texas A&amp;M researchers. In recent years, the importance of evaluating the environmental and economic impacts of dairy production have led to the development of models not just focused on the animal-level variables (as with NASEM), but instead integrating information about the entire farm system. These models, for example, the Ruminant Farm Systems (RuFaS) model, incorporate detailed information about local weather, soil characteristics, crop growth and storage, and prices of feedstuffs.</p>
+<p>Some programs allow users to optimize the inclusion rate of selected diet ingredients (e.g., least cost ration formulation; AMTS program). In contrast, NASEM is designed to <strong>evaluate</strong> existing diets rather than <strong>formulate</strong> new diets that optimize user-defined parameters or meet user-defined constraints. Additionally, NASEM predicts selected environmental impacts at the individual animal, predominantly based on dietary factors. Thus, NASEM predictions of environmental impacts do not integrate farm system information to the same extent as other models, e.g., RuFaS.</p>
 <div class="grey">
 <p><strong>Other ruminant diet evaluation models</strong></p>
 <p>The Cornell Net Protein and Carbohydrate System (CNCPS) <a href="https://cals.cornell.edu/animal-science/outreach-extension/publications-resources-software/cncps" class="uri">https://cals.cornell.edu/animal-science/outreach-extension/publications-resources-software/cncps</a></p>
 <p>The Large Ruminant Nutrition System (LRNS) <a href="https://animalscience.tamu.edu/the-utility-of-applied-nutrition-models-a-brief-history-and-future-perspectives/" class="uri">https://animalscience.tamu.edu/the-utility-of-applied-nutrition-models-a-brief-history-and-future-perspectives/</a></p>
 <p>Ruminant Farm Systems (RuFaS) <a href="http://rufas.org" class="uri">http://rufas.org</a></p>
+</div>
+<div class="green">
+<p><strong>Test Yourself</strong>
+The NASEM model is designed to <select class='webex-select'><option value='blank'></option><option value=''>formulate new</option><option value='answer'>evaluate existing</option></select> diets.</p>
 </div>
 </div>
 <div id="lets-develop-a-simple-nutritional-model" class="section level2 hasAnchor" number="2.5">
@@ -287,7 +397,7 @@ Figure 2.2: DMI vs BW for 300 observations from lactating cows
 </p>
 </div>
 <div class="green">
-<p><strong>Test Yourself:</strong> What would you conclude from the plot?</p>
+<p><strong>Think to Yourself:</strong> What would you conclude from the plot?</p>
 </div>
 <p>After looking at the plot, the researcher believes that it supports their hypothesis: DMI and BW are positively related. In other words, if an animal's BW is known, its DMI can be guessed with some accuracy. The researcher decides to convert this observed relationship to a mathematical model. Because the relationship seems to follow a line, they fit a regression with the linear form <span class="math inline">\(y = mx + b\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
@@ -300,6 +410,10 @@ Figure 2.3: Fitted regression model predicting DMI from BW for lactating cows
 <div id="model-development" class="section level3 hasAnchor" number="2.5.3">
 <h3><span class="header-section-number">2.5.3</span> Model development<a href="introduction-to-nutritional-models.html#model-development" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>By fitting a regression model to the observed points, they get an estimate of the slope (0.03) that relates BW and DMI. In other words, the average DMI observed was 3% of the animal BW. This single mathematical expression is a very simple nutritional model: <span class="math inline">\(DMI = 0.03 * BW\)</span></p>
+<p>We can think of our example model as an expression relating three <strong>parameters</strong>:</p>
+<p><span class="math inline">\(DMI\)</span> a predicted value</p>
+<p><span class="math inline">\(0.03\)</span> a coefficient relating DMI and BW</p>
+<p><span class="math inline">\(BW\)</span> a user input describing the animal</p>
 <p>The researcher thinks the model will be useful for prediction. They decide to test the predictive performance of the model by buying a new lactating cow. They record the cow's BW as 625 kg.</p>
 <p><img src="images/image-1264450838.png" /></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
@@ -310,6 +424,7 @@ Figure 2.4: Fitted regression model predicting DMI from BW for lactating cows
 </div>
 <div class="green">
 <p><strong>Test Yourself:</strong> Using our simple nutritional model, what is this cow's predicted DMI?</p>
+<p><input class='webex-solveme nospaces' size='10' data-answer='["18.75","18.75 kg","18.75 kgDM"]'/></p>
 </div>
 </div>
 <div id="model-verification" class="section level3 hasAnchor" number="2.5.4">
@@ -337,27 +452,149 @@ Figure 2.5: Actual DMI for a new observation (red point) of a cow with BW = 625 
 Figure 2.6: DMI vs BW for 300 observations from lactating cows, by parity
 </p>
 </div>
-<p>It appears there is some variation explained by parity. In this way, the researcher can update the model to include other variables, e.g., <span class="math inline">\(DMI = 0.03 * BW + ParityEffect\)</span>. Nutritional models with multiple variables are difficult to visualize, but they are conceptually similar to the simpler model in our example.</p>
+<p>It appears there is some variation explained by parity. In this way, the researcher can update the model to include other parameters, e.g., <span class="math inline">\(DMI = 0.03 * BW + ParityEffect\)</span>. Our example model now includes four parameters:</p>
+<p><span class="math inline">\(DMI\)</span> a predicted value</p>
+<p><span class="math inline">\(0.03\)</span> a coefficient relating DMI and BW</p>
+<p><span class="math inline">\(BW\)</span> a user input describing the animal</p>
+<p><span class="math inline">\(ParityEffect\)</span> a parameter that adjusts the intercept up for multiparous, and down for primiparous cows.</p>
+<p>When it comes to updating our model from here, the possibilities are almost limitless. Parameters can refer to any part of the animal system: the model inputs, intermediates, outputs, and relationships among these quantities. Almost anything we can measure in animal nutrition (an amount, a rate, a status) can be thought of as a parameter. As we can see from the example, parameters are not always numeric. Inputs such as <span class="math inline">\(Parity = multiparous, primiparous\)</span>, <span class="math inline">\(Breed = Holstein\)</span>, and <span class="math inline">\(Life\space Stage = Calf\)</span> are categories rather than numbers. As we'll see in later chapters, nutritional models can accommodate many different types of information (e.g, numerical, categorical), various types of relationships between parameters (e.g., additive, interactive), using many types of mathematical expressions (e.g., linear, non-linear).</p>
+</div>
+<div id="reflecting-on-our-example-model" class="section level3 hasAnchor" number="2.5.6">
+<h3><span class="header-section-number">2.5.6</span> Reflecting on our example model<a href="introduction-to-nutritional-models.html#reflecting-on-our-example-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Congratulations - you created and used your first nutritional model! 🎉</p>
+<p>Just like the two-dimensional cow paintings at the beginning, our simple nutritional model conveyed some information about cattle. Instead of a painting, we used a mathematical expression to communicate it. We showed how a researcher could use empirical observations (data collection) to create a model expression, check it against new data, and refine the model.</p>
 </div>
 </div>
-<div id="conclusions-and-additional-complexity" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Conclusions and additional complexity<a href="introduction-to-nutritional-models.html#conclusions-and-additional-complexity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Congratulations - you created and used a nutritional model! 🎉</p>
-<p>Our model involved the relationships between three variables, DMI, BW, and parity, making it relatively simple. In the subsequent chapters, we will discuss models that contain hundreds of variables, related by many types of mathematical expressions. Our simple example used a linear relationship, but nutritional models can also contain non-linear relationships. In our example, the effects of BW and Parity were independent and additive. Most nutritional models also include mathematical terms that describe interactions between variables.</p>
-<p>If this sounds complex, it's because it is complex! People have devoted entire careers to refining small subcomponents of the nutritional models we use. It's important to remember that our goal in this module is to gain a general understanding of nutritional models. If you are interested to learn all the details...maybe graduate school is a good fit for you.</p>
+<div id="scaling-up-and-adding-complexity" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Scaling up and adding complexity<a href="introduction-to-nutritional-models.html#scaling-up-and-adding-complexity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="green">
+<p>How do we get from our simple example model, to a huge and complex model like NASEM?</p>
+</div>
+<p>In our example, one researcher was working alone. In actuality, thousands of animal nutritionists and researchers contribute to developing nutritional models such as NASEM (2021). Many researchers have a specific focus area (e.g., fatty acid nutrition, rumen function) and dedicate their efforts to improving methods and collecting data for this specific topic area. An individual researcher can only collect a limited amount of data on a few parameters. Still, when thousands of researchers publish their findings, these models and data can be aggregated into larger models. In fact, some researchers ("modelers") specialize in aggregating and modeling data collected by other scientists!</p>
+<p>The NASEM model is a conglomeration of many smaller
+models (sometimes called <strong>sub-models</strong>) into one larger model. The entire NASEM model is massive: it represents all nutrients and energy for all nutritional processes. It contains hundreds of parameters, related by many types of mathematical expressions. In contrast, any given piece (a sub-model) of the NASEM model is simpler. A sub-model could represent only one nutrient (e.g., protein) or a
+specific process (e.g., ruminal degradation). Many of the sub-models can be further divided into smaller sub-models. Each of these tiny pieces of the NASEM model was created and refined through scientific processes similar to our example model. Modelers worked to connect together these tiny sub-models to create the much larger NASEM model.</p>
+<div class="green">
+<p><strong>Test yourself</strong> A NASEM sub-model is someone else's duplicate of
+the original model. <select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></p>
+</div>
+</div>
+<div id="conclusion" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Conclusion<a href="introduction-to-nutritional-models.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Nutritional models serve practical goals: they can make animal feeding practices more economical, more environmentally-sound, and more aligned with human needs and available resources. Nutritional models are developed through scientific processes. They use mathematical expressions to represent information about how nutritional processes work. Nutritional models can appear quite complex, but it's important to remember that they are the collective effort of many people, across long periods of time, as documented in the scientific literature.</p>
+</div>
+<div id="r-code-for-figures" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> R code for figures<a href="introduction-to-nutritional-models.html#r-code-for-figures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R code used for this chapter is given below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-nutritional-models.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the seed for reproducibility</span></span>
+<span id="cb1-2"><a href="introduction-to-nutritional-models.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">765</span>)</span>
+<span id="cb1-3"><a href="introduction-to-nutritional-models.html#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="introduction-to-nutritional-models.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required packages</span></span>
+<span id="cb1-5"><a href="introduction-to-nutritional-models.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-6"><a href="introduction-to-nutritional-models.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb1-7"><a href="introduction-to-nutritional-models.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-8"><a href="introduction-to-nutritional-models.html#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="introduction-to-nutritional-models.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the ggplot2 theme</span></span>
+<span id="cb1-10"><a href="introduction-to-nutritional-models.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
+<span id="cb1-11"><a href="introduction-to-nutritional-models.html#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="introduction-to-nutritional-models.html#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate data</span></span>
+<span id="cb1-13"><a href="introduction-to-nutritional-models.html#cb1-13" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">300</span>, <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">3</span>) <span class="co"># generate normally distributed residuals</span></span>
+<span id="cb1-14"><a href="introduction-to-nutritional-models.html#cb1-14" aria-hidden="true" tabindex="-1"></a>bw <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">300</span>, <span class="dv">600</span>, <span class="at">sd =</span> <span class="dv">40</span>) <span class="co"># generate normally distributed body weights</span></span>
+<span id="cb1-15"><a href="introduction-to-nutritional-models.html#cb1-15" aria-hidden="true" tabindex="-1"></a>parity <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">7</span>), <span class="dv">150</span>) <span class="co"># generate parity effect using integers</span></span>
+<span id="cb1-16"><a href="introduction-to-nutritional-models.html#cb1-16" aria-hidden="true" tabindex="-1"></a>dmi <span class="ot">&lt;-</span> <span class="fl">0.03</span> <span class="sc">*</span> bw <span class="sc">+</span> parity <span class="sc">+</span> res <span class="co"># create dry matter intake (DMI) as a function of observed and residual</span></span>
+<span id="cb1-17"><a href="introduction-to-nutritional-models.html#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="introduction-to-nutritional-models.html#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with the generated data ,create parity values</span></span>
+<span id="cb1-19"><a href="introduction-to-nutritional-models.html#cb1-19" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">DMI =</span> dmi, <span class="at">BW =</span> bw, <span class="at">Parity =</span> parity) <span class="sc">%&gt;%</span></span>
+<span id="cb1-20"><a href="introduction-to-nutritional-models.html#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-21"><a href="introduction-to-nutritional-models.html#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">Parity =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb1-22"><a href="introduction-to-nutritional-models.html#cb1-22" aria-hidden="true" tabindex="-1"></a>      Parity <span class="sc">==</span> <span class="dv">1</span>,</span>
+<span id="cb1-23"><a href="introduction-to-nutritional-models.html#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Primiparous (first calf)&quot;</span>,</span>
+<span id="cb1-24"><a href="introduction-to-nutritional-models.html#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Multiparous (2+ calves)&quot;</span></span>
+<span id="cb1-25"><a href="introduction-to-nutritional-models.html#cb1-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-26"><a href="introduction-to-nutritional-models.html#cb1-26" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-27"><a href="introduction-to-nutritional-models.html#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="introduction-to-nutritional-models.html#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatterplot of BW and DMI</span></span>
+<span id="cb1-29"><a href="introduction-to-nutritional-models.html#cb1-29" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> BW, <span class="at">y =</span> DMI)) <span class="sc">+</span></span>
+<span id="cb1-30"><a href="introduction-to-nutritional-models.html#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-31"><a href="introduction-to-nutritional-models.html#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;BW, kg&quot;</span>, <span class="at">y =</span> <span class="st">&quot;DMI, kg/d&quot;</span>)</span>
+<span id="cb1-32"><a href="introduction-to-nutritional-models.html#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="introduction-to-nutritional-models.html#cb1-33" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb1-34"><a href="introduction-to-nutritional-models.html#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="introduction-to-nutritional-models.html#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a linear regression line to the scatterplot and label the equation</span></span>
+<span id="cb1-36"><a href="introduction-to-nutritional-models.html#cb1-36" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb1-37"><a href="introduction-to-nutritional-models.html#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb1-38"><a href="introduction-to-nutritional-models.html#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">&quot;text&quot;</span>,</span>
+<span id="cb1-39"><a href="introduction-to-nutritional-models.html#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="dv">540</span>,</span>
+<span id="cb1-40"><a href="introduction-to-nutritional-models.html#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">35</span>,</span>
+<span id="cb1-41"><a href="introduction-to-nutritional-models.html#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">&quot;DMI = 0.03*BW&quot;</span>,</span>
+<span id="cb1-42"><a href="introduction-to-nutritional-models.html#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb1-43"><a href="introduction-to-nutritional-models.html#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">5</span></span>
+<span id="cb1-44"><a href="introduction-to-nutritional-models.html#cb1-44" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-45"><a href="introduction-to-nutritional-models.html#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;BW, kg&quot;</span>, <span class="at">y =</span> <span class="st">&quot;DMI, kg/d&quot;</span>)</span>
+<span id="cb1-46"><a href="introduction-to-nutritional-models.html#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="introduction-to-nutritional-models.html#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatterplot of BW and DMI, with an additional vertical red dashed line</span></span>
+<span id="cb1-48"><a href="introduction-to-nutritional-models.html#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="introduction-to-nutritional-models.html#cb1-49" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> BW, <span class="at">y =</span> DMI)) <span class="sc">+</span></span>
+<span id="cb1-50"><a href="introduction-to-nutritional-models.html#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-51"><a href="introduction-to-nutritional-models.html#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb1-52"><a href="introduction-to-nutritional-models.html#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb1-53"><a href="introduction-to-nutritional-models.html#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">&quot;text&quot;</span>,</span>
+<span id="cb1-54"><a href="introduction-to-nutritional-models.html#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="dv">540</span>,</span>
+<span id="cb1-55"><a href="introduction-to-nutritional-models.html#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">35</span>,</span>
+<span id="cb1-56"><a href="introduction-to-nutritional-models.html#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">&quot;DMI = 0.03*BW&quot;</span>,</span>
+<span id="cb1-57"><a href="introduction-to-nutritional-models.html#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb1-58"><a href="introduction-to-nutritional-models.html#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">5</span></span>
+<span id="cb1-59"><a href="introduction-to-nutritional-models.html#cb1-59" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-60"><a href="introduction-to-nutritional-models.html#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb1-61"><a href="introduction-to-nutritional-models.html#cb1-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">&quot;segment&quot;</span>,</span>
+<span id="cb1-62"><a href="introduction-to-nutritional-models.html#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="dv">625</span>,</span>
+<span id="cb1-63"><a href="introduction-to-nutritional-models.html#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="at">xend =</span> <span class="dv">625</span>,</span>
+<span id="cb1-64"><a href="introduction-to-nutritional-models.html#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb1-65"><a href="introduction-to-nutritional-models.html#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">yend =</span> <span class="cn">Inf</span>,</span>
+<span id="cb1-66"><a href="introduction-to-nutritional-models.html#cb1-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;red&quot;</span>,</span>
+<span id="cb1-67"><a href="introduction-to-nutritional-models.html#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">lty =</span> <span class="st">&quot;dashed&quot;</span></span>
+<span id="cb1-68"><a href="introduction-to-nutritional-models.html#cb1-68" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-69"><a href="introduction-to-nutritional-models.html#cb1-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-70"><a href="introduction-to-nutritional-models.html#cb1-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;BW, kg&quot;</span>, <span class="at">y =</span> <span class="st">&quot;DMI, kg/d&quot;</span>)</span>
+<span id="cb1-71"><a href="introduction-to-nutritional-models.html#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="introduction-to-nutritional-models.html#cb1-72" aria-hidden="true" tabindex="-1"></a>p2</span>
+<span id="cb1-73"><a href="introduction-to-nutritional-models.html#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="introduction-to-nutritional-models.html#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a red point to the scatterplot</span></span>
+<span id="cb1-75"><a href="introduction-to-nutritional-models.html#cb1-75" aria-hidden="true" tabindex="-1"></a>p2<span class="fl">.1</span> <span class="ot">&lt;-</span> p2 <span class="sc">+</span> <span class="fu">annotate</span>(</span>
+<span id="cb1-76"><a href="introduction-to-nutritional-models.html#cb1-76" aria-hidden="true" tabindex="-1"></a>  <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>,</span>
+<span id="cb1-77"><a href="introduction-to-nutritional-models.html#cb1-77" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="dv">625</span>,</span>
+<span id="cb1-78"><a href="introduction-to-nutritional-models.html#cb1-78" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="dv">25</span>,</span>
+<span id="cb1-79"><a href="introduction-to-nutritional-models.html#cb1-79" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> <span class="dv">4</span>,</span>
+<span id="cb1-80"><a href="introduction-to-nutritional-models.html#cb1-80" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">&quot;red&quot;</span></span>
+<span id="cb1-81"><a href="introduction-to-nutritional-models.html#cb1-81" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb1-82"><a href="introduction-to-nutritional-models.html#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="introduction-to-nutritional-models.html#cb1-83" aria-hidden="true" tabindex="-1"></a>p2<span class="fl">.1</span></span>
+<span id="cb1-84"><a href="introduction-to-nutritional-models.html#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="introduction-to-nutritional-models.html#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatterplot of BW and DMI, with color based on parity, and label the linear regression lines</span></span>
+<span id="cb1-86"><a href="introduction-to-nutritional-models.html#cb1-86" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> BW, <span class="at">y =</span> DMI, <span class="at">color =</span> Parity)) <span class="sc">+</span></span>
+<span id="cb1-87"><a href="introduction-to-nutritional-models.html#cb1-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-88"><a href="introduction-to-nutritional-models.html#cb1-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-89"><a href="introduction-to-nutritional-models.html#cb1-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)</span>
+<span id="cb1-90"><a href="introduction-to-nutritional-models.html#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="introduction-to-nutritional-models.html#cb1-91" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb1-92"><a href="introduction-to-nutritional-models.html#cb1-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb1-93"><a href="introduction-to-nutritional-models.html#cb1-93" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">&quot;text&quot;</span>,</span>
+<span id="cb1-94"><a href="introduction-to-nutritional-models.html#cb1-94" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="dv">555</span>,</span>
+<span id="cb1-95"><a href="introduction-to-nutritional-models.html#cb1-95" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">35</span>,</span>
+<span id="cb1-96"><a href="introduction-to-nutritional-models.html#cb1-96" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">&quot;DMI = 0.03*BW + (multiparous effect)&quot;</span>,</span>
+<span id="cb1-97"><a href="introduction-to-nutritional-models.html#cb1-97" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;#F8766D&quot;</span>,</span>
+<span id="cb1-98"><a href="introduction-to-nutritional-models.html#cb1-98" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">5</span></span>
+<span id="cb1-99"><a href="introduction-to-nutritional-models.html#cb1-99" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-100"><a href="introduction-to-nutritional-models.html#cb1-100" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb1-101"><a href="introduction-to-nutritional-models.html#cb1-101" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">&quot;text&quot;</span>,</span>
+<span id="cb1-102"><a href="introduction-to-nutritional-models.html#cb1-102" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="dv">555</span>,</span>
+<span id="cb1-103"><a href="introduction-to-nutritional-models.html#cb1-103" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">32</span>,</span>
+<span id="cb1-104"><a href="introduction-to-nutritional-models.html#cb1-104" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">&quot;DMI = 0.03*BW + (primiparous effect)&quot;</span>,</span>
+<span id="cb1-105"><a href="introduction-to-nutritional-models.html#cb1-105" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;#00BFC4&quot;</span>,</span>
+<span id="cb1-106"><a href="introduction-to-nutritional-models.html#cb1-106" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">5</span></span>
+<span id="cb1-107"><a href="introduction-to-nutritional-models.html#cb1-107" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-108"><a href="introduction-to-nutritional-models.html#cb1-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;BW, kg&quot;</span>, <span class="at">y =</span> <span class="st">&quot;DMI, kg/d&quot;</span>)</span></code></pre></div>
 
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Coffey2016" class="csl-entry">
-Coffey, D., K. Dawson, P. Ferket, and A. Connolly. 2016. <span>“Review of the Feed Industry from a Historical Perspective and Implications for Its Future.”</span> <em>Journal of Applied Animal Nutrition</em> 4: e3. <a href="https://doi.org/10.1017/JAN.2015.11">https://doi.org/10.1017/JAN.2015.11</a>.
-</div>
-<div id="ref-NASEM8" class="csl-entry">
-Engineering, and Medicine National Academies of Sciences. 2021. <span>“Nutrient Requirements of Dairy Cattle: Eighth Revised Edition.”</span> <em>Nutrient Requirements of Dairy Cattle</em>, August. <a href="https://doi.org/10.17226/25806">https://doi.org/10.17226/25806</a>.
-</div>
-<div id="ref-Ullrey2001" class="csl-entry">
-Ullrey, Duane E. 2001. <em>Landmark and Historic Contributions of NRC’s Committee on Animal Nutrition</em>. <em>Scientific Advances in Animal Nutrition</em>. National Academies Press. <a href="https://doi.org/10.17226/10299">https://doi.org/10.17226/10299</a>.
 </div>
 </div>
 <script>
