@@ -4,12 +4,6 @@ library(ggplot2)
 theme_set(theme_classic())
 ```
 
-```{r, echo = F, fig.align = "center", fig.height = 2, fig.cap = "Which one of us did you have in mind when you formulated our diet?"}
-knitr::include_graphics("images/Cow face distribution.jpg")
-library(webexercises)
-library(ggplot2)
-theme_set(theme_classic())
-```
 
 ::: {.lo}
 
