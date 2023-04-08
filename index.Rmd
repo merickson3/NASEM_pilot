@@ -1,5 +1,5 @@
 --- 
-title: Teaching with the narrative and model in NASEM (2021) 'Nutrient Requirements
+title: Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements
   of Dairy Cattle'
 author:
 - "MaryGrace Erickson, University of Wisconsin--Madison"
@@ -13,7 +13,7 @@ bibliography:
 - book.bib
 - packages.bib
 description: |
-  This book is intended to help instructors integrate the NASEM (2021) dairy nutrition model into undergraduate courses.
+  This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses.
 link-citations: yes
 ---
 
