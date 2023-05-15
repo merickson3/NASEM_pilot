@@ -310,3 +310,11 @@ In this system, the fates of marbles are determined by what blocks they run into
 
 ![](images/Xylophoe-Marble-Sorter-Trickshot.gif){align="center"}
 :::
+
+## Questions
+
+1. Describe the core physical/chemical principles underlying nutritional models. 
+1. List and describe the core sequence of ordered processes in nutrition. 
+1. What is an open system, and how does it apply to animal nutrition?
+1. What is a steady state condition, and how does it apply to animal nutrition? 
+1. Give examples of inputs, processes, and outputs in the nutritional system of a non-lactating animal. 

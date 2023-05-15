@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Protein | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
+  <meta name="description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  <meta name="generator" content="bookdown 0.33.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Protein | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Protein | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  
+  <meta name="twitter:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+<meta name="author" content="MaryGrace Erickson, University of Wisconsin--Madison" />
+<meta name="author" content="Michel A. Wattiaux, University of Wisconsin--Madison" />
+<meta name="author" content="Mark D. Hanigan, Virginia Polytechnic Institute and State University" />
+<meta name="author" content="Marina A.C. Danes, Universidade Federal de Lavras" />
+
+
+<meta name="date" content="2023-05-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="model-machinery.html"/>
+<link rel="next" href="glossary.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script>
+  function unrolltab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "none";
+    evt.currentTarget.className += "none";
+  }
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="www/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Learning NASEM Dairy (2021)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this interactive textbook</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#information-for-educators"><i class="fa fa-check"></i><b>1.2</b> Information for educators</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#intended-audience"><i class="fa fa-check"></i><b>1.3</b> Intended audience</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assumptions-about-prior-knowledge"><i class="fa fa-check"></i><b>1.4</b> Assumptions about prior knowledge</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#technology-requirements"><i class="fa fa-check"></i><b>1.5</b> Technology requirements</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.6</b> Accessing the NASEM (2021) book</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#the-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.7</b> The NASEM-dairy-8 software</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#running-a-simulation"><i class="fa fa-check"></i><b>1.8</b> Running a simulation</a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#known-updates-discrepancies-in-book-vs.-software"><i class="fa fa-check"></i><b>1.9</b> Known updates (discrepancies in book vs. software)</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#nasem-dairy-8-software-updates-and-bugs"><i class="fa fa-check"></i><b>1.9.1</b> NASEM dairy-8 software updates and bugs</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#differences-between-the-book-and-software"><i class="fa fa-check"></i><b>1.9.2</b> Differences between the book and software</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#contribute-edits-and-suggestions"><i class="fa fa-check"></i><b>1.10</b> Contribute edits and suggestions</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.11</b> License</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#citations"><i class="fa fa-check"></i><b>1.12</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html"><i class="fa fa-check"></i><b>2</b> Introduction to nutritional models</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#a-brief-history"><i class="fa fa-check"></i><b>2.1</b> A brief history</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#definition"><i class="fa fa-check"></i><b>2.2</b> Definition</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#usefulness"><i class="fa fa-check"></i><b>2.3</b> Usefulness</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#nasem-2021-and-other-dairy-nutrition-models"><i class="fa fa-check"></i><b>2.4</b> NASEM (2021) and other dairy nutrition models</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#lets-develop-a-simple-nutritional-model"><i class="fa fa-check"></i><b>2.5</b> Let's develop a simple nutritional model</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#hypothesis-generation"><i class="fa fa-check"></i><b>2.5.1</b> Hypothesis generation</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#data-collection-through-observation-or-experimentation"><i class="fa fa-check"></i><b>2.5.2</b> Data collection through observation (or experimentation)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-development"><i class="fa fa-check"></i><b>2.5.3</b> Model development</a></li>
+<li class="chapter" data-level="2.5.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-verification"><i class="fa fa-check"></i><b>2.5.4</b> Model verification</a></li>
+<li class="chapter" data-level="2.5.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process"><i class="fa fa-check"></i><b>2.5.5</b> Model refinement (re-starting the process)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#reflecting-on-our-example-model"><i class="fa fa-check"></i><b>2.5.6</b> Reflecting on our example model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#scaling-up-and-adding-complexity"><i class="fa fa-check"></i><b>2.6</b> Scaling up and adding complexity</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusion"><i class="fa fa-check"></i><b>2.7</b> Conclusion</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#r-code-for-figures"><i class="fa fa-check"></i><b>2.8</b> R code for figures</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="systems-concepts.html"><a href="systems-concepts.html"><i class="fa fa-check"></i><b>3</b> Systems concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="systems-concepts.html"><a href="systems-concepts.html#the-animal-nutritional-system"><i class="fa fa-check"></i><b>3.1</b> The animal nutritional system</a></li>
+<li class="chapter" data-level="3.2" data-path="systems-concepts.html"><a href="systems-concepts.html#ways-of-understanding-nutritional-systems"><i class="fa fa-check"></i><b>3.2</b> Ways of understanding nutritional systems</a></li>
+<li class="chapter" data-level="3.3" data-path="systems-concepts.html"><a href="systems-concepts.html#systems-concepts-1"><i class="fa fa-check"></i><b>3.3</b> Systems concepts</a></li>
+<li class="chapter" data-level="3.4" data-path="systems-concepts.html"><a href="systems-concepts.html#single-animal-nutritional-system"><i class="fa fa-check"></i><b>3.4</b> Single-animal nutritional system</a></li>
+<li class="chapter" data-level="3.5" data-path="systems-concepts.html"><a href="systems-concepts.html#physicalchemical-principles-mass-energy-balance"><i class="fa fa-check"></i><b>3.5</b> Physical/chemical principles: Mass &amp; energy balance</a></li>
+<li class="chapter" data-level="3.6" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-ordered-processes"><i class="fa fa-check"></i><b>3.6</b> Biological principles: ordered processes</a></li>
+<li class="chapter" data-level="3.7" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-context-dependence"><i class="fa fa-check"></i><b>3.7</b> Biological principles: context-dependence</a></li>
+<li class="chapter" data-level="3.8" data-path="systems-concepts.html"><a href="systems-concepts.html#conclusions"><i class="fa fa-check"></i><b>3.8</b> Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="requirements.html"><a href="requirements.html"><i class="fa fa-check"></i><b>4</b> Requirements</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-flows"><i class="fa fa-check"></i><b>4.1</b> Defining nutrient flows</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#supplies-requirements-and-balances"><i class="fa fa-check"></i><b>4.1.1</b> Supplies, requirements, and balances</a></li>
+<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.2</b> Requirement definitions in human and dairy nutrition</a></li>
+<li class="chapter" data-level="4.1.3" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.3</b> Absorbed and metabolizable amounts</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="requirements.html"><a href="requirements.html#dietary-reference-intakes"><i class="fa fa-check"></i><b>4.2</b> Dietary reference intakes</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="requirements.html"><a href="requirements.html#protecting-against-underfeeding-with-safety-factors"><i class="fa fa-check"></i><b>4.2.1</b> Protecting against underfeeding with "safety factors"</a></li>
+<li class="chapter" data-level="4.2.2" data-path="requirements.html"><a href="requirements.html#protecting-against-overfeeding"><i class="fa fa-check"></i><b>4.2.2</b> Protecting against overfeeding</a></li>
+<li class="chapter" data-level="4.2.3" data-path="requirements.html"><a href="requirements.html#accounting-for-uncertainty"><i class="fa fa-check"></i><b>4.2.3</b> Accounting for uncertainty</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#nasem-estimates-of-requirements"><i class="fa fa-check"></i><b>4.3</b> NASEM estimates of requirements</a></li>
+<li class="chapter" data-level="4.4" data-path="requirements.html"><a href="requirements.html#types-of-literature-used-by-nasem--nasem8"><i class="fa fa-check"></i><b>4.4</b> Types of literature used by NASEM <span class="citation">(2021)</span></a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="requirements.html"><a href="requirements.html#measuring-composition-of-inputs-body-tissues-and-outputs"><i class="fa fa-check"></i><b>4.4.1</b> Measuring composition of inputs, body tissues, and outputs</a></li>
+<li class="chapter" data-level="4.4.2" data-path="requirements.html"><a href="requirements.html#measuring-losses-when-intake-is-minimal"><i class="fa fa-check"></i><b>4.4.2</b> Measuring losses when intake is minimal</a></li>
+<li class="chapter" data-level="4.4.3" data-path="requirements.html"><a href="requirements.html#studying-symptoms-of-deficiency-and-toxicity"><i class="fa fa-check"></i><b>4.4.3</b> Studying symptoms of deficiency and toxicity</a></li>
+<li class="chapter" data-level="4.4.4" data-path="requirements.html"><a href="requirements.html#regression-on-productive-performance"><i class="fa fa-check"></i><b>4.4.4</b> Regression on productive performance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#r-code-for-figures-1"><i class="fa fa-check"></i><b>4.5</b> R code for figures</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-machinery.html"><a href="model-machinery.html#basic-nutrition-math"><i class="fa fa-check"></i><b>5.1</b> Basic nutrition math</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="model-machinery.html"><a href="model-machinery.html#using-ratios-percentages-proportions"><i class="fa fa-check"></i><b>5.1.1</b> Using ratios, percentages, proportions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="model-machinery.html"><a href="model-machinery.html#converting-units"><i class="fa fa-check"></i><b>5.1.2</b> Converting units</a></li>
+<li class="chapter" data-level="5.1.3" data-path="model-machinery.html"><a href="model-machinery.html#converting-basis"><i class="fa fa-check"></i><b>5.1.3</b> Converting basis</a></li>
+<li class="chapter" data-level="5.1.4" data-path="model-machinery.html"><a href="model-machinery.html#scaling"><i class="fa fa-check"></i><b>5.1.4</b> Scaling</a></li>
+<li class="chapter" data-level="5.1.5" data-path="model-machinery.html"><a href="model-machinery.html#weighting"><i class="fa fa-check"></i><b>5.1.5</b> Weighting</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="model-machinery.html"><a href="model-machinery.html#predictive-models"><i class="fa fa-check"></i><b>5.2</b> Predictive models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#predictive-model-descriptors"><i class="fa fa-check"></i><b>5.2.1</b> Predictive model descriptors</a></li>
+<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#simple-linear-model-empirical-input-output"><i class="fa fa-check"></i><b>5.2.2</b> Simple linear model (empirical, input-output)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetic-model-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.3</b> Exponential growth kinetic model (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.4</b> Saturable growth kinetics (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="model-machinery.html"><a href="model-machinery.html#dmi-prediction-in-nasem"><i class="fa fa-check"></i><b>5.2.5</b> DMI prediction in NASEM</a></li>
+<li class="chapter" data-level="5.2.6" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.6</b> Prediction using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="model-machinery.html"><a href="model-machinery.html#optimization"><i class="fa fa-check"></i><b>5.3</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="model-machinery.html"><a href="model-machinery.html#optimization-using-software"><i class="fa fa-check"></i><b>5.3.1</b> Optimization using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="model-machinery.html"><a href="model-machinery.html#other-important-concepts"><i class="fa fa-check"></i><b>5.4</b> Other important concepts</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.4.1</b> Allometric equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="protein.html"><a href="protein.html"><i class="fa fa-check"></i><b>6</b> Protein</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="protein.html"><a href="protein.html#biological-definition-of-protein"><i class="fa fa-check"></i><b>6.1</b> Biological definition of protein</a></li>
+<li class="chapter" data-level="6.2" data-path="protein.html"><a href="protein.html#nutritional-definitions-of-protein"><i class="fa fa-check"></i><b>6.2</b> Nutritional definitions of protein</a></li>
+<li class="chapter" data-level="6.3" data-path="protein.html"><a href="protein.html#the-animal-protein-system"><i class="fa fa-check"></i><b>6.3</b> The animal protein system</a></li>
+<li class="chapter" data-level="6.4" data-path="protein.html"><a href="protein.html#protein-intake"><i class="fa fa-check"></i><b>6.4</b> Protein intake</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="protein.html"><a href="protein.html#feed-level-calculations"><i class="fa fa-check"></i><b>6.4.1</b> Feed-level calculations</a></li>
+<li class="chapter" data-level="6.4.2" data-path="protein.html"><a href="protein.html#diet-level-calculations"><i class="fa fa-check"></i><b>6.4.2</b> Diet-level calculations</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="protein.html"><a href="protein.html#ruminal-protein-flows"><i class="fa fa-check"></i><b>6.5</b> Ruminal protein flows</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="protein.html"><a href="protein.html#rdp-and-rup"><i class="fa fa-check"></i><b>6.5.1</b> RDP and RUP</a></li>
+<li class="chapter" data-level="6.5.2" data-path="protein.html"><a href="protein.html#calculating-rdp-and-rup"><i class="fa fa-check"></i><b>6.5.2</b> Calculating RDP and RUP</a></li>
+<li class="chapter" data-level="6.5.3" data-path="protein.html"><a href="protein.html#microbial-protein-synthesis"><i class="fa fa-check"></i><b>6.5.3</b> Microbial protein synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="protein.html"><a href="protein.html#postruminal-protein-flows"><i class="fa fa-check"></i><b>6.6</b> Postruminal protein flows</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="protein.html"><a href="protein.html#metabolizable-protein"><i class="fa fa-check"></i><b>6.6.1</b> Metabolizable protein</a></li>
+<li class="chapter" data-level="6.6.2" data-path="protein.html"><a href="protein.html#metabolizable-aa"><i class="fa fa-check"></i><b>6.6.2</b> Metabolizable AA</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="protein.html"><a href="protein.html#recommendations-for-protein-supply"><i class="fa fa-check"></i><b>6.7</b> Recommendations for protein supply</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="protein.html"><a href="protein.html#example-of-breakdown-of-protein-from-n15-paper"><i class="fa fa-check"></i><b>6.7.1</b> Example of breakdown of protein from n15 paper</a></li>
+<li class="chapter" data-level="6.7.2" data-path="protein.html"><a href="protein.html#create-examples-for-other-stages"><i class="fa fa-check"></i><b>6.7.2</b> CREATE EXAMPLES FOR OTHER STAGES?</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="protein.html"><a href="protein.html#questions"><i class="fa fa-check"></i><b>6.8</b> Questions</a></li>
+<li class="chapter" data-level="6.9" data-path="protein.html"><a href="protein.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>6.9</b> R code for figures ### NEEDS UPDATE</a></li>
+<li class="chapter" data-level="6.10" data-path="protein.html"><a href="protein.html#references"><i class="fa fa-check"></i><b>6.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>7</b> Glossary</a></li>
+<li class="divider"></li>
+<b> Contributors:</b>
+<li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
+<li><a href="https://andysci.wisc.edu/directory/michel-wattiaux/" target="blank">Michel A. Wattiaux</a></li>
+<li><a href="https://www.dasc.vt.edu/people/faculty/hanigan.html" target="blank">Mark D. Hanigan</a></li>
+<li><a href="https://www.marinadanes.com" target="blank">Marina A.C. Danes </a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="protein" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Protein<a href="protein.html#protein" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="images/image-1217922456.png" alt="Re-creating a dairy cow with machinery is not as easy as you might think. Source: &lt;http://blog.modernmechanix.com&gt;" width="320" />
+<p class="caption">
+Figure 6.1: Re-creating a dairy cow with machinery is not as easy as you might think. Source: <a href="http://blog.modernmechanix.com" class="uri">http://blog.modernmechanix.com</a>
+</p>
+</div>
+<div class="lo">
+<p><strong>Learning Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Define the major protein supply fractions in dairy nutrition,
+including CP, RDP, RUP, MP, NP and describe how each is determined.</p></li>
+<li><p>Differentiate essential, non-essential, and conditionally-essential
+amino acids.</p></li>
+<li><p>Discuss why AA, and not just nitrogen, are considered in the NASEM</p>
+<ol start="2021" style="list-style-type: decimal">
+<li>model.</li>
+</ol></li>
+<li><p>Explain the concept of a "limiting AA" and discuss its relevance
+(and complications) when applied to dairy nutrition.</p></li>
+<li><p>Explain the goals of protein nutrition in terms of economic and
+environmental tradeoffs.</p></li>
+<li><p>List the protein demands (e.g., maintenance, lactation) that
+comprise the requirements for various life stages.</p></li>
+<li></li>
+<li><p>In-class activity - whiteboard drawing of the N cycling in a cow.</p></li>
+</ol>
+</div>
+<div id="biological-definition-of-protein" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Biological definition of protein<a href="protein.html#biological-definition-of-protein" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Biologically, proteins are defined as macromolecules comprised of many
+amino acids bonded together. Proteins are required for structure,
+function, and regulation of the body. For example:</p>
+<ul>
+<li>actin and myosin proteins contract muscles</li>
+<li>collagen and elastin, proteins in connective tissue, provide
+structural support</li>
+<li>protein hormones such as insulin and vasopressin regulate body
+processes</li>
+<li>hemoglobin carries oxygen in the blood</li>
+<li>immunoglobulin proteins (antibodies) participate in the immune
+response</li>
+</ul>
+<p>All proteins contain nitrogen, because every amino acid has an amino
+group (<span class="math inline">\(-NH_2\)</span>). All proteins also contain carbon, hydrogen, and oxygen.
+Some proteins contain sulfur, iron, copper, or other elements. Although
+every protein contains N, the N content of a given AA or protein varies.</p>
+<p>Across the animal kingdom, dietary AA absorbed in the small intestine
+are used to synthesize body proteins and output proteins during
+translation. In some animals (e.g., ruminants) a microbial community
+enables more significant use of dietary non-protein nitrogenous
+compounds for protein synthesis. This is one reason why the nutritional
+definition of protein is slightly different from its biological
+definition.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/AAtoProtein.png" alt="A. Free amino acids. B. Peptides, which are chains of AA. C. An example protein, which is a large molecule formed by a sequence of ~50 to 2000 AA, and takes on a 3-dimensional structure that can include multiple subunits" width="85%" />
+<p class="caption">
+Figure 6.2: A. Free amino acids. B. Peptides, which are chains of AA. C. An example protein, which is a large molecule formed by a sequence of ~50 to 2000 AA, and takes on a 3-dimensional structure that can include multiple subunits
+</p>
+</div>
+</div>
+<div id="nutritional-definitions-of-protein" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Nutritional definitions of protein<a href="protein.html#nutritional-definitions-of-protein" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In animal nutrition, "protein" is defined in more practical, measurable
+terms. The simplest nutritional term for protein is crude protein (CP).
+The CP fraction in a feed sample is determined by the laboratory
+analysis of the total nitrogen (N) content in the sample multiplied by
+6.25.</p>
+<p><span class="math display">\[ CP = N * 6.25\]</span></p>
+<p>where CP is crude protein expressed in any unit (% of the DM, grams, or
+g/d for example), N is N content in the same unit, and 6.25 is a
+conversion factor that assumes that on average 1 g of N is found is 6.25
+g of protein.The nutritional definition of protein therefore includes all
+N-containing compounds. This means that it accounts for both:</p>
+<ul>
+<li><p><strong>true protein (TP)</strong>, which consists of AA; and</p></li>
+<li><p><strong>non-protein nitrogen (NPN)</strong> which includes all other nitrogenous
+compounds that are not AA. NPN includes compounds such as urea,
+ammonia, nucleotides (in DNA and RNA), and choline. Although these
+compounds are not protein, they still contain N.</p></li>
+</ul>
+<p>The amount of CP is the sum of the amounts of TP and NPN. For many feed
+and output proteins, the majority of CP is TP. For example, the protein
+in cow milk is approximately 5% NPN and 95% TP.</p>
+<p><span class="math display">\[ CP = TP + NPN \]</span></p>
+<p>In non-ruminant animals, TP is the only usable fraction of CP, and the
+NPN fraction is of little use. Yet ruminants, or more exactly the
+microbes that populate the rumen, can use NPN to grow. Through microbial
+growth processes, some of the NPN in CP are converted into true protein
+(AA) that the host animal (the cow) can use.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="images/NPNvsAA.png" alt="Examples of N-containing compounds that would be included in CP. A. Urea molecule, an example of NPN. B. Thymine, a nucleic acid which is NPN. C. Lysine, an AA which would be considered TP." width="85%" />
+<p class="caption">
+Figure 6.3: Examples of N-containing compounds that would be included in CP. A. Urea molecule, an example of NPN. B. Thymine, a nucleic acid which is NPN. C. Lysine, an AA which would be considered TP.
+</p>
+</div>
+<div class="grey">
+<p><strong>NPN Literature Deep Dive</strong></p>
+<p>In experiments throughout the 1950s and 60s (e.g., Virtanen, 1966),
+researchers fed cows NPN (e.g. ammonium sulfate, urea) labeled with a
+stable isotope (<span class="math inline">\(^{15}N\)</span>). By collecting and analyzing milk from these
+cows, they were able to prove that the same label N from the feed NPN
+sources appeared later in every type of amino acid found in the cow's
+milk. In other words, the labeled N from NPN was transformed to amino
+acids, absorbed by the cow, and incorporated into milk protein. This
+proved that the microbiota can synthesize (at least to a small extent)
+every type of AA found in milk protein.</p>
+<p>Virtanen, A. I. (1966). Milk Production of Cows on Protein-Free Feed: Studies of the use of urea and ammonium salts as the sole nitrogen source open new important perspectives. Science, 153(3744), 1603-1614.</p>
+<p>Still, it is important to remember that feeding CP with a large fraction of NPN can depress growth and
+production relative to feeding CP with lesser NPN (and consequently more
+true protein). Many NPN sources, e.g., urea, are very quickly degraded
+in the rumen and can cross into the bloodstream as ammonia. Too much
+ammonia in the blood can be toxic, and even kill animals (ammonia/urea
+toxicity). For these reasons, protein composition and kinetics need to be carefully managed in the
+ration.</p>
+</div>
+<p>An important limitation built into any CP value is that proteins contain
+16% N, which means that in each 100 g of protein, there are 16 g of N.
+Thus 1 g of N measured in the laboratory corresponds to 6.25 g of
+protein (100/16). Thus, remember that the N content of a feed will
+always be 6.25 times lower than its CP content. In reality 16% N in
+protein is an average obtained across many feed protein sources and N
+content of proteins actually varies from 13 to 19%, which should equate
+to variable conversion factors ranging from 5.26 to 7.69 (FAO, 2003).</p>
+<p>One notable exception for us as nutritionists interested in milk
+production, is that N content of milk CP contains 15.77% N. Thus the N
+to CP conversion factor is 100/15.77 = 6.34 (NASEM, 2021).</p>
+<p>Another consequence of the assumptions made in calculating CP is that
+some feed may have a CP value greater than 100%! For example, feed grade
+urea, which can be used in dairy rations as a source of NPN, typically
+contains 46% N. Following the 6.25 rule, the CP of urea is 287%.</p>
+<p>Although CP is not a perfect measure of protein <em>per se</em>, it provides a
+common and measurable starting point for nutritional models. CP can be
+determined through a standardized and simple laboratory technique, which
+makes it practical for large-scale use across many feeds and farms. The
+NASEM model discusses the CP, TP, and NPN contents not just of feeds,
+but also of other quantities (e.g., microbial protein, feces, urine), so
+these definitions will be important to remember.</p>
+<div class="green">
+<p><strong>Test Yourself</strong></p>
+<p>Calculate the percent of N in alfalfa silage with 20% CP (on a DM
+basis).</p>
+<div class="webex-solution">
+<button>
+click here for an answer
+</button>
+<p><span class="math display">\[ CP = N * 6.25\\
+20 = N * 6.25\\
+\frac{20}{6.25} = N \\
+N = 3.2\text{% of DM}
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="the-animal-protein-system" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> The animal protein system<a href="protein.html#the-animal-protein-system" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the subsequent activities, we will explore the animal protein system. Recalling from previous chapters (Systems Concepts), the animal's protein system involves input, output, and transformation flows. The system includes a core sequence of nutritional processes (ingestion, digestion, absorption, assimilation/use). Protein models describe these features with respect to protein and protein-related nutrients.</p>
+<ul>
+<li>Ingestion (as Crude Protein)</li>
+<li>Rumen degradation (as Rumen-Degraded Protein) and passage (as Rumen-Undegraded Protein) and microbial protein synthesis<br />
+</li>
+<li>Intestinal digestion; absorption to circulation (as Metabolizable Protein)</li>
+<li>Assimilation and/or use (as Net Protein) for output flows such as milk protein and maintenance proteins (in hair, hooves, and digestive tract) and transformation flows such as body reserve gain</li>
+</ul>
+<div class="orange">
+<p><strong>What about recycling?</strong></p>
+<p>Although the NASEM model describes most protein input, output, and transformation flows, it does not describe body protein recycling. In dairy cattle (as in many other mammals), body protein is continually turning over at a greater rate than inputs and outputs. For example, a lactating dairy cow may consume 2.0 kg of apparently-digestible protein, and export 1.0-1.5 kg of milk protein per day, but degrade 3.0 kg of body protein and synthesize in excess of 4.0 kg of protein per day (Lobley, 2003). By mass, the empty body (subtracting weight of digesta) of a dairy cow contains ~ 8-11% protein on an as-is basis (NASEM, 2021). This means that a 700 kg lactating Holstein with 506 kg empty body weight would have 40-55 kg of body protein (Yan et al., 2009). The constant turnover of body protein (sometimes called "remodeling") offers animals flexibility to continually alter structure and/or function of body tissues. It also makes the animal more resilient to varying diet composition. For example, the animal can tolerate some day-to-day imbalances or insufficiencies in dietary AA because it can also draw upon body reserve AAs. However, regular body protein turnover (recycling) does not represent a net input, output, or change to the animal's status. Therefore, it is excluded from the NASEM model.</p>
+</div>
+</div>
+<div id="protein-intake" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Protein intake<a href="protein.html#protein-intake" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>CP is a low cost, routine feed analysis that is done on almost all samples sent to commercial laboratories. NASEM (2021) Feed Tables have default values for CP content of many different types of feeds. Notice that fats and vitamins/minerals provide no CP.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9db64f646af5930f2206" style="width:85%;height:600px;"></div>
+<script type="application/json" data-for="htmlwidget-9db64f646af5930f2206">{"x":{"data":[{"x":[0,9.271,0,12.172,0,8.514,7.62,52.644,13.485,4.497,41.492,9.234,13.422,7.707,38.985,0,0,0,22.064,20.471],"y":[1,12,6,13,5,10,8,20,15,7,19,11,14,9,18,2,3,4,17,16],"text":["FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  9.271<br />Fd_SD: 4.362","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean: 12.172<br />Fd_SD: 1.753","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  8.514<br />Fd_SD: 0.83","FD_Mean:  7.620<br />Fd_SD: 2.299","FD_Mean: 52.644<br />Fd_SD: 1.691","FD_Mean: 13.485<br />Fd_SD: 2.361","FD_Mean:  4.497<br />Fd_SD: 1.539","FD_Mean: 41.492<br />Fd_SD: 1.552","FD_Mean:  9.234<br />Fd_SD: 2.491","FD_Mean: 13.422<br />Fd_SD: 2.723","FD_Mean:  7.707<br />Fd_SD: 0.938","FD_Mean: 38.985<br />Fd_SD: 2.841","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean: 22.064<br />Fd_SD: 1.927","FD_Mean: 20.471<br />Fd_SD: 2.194"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","opacity":1,"line":{"color":"transparent"},"error_x":{"array":[null,4.362,null,1.753,null,0.83,2.299,1.691,2.361,1.539,1.552,2.491,2.723,0.938,2.841,null,null,null,1.927,2.194],"arrayminus":[null,4.362,null,1.753,null,0.83,2.299,1.691,2.361,1.539,1.552,2.491,2.723,0.938,2.841,null,null,null,1.927,2.194],"type":"data","width":0.722788759965534,"symmetric":false,"color":"rgba(0,0,0,1)"},"frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":180.456621004566},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2.71675,57.05175],"tickmode":"array","ticktext":["0","20","40"],"tickvals":[0,20,40],"categoryorder":"array","categoryarray":["0","20","40"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,20.6],"tickmode":"array","ticktext":["Calcium carbonate","Fat, canola oil","Fat, corn oil","Fat, soybean oil","Iron oxide","Limestone","Wheat straw","Rye annual hay, mature","Corn silage, typical","Corn grain dry, fine grind","Cool season grass hay, mature","Molasses","Oat grain","Cool season grass silage","Wheat grain","Legume silage, mid-maturity","Legume silage, immature","DDGS, high protein","Canola meal","Soybean meal, solvent 48CP"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"categoryorder":"array","categoryarray":["Calcium carbonate","Fat, canola oil","Fat, corn oil","Fat, soybean oil","Iron oxide","Limestone","Wheat straw","Rye annual hay, mature","Corn silage, typical","Corn grain dry, fine grind","Cool season grass hay, mature","Molasses","Oat grain","Cool season grass silage","Wheat grain","Legume silage, mid-maturity","Legume silage, immature","DDGS, high protein","Canola meal","Soybean meal, solvent 48CP"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"341e7de9087a":{"x":{},"y":{},"type":"scatter"},"341e4e2bc22a":{"x":{},"y":{},"ymin":{},"ymax":{}}},"cur_data":"341e7de9087a","visdat":{"341e7de9087a":["function (y) ","x"],"341e4e2bc22a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 6.4: Crude protein (% of DM; Mean ± SD)
+of selected feeds in the NASEM library
+</p>
+</div>
+<div id="feed-level-calculations" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Feed-level calculations<a href="protein.html#feed-level-calculations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Calculating an animal's intake of a certain nutrient from a certain ingredient involves multiplying the DMI of that ingredient by the CP composition (DM basis) of that feed ingredient. This can be done for any protein fraction given in the NASEM Feed Tables.</p>
+<p><strong>Given information:</strong></p>
+<p>CP content of corn grain = 8%<br />
+DMI of corn grain = 5 kg</p>
+<p>CP Intake from Corn Grain = (8 kg CP/100 kg DM) * 5 kg DM = 0.4 kg CP intake from corn grain</p>
+<p>This example can be done individually for each ingredient. Or, it can be done by multiplying two vectors: a vector of CP contents and a vector of DMI, which each should be as long as the number of feeds (<span class="math inline">\(n\)</span>) in the diet.</p>
+</div>
+<div id="diet-level-calculations" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Diet-level calculations<a href="protein.html#diet-level-calculations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can perform a similar operation at the diet level, across all ingredients. This relates to the weighted sum discussed previously (Machinery chapter).</p>
+<p><span class="math display">\[\text{Diet CP Intake}= \sum_{i = 1}^{n \space feeds} w_iCP_i \]</span></p>
+<p><span class="math inline">\(w_i\)</span> is the DMI of feed <span class="math inline">\(i\)</span> in kg
+<span class="math inline">\(CP_i\)</span> is the CP content of feed <span class="math inline">\(i\)</span> as a percent (kg CP / 100 kg DM)</p>
+</div>
+</div>
+<div id="ruminal-protein-flows" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Ruminal protein flows<a href="protein.html#ruminal-protein-flows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In ruminants, dietary protein undergoes significant transformations in
+the rumen that affect its nutritive properties. For this reason, all
+dairy nutrition models include some description of protein degradation
+or passage through the rumen, and microbial protein synthesis.</p>
+<div id="rdp-and-rup" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> RDP and RUP<a href="protein.html#rdp-and-rup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Protein systems such as NASEM break down CP intake in two fractions: the
+fraction degraded by the rumen microbes (RDP) and the fraction that
+escapes rumen degradation (RUP). Both RDP and RUP contribute to the
+supply of AA at the small intestine, but in different ways. The microbes
+used the RDP as a source of N to grow, producing microbial protein with
+a different AA composition than the RDP. In contrast, RUP passes through
+the rumen intact, without microbes altering the AA composition. Then,
+microbial protein and RUP are both digested with mammalian enzymes in
+the abomasum and small intestine.</p>
+<p><span class="math display">\[ CP = RDP + RUP \]</span></p>
+<p>CP that enters the rumen has only two possible fates: it will either be
+degraded (RDP) or pass out of the rumen (RUP). At this point we have
+reached a question. <em>How do we know which protein will be degraded in
+the rumen, and which protein will pass through the rumen?</em></p>
+<p>Many nutritional models (including NASEM) address this problem by modeling the kinetics of ruminal protein degradation and passage for each feed. In other words, they model the rates (amount / time) of intake, degradation, and passage to determine the fates of CP intake (RDP or RUP). K is the generic term used to denote a "rate." Because there is one input and only two possible outputs, the rate of intake (Kd + Kp) is equal to the rate of degradation (Kd) plus the rate of passage (Kp). This is due to the conservation of mass: what goes in, must come out, so over time the inputs = outputs.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="images/KdandKp.png" alt="Diagram of the rumen protein system, showing that CP intake can flow through two possible fates:  degradation or passage." width="85%" />
+<p class="caption">
+Figure 6.5: Diagram of the rumen protein system, showing that CP intake can flow through two possible fates: degradation or passage.
+</p>
+</div>
+<p><strong>Rates of Degradation (kd, %/h)</strong><br />
+One of the first ways nutrition
+researchers tried to determine protein degradation kinetics was through
+<em>in situ</em> (translation: on site) studies of protein degradation. In
+these studies, researchers placed a small mass of feed (0.3 to 12 g)
+inside a porous bag. Then, they lowered these bags into the rumen of a
+cannulated cow. In theory, the pores of the bag are large enough for
+microbes and rumen fluid to flow in, but not large enough for undigested
+feed particles to flow out. By taking bags out every several hours, they
+could measure how much protein had disappeared from the bag at a given
+time. With the proper setup, the disappearance rate from the bag tells
+the digestion rate at any given time.</p>
+<p>In the 1970s, researchers in Aberdeen, U.K. proposed a way of thinking
+about ruminal protein disappearance that is still used today. Through an
+experiment on degradation and passage kinetics, 0rskov and McDonald
+(1979) observed that CP entering the rumen seemed to behave in three
+main ways:</p>
+<blockquote>
+<p>"there exists one protein fraction (A; % total protein)
+which disappears very rapidly from the rumen, and...a second protein
+fraction (B; % total protein) disappears at a constant fractional
+rate...with some protein supplements there is clearly a third protein
+fraction which does not disappear over the period of observations (C; %
+total protein)"</p>
+</blockquote>
+<p>In equation form the amounts of CP (% of DM) can be expressed:<br />
+<span class="math inline">\(CP = A + B + C\)</span></p>
+Graphically, their observations suggested that rumen degradation looked something like this:
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="_main_files/figure-html/unnamed-chunk-9-1.png" alt="Ruminal protein degradation kinetics. Shows the fraction degraded instantaneously, a fraction degraded at a moderate rate, and a fraction where no degradation occurs." width="85%" />
+<p class="caption">
+Figure 6.6: Ruminal protein degradation kinetics. Shows the fraction degraded instantaneously, a fraction degraded at a moderate rate, and a fraction where no degradation occurs.
+</p>
+</div>
+<p>The discovery of 0rskov and McDonald (1979) suggested that the rate of
+degradation was infinitely fast for the A portion of CP (Kd = <span class="math inline">\(\infty\)</span>
+%/h), the rate of degradation was basically zero for the C portion of CP
+(Kd = 0 %/h), and the rate of degradation for the B portion of CP was
+somewhere in between (Kd = 0 to <span class="math inline">\(\infty\)</span> %/h). This conceptual framework
+was later used in the development of the NRC (2001) and NASEM (2021)
+models, with a few modifications.</p>
+<div class="green">
+<p><strong>Test Yourself</strong></p>
+<p>Which of these equations is NOT correct?
+<select class='webex-select'><option value='blank'></option><option value=''>CP = TP + NPN</option><option value='answer'>CP = Kd + Kp</option><option value=''>CP = RDP + RUP</option><option value=''>CP = A + B + C</option></select></p>
+</div>
+<div class="orange">
+<p><strong>Relation to carbohydrate nutrition</strong><br />
+It is important to remember that the microbial population requires both N and carbohydrates to grow and reproduce. Similar to the quickly-degrading, moderately-fast degrading, and slow-degrading fractions of protein, carbohydrates also vary in their rates of ruminal degradation. Glucose and other simple sugars are rapidly degraded, starch (depending on its processing) is moderately-quickly degraded, and fiber (NDF) is more slowly degraded.</p>
+</div>
+<p><strong>Rates of Passage (kp, %/h)</strong><br />
+In <em>in situ</em> studies, researchers can
+keep a bag of feed particles inside the rumen for many days, until all
+potentially rumen-degradable material has disappeared (i.e., the rate of
+passage is zero). However, in reality, feed particles are constantly
+passing out of the rumen to the lower gastrointestinal tract. This means
+that some potentially rumen-degradable material flows out of the rumen
+before it can be degraded.</p>
+<p>To learn about rates of passage, researchers have used labeled
+ingredients. Certain elements (e.g., Cr, Co, Yb) are not absorbed in the
+gastrointestinal tract and appear to have limited effects on the
+function of the animal and microbiota. Because these elements pass
+through the animal without being absorbed, they can be used to determine
+the rate of passage of digesta at various locations along the digestive
+tract. It is also possible to ascertain the rate of passage of N
+specifically (as opposed to ALL digesta) by "labeling" feeds with a
+stable N isotope.</p>
+<p><strong>Competition between Degradation and Passage</strong></p>
+<p>In the NASEM model, the fractions of CP that are RDP and RUP depend on
+the competition between rate of degradation (Kd, %/h and rate of passage
+(Kp, %/h) from the rumen. The slower the rate of passage is, the greater
+the period of time a feed spends in the rumen, the greater the period of
+time available for microbial action, and the greater the extent of
+degradation of the protein.</p>
+<p>The first step in calculating RDP and RUP is gathering information about
+each feed in the diet. The Feed Tables in NASEM (2021) provide
+parameters for each specific feed ingredient. For example, alfalfa
+haylage has an entry containing the following information:</p>
+<ul>
+<li>Crude protein (% of DM)</li>
+<li>The NPN content (% of CP), all of which is assumed to belong to the
+A fraction</li>
+<li>The A fraction (% of CP)</li>
+<li>The B fraction (% of CP)</li>
+<li>The C fraction (% of CP)</li>
+<li>Rate of degradation (Kd, %/h)</li>
+</ul>
+<p>The rates of passage (Kp, %/h) are given in the Protein chapter. There
+is one Kp for forages (4.87 %/h) and one for concentrate feeds (%/h).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="_main_files/figure-html/unnamed-chunk-10-1.png" alt="Degradation kinetics for the B fraction in four selected feeds from the NASEM (2021) library. Two are concentrates (soybean meal and wheat grain) and two are forages (corn silage and legume silage). Grey boxes show the fractions of CP instantaneously degraded and passing." width="85%" />
+<p class="caption">
+Figure 6.7: Degradation kinetics for the B fraction in four selected feeds from the NASEM (2021) library. Two are concentrates (soybean meal and wheat grain) and two are forages (corn silage and legume silage). Grey boxes show the fractions of CP instantaneously degraded and passing.
+</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+feed
+</th>
+<th style="text-align:right;">
+A
+</th>
+<th style="text-align:right;">
+B
+</th>
+<th style="text-align:right;">
+C
+</th>
+<th style="text-align:right;">
+Kd
+</th>
+<th style="text-align:right;">
+Kp
+</th>
+<th style="text-align:right;">
+RUP
+</th>
+<th style="text-align:right;">
+RDP
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Wheat grain
+</td>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+0.19100
+</td>
+<td style="text-align:right;">
+0.0528
+</td>
+<td style="text-align:right;">
+28.702
+</td>
+<td style="text-align:right;">
+71.298
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Corn silage, typical
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+0.04068
+</td>
+<td style="text-align:right;">
+0.0487
+</td>
+<td style="text-align:right;">
+32.920
+</td>
+<td style="text-align:right;">
+67.080
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Legume silage, mid-maturity
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0.08174
+</td>
+<td style="text-align:right;">
+0.0487
+</td>
+<td style="text-align:right;">
+26.875
+</td>
+<td style="text-align:right;">
+73.125
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Soybean meal, solvent 48CP
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.09000
+</td>
+<td style="text-align:right;">
+0.0528
+</td>
+<td style="text-align:right;">
+32.752
+</td>
+<td style="text-align:right;">
+67.248
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="calculating-rdp-and-rup" class="section level3 hasAnchor" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Calculating RDP and RUP<a href="protein.html#calculating-rdp-and-rup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now we have all the information needed to calculate the percentage or amount of CP that will become RDP versus RUP.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="images/CP_fractions.png" alt="Partitioning of CP into A, B, C, and sub-fractions" width="85%" />
+<p class="caption">
+Figure 6.8: Partitioning of CP into A, B, C, and sub-fractions
+</p>
+</div>
+<p>We start by dividing the quickly-degrading A fraction into TP and NPN. Often, the A fraction is 100% TP.</p>
+<p><span class="math display">\[A = NPN + TPA\]</span></p>
+<p>NASEM (2021) states that 100% of NPN is RDP, and none is RUP. We do not use kinetic parameters (Kd and Kp) for the NPN fraction because it is assumed to be degraded instantaneously.</p>
+<p><span class="math display">\[\text{RDP from NPN} = NPN\]</span></p>
+<p><span class="math display">\[\text{RUP from NPN} = 0\]</span></p>
+<p>Then, we can find the RDP contributed by the TP in the A fraction. NASEM (2021) states that most (93.6%) the TPA fraction is part of the RDP except for a small part (6.4%) that is RUP. We do not use kinetic parameters (Kd and Kp) for the TPA fraction because it is assumed to be degraded instantaneously.</p>
+<p><span class="math display">\[\text{RDP from TPA} = TPA *  (1-0.064)\]</span></p>
+<p><span class="math display">\[\text{RUP from TPA} = TPA * 0.064\]</span></p>
+<p>The B fraction is slightly more
+complex, because the competition between the rate of degradation (Kd)
+and rate of passage (Kp) determines the proportion of B that becomes RDP
+and the proportion that becomes RUP. The total rate of disappearance is
+the sum of the rate of degradation and the rate of passage (Kd + Kp). We
+can calculate the partial rates of disappearance for degradation
+(<span class="math inline">\(\frac{Kd}{(Kd+Kp)}\)</span>) and for passage (<span class="math inline">\(\frac{Kp}{(Kd+Kp)}\)</span>).
+Multiplying the B fraction by these partial rates of disappearance gives
+us the proportion of B fraction degraded in the rumen, which can
+contribute to microbial growth:</p>
+<p><span class="math display">\[\text{RDP from B} = B*\frac{Kd}{(Kd+Kp)}\]</span></p>
+<p>and the proportion of the B fraction not degraded in the rumen:</p>
+<p><span class="math display">\[\text{RUP from B} = B*\frac{Kp}{(Kd+Kp)}\]</span></p>
+<p>The C fraction is extremely simple! It is assumed to be 0% degradable and 100% undegradable. In equation form, this means:</p>
+<p><span class="math display">\[\text{RDP from C} = 0\]</span>
+<span class="math display">\[\text{RUP from C} = C\]</span></p>
+<p>The CP (% or amount) that is rumen-degradable is calculated as
+the sum of the degraded A and degraded B fractions. This is because RDP from C is always equal to zero.</p>
+<p><span class="math display">\[ \text{Total RDP} = (\text{RDP from A}) + (\text{RDP from B})\]</span></p>
+<p>The CP (% or amount) that is RUP is calculated by summing the amount of undegraded A and
+undegraded B fraction protein with the C fraction. This is because the C
+fraction is 100% undegradable, so all of it contributes to RUP.</p>
+<p><span class="math display">\[ \text{Total RUP} = (\text{RUP from A}) + (\text{RUP from B})+(\text{RUP from C})\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
+<img src="images/RDPRUPcalculation.png" alt="Summary of NASEM scheme for calculating RDP and RUP. The details summarized in this figure are listed in the text above." width="85%" />
+<p class="caption">
+Figure 6.9: Summary of NASEM scheme for calculating RDP and RUP. The details summarized in this figure are listed in the text above.
+</p>
+</div>
+<div class="blue">
+<p><strong>Example: Calculating RDP and RUP for a single feed</strong>.
+We can start by calculating RDP and RUP for a single feed (legume
+silage, mid-maturity). Assume 10 kg of this feed (DM basis) are
+consumed.</p>
+<p><strong>Animal Information</strong><br />
+DMI of just this feed, kg = 10</p>
+<p><strong>Feed Table Values (NASEM, 2021, p. 380)</strong><br />
+CP, % of DM = 20.5<br />
+NPN, % of CP = 0<br />
+A fraction, % of CP = 52<br />
+B fraction, % of CP = 39<br />
+C fraction, % of CP = 9 Kd of B, %/h = 8.2</p>
+<p><strong>Ch. 6 Values</strong><br />
+Kp of forage, %/h = 4.87</p>
+<div class="webex-solution">
+<button>
+Show problem set-up
+</button>
+<p>Often, our end goal is to get the amounts of RDP and RUP (kg CP). We can
+start by calculating the CP intake:</p>
+<p>CP Intake (kg DM) = 10 kg DMI * (20.5% CP in DM) = 2.05 kg CP</p>
+<p>Then, we can calculate the amounts of NPN, A, B, and C fractions:</p>
+<p>NPN = 2.05 kg CP * (0 kg NPN/ 100 kg CP) = 0 kg NPN<br />
+A = 2.05 kg CP * (52 kg A/100 kg CP) = 1.07 kg A<br />
+B = 2.05 kg CP * (39 kg B/100 kg CP) = 0.80 kg B<br />
+C = 2.05 kg CP * (9 kg C/100 kg CP) = 0.18 kg C</p>
+<p>At this point, we can see that 52+39+9 accounts for 100% of CP, and as a consequence, that 1.07+.80+.18 accounts for all 2.05 kg of CP being fed. Next, we subtract any diet NPN from the A fraction to split it into true protein (TPA) and non-protein (NPN) fractions.</p>
+<p>TPA (kg) = A - NPN = 1.07 - 0 = 1.07 kg
+NPN in A = 0 kg</p>
+</div>
+<div class="webex-solution">
+<button>
+Show RDP calculation
+</button>
+<p>Next, we can calculate the RDP from the A fraction.</p>
+<p>RDP from A = NPN + 93.6*TPA<br />
+RDP from A = 0 + (93.6 kg A degraded/100 kg A intake)1.07 kg TPA intake<br />
+RDP from A = 1.00 kg</p>
+<p>Then, the RDP from the B fraction:<br />
+RDP from B = (8.2 / (8.2+4.87)) * 0.80 kg B intake<br />
+RDP from B = 0.50 kg</p>
+<p>And the total RDP:<br />
+RDP total = (RDP from A) + (RDP from B)<br />
+RDP total = 1.5 kg</p>
+</div>
+<div class="webex-solution">
+<button>
+Show RUP calculation
+</button>
+<p>There is no RDP from C, so we can move to RUP. We have a few options. We can calculate RUP by difference, because we know CP = RDP + RUP and we have both CP and RDP values. We can also calculate RUP step by step. The latter approach is shown below.</p>
+<p>First, we calculate RUP from A:<br />
+RUP from A = (6.4 kg A passing/100 kg A intake)1.07 kg TPA intake<br />
+RUP from A = 0.07 kg</p>
+<p>Then, the RUP from B:<br />
+RUP from B = (4.87 / (8.2+4.87)) * 0.80 kg B intake<br />
+RUP from B = 0.30 kg</p>
+<p>And the RUP from C:<br />
+RUP from C = (100 kg C passage/100 kg C intake) * C<br />
+RUP from C = 10.18 kg<br />
+RUP from C = 0.18 kg</p>
+<p>RUP total = (RUP from A) + (RUP from B) + (RUP from C)<br />
+RUP total = 0.07 + 0.30 + 0.18<br />
+RUP total = 0.55</p>
+<p>We can check again that the RDP + RUP sums to the total amount of CP (within rounding error).<br />
+CP = RDP + RUP<br />
+CP = 1.5 + 0.55<br />
+CP = 2.05 kg</p>
+<p>The RDP and RUP can also be expressed as a percent of CP, rather than an amount in kg. Here, 1.5/2.55 gives 73% of CP as RDP, and 27% of CP as RUP. To do this at the diet level (rather than for an individual feed) we can calculate RDP and RUP for each ingredient in the diet, using the intake of that particular feed ingredient, and sum them.</p>
+</div>
+</div>
+<div class="green">
+<p><strong>Test yourself</strong></p>
+<p>Calculate RDP and RUP using the method above, for 5 kg DM of solvent-extracted soybean meal intake. Show all of your work.</p>
+<p><strong>Animal Information</strong><br />
+DMI of just this feed, kg = 5</p>
+<p><strong>Feed Table Values (NASEM, 2021, p. 380)</strong><br />
+CP, % of DM = 52.6<br />
+NPN, % of CP = 0<br />
+A fraction, % of CP = 18<br />
+B fraction, % of CP = 79<br />
+C fraction, % of CP = 2<br />
+Kd of B, %/h = 9.0</p>
+<p><strong>Ch. 6 Values</strong><br />
+Kp of concentrate, %/h = 5.28</p>
+<div class="webex-solution">
+<button>
+Show problem set-up
+</button>
+<p>CP Intake (kg DM) = 5 kg DMI * (52.6% CP in DM) = 2.63 kg CP<br />
+NPN = 2.63 kg CP * (0 kg NPN/ 100 kg CP) = 0 kg NPN<br />
+A = 2.63 kg CP * (18 kg A/100 kg CP) = 0.47 kg A<br />
+B = 2.63 kg CP * (79 kg B/100 kg CP) = 2.08 kg B<br />
+C = 2.63 kg CP * (2 kg C/100 kg CP) = 0.05 kg C</p>
+<p>TPA (kg) = A - NPN = 0.47 - 0 = 0.47 kg<br />
+NPN in A = 0 kg</p>
+</div>
+<div class="webex-solution">
+<button>
+Show RDP calculation
+</button>
+<p>RDP from A = NPN + 93.6TPA<br />
+RDP from A = 0 + (93.6 kg A degraded/100 kg A intake)*0.47 kg TPA intake<br />
+RDP from A = 0.44 kg</p>
+<p>RDP from B = (9.0 / (9.0+5.28)) * 2.08 kg B intake<br />
+RDP from B = 1.31 kg</p>
+<p>RDP total = (RDP from A) + (RDP from B)<br />
+RDP total = 1.75 kg</p>
+</div>
+<div class="webex-solution">
+<button>
+Show RUP calculation
+</button>
+<p>RUP from A = (6.4 kg A passing/100 kg A intake)0.47 kg TPA intake<br />
+RUP from A = 0.03 kg</p>
+<p>RUP from B = (5.28 / (9.0+5.28)) * 2.08 kg B intake<br />
+RUP from B = 0.77 kg</p>
+<p>RUP from C = (100 kg C passage/100 kg C intake) * C<br />
+RUP from C = 10.05 kg<br />
+RUP from C = 0.05 kg</p>
+<p>RUP total = (RUP from A) + (RUP from B) + (RUP from C)<br />
+RUP total = 0.03 + 0.77 + 0.05<br />
+RUP total = 0.85</p>
+<p>We can check again that the RDP + RUP sums to the total amount of CP (within rounding error).</p>
+<p>CP = RDP + RUP<br />
+CP = 1.75 + 0.85<br />
+CP <span class="math inline">\(\approx\)</span> 2.6 kg</p>
+</div>
+</div>
+</div>
+<div id="microbial-protein-synthesis" class="section level3 hasAnchor" number="6.5.3">
+<h3><span class="header-section-number">6.5.3</span> Microbial protein synthesis<a href="protein.html#microbial-protein-synthesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The next step modeled in the rumen in microbial protein synthesis. Microbial protein synthesis is described as a saturable growth process dependent on available RDP and major rumen-degradable carbohydrates (RDNDF = rumen-degradable neutral detergent fiber, and RDS = rumen-degradable starch). Note that the equation predicts microbial N, which can easily be converted to CP.</p>
+<p>Eq. 6-3, p. 74 (NASEM, 2021)
+<span class="math display">\[
+\text{Microbial N (g/d)} = \frac{\beta_0 + (\beta_1 * RDP)}{(1 + \frac{\beta_2}{RDNDF})(1 + \frac{\beta_3}{RDS})}
+\]</span></p>
+<p>This is a Michaelis-Menten function. It suggests that both rumen-fermentable carbohydrates and rumen-degradable protein contribute to microbial protein synthesis. The numerator includes a constant and the maximum velocity of microbial N production in g per day. <span class="math inline">\(V_m = \beta_0 + (\beta_1 * RDP)\)</span>. Terms in the denominator represent the Michaelis constants (<span class="math inline">\(K_m\)</span>) for major pools of rumen-degradable carbohydrates: <span class="math inline">\(\beta_2 = K_m\)</span> for RDNDF <span class="math inline">\(\beta_2 = K_m\)</span> for RDS. Details on calculating RDNDF and RDS are given in the consensus report (NASEM, 2021, p. 74).</p>
+<div class="green">
+<p><strong>Test Yourself</strong></p>
+<p>Convert microbial N to microbial CP.</p>
+<p>Microbial N (g/d): 244</p>
+<p>Microbial CP (g/d) = <input class='webex-solveme nospaces' size='4' data-answer='["1525"]'/></p>
+<div class="webex-solution">
+<button>
+click here for explanation
+</button>
+<p>CP = N * 6.25</p>
+<p>CP = 244*6.25</p>
+</div>
+</div>
+<p>Next, we can determine how much of the microbial CP is TP versus NPN. NASEM (2021) assumes that a fixed percentage (82.4%) of microbial CP is TP, and the remainder is NPN. This is because the "bodies" of the microbes contain not just AA and true protein, but also NPN such as the nucleic acids in microbial DNA and RNA. Microbial TP can contribute to metabolizable protein, whereas microbial NPN does not.</p>
+</div>
+</div>
+<div id="postruminal-protein-flows" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Postruminal protein flows<a href="protein.html#postruminal-protein-flows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="metabolizable-protein" class="section level3 hasAnchor" number="6.6.1">
+<h3><span class="header-section-number">6.6.1</span> Metabolizable protein<a href="protein.html#metabolizable-protein" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The true protein digested postruminally is absorbed as AA that reach
+the blood stream (portal vein) for transport to the liver. This pool of
+AA circulating in the blood is called Metabolizable
+Protein (MP). Thus similar to the metabolizable energy (ME) concept, MP refers to the "useful" nutrients
+(in this case AA) absorbed in the blood.</p>
+<p>MP is the sum of digestible RUP and digestible microbial TP.</p>
+<p><span class="math display">\[\text{MP (g/d)} = (\text{digestible MiTP (g/d)}) + (\text{digestible RUP (g/d)})\]</span>
+Microbial TP is assumed to be 80% digestible (NASEM, 2021).
+<span class="math display">\[\text{digestible MiTP (g/d)} = 0.80* \text{MiTP (g/d)}\]</span>
+Each feed has its own intestinal digestibility coefficient (dRUP) listed in the Feed Tables. To calculate the amount of digestible RUP for a certain feed, multiply the feed's digestibility coefficient (<span class="math inline">\(dcRUP_i\)</span>) by the RUP intake from that feed (<span class="math inline">\(RUPIn_i\)</span>).</p>
+<p><span class="math display">\[\text{digestible RUP (g/d) from feed }i = {dcRUP_i} * RUPIn_i\]</span>
+The digestible RUP from each feed can be summed to create a diet-level digestible RUP.</p>
+<p><span class="math display">\[\text{Diet digestible RUP}= \sum_{i = 1}^{n \space feeds} ({dcRUP_i} * RUPIn_i) \]</span></p>
+<p>where:
+<span class="math inline">\(dcRUP_i\)</span> is the RUP digestibility coefficient (g RUP digested / 100 g RUP supply)
+<span class="math inline">\(RUPIn_i\)</span> is the RUP supply from feed <span class="math inline">\(i\)</span> in g/d</p>
+<table style="width:50%; margin-left: auto; margin-right: auto;" class="table">
+<thead>
+<tr>
+<th style="text-align:left;">
+Feed
+</th>
+<th style="text-align:right;">
+dcRUP
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Wheat grain
+</td>
+<td style="text-align:right;">
+87.734
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Corn silage, typical
+</td>
+<td style="text-align:right;">
+70.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Legume silage, mid-maturity
+</td>
+<td style="text-align:right;">
+70.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Soybean meal, solvent 48CP
+</td>
+<td style="text-align:right;">
+91.000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="metabolizable-aa" class="section level3 hasAnchor" number="6.6.2">
+<h3><span class="header-section-number">6.6.2</span> Metabolizable AA<a href="protein.html#metabolizable-aa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>According to the NASEM (2021) committee, although MP should be used to
+describe and assess diets, it is intestinally-absorbed AAs (rather than
+protein) that are metabolized.</p>
+<p>There are 20 common AAs that occur in proteins. Of these, nine are
+classified as essential (EAA) and one as conditionally essential. EAA
+are essential because their carbon skeletons cannot be synthesized by
+animal cells at a rate that meets metabolic needs. In contrast,
+Non-essential AA (NEAA) can be synthesized by animal cells in large
+enough quantities to supply needs. The term "conditionally essential"
+refers to an AA that is essential under certain conditions. Dairy cattle
+can synthesize Arg in large quantities, but Arg synthesis is
+not enough to meet Arg demands when milk production is high.
+Therefore, whether or not Arg is "essential" depends on the
+conditions.</p>
+<div id="section" class="section level9" number="6.6.2.0.0.0.0.0.1">
+<p class="heading"><span class="header-section-number">6.6.2.0.0.0.0.0.1</span> ????</p>
+<p>AA analysis is less common as of this writing. However, NASEM (2021) feed tables provide default AA composition values for the feed library, as a percent of CP.
+######### ????</p>
+<table style="width:50%; margin-left: auto; margin-right: auto;" class="table">
+<thead>
+<tr>
+<th style="text-align:left;">
+EAA
+</th>
+<th style="text-align:left;">
+Abbreviation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Histidine
+</td>
+<td style="text-align:left;">
+His
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Isoleucine
+</td>
+<td style="text-align:left;">
+Ile
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Leucine
+</td>
+<td style="text-align:left;">
+Leu
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lysine
+</td>
+<td style="text-align:left;">
+Lys
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Methionine
+</td>
+<td style="text-align:left;">
+Met
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Phenylalanine
+</td>
+<td style="text-align:left;">
+Phe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Threonine
+</td>
+<td style="text-align:left;">
+Thr
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tryptophan
+</td>
+<td style="text-align:left;">
+Trp
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Valine
+</td>
+<td style="text-align:left;">
+Val
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arginine
+</td>
+<td style="text-align:left;">
+Arg
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="recommendations-for-protein-supply" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Recommendations for protein supply<a href="protein.html#recommendations-for-protein-supply" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-of-breakdown-of-protein-from-n15-paper" class="section level3 hasAnchor" number="6.7.1">
+<h3><span class="header-section-number">6.7.1</span> Example of breakdown of protein from n15 paper<a href="protein.html#example-of-breakdown-of-protein-from-n15-paper" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here is an example of protein requirements for multiparous
+late-lactation Holsteins with average milk production and in an early
+stage of gestation.</p>
+</div>
+<div id="create-examples-for-other-stages" class="section level3 hasAnchor" number="6.7.2">
+<h3><span class="header-section-number">6.7.2</span> CREATE EXAMPLES FOR OTHER STAGES?<a href="protein.html#create-examples-for-other-stages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Same cow different stages</p>
+<p>Smaller cow vs. bigger cow (DMI and BW)</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="85%" style="display: block; margin: auto;" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+SimId
+</th>
+<th style="text-align:right;">
+Scurf
+</th>
+<th style="text-align:right;">
+EndogenousUrinary
+</th>
+<th style="text-align:right;">
+MetabolicFecal
+</th>
+<th style="text-align:right;">
+FrameGrowth
+</th>
+<th style="text-align:right;">
+BodyReserves
+</th>
+<th style="text-align:right;">
+Pregnancy
+</th>
+<th style="text-align:right;">
+Lactation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Dry multiparous, 260 days gestation
+</td>
+<td style="text-align:right;">
+8.457749
+</td>
+<td style="text-align:right;">
+218.625
+</td>
+<td style="text-align:right;">
+171.2545
+</td>
+<td style="text-align:right;">
+0.00000
+</td>
+<td style="text-align:right;">
+5.848
+</td>
+<td style="text-align:right;">
+94.9605025
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lactating multiparous, 30 DIM
+</td>
+<td style="text-align:right;">
+8.457749
+</td>
+<td style="text-align:right;">
+218.625
+</td>
+<td style="text-align:right;">
+319.6752
+</td>
+<td style="text-align:right;">
+0.00000
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+-4.8097975
+</td>
+<td style="text-align:right;">
+1395.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lactating multiparous, 250 DIM
+</td>
+<td style="text-align:right;">
+8.457749
+</td>
+<td style="text-align:right;">
+218.625
+</td>
+<td style="text-align:right;">
+289.9910
+</td>
+<td style="text-align:right;">
+0.00000
+</td>
+<td style="text-align:right;">
+5.848
+</td>
+<td style="text-align:right;">
+14.8428141
+</td>
+<td style="text-align:right;">
+992.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lactating multiparous, 150 DIM
+</td>
+<td style="text-align:right;">
+8.457749
+</td>
+<td style="text-align:right;">
+218.625
+</td>
+<td style="text-align:right;">
+283.1409
+</td>
+<td style="text-align:right;">
+0.00000
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+0.5600027
+</td>
+<td style="text-align:right;">
+1193.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lactating primiparous, 150 DIM
+</td>
+<td style="text-align:right;">
+7.159958
+</td>
+<td style="text-align:right;">
+165.625
+</td>
+<td style="text-align:right;">
+239.7564
+</td>
+<td style="text-align:right;">
+24.61789
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+0.5600027
+</td>
+<td style="text-align:right;">
+992.0
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="_main_files/figure-html/unnamed-chunk-18-1.png" alt="Predicted net protein use for different body functions" width="85%" />
+<p class="caption">
+Figure 6.10: Predicted net protein use for different body functions
+</p>
+</div>
+</div>
+</div>
+<div id="questions" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Questions<a href="protein.html#questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>What is NPN? Can non-ruminants use NPN to meet their protein requirements?</li>
+<li>What is a typical range of RUP and RDP for a lactating dairy cow ration (% of CP).</li>
+<li>What would happen if an animal were fed too much RDP? Or RUP?</li>
+<li>What happens if an animal is fed too much CP?</li>
+<li>What are some factors that influence protein degradability?</li>
+<li>How does carbohydrate nutrition affect the supply of metabolizable protein?</li>
+<li>Compare and contrast the the A, B, and C fractions of CP.</li>
+<li>Tell about a research technique used to estimate protein degradability in the rumen.</li>
+<li>Tell about a method used to estimate protein digestibility for the whole digestive tract.</li>
+</ol>
+</div>
+<div id="r-code-for-figures-needs-update" class="section level2 hasAnchor" number="6.9">
+<h2><span class="header-section-number">6.9</span> R code for figures ### NEEDS UPDATE<a href="protein.html#r-code-for-figures-needs-update" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="protein.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the necessary packages</span></span>
+<span id="cb1-2"><a href="protein.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="protein.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-4"><a href="protein.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-5"><a href="protein.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-6"><a href="protein.html#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="protein.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
+<span id="cb1-8"><a href="protein.html#cb1-8" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-9"><a href="protein.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the data</span></span>
+<span id="cb1-10"><a href="protein.html#cb1-10" aria-hidden="true" tabindex="-1"></a>time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">48</span>, <span class="at">by =</span> <span class="dv">4</span>))</span>
+<span id="cb1-11"><a href="protein.html#cb1-11" aria-hidden="true" tabindex="-1"></a>protein <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">71</span>, <span class="dv">51</span>, <span class="dv">37</span>, <span class="dv">26</span>, <span class="dv">19</span>, <span class="dv">14</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb1-12"><a href="protein.html#cb1-12" aria-hidden="true" tabindex="-1"></a>frac <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>)</span>
+<span id="cb1-13"><a href="protein.html#cb1-13" aria-hidden="true" tabindex="-1"></a>a_frac <span class="ot">&lt;-</span> <span class="dv">80</span></span>
+<span id="cb1-14"><a href="protein.html#cb1-14" aria-hidden="true" tabindex="-1"></a>b_frac <span class="ot">&lt;-</span> <span class="dv">15</span></span>
+<span id="cb1-15"><a href="protein.html#cb1-15" aria-hidden="true" tabindex="-1"></a>c_frac <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb1-16"><a href="protein.html#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="protein.html#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with the data</span></span>
+<span id="cb1-18"><a href="protein.html#cb1-18" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">time =</span> time, <span class="at">protein =</span> protein)</span>
+<span id="cb1-19"><a href="protein.html#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="protein.html#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot using ggplot</span></span>
+<span id="cb1-21"><a href="protein.html#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> protein)) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="protein.html#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="protein.html#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> frac), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-24"><a href="protein.html#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">110</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-25"><a href="protein.html#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time (hours)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Protein remaining (%)&quot;</span>, <span class="at">title =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb1-26"><a href="protein.html#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">5</span>, <span class="at">y =</span> <span class="dv">85</span>, <span class="at">label =</span> <span class="st">&quot;A fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#F8766D&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-27"><a href="protein.html#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">20</span>, <span class="at">y =</span> <span class="dv">45</span>, <span class="at">label =</span> <span class="st">&quot;B fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#00BA38&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-28"><a href="protein.html#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">35</span>, <span class="at">y =</span> <span class="dv">20</span>, <span class="at">label =</span> <span class="st">&quot;C fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#619CFF&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-29"><a href="protein.html#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-30"><a href="protein.html#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-31"><a href="protein.html#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))</span>
+<span id="cb1-32"><a href="protein.html#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="protein.html#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
+<span id="cb1-34"><a href="protein.html#cb1-34" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-35"><a href="protein.html#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="protein.html#cb1-36" aria-hidden="true" tabindex="-1"></a>feed <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Wheat grain&quot;</span>, <span class="st">&quot;Corn silage, typical&quot;</span>, <span class="st">&quot;Legume silage, mid-maturity&quot;</span>, </span>
+<span id="cb1-37"><a href="protein.html#cb1-37" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&quot;Soybean meal, solvent 48CP&quot;</span>)</span>
+<span id="cb1-38"><a href="protein.html#cb1-38" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">31</span>, <span class="dv">60</span>, <span class="dv">52</span>, <span class="dv">18</span>)</span>
+<span id="cb1-39"><a href="protein.html#cb1-39" aria-hidden="true" tabindex="-1"></a>B <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">54</span>, <span class="dv">24</span>, <span class="dv">39</span>, <span class="dv">80</span>)</span>
+<span id="cb1-40"><a href="protein.html#cb1-40" aria-hidden="true" tabindex="-1"></a>C <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">2</span>)</span>
+<span id="cb1-41"><a href="protein.html#cb1-41" aria-hidden="true" tabindex="-1"></a>Kd <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.191</span>, <span class="fl">0.04068</span>, <span class="fl">0.08174</span>, <span class="fl">0.09</span>) <span class="co"># kd/100</span></span>
+<span id="cb1-42"><a href="protein.html#cb1-42" aria-hidden="true" tabindex="-1"></a>Kp <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.0528</span>, <span class="fl">0.0487</span>, <span class="fl">0.0487</span>, <span class="fl">0.0528</span>) <span class="co">#ifelse feed is concentrate</span></span>
+<span id="cb1-43"><a href="protein.html#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="protein.html#cb1-44" aria-hidden="true" tabindex="-1"></a>RUP <span class="ot">=</span> A<span class="sc">*</span>.<span class="dv">064</span> <span class="sc">+</span> C <span class="sc">+</span> B<span class="sc">*</span>(Kp<span class="sc">/</span>(Kd <span class="sc">+</span> Kp)) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb1-45"><a href="protein.html#cb1-45" aria-hidden="true" tabindex="-1"></a>RDP <span class="ot">=</span> A<span class="sc">*</span>.<span class="dv">936</span> <span class="sc">+</span> B<span class="sc">*</span>(Kd<span class="sc">/</span>(Kd <span class="sc">+</span> Kp)) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb1-46"><a href="protein.html#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="protein.html#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="protein.html#cb1-48" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">feed =</span> feed,</span>
+<span id="cb1-49"><a href="protein.html#cb1-49" aria-hidden="true" tabindex="-1"></a>                <span class="at">A =</span> A,</span>
+<span id="cb1-50"><a href="protein.html#cb1-50" aria-hidden="true" tabindex="-1"></a>                <span class="at">B =</span> B,</span>
+<span id="cb1-51"><a href="protein.html#cb1-51" aria-hidden="true" tabindex="-1"></a>                <span class="at">C =</span> C,</span>
+<span id="cb1-52"><a href="protein.html#cb1-52" aria-hidden="true" tabindex="-1"></a>                <span class="at">Kd =</span> Kd,</span>
+<span id="cb1-53"><a href="protein.html#cb1-53" aria-hidden="true" tabindex="-1"></a>                <span class="at">Kp =</span> Kp, </span>
+<span id="cb1-54"><a href="protein.html#cb1-54" aria-hidden="true" tabindex="-1"></a>                <span class="at">RUP =</span> RUP,</span>
+<span id="cb1-55"><a href="protein.html#cb1-55" aria-hidden="true" tabindex="-1"></a>                <span class="at">RDP =</span> RDP) </span>
+<span id="cb1-56"><a href="protein.html#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="protein.html#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="co"># create time data.frame</span></span>
+<span id="cb1-58"><a href="protein.html#cb1-58" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, .<span class="dv">5</span>)</span>
+<span id="cb1-59"><a href="protein.html#cb1-59" aria-hidden="true" tabindex="-1"></a>tdf <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">t =</span> <span class="fu">rep</span>(t, <span class="at">each =</span> <span class="fu">length</span>(feed)),</span>
+<span id="cb1-60"><a href="protein.html#cb1-60" aria-hidden="true" tabindex="-1"></a>                 <span class="at">feed =</span> feed)</span>
+<span id="cb1-61"><a href="protein.html#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="protein.html#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="co"># use the rate of disappearance, Kd + Kp</span></span>
+<span id="cb1-63"><a href="protein.html#cb1-63" aria-hidden="true" tabindex="-1"></a>plotdf <span class="ot">=</span> <span class="fu">left_join</span>(df, tdf) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-64"><a href="protein.html#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">remaining_cp =</span> A<span class="sc">*</span><span class="fl">0.064</span> <span class="sc">+</span> B<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>(Kd<span class="sc">+</span>Kp)<span class="sc">*</span>t)<span class="sc">+</span> C)</span>
+<span id="cb1-65"><a href="protein.html#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="protein.html#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co"># use two df is easier</span></span>
+<span id="cb1-67"><a href="protein.html#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-68"><a href="protein.html#cb1-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> plotdf, </span>
+<span id="cb1-69"><a href="protein.html#cb1-69" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> remaining_cp)) <span class="sc">+</span></span>
+<span id="cb1-70"><a href="protein.html#cb1-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">100</span>) <span class="sc">+</span></span>
+<span id="cb1-71"><a href="protein.html#cb1-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time, h&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Remaining CP, %&quot;</span> )<span class="sc">+</span></span>
+<span id="cb1-72"><a href="protein.html#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> (C<span class="sc">+</span>A<span class="sc">*</span>.<span class="dv">064</span>), <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>), <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-73"><a href="protein.html#cb1-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">ymin =</span> (<span class="dv">100</span> <span class="sc">-</span> A<span class="sc">*</span>.<span class="dv">936</span>), <span class="at">ymax =</span> <span class="cn">Inf</span>, <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>), <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-74"><a href="protein.html#cb1-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>feed) <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
+</div>
+<div id="references" class="section level2 hasAnchor" number="6.10">
+<h2><span class="header-section-number">6.10</span> References<a href="protein.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Yan, T., Patterson, D. C., Mayne, C. S., Agnew, R. E., &amp; Porter, M. G. (2009). Prediction of empty body weight and composition from live weight and other live animal measurements in lactating dairy cows. The Journal of Agricultural Science, 147(3), 241-252.</p>
+
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+    
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+  
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+  
+  var cl = this.classList
+  
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+  
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+  
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+  
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="model-machinery.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="glossary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"highlight": "espresso",
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

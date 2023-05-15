@@ -73,7 +73,7 @@ Check a human food label. Similar to reporting for dairy cattle nutrition, human
 
 ## Dietary reference intakes
 
-We established a basic definition for a nutrient requirement. Estimating these average requirements is an important component of NASEM [-@NASEM8]. But NASEM Dairy-8 not only helps determine the daily amount of nutrient required **on average** (the mean), it also gives information about the variability around the average (the variance). As a consequence, the estimated average requirement is just one parameter in a class of terms referred to as **dietary reference intakes**. These dietary reference intakes combine information about both the mean and variance in a requirement to assist nutritionists in formulating rations that protect against under- and over-supplying nutrients. 
+We established a basic definition for a nutrient requirement. Estimating these average requirements is an important component of NASEM (2021). But NASEM Dairy-8 not only helps determine the daily amount of nutrient required **on average** (the mean), it also gives information about the variability around the average (the variance). As a consequence, the estimated average requirement is just one parameter in a class of terms referred to as **dietary reference intakes**. These dietary reference intakes combine information about both the mean and variance in a requirement to assist nutritionists in formulating rations that protect against under- and over-supplying nutrients. 
 
 Dietary Reference Intakes include the estimated average requirement, the recommended daily allowance, adequate intake, and maximum tolerable level. Each of these will be defined in the subsequent sections. The dietary reference intakes are based on the principle that nutrient requirements are not a single fixed level of nutrient intake. Instead, nutrient requirements have both a mean and variance. In other words, a distribution. 
 
@@ -202,7 +202,7 @@ $$
 NP_{total} = NP_{maintenance} + NP_{activity} + NP_{growth}+ NP_{reproduction} + NP_{bodyreserve} 
 $$
 
-::: {.lo}
+::: {.green}
 
 **Test yourself**
 The factorial approach refers to summing across multiple factors. `r torf(TRUE)` 
@@ -210,15 +210,13 @@ The factorial approach refers to summing across multiple factors. `r torf(TRUE)`
 ::: 
 
 
-## Types of literature used by NASEM [-@NASEM8]
+## Types of literature used by NASEM (2021)
 
 We know now that a nutrient requirement is the daily (metabolizable or absorbed) amount of a nutrient required to support an animal's body functioning without changing body reserves and status. We also know that requirements are often calculated factorially, e.g., separate requirements are estimated for maintenance, gestation, lactation, growth, and reserve gain and summed together to estimate the total nutrient requirement. 
 
-Yet how does NASEM [-@NASEM8] determine the required nutrient needed for separate body functions? The committee uses a variety of types of research. The narrative in NASEM [-@NASEM8] focuses on research done after the 7th edition (NRC, 2001), but it also cites some classical studies done in prior years. Some examples of the types of literature referenced by NASEM are discussed below. 
+Yet how does NASEM (2021) determine the required nutrient needed for separate body functions? The committee uses a variety of types of research. The narrative in NASEM (2021) focuses on research done after the 7th edition (NRC, 2001), but it also cites some classical studies done in prior years. Some examples of the types of literature referenced by NASEM are discussed below. 
 
 ### Measuring composition of inputs, body tissues, and outputs
-
-**** citation **
 
 Nutrient requirements for growth and changes in body reserves are often estimated using data on body composition. For example, early researchers determined the chemical composition of the carcasses of animals slaughtered at different ages. They assumed that 1 kg of growth in the body frame (carcass) would require at least as many nutrients as were contained in 1 kg of the body frame at slaughter. Similarly, studies have measured the composition of cows with more or less body reserve (body reserves = primarily adipose and muscle tissue). This type of research is often used to calculate nutrient requirements expected for certain rates (kg/d) of growth and changes in body reserves.  
 
@@ -226,30 +224,23 @@ Researchers in the mid-20th century studied the chemical composition of the grav
 
 ### Measuring losses when intake is minimal
 
-@Swanson1977
-
-To determine maintenance requirements, one experimental approach involves feeding animals very little of the nutrient in question for a short period. Then, researchers can determine the amount of nutrient that would be lost (in urine and feces) through body functions alone (not diet). For example, part of the maintenance requirement for protein is the amount of protein lost in feces due to typical gastrointestinal tract secretions and sloughed cells. This fraction is referred to as metabolic fecal protein. Typically, the protein in feces includes both metabolic fecal protein and undigested dietary protein. When minimal protein is fed, the amount of undigested dietary protein approaches zero. This isolates the amount of metabolic protein needed by the animal. A similar approach is used to determine the energy, protein, and minerals lost in urine as part of maintenance body functions. 
+To determine maintenance requirements, one experimental approach involves feeding animals very little of the nutrient in question for a short period. Then, researchers can determine the amount of nutrient that would be lost (in urine and feces) through body functions alone (not diet). For example, part of the maintenance requirement for protein is the amount of protein lost in feces due to typical gastrointestinal tract secretions and sloughed cells. This fraction is referred to as metabolic fecal protein. Typically, the protein in feces includes both metabolic fecal protein and undigested dietary protein. When minimal protein is fed, the amount of undigested dietary protein approaches zero. This isolates the amount of metabolic protein needed by the animal. A similar approach is used to determine the energy, protein, and minerals lost in urine as part of maintenance body functions (Swanson, 1977). 
 
 
 ### Studying symptoms of deficiency and toxicity
 
-** citation **
 
-The NASEM [-@NASEM8] committee also used studies that reported observable symptoms of deficiency and toxicity. For example, vitamin D deficiency (rickets) is known to cause a stiff gait, bowed legs, and increased incidence of fractures. By studying the levels of absorbed vitamin D that were associated with visible symptoms, the committee could establish minimum nutrient requirements. Conversely, the committee set upper limits  by examining the level of nutrient associated with symptoms of toxicity. This approach was particularly important with vitamin and mineral requirements. 
+The NASEM (2021) committee also used studies that reported observable symptoms of deficiency and toxicity. For example, vitamin D deficiency (rickets) is known to cause a stiff gait, bowed legs, and increased incidence of fractures. By studying the levels of absorbed vitamin D that were associated with visible symptoms, the committee could establish minimum nutrient requirements. Conversely, the committee set upper limits  by examining the level of nutrient associated with symptoms of toxicity. This approach was particularly important with vitamin and mineral requirements. 
 
 ### Regression on productive performance
-
- ** citation **
  
-Finally, the NASEM [-@NASEM8] committee cited several works where requirements was studied with a regression approach. When data are abundant, regression enables researchers to mathematically relate values of a nutrient (X) to an animal performance trait (Y). For example, milk and milk component data are often used as dependent (Y) variables in regression. This is because nearly every study with dairy cattle measures the production of milk and components. 
+Finally, the NASEM (2021) committee cited several works where requirements was studied with a regression approach. When data are abundant, regression enables researchers to mathematically relate values of a nutrient (X) to an animal performance trait (Y). For example, milk and milk component data are often used as dependent (Y) variables in regression. This is because nearly every study with dairy cattle measures the production of milk and components. 
 
-For many people, regression calls to mind the image of a line. Perhaps in high school, they learned that a line can describe the relationship between X and Y variables by an intercept and slope. The regressions cited by NASEM [-@NASEM8] uses a similar idea. However, the relationship between the metabolizable amount of a nutrient (X) and animal performance (Y) is generally not expected to be a single line. Two common shapes are given below. 
+For many people, regression calls to mind the image of a line. Perhaps in high school, they learned that a line can describe the relationship between X and Y variables by an intercept and slope. The regressions cited by NASEM (2021) uses a similar idea. However, the relationship between the metabolizable amount of a nutrient (X) and animal performance (Y) is generally not expected to be a single line. Two common shapes are given below. 
 
 #### Breakpoint analysis or "broken-stick" response
 
-@Robbins2006
-
-Assuming the same animal and diet characteristics, one way researchers have conceptualized requirements is through breakpoint analysis. With this framework in mind, researchers examine the performance response (e.g., the production of fat- and protein-corrected milk, FPCM) with increasing metabolizable amounts of nutrient X. The requirement is expected to be the "breakpoint" where additional amounts of nutrient (X) lead to zero gains in performance (Y). Breakpoint analysis is sometimes referred to as a "broken-stick" model, because it resemble a stick of wood that has been snapped. More technically, it is a piecewise linear function. 
+Assuming the same animal and diet characteristics, one way researchers have conceptualized requirements is through breakpoint analysis (Robbins, 2006). With this framework in mind, researchers examine the performance response (e.g., the production of fat- and protein-corrected milk, FPCM) with increasing metabolizable amounts of nutrient X. The requirement is expected to be the "breakpoint" where additional amounts of nutrient (X) lead to zero gains in performance (Y). Breakpoint analysis is sometimes referred to as a "broken-stick" model, because it resemble a stick of wood that has been snapped. More technically, it is a piecewise linear function. 
 
 The breakpoint or broken-stick model supposes the following: 
 
@@ -276,9 +267,7 @@ ggplot(dat,aes(x = x, y = y2)) +
 
 #### Curvlinear response
 
-@Pesti2009
-
-Sometimes, the broken-stick type response does not match well with the observed data. This can be because excessive amounts of the nutrient X lead to declines in performance Y, rather than Y remaining flat. Or perhaps the relation between X and Y may appear to be made up of curves rather than lines. In these cases, we can express the relation of X and Y using mathematical terms for curves. For example, polynomial functions, e.g., $FPCM = 25 + 12x -0.1x^2$ can describe a gradual increase in performance that curves to reach a maximum and declines. A logistic function can describe a situation where additional metabolizable amounts of nutrient X result in smaller and smaller gains in performance (Y). Various mathematical functions are used "behind the scenes" in the NASEM Dairy-8 [-@NASEM8] nutritional model, and they are based on regression work. 
+Sometimes, the broken-stick type response does not match well with the observed data (Pesti et al., 2009). This can be because excessive amounts of the nutrient X lead to declines in performance Y, rather than Y remaining flat. Or perhaps the relation between X and Y may appear to be made up of curves rather than lines. In these cases, we can express the relation of X and Y using mathematical terms for curves. For example, polynomial functions, e.g., $FPCM = 25 + 12x -0.1x^2$ can describe a gradual increase in performance that curves to reach a maximum and declines. A logistic function can describe a situation where additional metabolizable amounts of nutrient X result in smaller and smaller gains in performance (Y). Various mathematical functions are used "behind the scenes" in the NASEM (2021) nutritional model, and they are based on regression work. 
 
 In general, nutrient requirements are determined by experiments where different levels of a nutrient are fed and animals' responses (e.g., bodyweight, milk production, reproductive performance) are observed. Let's consider a hypothetical nutrient X. A single experiment might compare just a few levels of nutrient X and record the average response. For example, researchers could feed 0.9, 1.2, and 1.5% of diet dry matter as calcium and record the response with each level. 
 
@@ -306,7 +295,23 @@ ggplot(dat,aes(x = x, y = y2)) +
   labs(y = "FPCM (kg)", x = "Intake amount of nutrient X") 
 ```
 
+## Questions
+
+1. What is the difference between macronutrients and micronutrients?
+1. What is meant by nutrient balance?
+1. What are some of the difficulties involved in formulating a diet that meets the needs of an entire group of animals?
+1. What is the definition of nutrient requirement according to NASEM?
+1. Why are nutrient requirements often given in amounts per day?
+1. What is the difference between the gross amount and metabolizable amount of a nutrient?
+1. Why are minerals considered on an absorbed basis?
+1. What is the difference between EAR and AI?
+1. What is the "factorial approach" with respect to nutrient requirements?
+1. Give examples of types of literature used to determine requirements in NASEM (2021).
+
 ## R code for figures
+
+`r hide("Show R code for Figures")`
+
 ```{r, echo = TRUE, eval = F}
 library(ggplot2)
 theme_set(theme_classic())
@@ -391,3 +396,12 @@ ggplot(dat, aes(x = x, y = y2)) +
 
 ```
 
+`r unhide()` 
+
+## References
+
+Pesti, G. M., Vedenov, D., Cason, J. A., & Billard, L. (2009). A comparison of methods to estimate nutritional requirements from experimental data. British poultry science, 50(1), 16-32.
+
+Robbins, K. R., Saxton, A. M., & Southern, L. L. (2006). Estimation of nutrient requirements using broken-line regression analysis. Journal of animal science, 84(suppl_13), E155-E165.
+
+Swanson, E. W. (1977). Factors for computing requirements of protein for maintenance of cattle. Journal of Dairy Science, 60(10), 1583-1593.

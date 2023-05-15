@@ -1175,6 +1175,16 @@ theory of biological structure and organization. J Exp Biol 1 May 2005;
 
 :::
 
-# Conclusions
+## Conclusions
 
 
+## Questions
+1. Define ratios, percentages, and proportions. 
+1. Explain the concept of "basis" and differentiate as-is and DM basis. 
+1. How does weighting differ from scaling?
+1. What are some ways to describe predictive models? List and define common descriptors.
+1. Give two examples of non-linear model forms that are often used in animal nutrition. 
+1. What are some examples of constraints we can use in optimization, and how do we represent them mathematically?
+1. How do we ensure that inclusion rates for each feed are non-negative and add up to 1 in optimization?
+1. What is an example of an unrealistic diet that could be produced by optimization? Why do these occur?
+1. What is typically optimized (included in the objective function)? What is possible to optimize?

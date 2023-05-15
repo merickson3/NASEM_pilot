@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Protein Overview | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
+  <meta name="description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  <meta name="generator" content="bookdown 0.33.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Protein Overview | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Protein Overview | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  
+  <meta name="twitter:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+<meta name="author" content="MaryGrace Erickson, University of Wisconsin--Madison" />
+<meta name="author" content="Michel A. Wattiaux, University of Wisconsin--Madison" />
+<meta name="author" content="Mark D. Hanigan, Virginia Polytechnic Institute and State University" />
+<meta name="author" content="Marina A.C. Danes, Universidade Federal de Lavras" />
+
+
+<meta name="date" content="2023-05-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="model-machinery.html"/>
+<link rel="next" href="protein-intake-and-ruminal-supplies.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script>
+  function unrolltab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "none";
+    evt.currentTarget.className += "none";
+  }
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="www/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Learning NASEM Dairy (2021)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this interactive textbook</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#information-for-educators"><i class="fa fa-check"></i><b>1.2</b> Information for educators</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#nasem-components"><i class="fa fa-check"></i><b>1.3</b> NASEM Components</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.3.1</b> Accessing the NASEM (2021) book</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#accessing-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.3.2</b> Accessing NASEM-dairy-8 software</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#examples"><i class="fa fa-check"></i><b>1.4</b> Examples</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#nasem-dairy-8"><i class="fa fa-check"></i><b>1.4.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#r"><i class="fa fa-check"></i><b>1.4.2</b> R</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#python"><i class="fa fa-check"></i><b>1.4.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#helpful-information"><i class="fa fa-check"></i><b>1.5</b> Helpful information</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#contribute-edits-and-suggestions"><i class="fa fa-check"></i><b>1.6</b> Contribute edits and suggestions</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#license-citation-information"><i class="fa fa-check"></i><b>1.7</b> License &amp; Citation Information</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html"><i class="fa fa-check"></i><b>2</b> Introduction to nutritional models</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#a-brief-history"><i class="fa fa-check"></i><b>2.1</b> A brief history</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#definition"><i class="fa fa-check"></i><b>2.2</b> Definition</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#usefulness"><i class="fa fa-check"></i><b>2.3</b> Usefulness</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#nasem-2021-and-other-dairy-nutrition-models"><i class="fa fa-check"></i><b>2.4</b> NASEM (2021) and other dairy nutrition models</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#lets-develop-a-simple-nutritional-model"><i class="fa fa-check"></i><b>2.5</b> Let's develop a simple nutritional model</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#hypothesis-generation"><i class="fa fa-check"></i><b>2.5.1</b> Hypothesis generation</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#data-collection-through-observation-or-experimentation"><i class="fa fa-check"></i><b>2.5.2</b> Data collection through observation (or experimentation)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-development"><i class="fa fa-check"></i><b>2.5.3</b> Model development</a></li>
+<li class="chapter" data-level="2.5.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-verification"><i class="fa fa-check"></i><b>2.5.4</b> Model verification</a></li>
+<li class="chapter" data-level="2.5.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process"><i class="fa fa-check"></i><b>2.5.5</b> Model refinement (re-starting the process)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#reflecting-on-our-example-model"><i class="fa fa-check"></i><b>2.5.6</b> Reflecting on our example model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#scaling-up-and-adding-complexity"><i class="fa fa-check"></i><b>2.6</b> Scaling up and adding complexity</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusion"><i class="fa fa-check"></i><b>2.7</b> Conclusion</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#questions"><i class="fa fa-check"></i><b>2.8</b> Questions</a></li>
+<li class="chapter" data-level="2.9" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#r-code-for-figures"><i class="fa fa-check"></i><b>2.9</b> R code for figures</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="systems-concepts.html"><a href="systems-concepts.html"><i class="fa fa-check"></i><b>3</b> Systems concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="systems-concepts.html"><a href="systems-concepts.html#the-animal-nutritional-system"><i class="fa fa-check"></i><b>3.1</b> The animal nutritional system</a></li>
+<li class="chapter" data-level="3.2" data-path="systems-concepts.html"><a href="systems-concepts.html#ways-of-understanding-nutritional-systems"><i class="fa fa-check"></i><b>3.2</b> Ways of understanding nutritional systems</a></li>
+<li class="chapter" data-level="3.3" data-path="systems-concepts.html"><a href="systems-concepts.html#systems-concepts-1"><i class="fa fa-check"></i><b>3.3</b> Systems concepts</a></li>
+<li class="chapter" data-level="3.4" data-path="systems-concepts.html"><a href="systems-concepts.html#single-animal-nutritional-system"><i class="fa fa-check"></i><b>3.4</b> Single-animal nutritional system</a></li>
+<li class="chapter" data-level="3.5" data-path="systems-concepts.html"><a href="systems-concepts.html#physicalchemical-principles-mass-energy-balance"><i class="fa fa-check"></i><b>3.5</b> Physical/chemical principles: Mass &amp; energy balance</a></li>
+<li class="chapter" data-level="3.6" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-ordered-processes"><i class="fa fa-check"></i><b>3.6</b> Biological principles: ordered processes</a></li>
+<li class="chapter" data-level="3.7" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-context-dependence"><i class="fa fa-check"></i><b>3.7</b> Biological principles: context-dependence</a></li>
+<li class="chapter" data-level="3.8" data-path="systems-concepts.html"><a href="systems-concepts.html#conclusions"><i class="fa fa-check"></i><b>3.8</b> Conclusions</a></li>
+<li class="chapter" data-level="3.9" data-path="systems-concepts.html"><a href="systems-concepts.html#questions-1"><i class="fa fa-check"></i><b>3.9</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="requirements.html"><a href="requirements.html"><i class="fa fa-check"></i><b>4</b> Requirements</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-flows"><i class="fa fa-check"></i><b>4.1</b> Defining nutrient flows</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#supplies-requirements-and-balances"><i class="fa fa-check"></i><b>4.1.1</b> Supplies, requirements, and balances</a></li>
+<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.2</b> Requirement definitions in human and dairy nutrition</a></li>
+<li class="chapter" data-level="4.1.3" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.3</b> Absorbed and metabolizable amounts</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="requirements.html"><a href="requirements.html#dietary-reference-intakes"><i class="fa fa-check"></i><b>4.2</b> Dietary reference intakes</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="requirements.html"><a href="requirements.html#protecting-against-underfeeding-with-safety-factors"><i class="fa fa-check"></i><b>4.2.1</b> Protecting against underfeeding with "safety factors"</a></li>
+<li class="chapter" data-level="4.2.2" data-path="requirements.html"><a href="requirements.html#protecting-against-overfeeding"><i class="fa fa-check"></i><b>4.2.2</b> Protecting against overfeeding</a></li>
+<li class="chapter" data-level="4.2.3" data-path="requirements.html"><a href="requirements.html#accounting-for-uncertainty"><i class="fa fa-check"></i><b>4.2.3</b> Accounting for uncertainty</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#nasem-estimates-of-requirements"><i class="fa fa-check"></i><b>4.3</b> NASEM estimates of requirements</a></li>
+<li class="chapter" data-level="4.4" data-path="requirements.html"><a href="requirements.html#types-of-literature-used-by-nasem-2021"><i class="fa fa-check"></i><b>4.4</b> Types of literature used by NASEM (2021)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="requirements.html"><a href="requirements.html#measuring-composition-of-inputs-body-tissues-and-outputs"><i class="fa fa-check"></i><b>4.4.1</b> Measuring composition of inputs, body tissues, and outputs</a></li>
+<li class="chapter" data-level="4.4.2" data-path="requirements.html"><a href="requirements.html#measuring-losses-when-intake-is-minimal"><i class="fa fa-check"></i><b>4.4.2</b> Measuring losses when intake is minimal</a></li>
+<li class="chapter" data-level="4.4.3" data-path="requirements.html"><a href="requirements.html#studying-symptoms-of-deficiency-and-toxicity"><i class="fa fa-check"></i><b>4.4.3</b> Studying symptoms of deficiency and toxicity</a></li>
+<li class="chapter" data-level="4.4.4" data-path="requirements.html"><a href="requirements.html#regression-on-productive-performance"><i class="fa fa-check"></i><b>4.4.4</b> Regression on productive performance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#questions-2"><i class="fa fa-check"></i><b>4.5</b> Questions</a></li>
+<li class="chapter" data-level="4.6" data-path="requirements.html"><a href="requirements.html#r-code-for-figures-1"><i class="fa fa-check"></i><b>4.6</b> R code for figures</a></li>
+<li class="chapter" data-level="4.7" data-path="requirements.html"><a href="requirements.html#references"><i class="fa fa-check"></i><b>4.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-machinery.html"><a href="model-machinery.html#basic-nutrition-math"><i class="fa fa-check"></i><b>5.1</b> Basic nutrition math</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="model-machinery.html"><a href="model-machinery.html#using-ratios-percentages-proportions"><i class="fa fa-check"></i><b>5.1.1</b> Using ratios, percentages, proportions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="model-machinery.html"><a href="model-machinery.html#converting-units"><i class="fa fa-check"></i><b>5.1.2</b> Converting units</a></li>
+<li class="chapter" data-level="5.1.3" data-path="model-machinery.html"><a href="model-machinery.html#converting-basis"><i class="fa fa-check"></i><b>5.1.3</b> Converting basis</a></li>
+<li class="chapter" data-level="5.1.4" data-path="model-machinery.html"><a href="model-machinery.html#scaling"><i class="fa fa-check"></i><b>5.1.4</b> Scaling</a></li>
+<li class="chapter" data-level="5.1.5" data-path="model-machinery.html"><a href="model-machinery.html#weighting"><i class="fa fa-check"></i><b>5.1.5</b> Weighting</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="model-machinery.html"><a href="model-machinery.html#predictive-models"><i class="fa fa-check"></i><b>5.2</b> Predictive models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#predictive-model-descriptors"><i class="fa fa-check"></i><b>5.2.1</b> Predictive model descriptors</a></li>
+<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#simple-linear-model-empirical-input-output"><i class="fa fa-check"></i><b>5.2.2</b> Simple linear model (empirical, input-output)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetic-model-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.3</b> Exponential growth kinetic model (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.4</b> Saturable growth kinetics (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="model-machinery.html"><a href="model-machinery.html#dmi-prediction-in-nasem"><i class="fa fa-check"></i><b>5.2.5</b> DMI prediction in NASEM</a></li>
+<li class="chapter" data-level="5.2.6" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.6</b> Prediction using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="model-machinery.html"><a href="model-machinery.html#optimization"><i class="fa fa-check"></i><b>5.3</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="model-machinery.html"><a href="model-machinery.html#optimization-using-software"><i class="fa fa-check"></i><b>5.3.1</b> Optimization using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="model-machinery.html"><a href="model-machinery.html#other-important-concepts"><i class="fa fa-check"></i><b>5.4</b> Other important concepts</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.4.1</b> Allometric equations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="model-machinery.html"><a href="model-machinery.html#conclusions-1"><i class="fa fa-check"></i><b>5.5</b> Conclusions</a></li>
+<li class="chapter" data-level="5.6" data-path="model-machinery.html"><a href="model-machinery.html#questions-3"><i class="fa fa-check"></i><b>5.6</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="protein-overview.html"><a href="protein-overview.html"><i class="fa fa-check"></i><b>6</b> Protein Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="protein-overview.html"><a href="protein-overview.html#biological-definition-of-protein"><i class="fa fa-check"></i><b>6.1</b> Biological definition of protein</a></li>
+<li class="chapter" data-level="6.2" data-path="protein-overview.html"><a href="protein-overview.html#nutritional-definitions-of-protein"><i class="fa fa-check"></i><b>6.2</b> Nutritional definitions of protein</a></li>
+<li class="chapter" data-level="6.3" data-path="protein-overview.html"><a href="protein-overview.html#goals-of-dairy-protein-nutrition"><i class="fa fa-check"></i><b>6.3</b> Goals of dairy protein nutrition</a></li>
+<li class="chapter" data-level="6.4" data-path="protein-overview.html"><a href="protein-overview.html#the-animal-protein-system"><i class="fa fa-check"></i><b>6.4</b> The animal protein system</a></li>
+<li class="chapter" data-level="6.5" data-path="protein-overview.html"><a href="protein-overview.html#amino-acids"><i class="fa fa-check"></i><b>6.5</b> Amino acids</a></li>
+<li class="chapter" data-level="6.6" data-path="protein-overview.html"><a href="protein-overview.html#references-1"><i class="fa fa-check"></i><b>6.6</b> References</a></li>
+<li class="chapter" data-level="6.7" data-path="protein-overview.html"><a href="protein-overview.html#questions-4"><i class="fa fa-check"></i><b>6.7</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html"><i class="fa fa-check"></i><b>7</b> Protein intake and ruminal supplies</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#cp-intake"><i class="fa fa-check"></i><b>7.1</b> CP intake</a></li>
+<li class="chapter" data-level="7.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#ruminal-protein-supplies"><i class="fa fa-check"></i><b>7.2</b> Ruminal protein supplies</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#rdp-and-rup"><i class="fa fa-check"></i><b>7.2.1</b> RDP and RUP</a></li>
+<li class="chapter" data-level="7.2.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#calculating-rdp-and-rup"><i class="fa fa-check"></i><b>7.2.2</b> Calculating RDP and RUP</a></li>
+<li class="chapter" data-level="7.2.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#microbial-protein-synthesis"><i class="fa fa-check"></i><b>7.2.3</b> Microbial protein synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#examples-1"><i class="fa fa-check"></i><b>7.3</b> Examples</a></li>
+<li class="chapter" data-level="7.4" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#questions-5"><i class="fa fa-check"></i><b>7.4</b> Questions</a></li>
+<li class="chapter" data-level="7.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>7.5</b> R code for figures ### NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html"><i class="fa fa-check"></i><b>8</b> Protein postruminal supplies</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-microbial-tp"><i class="fa fa-check"></i><b>8.1</b> Digestion of microbial TP</a></li>
+<li class="chapter" data-level="8.2" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-rup"><i class="fa fa-check"></i><b>8.2</b> Digestion of RUP</a></li>
+<li class="chapter" data-level="8.3" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#metabolizable-protein"><i class="fa fa-check"></i><b>8.3</b> Metabolizable protein</a></li>
+<li class="chapter" data-level="8.4" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-basis"><i class="fa fa-check"></i><b>8.4</b> AA basis</a></li>
+<li class="chapter" data-level="8.5" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-microbial-protein"><i class="fa fa-check"></i><b>8.5</b> AA in microbial protein</a></li>
+<li class="chapter" data-level="8.6" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-rup"><i class="fa fa-check"></i><b>8.6</b> AA in RUP</a></li>
+<li class="chapter" data-level="8.7" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#examples-2"><i class="fa fa-check"></i><b>8.7</b> Examples</a></li>
+<li class="chapter" data-level="8.8" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#questions-6"><i class="fa fa-check"></i><b>8.8</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html"><i class="fa fa-check"></i><b>9</b> Protein use and recommended supplies</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#scurf"><i class="fa fa-check"></i><b>9.1</b> Scurf</a></li>
+<li class="chapter" data-level="9.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#endogenous-urinary-protein"><i class="fa fa-check"></i><b>9.2</b> Endogenous urinary protein</a></li>
+<li class="chapter" data-level="9.3" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#metabolic-fecal-protein"><i class="fa fa-check"></i><b>9.3</b> Metabolic fecal protein</a></li>
+<li class="chapter" data-level="9.4" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#milk-protein"><i class="fa fa-check"></i><b>9.4</b> Milk protein</a></li>
+<li class="chapter" data-level="9.5" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#gestation-protein"><i class="fa fa-check"></i><b>9.5</b> Gestation protein</a></li>
+<li class="chapter" data-level="9.6" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#growth"><i class="fa fa-check"></i><b>9.6</b> Growth</a></li>
+<li class="chapter" data-level="9.7" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#total-np-use"><i class="fa fa-check"></i><b>9.7</b> Total NP use</a></li>
+<li class="chapter" data-level="9.8" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#aa-basis-1"><i class="fa fa-check"></i><b>9.8</b> AA basis</a></li>
+<li class="chapter" data-level="9.9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#recommendations"><i class="fa fa-check"></i><b>9.9</b> Recommendations</a></li>
+<li class="chapter" data-level="9.10" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#examples-3"><i class="fa fa-check"></i><b>9.10</b> Examples</a>
+<ul>
+<li class="chapter" data-level="9.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-software"><i class="fa fa-check"></i><b>9.10.1</b> NASEM dairy-8 software</a></li>
+<li class="chapter" data-level="9.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-needs-update"><i class="fa fa-check"></i><b>9.10.2</b> R ## NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="9.11" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#questions-7"><i class="fa fa-check"></i><b>9.11</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>10</b> Glossary</a></li>
+<li class="divider"></li>
+<b> Contributors:</b>
+<li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
+<li><a href="https://andysci.wisc.edu/directory/michel-wattiaux/" target="blank">Michel A. Wattiaux</a></li>
+<li><a href="https://www.dasc.vt.edu/people/faculty/hanigan.html" target="blank">Mark D. Hanigan</a></li>
+<li><a href="https://www.marinadanes.com" target="blank">Marina A.C. Danes </a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="protein-overview" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Protein Overview<a href="protein-overview.html#protein-overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="lo">
+<p><strong>Learning Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Explain the importance of proteins in body functions.</p></li>
+<li><p>Define crude protein, true protein, and non-protein nitrogen.</p></li>
+<li><p>Explain the goals of protein nutrition in terms of economic and
+environmental tradeoffs.</p></li>
+<li><p>Differentiate essential, non-essential, and conditionally-essential
+amino acids.</p></li>
+<li><p>Discuss why AA, and not just nitrogen, are considered in nutritional models.</p></li>
+</ol>
+</div>
+<div id="biological-definition-of-protein" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Biological definition of protein<a href="protein-overview.html#biological-definition-of-protein" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Biologically, proteins are defined as macromolecules comprised of many
+amino acids bonded together. Proteins are required for structure,
+function, and regulation of the body. For example:</p>
+<ul>
+<li>actin and myosin proteins contract muscles</li>
+<li>collagen and elastin, proteins in connective tissue, provide
+structural support</li>
+<li>protein hormones such as insulin and vasopressin regulate body
+processes</li>
+<li>hemoglobin carries oxygen in the blood</li>
+<li>immunoglobulin proteins (antibodies) participate in the immune
+response</li>
+</ul>
+<p>All proteins contain nitrogen, because every amino acid has an amino
+group (<span class="math inline">\(-NH_2\)</span>). All proteins also contain carbon, hydrogen, and oxygen.
+Some proteins contain sulfur, iron, copper, or other elements. Although
+every protein contains N, the N content of a given AA or protein varies.</p>
+<p>Across the animal kingdom, dietary AA absorbed in the small intestine
+are used to synthesize body proteins and output proteins during
+translation. In some animals (e.g., ruminants) a microbial community
+enables more significant use of dietary non-protein nitrogenous
+compounds for protein synthesis. This is one reason why the nutritional
+definition of protein is slightly different from its biological
+definition.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-44"></span>
+<img src="images/AAtoProtein.png" alt="A. Free amino acids. B. Peptides, which are chains of AA. C. An example protein, which is a large molecule formed by a sequence of ~50 to 2000 AA, and takes on a 3-dimensional structure that can include multiple subunits" width="85%" />
+<p class="caption">
+Figure 6.1: A. Free amino acids. B. Peptides, which are chains of AA. C. An example protein, which is a large molecule formed by a sequence of ~50 to 2000 AA, and takes on a 3-dimensional structure that can include multiple subunits
+</p>
+</div>
+</div>
+<div id="nutritional-definitions-of-protein" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Nutritional definitions of protein<a href="protein-overview.html#nutritional-definitions-of-protein" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In animal nutrition, "protein" is defined in more practical, measurable
+terms. The simplest nutritional term for protein is crude protein (CP).
+The CP fraction in a feed sample is determined by the laboratory
+analysis of the total nitrogen (N) content in the sample multiplied by
+6.25.</p>
+<p><span class="math display">\[ CP = N * 6.25\]</span></p>
+<p>where CP is crude protein expressed in any unit (% of the DM, grams, or
+g/d for example), N is N content in the same unit, and 6.25 is a
+conversion factor that assumes that on average 1 g of N is found is 6.25
+g of protein.The nutritional definition of protein therefore includes all
+N-containing compounds. This means that it accounts for both:</p>
+<ul>
+<li><p><strong>true protein (TP)</strong>, which consists of AA; and</p></li>
+<li><p><strong>non-protein nitrogen (NPN)</strong> which includes all other nitrogenous
+compounds that are not AA. NPN includes compounds such as urea,
+ammonia, nucleotides (in DNA and RNA), and choline. Although these
+compounds are not protein, they still contain N.</p></li>
+</ul>
+<p>The amount of CP is the sum of the amounts of TP and NPN. For many feed
+and output proteins, the majority of CP is TP. For example, the protein
+in cow milk is approximately 5% NPN and 95% TP.</p>
+<p><span class="math display">\[ CP = TP + NPN \]</span></p>
+<p>In non-ruminant animals, TP is the only usable fraction of CP, and the
+NPN fraction is of little use. Yet ruminants, or more exactly the
+microbes that populate the rumen, can use NPN to grow. Through microbial
+growth processes, some of the NPN in CP are converted into true protein
+(AA) that the host animal (the cow) can use.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-45"></span>
+<img src="images/NPNvsAA.png" alt="Examples of N-containing compounds that would be included in CP. A. Urea molecule, an example of NPN. B. Thymine, a nucleic acid which is NPN. C. Lysine, an AA which would be considered TP." width="85%" />
+<p class="caption">
+Figure 6.2: Examples of N-containing compounds that would be included in CP. A. Urea molecule, an example of NPN. B. Thymine, a nucleic acid which is NPN. C. Lysine, an AA which would be considered TP.
+</p>
+</div>
+<div class="grey">
+<p><strong>NPN Literature Deep Dive</strong></p>
+<p>In experiments throughout the 1950s and 60s (e.g., Virtanen, 1966),
+researchers fed cows NPN (e.g. ammonium sulfate, urea) labeled with a
+stable isotope (<span class="math inline">\(^{15}N\)</span>). By collecting and analyzing milk from these
+cows, they were able to prove that the same label N from the feed NPN
+sources appeared later in every type of amino acid found in the cow's
+milk. In other words, the labeled N from NPN was transformed to amino
+acids, absorbed by the cow, and incorporated into milk protein. This
+proved that the microbiota can synthesize (at least to a small extent)
+every type of AA found in milk protein.</p>
+<p>Virtanen, A. I. (1966). Milk Production of Cows on Protein-Free Feed: Studies of the use of urea and ammonium salts as the sole nitrogen source open new important perspectives. Science, 153(3744), 1603-1614.</p>
+<p>Still, it is important to remember that feeding CP with a large fraction of NPN can depress growth and
+production relative to feeding CP with lesser NPN (and consequently more
+true protein). Many NPN sources, e.g., urea, are very quickly degraded
+in the rumen and can cross into the bloodstream as ammonia. Too much
+ammonia in the blood can be toxic, and even kill animals (ammonia/urea
+toxicity). For these reasons, protein composition and kinetics need to be carefully managed in the
+ration.</p>
+</div>
+<p>An important limitation built into any CP value is that proteins contain
+16% N, which means that in each 100 g of protein, there are 16 g of N.
+Thus 1 g of N measured in the laboratory corresponds to 6.25 g of
+protein (100/16). Thus, remember that the N content of a feed will
+always be 6.25 times lower than its CP content. In reality 16% N in
+protein is an average obtained across many feed protein sources and N
+content of proteins actually varies from 13 to 19%, which should equate
+to variable conversion factors ranging from 5.26 to 7.69 (FAO, 2003).</p>
+<p>One notable exception for us as nutritionists interested in milk
+production, is that N content of milk CP contains 15.77% N. Thus the N
+to CP conversion factor is 100/15.77 = 6.34 (NASEM, 2021).</p>
+<p>Another consequence of the assumptions made in calculating CP is that
+some feed may have a CP value greater than 100%! For example, feed grade
+urea, which can be used in dairy rations as a source of NPN, typically
+contains 46% N. Following the 6.25 rule, the CP of urea is 287%.</p>
+<p>Although CP is not a perfect measure of protein <em>per se</em>, it provides a
+common and measurable starting point for nutritional models. CP can be
+determined through a standardized and simple laboratory technique, which
+makes it practical for large-scale use across many feeds and farms. The
+NASEM model discusses the CP, TP, and NPN contents not just of feeds,
+but also of other quantities (e.g., microbial protein, feces, urine), so
+these definitions will be important to remember.</p>
+<div class="green">
+<p><strong>Test Yourself</strong></p>
+<p>Calculate the percent of N in alfalfa silage with 20% CP (on a DM
+basis).</p>
+<div class="webex-solution">
+<button>
+click here for an answer
+</button>
+<p><span class="math display">\[ CP = N * 6.25\\
+20 = N * 6.25\\
+\frac{20}{6.25} = N \\
+N = 3.2\text{% of DM}
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="goals-of-dairy-protein-nutrition" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Goals of dairy protein nutrition<a href="protein-overview.html#goals-of-dairy-protein-nutrition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Because ruminants can convert non-protein nitrogen to amino acids thanks to rumen microbes, protein nutrition is intertwined with nitrogen nutrition. In general terms, goals in protein and nitrogen nutrition in dairy cattle include:</p>
+<ol style="list-style-type: decimal">
+<li>manage the kinetics of ruminal N degradation and N recycling to support microbial protein synthesis.<br />
+</li>
+<li>supply adequate amounts of amino acids (AA) to the small intestine to meet animal needs.</li>
+<li>reduce losses of N in manure.</li>
+</ol>
+<p>For lactating dairy cattle, optimizing milk protein output is a central goal. Milk protein supplies 20% of the protein consumed by American people (NHANES, 2010), making it important for human nutrition. The dairy industry also supplies 21% of the beef consumed in the U.S. (Moreira et al., 2021). Although milk and meat production is important to human nutrition domestically, it is arguably more critical in developing countries where protein and energy undernutrition is more common (FAO, 2018).</p>
+<p>Manure N is part of a naturally-occurring N cycle. However, excess manure N is an environmental concern because of its potential contribution to water quality degradation (nitrate in drinking water for example) and because of its contribution to air quality degradation (emission of ammonia, which can perturb the balance of natural ecosystem, and emission of nitrous oxide, which is a very potent greenhouse gas contributing to climate change). Therefore, feeding the human population must be balanced with stewardship of the environment.</p>
+</div>
+<div id="the-animal-protein-system" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> The animal protein system<a href="protein-overview.html#the-animal-protein-system" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the subsequent activities, we will explore the animal protein system. Recalling from previous chapters (Systems Concepts), the animal's protein system involves input, output, and transformation flows. The system includes a core sequence of nutritional processes (ingestion, digestion, absorption, assimilation/use). Protein models describe these features with respect to protein and protein-related nutrients.</p>
+<ul>
+<li>Ingestion (as Crude Protein)</li>
+<li>Rumen degradation (as Rumen-Degraded Protein) and passage (as Rumen-Undegraded Protein) and microbial protein synthesis<br />
+</li>
+<li>Intestinal digestion; absorption to circulation (as Metabolizable Protein)</li>
+<li>Assimilation and/or use (as Net Protein) for output flows such as milk protein and maintenance proteins (in hair, hooves, and digestive tract) and transformation flows such as body reserve gain</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-46"></span>
+<img src="images/protein_system.png" alt="Depiction of protein flows in ruminant animals. Figure shows how protein proceeds through the digestive tract, NPN and AA are absorbed into circulation, and NPN and AA in circulation follow various paths." width="100%" />
+<p class="caption">
+Figure 6.3: Depiction of protein flows in ruminant animals. Figure shows how protein proceeds through the digestive tract, NPN and AA are absorbed into circulation, and NPN and AA in circulation follow various paths.
+</p>
+</div>
+<p>As the figure illustrates, protein flows in the animal are quite complex. The NASEM (2021) model does not depict every mechanism in detail. Instead, it focuses on some major areas that are most nutritionally-relevant. For example, significant transformations in the rumen affect the AA composition of protein available to the animal, so ruminal protein degradation and passage are modeled in great detail. It is also critical to know how much AA reach circulation (metabolizable protein), because these are the AA the animal can use to meet bodily needs. Finally, NASEM (2021) offers some predictions of the net protein needed by the animal for body functions. Each of these areas will be discussed in greater detail in later chapters.</p>
+</div>
+<div id="amino-acids" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Amino acids<a href="protein-overview.html#amino-acids" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Historically, diets were formulated on a protein basis. However, physiologically, animals require individual AA, not protein <em>per se</em>. There are 20 common AAs that occur in proteins. Of these, nine are
+classified as essential (EAA) and one as conditionally essential. EAA
+are essential because their carbon skeletons cannot be synthesized by
+animal cells at a rate that meets metabolic needs. In contrast,
+Non-essential AA (NEAA) can be synthesized by animal cells in large
+enough quantities to supply needs. The term "conditionally essential"
+refers to an AA that is essential under certain conditions. Dairy cattle
+can synthesize Arg in large quantities, but Arg synthesis is
+not enough to meet Arg demands when milk production is high.
+Therefore, whether or not Arg is "essential" depends on the
+conditions.</p>
+<p>Early studies pointed to Lys and Met as the the most limiting AA for milk production when preserved forages were included in the TMR. The previous edition of 'Nutrient Requirements of Dairy Cattle' (NRC, 2001) included recommendations for the percentage of metabolizable protein that should come from these two AA. This approach had limitations. First, it did not include many other AA that affected production. Second, because AA recommendations were given as a percentage of MP (rather than g/d), it described the AA "profile" rather than the specific amount supplied of each individual EAA. Between 2001 and 2021, significant research efforts were dedicated to expanding knowledge of AA flows in dairy cattle. As a result, supplies of all essential AA (EAA; g/d) are modeled in NASEM (2021).</p>
+<table style="width:50%; margin-left: auto; margin-right: auto;" class="table">
+<thead>
+<tr>
+<th style="text-align:left;">
+EAA
+</th>
+<th style="text-align:left;">
+Abbreviation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Histidine
+</td>
+<td style="text-align:left;">
+His
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Isoleucine
+</td>
+<td style="text-align:left;">
+Ile
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Leucine
+</td>
+<td style="text-align:left;">
+Leu
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lysine
+</td>
+<td style="text-align:left;">
+Lys
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Methionine
+</td>
+<td style="text-align:left;">
+Met
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Phenylalanine
+</td>
+<td style="text-align:left;">
+Phe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Threonine
+</td>
+<td style="text-align:left;">
+Thr
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tryptophan
+</td>
+<td style="text-align:left;">
+Trp
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Valine
+</td>
+<td style="text-align:left;">
+Val
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arginine
+</td>
+<td style="text-align:left;">
+Arg
+</td>
+</tr>
+</tbody>
+</table>
+<div class="orange">
+<p><strong>What about recycling?</strong></p>
+<p>Although the NASEM model describes most protein input, output, and transformation flows, it does not explicitly describe some of the circularity inherent in actual protein flows. We can consider two examples:</p>
+<p>First, in ruminants, circulating urea is recycled to the gastrointestinal tract. Urea that re-enters the rumen can contribute to microbial protein supply. This mechanism is not depicted in the NASEM (2021) model explicitly.</p>
+<p>Second, in dairy cattle (as in many other mammals), body protein is continually turning over. In fact, the rate of turnover is greater than rates of inputs and outputs. For example, a lactating dairy cow may consume 2.0 kg of apparently-digestible protein, and export 1.0-1.5 kg of milk protein per day, but degrade 3.0 kg of body protein and synthesize in excess of 4.0 kg of protein per day (Lobley, 2003). By mass, the empty body (subtracting weight of digesta) of a dairy cow contains ~ 8-11% protein on an as-is basis (NASEM, 2021). This means that a 700 kg lactating Holstein with 506 kg empty body weight would have 40-55 kg of body protein (Yan et al., 2009). The constant turnover of body protein (sometimes called "remodeling") offers animals flexibility to continually alter structure and/or function of body tissues. It also makes the animal more resilient to varying diet composition. For example, the animal can tolerate some day-to-day imbalances or insufficiencies in dietary AA because it can also draw upon body reserve AAs. However, regular body protein turnover (recycling) does not represent a net input, output, or change to the animal's status. Therefore, it is excluded from the NASEM model.</p>
+</div>
+<div class="grey">
+<p><strong>Further Reading</strong></p>
+<p>Wattiaux, M. A. (1998). Protein metabolism in dairy cows. Dairy Essentials: Nutrition and Feeding, Reproduction and Genetic Selection, Lactation and Milking, Raising Dairy Heifers.
+<a href="https://avys.omu.edu.tr/storage/app/public/gciftci/120181/7.pdf" class="uri">https://avys.omu.edu.tr/storage/app/public/gciftci/120181/7.pdf</a></p>
+</div>
+</div>
+<div id="references-1" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> References<a href="protein-overview.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>National Health and Nutrition Examination Survey (2010). <a href="https://wwwn.cdc.gov/nchs/nhanes/2009-2010/DR1IFF_F.htm" class="uri">https://wwwn.cdc.gov/nchs/nhanes/2009-2010/DR1IFF_F.htm</a></p>
+<p>Moreira, L. C., Rosa, G. J., &amp; Schaefer, D. M. (2021). Beef production from cull dairy cows: a review from culling to consumption. Journal of Animal Science, 99(7), skab192.</p>
+<p>Yan, T., Patterson, D. C., Mayne, C. S., Agnew, R. E., &amp; Porter, M. G. (2009). Prediction of empty body weight and composition from live weight and other live animal measurements in lactating dairy cows. The Journal of Agricultural Science, 147(3), 241-252.</p>
+<p>FAO. 2018. World Livestock: Transforming the livestock sector through the Sustainable Development Goals. Rome. 222 pp. <a href="https://doi.org/10.4060/ca1201en" class="uri">https://doi.org/10.4060/ca1201en</a>. Licence: CC BY-NC-SA 3.0 IGO.</p>
+</div>
+<div id="questions-4" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Questions<a href="protein-overview.html#questions-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>What is NPN? Can non-ruminants use NPN to meet their protein requirements?</li>
+<li>Why are proteins important for the body's structure and function? Give examples.</li>
+<li>How does the nutritional definition of protein differ from its biological definition?</li>
+<li>How would you describe the goals of protein nutrition in dairy cattle?</li>
+<li>What is crude protein (CP), and how is it measured?</li>
+<li>What are some limitations of how CP is calculated?</li>
+<li>What types of compounds fall under the category of NPN?</li>
+<li>How was it demonstrated that NPN can be transformed into amino acids in dairy cattle?</li>
+<li>Why is it important to manage protein composition and kinetics carefully in animal nutrition?</li>
+<li>Differentiate essential and non-essential AA.</li>
+<li>Which AA is conditionally essential?</li>
+<li>Give three examples of essential AA.</li>
+</ol>
+
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+    
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+  
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+  
+  var cl = this.classList
+  
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+  
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+  
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+  
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="model-machinery.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="protein-intake-and-ruminal-supplies.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"highlight": "espresso",
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

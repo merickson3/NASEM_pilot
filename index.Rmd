@@ -40,11 +40,11 @@ Our interactive textbook and its accompanying resources for teachers are intende
 
 ## Information for educators
 
-## Intended audience
+**Intended audience**
 
 This interactive textbook is for anyone interested in learning about nutritional science and nutritional modeling. Although is discusses a dairy cattle nutritional model, it is NOT designed solely for dairy-interested learners. As the "Requirements" chapter illustrates, there is substantial overlap in how scientists describe nutritional processes for humans and other animal species. Throughout the  textbook, we emphasized critical thinking about nutritional science rather than memorization of any particular dairy cattle nutrition facts. Therefore, we hope this interactive textbook will be interesting and relevant for learners regardless of their interest in dairy cattle. 
 
-## Assumptions about prior knowledge
+**Assumptions about prior knowledge**
 
 This textbook can be used by anyone, but it has been designed with the assumption that learners have some prior knowledge. Before starting this material, we suggest that learners should have:
 
@@ -54,13 +54,19 @@ This textbook can be used by anyone, but it has been designed with the assumptio
 
 - Basic skills with statistics and math (mean, standard deviation, regression)
 
-## Technology requirements
+**Technology requirements**
 
 - To read the narrative and complete activities, need a computer and stable internet connection
 - To run NASEM-8 software, need Windows operating system
 
+## NASEM Components
 
-## Accessing the NASEM (2021) book
+```{r, echo = F, fig.align = "center", out.width = '100%', fig.cap = "Components of 'Nutrient Requirements of Dairy Cattle, 8th edition.' The consensus report book includes (A) narrative text reviewing scientific literature used in creating the model, (B) Feed Tables with ingredient composition data. The book was also released with (C) Windows software." }
+knitr::include_graphics("images/NASEM_components.png")
+
+```
+
+### Accessing the NASEM (2021) book
 
 
 The NASEM (2021) book provides a narrative that summarizes recent scientific literature on dairy nutrition and justifies choices made while developing the mathematical model. The narrative is rich with information on nutritional physiology, dairy herd management, dairy nutrition experimentation, and the model development process. Due to its information density and use of technical language, it may be overwhelming to read for less-experienced practitioners. For this reason, learners may find it helpful to read the NASEM (2021) book in a class or small-group setting where it is possible to ask questions and verify their understanding. 
@@ -87,7 +93,7 @@ https://nap.nationalacademies.org/catalog/9825/nutrient-requirements-of-dairy-ca
 ::: 
 
 
-## The NASEM-dairy-8 software
+### Accessing NASEM-dairy-8 software
 
 
 Most of this interactive textbook can be completed without using the NASEM-dairy-8 software. However, learners are encouraged to download and experiment with the NASEM dairy-8 software on their own time. Download instructions are available on the NASEM website.
@@ -110,7 +116,9 @@ It is also possible to download the Windows software for NRC (2001), although NA
 
 ::: 
 
-## Running a simulation
+## Examples
+
+### NASEM dairy-8
 
 The easiest way to get started running NASEM-8 is to Load a pre-defined simulation.The software comes with several pre-defined simulations for different classes of animals (e.g., "Example Lactating Cow 100 DIM"). Loading a pre-defined simulation pre-loads all of the inputs describing an example animal, management scenario, and diet. This can be helpful to avoid entering unrealistic inputs. 
 
@@ -133,12 +141,42 @@ Some of the most common mistakes when using NASEM dairy-8 relate to improper inp
 **NOTE**: Even with perfectly-matched inputs, the NASEM software is more up-to-date than the consensus report. For this reason, the outputs may differ slightly when using equations in the book versus the reports generated in the software. More details are given in the next section.
 ::: 
 
+### R
 
-## Known updates (discrepancies in book vs. software)
+The examples assume that the user has installed R and set the working directory to a relevant folder. However, most examples are designed to be relatively portable and work regardless of the working directory.  Additionally, some ```library()``` calls are made to load required packages. If this is the first time using a package, the user needs to first install the package (```install.packages("packagename")```, where packagename is replaced with the enquoted ("") name of the package to be installed). 
 
-The software is under continual improvement, whereas the book is static. According to the NASEM-8 software "help" documentation, the latest software and R code contains the most correct and up-to-date version of the NASEM model. **To avoid confusion, our interactive textbook will use the NASEM model equations given in the software.**
+Many people run R within a developing environment such as Rstudio. Rstudio is available for download across platforms:  https://posit.co/download/rstudio-desktop/. The learnr package provides a nice overview of how to set up R and Rstudio:  https://learnr-examples.shinyapps.io/ex-setup-r/#section-welcome
 
-### NASEM dairy-8 software updates and bugs
+:::{.orange}
+
+**Complete beginners:  learn R with swirl**  
+To get started feeling more comfortable with R, I would recommend you give the "swirl" package a try. It is pretty fun and helps you start to grasp the basic R syntax. Use the install.packages command to install it. Then, you can use library() to call the swirl package, loading it into your workspace.
+
+From here, the swirl package should mostly guide you the rest of the way. There are several modules you can complete. The R Programming course is a good start. You can see more about the swirl package here: https://github.com/swirldev/swirl_courses#swirl-courses
+
+```{r, echo = T, eval = F}
+install.packages ("swirl")
+library(swirl)
+install_course("R Programming")  #Loading a course in "swirl"
+swirl()
+```
+
+:::
+
+
+### Python
+
+The examples assume the user has installed Python and pandas. The simplest way for inexperienced users to install Python and pandas is through Anaconda. For installation instructions, see here:  https://docs.continuum.io/free/anaconda/install/
+
+For Mac, python is preinstalled. To run an example, open a terminal in the working directory (folder with input/output files in it) and call ```python``` to change the interpreter to Python.  Alternatively, the examples can be run from a developing environment such as Visual Studio code. Again, it is important to ensure the working directory (if relevant for the example) has been set up. However, most examples are designed to be relatively portable and work regardless of the working directory. 
+
+## Helpful information
+
+**Known updates (discrepancies in book vs. software)**
+
+The software is under continual improvement, whereas the book is static. According to the NASEM-8 software "help" documentation, the latest software and R code contains the most correct and up-to-date version of the NASEM model. **NOTE**: *To avoid confusion, our interactive textbook will use the NASEM model equations given in the software.*
+
+**NASEM dairy-8 software updates and bugs**
 
 Since the software was released, several updates have been made. Users should ensure they have the latest version of NASEM-8 downloaded to avoid any errors. The errors below may be encountered with older versions:
 
@@ -146,7 +184,7 @@ Since the software was released, several updates have been made. Users should en
 1. In certain cases, the NEL balance in the sidebar does not match the Word document output. 
 1. In certain versions of the NASEM-8 software, manure volatile solids was overwritten by manure water in tabular output in Word.
 
-### Differences between the book and software
+**Differences between the book and software**
 
 The most recent software is more up-to-date than the equations in the Consensus Report book. Most discrepancies result in relatively small differences in predictions as a result of fine-tuning parameters. Known discrepancies between the book and software include:
 
@@ -170,7 +208,7 @@ Other notes (not discrepant, but maybe helpful to know).
 Interested in editing or adding to this interactive textbook? Please share your ideas with our team (merickson3@wisc.edu) so we can incorporate them and acknowledge you as a contributor. We could especially use suggested alternative text and activities to improve the accessibility of this resource. 
 
 
-## License
+## License & Citation Information
 
 This work is licensed under a CC-BY-NC-SA license. This means you are free to use it for educational purposes or modify it, as long as you **cite the original work (see below)** and share your creation under a similar license. 
 
@@ -178,7 +216,7 @@ This work is licensed under a CC-BY-NC-SA license. This means you are free to us
 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-## Citations
+**Required Citations**
 
 If you use this interactive textbook, please give credit by citing our work and the NASEM report. 
 

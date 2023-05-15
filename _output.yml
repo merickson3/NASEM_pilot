@@ -29,6 +29,7 @@ bookdown::gitbook:
     #  all: ['facebook', 'twitter', 'linkedin', 'weibo', 'instapaper']
     info: true
     toc:
+      collapse: section
       before: |
         <li><a href="./">Learning NASEM Dairy (2021)</a></li>
       after: |

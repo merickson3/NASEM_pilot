@@ -11,3 +11,8 @@ tidyr
 stringr
 lpSolve
 shiny
+knitr
+kableExtra
+readxl
+ggrepel
+tibble

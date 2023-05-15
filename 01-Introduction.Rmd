@@ -301,10 +301,25 @@ the original model. `r torf(FALSE)`
 
 Nutritional models serve practical goals:  they can make animal feeding practices more economical, more environmentally-sound, and more aligned with human needs and available resources. Nutritional models are developed through scientific processes. They use mathematical expressions to represent information about how nutritional processes work. Nutritional models can appear quite complex, but it's important to remember that they are the collective effort of many people, across long periods of time, as documented in the scientific literature.  
 
+## Questions
+
+
+1. What historical events spurred the development of animal nutrition sciences in the U.S.? 
+1. Explain why nutritional models can be useful to dairy producers.
+1. Give an example of a situation when a nutritional model could help make decisions related to environmental impacts. 
+1. Give an exmaple of how a nutritional model could be used in farm economic decisions.
+1. How many editions of the "Nutrient Requirements of Dairy Cattle" consensus report have been published?
+1. Explain how a cave painting can be thought of as similar to a nutritional model, metaphorically.
+1. Explain the steps involved in developing a nutritional model, using a different example than the one discussed in this chapter.
+1. What are some possible courses of action when a nutritional model does not adequately explain the observed variation? Discuss the options available to researchers for model refinement and improvement.
+1. Would you say the process used to develop nutritional models is linear or circular (recursive)? Explain your reasoning. 
+
 
 ## R code for figures
 
 R code used for this chapter is given below.
+
+`r hide("Show R code for figures")`
 
 ```{r, eval = FALSE, echo = TRUE}
 
@@ -420,3 +435,4 @@ p + geom_smooth(method = "lm", se = F) +
 ```
 
 
+`r unhide()` 
