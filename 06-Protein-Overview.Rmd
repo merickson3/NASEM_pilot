@@ -185,10 +185,13 @@ these definitions will be important to remember.
 ::: green
 **Test Yourself**
 
-Calculate the percent of N in alfalfa silage with 20% CP (on a DM
-basis).
+1. True or false. Monogastric animals can derive significant amounts of metabolizable protein from NPN. `r torf(FALSE)`.  
+1. Which of the following is considered true protein? `r mcq(c(answer = "AA", "urea", "nucleotides", "creatinine"))`.  
+1. Which of the following is an example of NPN? `r mcq(c("myosin", "amino acid", answer = "urea", "CH4"))`.  
+1. Calculate the percent of N in alfalfa silage with 20% CP (on a DM
+basis) `r fitb("3.2")` % of DM (1 digit after decimal)   
 
-`r hide("click here for an answer")`
+`r hide("click here for an explanation")`
 
 $$ CP = N * 6.25\\
 20 = N * 6.25\\
