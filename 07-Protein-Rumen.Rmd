@@ -243,8 +243,10 @@ models, with a few modifications.
 ::: {.green}
 **Test Yourself**
 
-Which of these equations is NOT correct?
-`r mcq(c("CP = TP + NPN", answer = "CP = Kd + Kp", "CP = RDP + RUP", "CP = A + B + C"))`
+1. Which of these equations is NOT correct? `r mcq(c("CP = TP + NPN", answer = "CP = Kd + Kp", "CP = RDP + RUP", "CP = A + B + C"))`
+1. The `r mcq(c("A", answer = "B", "C"))` fraction is degraded at a moderate rate.
+1. The `r mcq(c(answer = "A", "B", "C"))` fraction is degraded instantaneously.
+1. The `r mcq(c("A", "B", answer= "C"))` fraction is never degraded.
 
 :::
 ::: {.orange}

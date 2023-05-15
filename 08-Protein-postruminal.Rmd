@@ -49,6 +49,12 @@ Microbial TP is assumed to be 80% digestible (NASEM, 2021).
 $$\text{digestible MiTP (g/d)} = 0.80* \text{MiTP (g/d)}$$
 
 
+::: {.green}
+
+**Test Yourself: **  
+True or false:  The digestibility of microbial TP depends on the feeds in the diet. `r torf(FALSE)`
+
+:::  
 
 ## Digestion of RUP
 
@@ -159,7 +165,7 @@ dl %>%
 
 NASEM (2021) assumed that the digestibility of each individual AA in RUP was the same as the digestibility of RUP (p. 78). The committee noted that this assumption is likely incorrect, but they had insufficient data to recommend digestibility coefficients for each individual AA. 
 
-For a given feed, the digested fraction of each EAA can be calculated using the digestibility coefficient of RUP for that feed ($dcRUP$) multiplied by the total supply of each EAA in RUP supply. In the NASEM (2021) model, these AA supplies are corrected for incomplete recovery during hydrolysis to correct for errors introduced by laborotory methods. This aspect is omitted from our interactive textbook.
+For a given feed, the digested fraction of each EAA can be calculated using the digestibility coefficient of RUP for that feed ($dcRUP$) multiplied by the total supply of each EAA in RUP supply. In the NASEM (2021) model, these AA supplies are corrected for incomplete recovery during hydrolysis to correct for errors introduced by laboratory methods. This aspect is omitted from our interactive textbook.
 
 $$
 \text{dRUPEAA, g/d} = dcRUP *
@@ -176,6 +182,15 @@ $$
 \text{Val, g/d} \\ 
 \end{bmatrix}
 $$
+::: {.green}
+
+**Test Yourself: **  
+
+True or false:  The digestibility of each individual AA in RUP is assumed to be the same as the overall digestibility of RUP. `r torf(TRUE)`
+
+True or false:  In many feeds, only a small portion (10-20%) of RUP is digestible. `r torf(FALSE)`
+
+:::  
 
 ## Examples
 

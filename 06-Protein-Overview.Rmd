@@ -8,7 +8,7 @@ editor_options:
     wrap: 72
 ---
 
-# Protein Overview
+# Protein overview
 
 
 ```{r, echo = F}
@@ -209,6 +209,15 @@ For lactating dairy cattle, optimizing milk protein output is a central goal. Mi
 
 Manure N is part of a naturally-occurring N cycle. However, excess manure N is an environmental concern because of its potential contribution to water quality degradation (nitrate in drinking water for example) and because of its contribution to air quality degradation (emission of ammonia, which can perturb the balance of natural ecosystem, and emission of nitrous oxide, which is a very potent greenhouse gas contributing to climate change). Therefore, feeding the human population must be balanced with stewardship of the environment. 
 
+::: {.green}
+
+**Test Yourself: **  
+1. Which of the following is a goal of protein and nitrogen nutrition in dairy cattle? 
+`r mcq(c("Promote ruminal N degradation", "Maximize losses of N in manure", answer = "Optimize productivity"))`  
+1. Which GHG is produced as a result of the N cycle? `r mcq(c("CO2", "NH3", "NO2", "N2", answer = "N2O"))`
+
+:::  
+
 ## The animal protein system
 
 In the subsequent activities, we will explore the animal protein system. Recalling from previous chapters (Systems Concepts), the animal's protein system involves input, output, and transformation flows. The system includes a core sequence of nutritional processes (ingestion, digestion, absorption, assimilation/use). Protein models describe these features with respect to protein and protein-related nutrients. 
@@ -253,6 +262,18 @@ essential_aa <- data.frame(
 kable(essential_aa, table.attr = "style='width:50%;'") %>% 
   kable_styling(position = "center")
 ```
+
+::: {.green}
+
+**Test Yourself: ** 
+
+1. True or False: Animals require individual amino acids (AA) rather than protein itself. `r torf(TRUE)`. 
+1. True or False: Non-essential amino acids (NEAA) can be synthesized by animal cells in large enough quantities to supply needs. `r torf(TRUE)`. 
+1. How many essential amino acids (EAA) are there? `r mcq(c("6", answer = "9", "10", "12"))`. 
+1. Which AA is conditionally essential for dairy cattle? `r mcq(c("Leu", "Val", "Iso", answer = "Arg"))`. 
+1. Which AA were included in the previous NRC (2001) model? `r mcq(c(answer = "Lys and Met", "Lys and Leu", "His and Met"))`. 
+
+:::  
 
 ::: {.orange}
 
