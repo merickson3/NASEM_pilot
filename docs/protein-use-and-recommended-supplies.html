@@ -26,7 +26,7 @@
 <meta name="author" content="Marina A.C. Danes, Universidade Federal de Lavras" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2023-05-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,13 +58,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
-<script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 <script>
   function unrolltab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -147,28 +140,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="www/webex.css" type="text/css" />
@@ -373,12 +344,23 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="protein-use-and-recommended-supplies" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Chapter 9</span> Protein use and recommended supplies<a href="protein-use-and-recommended-supplies.html#protein-use-and-recommended-supplies" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-76"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="images/protein_system_use.png" alt="Depiction of protein flows in ruminant animals focused on use by various tissues." width="100%" />
 <p class="caption">
 Figure 9.1: Depiction of protein flows in ruminant animals focused on use by various tissues.
 </p>
 </div>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:kableExtra&#39;:
+## 
+##     group_rows</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
 <div class="lo">
 <p><strong>Learning Objectives</strong></p>
 <ol style="list-style-type: decimal">
@@ -387,7 +369,7 @@ Figure 9.1: Depiction of protein flows in ruminant animals focused on use by var
 <li><p>Explain what happens to protein in excess of body uses</p></li>
 </ol>
 </div>
-<p>In the last chapter, we followed protein transformations through digestion and absorption. By the end of the last chapter, we knew the AA supplies (g/d) entering circulation and available as metabolizable protein (MP). In this chapter, we will focus on how circulating AA are used by various body tissues, for body functions. Protein used in body tissues (export or constitutive proteins) is referred to as <strong>net protein</strong> (NP). This is analogous to the energy fractionation scheme. Similar to how energy is conserved, we can recall from the Systems Concepts chapter that the mass of the element N will also be conserved across nutritional processes.</p>
+<p>In the last chapter, we followed protein transformations through digestion and absorption. By the end of the last chapter, we knew the AA supplies (g/d) entering circulation and available as metabolizable protein (MP). In this chapter, we will focus on how circulating AA are used by various body tissues, for body functions. Protein used in body tissues (export or constitutive proteins) is referred to as <strong>net protein</strong> (NP). This is mostly analogous to the energy fractionation scheme. Similar to how energy is conserved, we can recall from the Systems Concepts chapter that the mass of the element N will also be conserved across nutritional processes.</p>
 <p>The NASEM (2021) model includes predictions of NP use for several body functions. First, there are baseline body functions that demand protein even for animals that are not "performing" (lactating, gestating, or growing). These functions are collectively referred to as "maintenance" uses. Maintenance uses include endogenous urinary, metabolic fecal, and scurf protein use. In contrast, pregnancy, lactation, and growth can be considered "productive" uses.</p>
 <p>To get an idea of overall uses, let's compare predicted protein uses for the following scenarios:</p>
 <ul>
@@ -572,8 +554,8 @@ Lactation
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-80"></span>
-<img src="_main_files/figure-html/unnamed-chunk-80-1.png" alt="Predicted net protein use for different body functions" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="_main_files/figure-html/unnamed-chunk-6-1.png" alt="Predicted net protein use for different body functions" width="85%" />
 <p class="caption">
 Figure 9.2: Predicted net protein use for different body functions
 </p>
@@ -614,7 +596,7 @@ where <span class="math inline">\(NDF\)</span> is the percent of NDF in DM (not 
 </div>
 <div id="milk-protein" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> Milk protein<a href="protein-use-and-recommended-supplies.html#milk-protein" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Milk protein export is commonly measured. The net protein requirement for milk production is assumed to be the net protein content of milk exported. For example, production of 35 kg/d of milk with 3.2% true protein accounts for 1.12 kg of milk net protein secretion (1120 g). Because milk protein production is commonly known, often there is no need for a predictive equation such as those used with other protein uses (e.g., gestation, metabolic fecal protein)</p>
+<p>Milk protein export is commonly measured. The net protein requirement for milk production is assumed to be the net protein amount of milk exported. For example, production of 35 kg/d of milk with 3.2% true protein accounts for 1.12 kg of milk net protein secretion (1120 g). Because milk protein production is commonly known, often there is no need for a predictive equation such as those used with other protein uses (e.g., gestation, metabolic fecal protein)</p>
 </div>
 <div id="gestation-protein" class="section level2 hasAnchor" number="9.5">
 <h2><span class="header-section-number">9.5</span> Gestation protein<a href="protein-use-and-recommended-supplies.html#gestation-protein" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -622,8 +604,8 @@ where <span class="math inline">\(NDF\)</span> is the percent of NDF in DM (not 
 <p>Eq. 6-11, p. 86
 <span class="math display">\[\text{NPGestation (g/d)} = Gain_{GrUter} * 125\]</span>
 <span class="math inline">\(Gain_{GrUter}\)</span> is the daily gain in mass (as-is) of the gravid uterus. The gravid uterus is assumed to contain 125 g of protein per kg of wet weight. The NASEM (2021) model also assumes that some NP is released by the involution of maternal reproductive tissues. In other words, the process of shrinking the maternal reproductive organs back down to non-pregnant state frees some AA that can be used for other body purposes. This is why the NP use for gestation is negative from days 0 to 100 of lactation.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-81"></span>
-<img src="_main_files/figure-html/unnamed-chunk-81-1.png" alt="Example of NP use for gestation for a cow with conception at 90 days in milk." width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="_main_files/figure-html/unnamed-chunk-7-1.png" alt="Example of NP use for gestation for a cow with conception at 90 days in milk." width="85%" />
 <p class="caption">
 Figure 9.3: Example of NP use for gestation for a cow with conception at 90 days in milk.
 </p>
@@ -638,8 +620,8 @@ Figure 9.3: Example of NP use for gestation for a cow with conception at 90 days
 <p>Eq 6-12, p. 87
 <span class="math display">\[\text{NP frame gain (g/d)} = \text{Frame weight gain (g/d)} * 0.11 *0.86\]</span>
 This is because frame growth is assumed to include 11% CP on an as-is basis, with 86% TP. According to NASEM (2021), 0.19 and 0.15 kg/d of frame growth rates are reasonable targets for frame growth in first and second lactation Holsteins. After the second lactation, frame growth is typically assumed to be zero. Frame growth is assumed to represent 85% of live weight growth.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-82"></span>
-<img src="_main_files/figure-html/unnamed-chunk-82-1.png" alt="Frame growth targets in NASEM (2021) for first, second, and third or greater lactations" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="_main_files/figure-html/unnamed-chunk-8-1.png" alt="Frame growth targets in NASEM (2021) for first, second, and third or greater lactations" width="85%" />
 <p class="caption">
 Figure 9.4: Frame growth targets in NASEM (2021) for first, second, and third or greater lactations
 </p>
@@ -658,8 +640,8 @@ Figure 9.4: Frame growth targets in NASEM (2021) for first, second, and third or
 <div id="aa-basis-1" class="section level2 hasAnchor" number="9.8">
 <h2><span class="header-section-number">9.8</span> AA basis<a href="protein-use-and-recommended-supplies.html#aa-basis-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To convert each of these NP equations to an AA basis, multiply the NP use by the AA composition of the respective protein fraction. AA composition of CP and TP fractions is given in Table 6-2 in NASEM (2021; p. 79). The AA composition of body growth and the growth of the gravid uterus are assumed to equal the "Whole Empty Body" AA composition.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-83"></span>
-<img src="_main_files/figure-html/unnamed-chunk-83-1.png" alt="AA composition of protein fractions as listed in NASEM (2021, p. 79) as a percentage of TP." width="100%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="_main_files/figure-html/unnamed-chunk-9-1.png" alt="AA composition of protein fractions as listed in NASEM (2021, p. 79) as a percentage of TP." width="100%" />
 <p class="caption">
 Figure 9.5: AA composition of protein fractions as listed in NASEM (2021, p. 79) as a percentage of TP.
 </p>
@@ -682,11 +664,132 @@ a 550 kg Jersey cow.</p>
 </div>
 <div id="recommendations" class="section level2 hasAnchor" number="9.9">
 <h2><span class="header-section-number">9.9</span> Recommendations<a href="protein-use-and-recommended-supplies.html#recommendations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The NASEM (2021) adopted a factorial approach to calculate total protein use, which means that the daily use is determined as the sum of the protein use for each relevant body function (maintenance, tissue growth, lactation and reproduction).</p>
-<p>Recommendations are calculated as the sum of export and accretion, each
-divided by its assigned (endogenous urinary loss and gestation) or
-target (scurf + MFP + MPY + growth + body reserves) efficiencies of MP
-to NP conversion.</p>
+<p>The NASEM (2021) adopted a factorial approach to calculate total NP use, which means that the daily NP use is determined as the sum of the protein use for each relevant body function (maintenance, tissue growth, lactation and reproduction). The last step in evaluating the adequacy of protein nutrition for a diet is determining if the circulating MP (or metabolizable AA) supplied by the diet is sufficient given the predicted total NP (or Net AA) use.</p>
+<p><strong>MP to NP</strong>
+MP is used with less than perfect efficiency (&lt;1.0 ratio of NP to MP). When considering MP as a whole (not individual AA), the efficiencies of converting MP to NP depend on the body function. Scurf, metabolic fecal protein, milk, and growth share the same target efficiency of MP use (0.69; NASEM, 2021). The use of MP for gestation is much less efficient, so an efficiency of 0.33 is used. Finally, endogenous urinary N losses are endproducts of N metabolism, so they are assigned an efficiency of 1.0 (NASEM, 2021, p. 87). In summary, the total recommended MP supply (g/d) can be calculated using the predicted NP uses (g/d) for each body function:</p>
+<p>Eq. 6-14a, p. 89, NASEM (2021)
+<span class="math display">\[
+\begin{aligned}
+\text{Recommended MP supply} &amp;= \frac{(NPScurf + NPMFP + NPMilk + NPGrowth)}{0.69} +\\[16pt]  &amp;\quad\frac{NPGestation}{0.33} + \frac{NPEndogenousUrinary}{1.0}
+\end{aligned}
+\]</span>
+<strong>Metabolizable AA to Net AA</strong></p>
+<p>For a given AA, the equation is similar, except that a target efficiency specific to that AA can be used, rather than a target efficiency for the entire MP fraction. NASEM provides target efficiencies for each AA for export proteins (Table 6-4, p. 88, NASEM, 2021). However, the efficiencies for gestation and endogenous urinary MP to NP use are fixed to 0.33 and 1.0, respectively. This is because there was insufficient data to recommend efficiencies specific to each AA for these body functions.</p>
+<p>Eq. 6-14b, p. 89, NASEM (2021)
+<span class="math display">\[
+\begin{aligned}
+\text{Recommended metabolizable supply of }AA_i &amp;= \frac{(NetAA_iScurf + NetAA_iMFP + NetAA_iMilk + NetAA_iGrowth)}{TargetEffAA_i} + \\[16pt] &amp;\quad \frac{NetAA_iGestation}{0.33} + \frac{NetAA_iEndogenousUrinary}{1.0}
+\end{aligned}
+\]</span></p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+AA
+</th>
+<th style="text-align:left;">
+TargetEff
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Arg
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+His
+</td>
+<td style="text-align:left;">
+0.75
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ile
+</td>
+<td style="text-align:left;">
+0.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Leu
+</td>
+<td style="text-align:left;">
+0.73
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lys
+</td>
+<td style="text-align:left;">
+0.72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Met
+</td>
+<td style="text-align:left;">
+0.73
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Phe
+</td>
+<td style="text-align:left;">
+0.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Thr
+</td>
+<td style="text-align:left;">
+0.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Trp
+</td>
+<td style="text-align:left;">
+0.86
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Val
+</td>
+<td style="text-align:left;">
+0.74
+</td>
+</tr>
+</tbody>
+</table>
+<p>The NASEM (2021) committee used a creative approach to determine target MP to NP conversion efficiencies. The committee acknowledged that a lot of data was available on milk protein production, and data on protein use for other body functions were very limited. However, they found it reasonable to assume that the animal would use protein for non-milk-production body functions (e.g., maintenance functions) before milk protein production was maximized. In general, nutrition studies have shown that milk protein production increases with greater MP supply, then reaches a maximum, and declines if MP supply is excessive, forming a curve shape. Therefore, they set out to find the efficiencies of MP to NP use at maximal milk protein production.</p>
+<p>The NASEM (2021) consensus report gives great detail about the process used by the committee to determine target MP and AA efficiencies. To envision the approach, we can construct a fictional example. Our example will describe a simplified way to determine MP to NP conversion efficiencies using an approach based on NASEM (2021).</p>
+<ol style="list-style-type: decimal">
+<li>Develop a database with animal characteristics (e.g., body weight, milk protein production) and diet information.</li>
+<li>Use the database to generate predicted supplies of MP in each scenario, and predicted use of NP for each body function using the NASEM (2021) model.</li>
+<li>For each scenario, determine the MP available for milk protein production, after protein needs for other body functions have been met.</li>
+<li>Plot the MP available for milk protein production against the observed milk NP output.</li>
+<li>Fit a model to describe the observed data in an equation with linear and quadratic terms (Figure).<br />
+</li>
+<li>Determine the derivative of the equation (Figure).</li>
+<li>Set the derivative equal to zero to determine the maximum of the curve, where the marginal return to additional MP is zero. The maximum will have an X value and Y value describing the available MP and NP output, respectively.<br />
+</li>
+<li>Calculate the efficiency of NP to MP use for milk protein production at maximum NP output, by dividing the NP output (Y value) by the MP supply (X value on figure).</li>
+</ol>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="85%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="examples-3" class="section level2 hasAnchor" number="9.10">
 <h2><span class="header-section-number">9.10</span> Examples<a href="protein-use-and-recommended-supplies.html#examples-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -695,34 +798,34 @@ to NP conversion.</p>
 </div>
 <div id="r-needs-update" class="section level3 hasAnchor" number="9.10.2">
 <h3><span class="header-section-number">9.10.2</span> R ## NEEDS UPDATE<a href="protein-use-and-recommended-supplies.html#r-needs-update" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="protein-use-and-recommended-supplies.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Animal information</span></span>
-<span id="cb12-2"><a href="protein-use-and-recommended-supplies.html#cb12-2" aria-hidden="true" tabindex="-1"></a>BW <span class="ot">=</span> <span class="dv">700</span> <span class="co"># body weight, kg</span></span>
-<span id="cb12-3"><a href="protein-use-and-recommended-supplies.html#cb12-3" aria-hidden="true" tabindex="-1"></a>DMI <span class="ot">=</span> <span class="dv">25</span> <span class="co"># dry matter intake, kg/d</span></span>
-<span id="cb12-4"><a href="protein-use-and-recommended-supplies.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="protein-use-and-recommended-supplies.html#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="protein-use-and-recommended-supplies.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Diet information</span></span>
-<span id="cb12-7"><a href="protein-use-and-recommended-supplies.html#cb12-7" aria-hidden="true" tabindex="-1"></a>NDF <span class="ot">=</span> <span class="dv">30</span> <span class="co"># % of DM, not divided by 100!!!</span></span>
-<span id="cb12-8"><a href="protein-use-and-recommended-supplies.html#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="protein-use-and-recommended-supplies.html#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="protein-use-and-recommended-supplies.html#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define functions to predict use of NP</span></span>
-<span id="cb12-11"><a href="protein-use-and-recommended-supplies.html#cb12-11" aria-hidden="true" tabindex="-1"></a>NPScurf <span class="ot">&lt;-</span> <span class="cf">function</span>(BW) {</span>
-<span id="cb12-12"><a href="protein-use-and-recommended-supplies.html#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.20</span><span class="sc">*</span>BW<span class="sc">^</span><span class="fl">0.60</span><span class="sc">*</span><span class="fl">0.85</span></span>
-<span id="cb12-13"><a href="protein-use-and-recommended-supplies.html#cb12-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-14"><a href="protein-use-and-recommended-supplies.html#cb12-14" aria-hidden="true" tabindex="-1"></a>NPEndUrinary <span class="ot">&lt;-</span> <span class="cf">function</span>(BW) {</span>
-<span id="cb12-15"><a href="protein-use-and-recommended-supplies.html#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="dv">53</span><span class="sc">*</span><span class="fl">6.25</span><span class="sc">*</span>BW<span class="sc">*</span><span class="fl">0.001</span></span>
-<span id="cb12-16"><a href="protein-use-and-recommended-supplies.html#cb12-16" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-17"><a href="protein-use-and-recommended-supplies.html#cb12-17" aria-hidden="true" tabindex="-1"></a>NPMFP <span class="ot">&lt;-</span> <span class="cf">function</span>(NDF, DMI) {</span>
-<span id="cb12-18"><a href="protein-use-and-recommended-supplies.html#cb12-18" aria-hidden="true" tabindex="-1"></a>  ((<span class="fl">11.62</span> <span class="sc">+</span><span class="fl">0.134</span> <span class="sc">*</span> NDF)<span class="sc">*</span>DMI)<span class="sc">*</span><span class="fl">0.73</span></span>
-<span id="cb12-19"><a href="protein-use-and-recommended-supplies.html#cb12-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-20"><a href="protein-use-and-recommended-supplies.html#cb12-20" aria-hidden="true" tabindex="-1"></a>NPGestation <span class="ot">&lt;-</span> <span class="cf">function</span>(GainGrUter) {</span>
-<span id="cb12-21"><a href="protein-use-and-recommended-supplies.html#cb12-21" aria-hidden="true" tabindex="-1"></a>  GainGrUter<span class="sc">*</span><span class="dv">125</span></span>
-<span id="cb12-22"><a href="protein-use-and-recommended-supplies.html#cb12-22" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-23"><a href="protein-use-and-recommended-supplies.html#cb12-23" aria-hidden="true" tabindex="-1"></a>NPFrame <span class="ot">&lt;-</span> <span class="cf">function</span>(FrameGain) {</span>
-<span id="cb12-24"><a href="protein-use-and-recommended-supplies.html#cb12-24" aria-hidden="true" tabindex="-1"></a>  FrameGain<span class="sc">*</span><span class="fl">0.11</span><span class="sc">*</span><span class="fl">0.86</span></span>
-<span id="cb12-25"><a href="protein-use-and-recommended-supplies.html#cb12-25" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-26"><a href="protein-use-and-recommended-supplies.html#cb12-26" aria-hidden="true" tabindex="-1"></a>NPReserve <span class="ot">&lt;-</span> <span class="cf">function</span>(ReserveGain) {</span>
-<span id="cb12-27"><a href="protein-use-and-recommended-supplies.html#cb12-27" aria-hidden="true" tabindex="-1"></a>  ReserveGain<span class="sc">*</span><span class="fl">0.08</span><span class="sc">*</span><span class="fl">0.86</span></span>
-<span id="cb12-28"><a href="protein-use-and-recommended-supplies.html#cb12-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="protein-use-and-recommended-supplies.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Animal information</span></span>
+<span id="cb5-2"><a href="protein-use-and-recommended-supplies.html#cb5-2" aria-hidden="true" tabindex="-1"></a>BW <span class="ot">=</span> <span class="dv">700</span> <span class="co"># body weight, kg</span></span>
+<span id="cb5-3"><a href="protein-use-and-recommended-supplies.html#cb5-3" aria-hidden="true" tabindex="-1"></a>DMI <span class="ot">=</span> <span class="dv">25</span> <span class="co"># dry matter intake, kg/d</span></span>
+<span id="cb5-4"><a href="protein-use-and-recommended-supplies.html#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="protein-use-and-recommended-supplies.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="protein-use-and-recommended-supplies.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Diet information</span></span>
+<span id="cb5-7"><a href="protein-use-and-recommended-supplies.html#cb5-7" aria-hidden="true" tabindex="-1"></a>NDF <span class="ot">=</span> <span class="dv">30</span> <span class="co"># % of DM, not divided by 100!!!</span></span>
+<span id="cb5-8"><a href="protein-use-and-recommended-supplies.html#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="protein-use-and-recommended-supplies.html#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="protein-use-and-recommended-supplies.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define functions to predict use of NP</span></span>
+<span id="cb5-11"><a href="protein-use-and-recommended-supplies.html#cb5-11" aria-hidden="true" tabindex="-1"></a>NPScurf <span class="ot">&lt;-</span> <span class="cf">function</span>(BW) {</span>
+<span id="cb5-12"><a href="protein-use-and-recommended-supplies.html#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.20</span><span class="sc">*</span>BW<span class="sc">^</span><span class="fl">0.60</span><span class="sc">*</span><span class="fl">0.85</span></span>
+<span id="cb5-13"><a href="protein-use-and-recommended-supplies.html#cb5-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-14"><a href="protein-use-and-recommended-supplies.html#cb5-14" aria-hidden="true" tabindex="-1"></a>NPEndUrinary <span class="ot">&lt;-</span> <span class="cf">function</span>(BW) {</span>
+<span id="cb5-15"><a href="protein-use-and-recommended-supplies.html#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="dv">53</span><span class="sc">*</span><span class="fl">6.25</span><span class="sc">*</span>BW<span class="sc">*</span><span class="fl">0.001</span></span>
+<span id="cb5-16"><a href="protein-use-and-recommended-supplies.html#cb5-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-17"><a href="protein-use-and-recommended-supplies.html#cb5-17" aria-hidden="true" tabindex="-1"></a>NPMFP <span class="ot">&lt;-</span> <span class="cf">function</span>(NDF, DMI) {</span>
+<span id="cb5-18"><a href="protein-use-and-recommended-supplies.html#cb5-18" aria-hidden="true" tabindex="-1"></a>  ((<span class="fl">11.62</span> <span class="sc">+</span><span class="fl">0.134</span> <span class="sc">*</span> NDF)<span class="sc">*</span>DMI)<span class="sc">*</span><span class="fl">0.73</span></span>
+<span id="cb5-19"><a href="protein-use-and-recommended-supplies.html#cb5-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-20"><a href="protein-use-and-recommended-supplies.html#cb5-20" aria-hidden="true" tabindex="-1"></a>NPGestation <span class="ot">&lt;-</span> <span class="cf">function</span>(GainGrUter) {</span>
+<span id="cb5-21"><a href="protein-use-and-recommended-supplies.html#cb5-21" aria-hidden="true" tabindex="-1"></a>  GainGrUter<span class="sc">*</span><span class="dv">125</span></span>
+<span id="cb5-22"><a href="protein-use-and-recommended-supplies.html#cb5-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-23"><a href="protein-use-and-recommended-supplies.html#cb5-23" aria-hidden="true" tabindex="-1"></a>NPFrame <span class="ot">&lt;-</span> <span class="cf">function</span>(FrameGain) {</span>
+<span id="cb5-24"><a href="protein-use-and-recommended-supplies.html#cb5-24" aria-hidden="true" tabindex="-1"></a>  FrameGain<span class="sc">*</span><span class="fl">0.11</span><span class="sc">*</span><span class="fl">0.86</span></span>
+<span id="cb5-25"><a href="protein-use-and-recommended-supplies.html#cb5-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-26"><a href="protein-use-and-recommended-supplies.html#cb5-26" aria-hidden="true" tabindex="-1"></a>NPReserve <span class="ot">&lt;-</span> <span class="cf">function</span>(ReserveGain) {</span>
+<span id="cb5-27"><a href="protein-use-and-recommended-supplies.html#cb5-27" aria-hidden="true" tabindex="-1"></a>  ReserveGain<span class="sc">*</span><span class="fl">0.08</span><span class="sc">*</span><span class="fl">0.86</span></span>
+<span id="cb5-28"><a href="protein-use-and-recommended-supplies.html#cb5-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 </div>
 <div id="questions-7" class="section level2 hasAnchor" number="9.11">

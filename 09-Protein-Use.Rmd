@@ -16,6 +16,9 @@ knitr::include_graphics("images/protein_system_use.png")
 library(webexercises)
 library(kableExtra)
 library(tibble)
+library(ggplot2)
+library(dplyr)
+library(patchwork)
 ```
 
 ```{r, include=FALSE}
@@ -41,7 +44,7 @@ theme_set(theme_classic())
 
 :::
 
-In the last chapter, we followed protein transformations through digestion and absorption. By the end of the last chapter, we knew the AA supplies (g/d) entering circulation and available as metabolizable protein (MP). In this chapter, we will focus on how circulating AA are used by various body tissues, for body functions. Protein used in body tissues (export or constitutive proteins) is referred to as **net protein** (NP). This is analogous to the energy fractionation scheme. Similar to how energy is conserved, we can recall from the Systems Concepts chapter that the mass of the element N will also be conserved across nutritional processes. 
+In the last chapter, we followed protein transformations through digestion and absorption. By the end of the last chapter, we knew the AA supplies (g/d) entering circulation and available as metabolizable protein (MP). In this chapter, we will focus on how circulating AA are used by various body tissues, for body functions. Protein used in body tissues (export or constitutive proteins) is referred to as **net protein** (NP). This is mostly analogous to the energy fractionation scheme. Similar to how energy is conserved, we can recall from the Systems Concepts chapter that the mass of the element N will also be conserved across nutritional processes. 
 
 The NASEM (2021) model includes predictions of NP use for several body functions. First, there are baseline body functions that demand protein even for animals that are not "performing" (lactating, gestating, or growing). These functions are collectively referred to as "maintenance" uses. Maintenance uses include endogenous urinary, metabolic fecal, and scurf protein use. In contrast, pregnancy, lactation, and growth can be considered "productive" uses.
 
@@ -171,7 +174,7 @@ where $NDF$ is the percent of NDF in DM (not divided by 100 in this case), and $
 
 ## Milk protein
 
-Milk protein export is commonly measured. The net protein requirement for milk production is assumed to be the net protein content of milk exported. For example, production of 35 kg/d of milk with 3.2% true protein accounts for 1.12 kg of milk net protein secretion (1120 g). Because milk protein production is commonly known, often there is no need for a predictive equation such as those used with other protein uses (e.g., gestation, metabolic fecal protein)
+Milk protein export is commonly measured. The net protein requirement for milk production is assumed to be the net protein amount of milk exported. For example, production of 35 kg/d of milk with 3.2% true protein accounts for 1.12 kg of milk net protein secretion (1120 g). Because milk protein production is commonly known, often there is no need for a predictive equation such as those used with other protein uses (e.g., gestation, metabolic fecal protein)
 
 ## Gestation protein
 
@@ -434,12 +437,80 @@ $$
 
 ## Recommendations
 
-The NASEM (2021) adopted a factorial approach to calculate total protein use, which means that the daily use is determined as the sum of the protein use for each relevant body function (maintenance, tissue growth, lactation and reproduction).
+The NASEM (2021) adopted a factorial approach to calculate total NP use, which means that the daily NP use is determined as the sum of the protein use for each relevant body function (maintenance, tissue growth, lactation and reproduction). The last step in evaluating the adequacy of protein nutrition for a diet is determining if the circulating MP (or metabolizable AA) supplied by the diet is sufficient given the predicted total NP (or Net AA) use. 
 
-Recommendations are calculated as the sum of export and accretion, each
-divided by its assigned (endogenous urinary loss and gestation) or
-target (scurf + MFP + MPY + growth + body reserves) efficiencies of MP
-to NP conversion.
+**MP to NP**
+MP is used with less than perfect efficiency (<1.0 ratio of NP to MP). When considering MP as a whole (not individual AA), the efficiencies of converting MP to NP depend on the body function. Scurf, metabolic fecal protein, milk, and growth share the same target efficiency of MP use (0.69; NASEM, 2021). The use of MP for gestation is much less efficient, so an efficiency of 0.33 is used. Finally, endogenous urinary N losses are endproducts of N metabolism, so they are assigned an efficiency of 1.0 (NASEM, 2021, p. 87). In summary, the total recommended MP supply (g/d) can be calculated using the predicted NP uses (g/d) for each body function:
+
+Eq. 6-14a, p. 89, NASEM (2021)
+$$
+\begin{aligned}
+\text{Recommended MP supply} &= \frac{(NPScurf + NPMFP + NPMilk + NPGrowth)}{0.69} +\\[16pt]  &\quad\frac{NPGestation}{0.33} + \frac{NPEndogenousUrinary}{1.0}
+\end{aligned}
+$$
+**Metabolizable AA to Net AA**
+
+For a given AA, the equation is similar, except that a target efficiency specific to that AA can be used, rather than a target efficiency for the entire MP fraction. NASEM provides target efficiencies for each AA for export proteins (Table 6-4, p. 88, NASEM, 2021). However, the efficiencies for gestation and endogenous urinary MP to NP use are fixed to 0.33 and 1.0, respectively. This is because there was insufficient data to recommend efficiencies specific to each AA for these body functions. 
+
+Eq. 6-14b, p. 89, NASEM (2021)
+$$
+\begin{aligned}
+\text{Recommended metabolizable supply of }AA_i &= \frac{(NetAA_iScurf + NetAA_iMFP + NetAA_iMilk + NetAA_iGrowth)}{TargetEffAA_i} + \\[16pt] &\quad \frac{NetAA_iGestation}{0.33} + \frac{NetAA_iEndogenousUrinary}{1.0}
+\end{aligned}
+$$
+
+```{r}
+AA <- c("Arg", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val")
+TargetEff <- c("NA", "0.75", "0.71", "0.73", "0.72", "0.73", "0.60", "0.64", "0.86", "0.74")
+data.frame(AA, TargetEff) %>% kable() %>% kable_styling(full_width = F)
+```
+
+
+
+The NASEM (2021) committee used a creative approach to determine target MP to NP conversion efficiencies. The committee acknowledged that a lot of data was available on milk protein production, and data on protein use for other body functions were very limited. However, they found it reasonable to assume that the animal would use protein for non-milk-production body functions (e.g., maintenance functions) before milk protein production was maximized. In general, nutrition studies have shown that milk protein production increases with greater MP supply, then reaches a maximum, and declines if MP supply is excessive, forming a curve shape.  Therefore, they set out to find the efficiencies of MP to NP use at maximal milk protein production. 
+
+The NASEM (2021) consensus report gives great detail about the process used by the committee to determine target MP and AA efficiencies. To envision the approach, we can construct a fictional example. Our example will describe a simplified way to determine MP to NP conversion efficiencies using an approach based on NASEM (2021). 
+
+1. Develop a database with animal characteristics (e.g., body weight, milk protein production) and diet information.
+1. Use the database to generate predicted supplies of MP in each scenario, and predicted use of NP for each body function using the NASEM (2021) model.
+1. For each scenario, determine the MP available for milk protein production, after protein needs for other body functions have been met. 
+1. Plot the MP available for milk protein production against the observed milk NP output. 
+2. Fit a model to describe the observed data in an equation with linear and quadratic terms (Figure).  
+3. Determine the derivative of the equation (Figure).
+4. Set the derivative equal to zero to determine the maximum of the curve, where the marginal return to additional MP is zero. The maximum will have an X value and Y value describing the available MP and NP output, respectively.  
+5. Calculate the efficiency of NP to MP use for milk protein production at maximum NP output, by dividing the NP output (Y value) by the MP supply (X value on figure). 
+
+
+```{r}
+
+
+# Create data frame for Milk Protein and its derivative
+MP <- 500:2500
+MilkProtein <- 1.15 * MP + -0.0003 * MP^2
+Derivative <- 1.15 - 0.0006 * MP
+
+data1 <- data.frame(MP, MilkProtein, Derivative)
+
+p1 <- data1 %>%
+  ggplot(aes(x = MP, y = MilkProtein)) +
+  geom_point(size = .2) +
+  geom_vline(xintercept = 1916.667, color = "red") +
+  theme_bw() +
+  labs(x = NULL, y = "Milk protein (NP), g/d") + 
+  annotate(geom = "label", x = 750, y = 1000, label = "NP = 1102 g/d \n MP = 1917 g/d")
+
+
+p2 <- data1 %>%
+  ggplot(aes(x = MP, y = Derivative)) +
+  geom_point(size = .2) +
+  geom_vline(xintercept = 1916.667, color = "red") +
+  geom_hline(yintercept = 0) +
+  theme_bw() +
+  labs(x = "MP available for milk protein", y = "Derivative")
+patch <- p1 / p2
+patch + plot_layout(heights = c(2, 1))
+
+```
 
 ## Examples
 
