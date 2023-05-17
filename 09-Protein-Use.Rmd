@@ -344,7 +344,7 @@ $$\text{NP reserve gain (g/d)} = \text{Body reserve gain (g/d)} * 0.08 * 0.86$$
 
 The total NP use is estimated by summing the predicted use of NP for each body function:
 
-$$\text{Total NP use, g/d} = \text{NPScurf} + \text{NPEndUrinary} + \text{NPMFP} + \text{NPMilk} + \text{NPGestation} +  \text{NPGrowth} $$
+$$\text{Total NP use, g/d} = \text{NPScurf} + \text{NPEndUrinary} + \text{NPMFP} + \text{NPMilk} + \\[16pt] \text{NPGestation} +  \text{NPGrowth} $$
 
 Endogenous urinary, metabolic fecal, and scurf proteins are sometimes referred to collectively as "maintenance" uses. This is because these requirements exist across animals to "maintain" body function. In contrast, pregnancy, lactation, and growth can be considered "productive" uses.
 
@@ -458,11 +458,11 @@ $$
 \text{Recommended metabolizable supply of }AA_i &= \frac{(NetAA_iScurf + NetAA_iMFP + NetAA_iMilk + NetAA_iGrowth)}{TargetEffAA_i} + \\[16pt] &\quad \frac{NetAA_iGestation}{0.33} + \frac{NetAA_iEndogenousUrinary}{1.0}
 \end{aligned}
 $$
-
+ <p style="text-align: center;"> **Table 9.1. ** Target efficiencies for EAA conversion from MP to milk, growth, scurf, and metabolic fecal protein accretion/export from NASEM (2021)" </p>
 ```{r}
 AA <- c("Arg", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val")
 TargetEff <- c("NA", "0.75", "0.71", "0.73", "0.72", "0.73", "0.60", "0.64", "0.86", "0.74")
-data.frame(AA, TargetEff) %>% kable() %>% kable_styling(full_width = F)
+data.frame(AA, TargetEff) %>% kable() %>% kable_styling(full_width = F) # there is no way to make caption in kable wider than table
 ```
 
 
