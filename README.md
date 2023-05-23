@@ -1,13 +1,11 @@
 Welcome! 
+  
+Our interactive textbook and its accompanying resources for teachers are intended to promote learning from the NASEM (2021) materials. Because the NASEM (2021) narrative and software were designed for advanced dairy nutrition practitioners, they may be difficult for less-experienced learners. Our interactive textbook is designed to highlight core concepts that will assist learners in understanding the NASEM narrative and utilizing the mathematical model in practice.
 
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
+A pilot version of the book is available here:  https://merickson3.github.io/NASEM_pilot/ 
 
-This template provides a skeleton file structure that you can edit to create your book. 
+License details:  https://merickson3.github.io/NASEM_pilot/index.html#license-citation-information
 
-The contents inside the .Rmd files provide some pointers to help you get started, but feel free to also delete the content in each file and start fresh.
+Suggested citation:
 
-Additional resources:
-
-The **bookdown** book: https://bookdown.org/yihui/bookdown/
-
-The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown
+Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Learning from the narrative and model in NASEM (2021) "Nutrient Requirements of Dairy Cattle": an interactive textbook. Version 1.0.0. https://doi.org/10.17605/OSF.IO/Q6WX9
