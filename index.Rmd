@@ -186,8 +186,10 @@ Since the software was released, several updates have been made. Users should en
 
 **Differences between the book and software**
 
-The most recent software is more up-to-date than the equations in the Consensus Report book. Most discrepancies result in relatively small differences in predictions as a result of fine-tuning parameters. Known discrepancies between the book and software include:
+The most recent software is more up-to-date than the equations in the Consensus Report book. Most updates resulted in relatively small differences in predictions as a result of fine-tuning parameters. Known differences between the book and software include:
 
+
+1. The efficiency of ME to RE is 0.75 in the software and 0.74 in the book (p. 29). 
 1. The kg of CP in gravid uterus per kg of calf birth weight (CP_GrUtWt) differs from book p. 87. 
 1. The kg gravid uterus weight per fetal birthweight (GrUterWt_FetBWbrth) differs from book p. 31.
 1. The energy (Mcal/kg) fresh gravid uterus weight (NE_GrUtWt) at birth differs from book p. 31. 
@@ -201,7 +203,8 @@ The most recent software is more up-to-date than the equations in the Consensus 
 Other notes (not discrepant, but maybe helpful to know).
 1. The book (eq. 6-13b, p. 87) gives an equation for the efficiency of AA use for non-pregnant animals. There is no corresponding equation for gestating animals in the book, but the software takes into account AA needs for gestation when appropriate. 
 1. The book (eq. 6-4a) has a parentheses error. The end of the equation shows a calculation of total diet NDF intake as NDF/100 * DMI. The diet NDF intake should be multiplied by the entire equation preceding, not just the last term (1.51 * DMI). This is because the first part of the equation calculates the percentage of rumen-degradable NDF out of the diet NDF. 
-
+1. The book (p. 32) abbreviates the gains/losses of reproductive tissues associated with pregnancy and involution as GrUter_Wt. The uterus is not technically gravid after parturition, therefore, gravid signifies that the uterus is still returning from pregnant to non-pregnant status. 
+1. The equation 3-5a on p. 25 reads "DMI_DM" where it should say "DMI_BW."
 
 ## Contribute edits and suggestions
 
@@ -224,7 +227,7 @@ If you use this interactive textbook, please give credit by citing our work and 
 
 **Cite our interactive textbook:**
 
-Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Learning from the narrative and model in NASEM (2021) "Nutrient Requirements of Dairy Cattle":  an interactive textbook. Version 1.0.0. Retrieved from https://merickson3.github.io/NASEM_pilot/
+Erickson, M.G., Hanigan, M.D., and Wattiaux, M.A. (2023). Learning from the narrative and model in NASEM (2021) "Nutrient Requirements of Dairy Cattle": an interactive textbook. Version 1.0.0. https://doi.org/10.17605/OSF.IO/Q6WX9
 
 **Cite the consensus report:**
 

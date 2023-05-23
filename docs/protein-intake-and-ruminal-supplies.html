@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Protein intake and ruminal supplies | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
+  <title>Chapter 11 Protein intake and ruminal supplies | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
   <meta name="description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
   <meta name="generator" content="bookdown 0.33.2 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Protein intake and ruminal supplies | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta property="og:title" content="Chapter 11 Protein intake and ruminal supplies | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Protein intake and ruminal supplies | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta name="twitter:title" content="Chapter 11 Protein intake and ruminal supplies | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
   
   <meta name="twitter:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
   
@@ -26,7 +26,7 @@
 <meta name="author" content="Marina A.C. Danes, Universidade Federal de Lavras" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2023-05-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,13 @@
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/d3-3.3.8/d3.min.js"></script>
+<script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<link href="libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+<script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/chromatography-0.1/chromatography.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
 <script src="libs/plotly-binding-4.10.1/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
@@ -147,28 +154,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="www/webex.css" type="text/css" />
@@ -294,59 +279,137 @@ div.csl-indent {
 <li class="chapter" data-level="5.5" data-path="model-machinery.html"><a href="model-machinery.html#conclusions-1"><i class="fa fa-check"></i><b>5.5</b> Conclusions</a></li>
 <li class="chapter" data-level="5.6" data-path="model-machinery.html"><a href="model-machinery.html#questions-3"><i class="fa fa-check"></i><b>5.6</b> Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="protein-overview.html"><a href="protein-overview.html"><i class="fa fa-check"></i><b>6</b> Protein overview</a>
+<li class="chapter" data-level="6" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html"><i class="fa fa-check"></i><b>6</b> Dry matter intake</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="protein-overview.html"><a href="protein-overview.html#biological-definition-of-protein"><i class="fa fa-check"></i><b>6.1</b> Biological definition of protein</a></li>
-<li class="chapter" data-level="6.2" data-path="protein-overview.html"><a href="protein-overview.html#nutritional-definitions-of-protein"><i class="fa fa-check"></i><b>6.2</b> Nutritional definitions of protein</a></li>
-<li class="chapter" data-level="6.3" data-path="protein-overview.html"><a href="protein-overview.html#goals-of-dairy-protein-nutrition"><i class="fa fa-check"></i><b>6.3</b> Goals of dairy protein nutrition</a></li>
-<li class="chapter" data-level="6.4" data-path="protein-overview.html"><a href="protein-overview.html#the-animal-protein-system"><i class="fa fa-check"></i><b>6.4</b> The animal protein system</a></li>
-<li class="chapter" data-level="6.5" data-path="protein-overview.html"><a href="protein-overview.html#amino-acids"><i class="fa fa-check"></i><b>6.5</b> Amino acids</a></li>
-<li class="chapter" data-level="6.6" data-path="protein-overview.html"><a href="protein-overview.html#references-1"><i class="fa fa-check"></i><b>6.6</b> References</a></li>
-<li class="chapter" data-level="6.7" data-path="protein-overview.html"><a href="protein-overview.html#questions-4"><i class="fa fa-check"></i><b>6.7</b> Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html"><i class="fa fa-check"></i><b>7</b> Protein intake and ruminal supplies</a>
+<li class="chapter" data-level="6.1" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#introduction-to-dmi"><i class="fa fa-check"></i><b>6.1</b> Introduction to DMI</a></li>
+<li class="chapter" data-level="6.2" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#two-theories-of-dmi-regulation"><i class="fa fa-check"></i><b>6.2</b> Two theories of DMI regulation</a></li>
+<li class="chapter" data-level="6.3" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#animal-factors"><i class="fa fa-check"></i><b>6.3</b> Animal factors</a></li>
+<li class="chapter" data-level="6.4" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#diet-factors"><i class="fa fa-check"></i><b>6.4</b> Diet factors</a></li>
+<li class="chapter" data-level="6.5" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#other-factors"><i class="fa fa-check"></i><b>6.5</b> Other factors</a></li>
+<li class="chapter" data-level="6.6" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#dmi-in-nasem-2021"><i class="fa fa-check"></i><b>6.6</b> DMI in NASEM (2021)</a></li>
+<li class="chapter" data-level="6.7" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#examples-1"><i class="fa fa-check"></i><b>6.7</b> Examples</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#cp-intake"><i class="fa fa-check"></i><b>7.1</b> CP intake</a></li>
-<li class="chapter" data-level="7.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#ruminal-protein-supplies"><i class="fa fa-check"></i><b>7.2</b> Ruminal protein supplies</a>
+<li class="chapter" data-level="6.7.1" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#nasem-dairy-8-2"><i class="fa fa-check"></i><b>6.7.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="6.7.2" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#r-2"><i class="fa fa-check"></i><b>6.7.2</b> R</a></li>
+<li class="chapter" data-level="6.7.3" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#python-2"><i class="fa fa-check"></i><b>6.7.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#questions-4"><i class="fa fa-check"></i><b>6.8</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="energy-overview.html"><a href="energy-overview.html"><i class="fa fa-check"></i><b>7</b> Energy overview</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#rdp-and-rup"><i class="fa fa-check"></i><b>7.2.1</b> RDP and RUP</a></li>
-<li class="chapter" data-level="7.2.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#calculating-rdp-and-rup"><i class="fa fa-check"></i><b>7.2.2</b> Calculating RDP and RUP</a></li>
-<li class="chapter" data-level="7.2.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#microbial-protein-synthesis"><i class="fa fa-check"></i><b>7.2.3</b> Microbial protein synthesis</a></li>
+<li class="chapter" data-level="7.1" data-path="energy-overview.html"><a href="energy-overview.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="energy-overview.html"><a href="energy-overview.html#chemicalphysical-laws"><i class="fa fa-check"></i><b>7.2</b> Chemical/physical laws</a></li>
+<li class="chapter" data-level="7.3" data-path="energy-overview.html"><a href="energy-overview.html#measuring-energy-with-calorimetry"><i class="fa fa-check"></i><b>7.3</b> Measuring energy with calorimetry</a></li>
+<li class="chapter" data-level="7.4" data-path="energy-overview.html"><a href="energy-overview.html#biological-importance-of-energy"><i class="fa fa-check"></i><b>7.4</b> Biological importance of energy</a></li>
+<li class="chapter" data-level="7.5" data-path="energy-overview.html"><a href="energy-overview.html#energy-in-nutritional-processes"><i class="fa fa-check"></i><b>7.5</b> Energy in nutritional processes</a></li>
+<li class="chapter" data-level="7.6" data-path="energy-overview.html"><a href="energy-overview.html#conclusions-2"><i class="fa fa-check"></i><b>7.6</b> Conclusions</a></li>
+<li class="chapter" data-level="7.7" data-path="energy-overview.html"><a href="energy-overview.html#questions-5"><i class="fa fa-check"></i><b>7.7</b> Questions</a></li>
+<li class="chapter" data-level="7.8" data-path="energy-overview.html"><a href="energy-overview.html#references-1"><i class="fa fa-check"></i><b>7.8</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#examples-1"><i class="fa fa-check"></i><b>7.3</b> Examples</a></li>
-<li class="chapter" data-level="7.4" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#questions-5"><i class="fa fa-check"></i><b>7.4</b> Questions</a></li>
-<li class="chapter" data-level="7.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>7.5</b> R code for figures ### NEEDS UPDATE</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html"><i class="fa fa-check"></i><b>8</b> Protein postruminal supplies</a>
+<li class="chapter" data-level="8" data-path="energy-supply.html"><a href="energy-supply.html"><i class="fa fa-check"></i><b>8</b> Energy supply</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-microbial-tp"><i class="fa fa-check"></i><b>8.1</b> Digestion of microbial TP</a></li>
-<li class="chapter" data-level="8.2" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-rup"><i class="fa fa-check"></i><b>8.2</b> Digestion of RUP</a></li>
-<li class="chapter" data-level="8.3" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#metabolizable-protein"><i class="fa fa-check"></i><b>8.3</b> Metabolizable protein</a></li>
-<li class="chapter" data-level="8.4" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-basis"><i class="fa fa-check"></i><b>8.4</b> AA basis</a></li>
-<li class="chapter" data-level="8.5" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-microbial-protein"><i class="fa fa-check"></i><b>8.5</b> AA in microbial protein</a></li>
-<li class="chapter" data-level="8.6" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-rup"><i class="fa fa-check"></i><b>8.6</b> AA in RUP</a></li>
-<li class="chapter" data-level="8.7" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#examples-2"><i class="fa fa-check"></i><b>8.7</b> Examples</a></li>
-<li class="chapter" data-level="8.8" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#questions-6"><i class="fa fa-check"></i><b>8.8</b> Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html"><i class="fa fa-check"></i><b>9</b> Protein use and recommended supplies</a>
+<li class="chapter" data-level="8.1" data-path="energy-supply.html"><a href="energy-supply.html#energy-intake-gross-energy"><i class="fa fa-check"></i><b>8.1</b> Energy intake (gross energy)</a></li>
+<li class="chapter" data-level="8.2" data-path="energy-supply.html"><a href="energy-supply.html#ge-from-om-fractions"><i class="fa fa-check"></i><b>8.2</b> GE from OM fractions</a></li>
+<li class="chapter" data-level="8.3" data-path="energy-supply.html"><a href="energy-supply.html#base-digestibilities-of-om-fractions"><i class="fa fa-check"></i><b>8.3</b> Base digestibilities of OM fractions</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#scurf"><i class="fa fa-check"></i><b>9.1</b> Scurf</a></li>
-<li class="chapter" data-level="9.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#endogenous-urinary-protein"><i class="fa fa-check"></i><b>9.2</b> Endogenous urinary protein</a></li>
-<li class="chapter" data-level="9.3" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#metabolic-fecal-protein"><i class="fa fa-check"></i><b>9.3</b> Metabolic fecal protein</a></li>
-<li class="chapter" data-level="9.4" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#milk-protein"><i class="fa fa-check"></i><b>9.4</b> Milk protein</a></li>
-<li class="chapter" data-level="9.5" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#gestation-protein"><i class="fa fa-check"></i><b>9.5</b> Gestation protein</a></li>
-<li class="chapter" data-level="9.6" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#growth"><i class="fa fa-check"></i><b>9.6</b> Growth</a></li>
-<li class="chapter" data-level="9.7" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#total-np-use"><i class="fa fa-check"></i><b>9.7</b> Total NP use</a></li>
-<li class="chapter" data-level="9.8" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#aa-basis-1"><i class="fa fa-check"></i><b>9.8</b> AA basis</a></li>
-<li class="chapter" data-level="9.9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#recommendations"><i class="fa fa-check"></i><b>9.9</b> Recommendations</a></li>
-<li class="chapter" data-level="9.10" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#examples-3"><i class="fa fa-check"></i><b>9.10</b> Examples</a>
+<li class="chapter" data-level="8.3.1" data-path="energy-supply.html"><a href="energy-supply.html#ndf"><i class="fa fa-check"></i><b>8.3.1</b> NDF</a></li>
+<li class="chapter" data-level="8.3.2" data-path="energy-supply.html"><a href="energy-supply.html#starch"><i class="fa fa-check"></i><b>8.3.2</b> Starch</a></li>
+<li class="chapter" data-level="8.3.3" data-path="energy-supply.html"><a href="energy-supply.html#cp"><i class="fa fa-check"></i><b>8.3.3</b> CP</a></li>
+<li class="chapter" data-level="8.3.4" data-path="energy-supply.html"><a href="energy-supply.html#snpncpe"><i class="fa fa-check"></i><b>8.3.4</b> sNPNCPE</a></li>
+<li class="chapter" data-level="8.3.5" data-path="energy-supply.html"><a href="energy-supply.html#rom"><i class="fa fa-check"></i><b>8.3.5</b> ROM</a></li>
+<li class="chapter" data-level="8.3.6" data-path="energy-supply.html"><a href="energy-supply.html#fa"><i class="fa fa-check"></i><b>8.3.6</b> FA</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="energy-supply.html"><a href="energy-supply.html#summing-to-diet-level"><i class="fa fa-check"></i><b>8.4</b> Summing to diet level</a></li>
+<li class="chapter" data-level="8.5" data-path="energy-supply.html"><a href="energy-supply.html#diet-level-de-adjustments"><i class="fa fa-check"></i><b>8.5</b> Diet-level DE adjustments</a>
 <ul>
-<li class="chapter" data-level="9.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-software"><i class="fa fa-check"></i><b>9.10.1</b> NASEM dairy-8 software</a></li>
-<li class="chapter" data-level="9.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-needs-update"><i class="fa fa-check"></i><b>9.10.2</b> R ## NEEDS UPDATE</a></li>
+<li class="chapter" data-level="8.5.1" data-path="energy-supply.html"><a href="energy-supply.html#dndf_ndf-adjustment"><i class="fa fa-check"></i><b>8.5.1</b> dNDF_NDF adjustment</a></li>
+<li class="chapter" data-level="8.5.2" data-path="energy-supply.html"><a href="energy-supply.html#dstarch_starch-adjustment"><i class="fa fa-check"></i><b>8.5.2</b> dStarch_Starch adjustment</a></li>
+<li class="chapter" data-level="8.5.3" data-path="energy-supply.html"><a href="energy-supply.html#other-adjustments"><i class="fa fa-check"></i><b>8.5.3</b> Other adjustments</a></li>
 </ul></li>
-<li class="chapter" data-level="9.11" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#questions-7"><i class="fa fa-check"></i><b>9.11</b> Questions</a></li>
+<li class="chapter" data-level="8.6" data-path="energy-supply.html"><a href="energy-supply.html#de-calculation"><i class="fa fa-check"></i><b>8.6</b> DE calculation</a></li>
+<li class="chapter" data-level="8.7" data-path="energy-supply.html"><a href="energy-supply.html#de-to-me"><i class="fa fa-check"></i><b>8.7</b> DE to ME</a></li>
+<li class="chapter" data-level="8.8" data-path="energy-supply.html"><a href="energy-supply.html#conclusions-3"><i class="fa fa-check"></i><b>8.8</b> Conclusions</a></li>
+<li class="chapter" data-level="8.9" data-path="energy-supply.html"><a href="energy-supply.html#examples."><i class="fa fa-check"></i><b>8.9</b> Examples.</a>
+<ul>
+<li class="chapter" data-level="8.9.1" data-path="energy-supply.html"><a href="energy-supply.html#nasem-dairy-8-3"><i class="fa fa-check"></i><b>8.9.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="8.9.2" data-path="energy-supply.html"><a href="energy-supply.html#r-3"><i class="fa fa-check"></i><b>8.9.2</b> R</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>10</b> Glossary</a></li>
+<li class="chapter" data-level="8.10" data-path="energy-supply.html"><a href="energy-supply.html#questions-6"><i class="fa fa-check"></i><b>8.10</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="energy-use.html"><a href="energy-use.html"><i class="fa fa-check"></i><b>9</b> Energy use</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="energy-use.html"><a href="energy-use.html#body-functions-in-the-energy-model"><i class="fa fa-check"></i><b>9.1</b> Body functions in the energy model</a></li>
+<li class="chapter" data-level="9.2" data-path="energy-use.html"><a href="energy-use.html#maintenance"><i class="fa fa-check"></i><b>9.2</b> Maintenance</a></li>
+<li class="chapter" data-level="9.3" data-path="energy-use.html"><a href="energy-use.html#lactation"><i class="fa fa-check"></i><b>9.3</b> Lactation</a></li>
+<li class="chapter" data-level="9.4" data-path="energy-use.html"><a href="energy-use.html#activity"><i class="fa fa-check"></i><b>9.4</b> Activity</a></li>
+<li class="chapter" data-level="9.5" data-path="energy-use.html"><a href="energy-use.html#environmental-effects"><i class="fa fa-check"></i><b>9.5</b> Environmental effects</a></li>
+<li class="chapter" data-level="9.6" data-path="energy-use.html"><a href="energy-use.html#gestation"><i class="fa fa-check"></i><b>9.6</b> Gestation</a></li>
+<li class="chapter" data-level="9.7" data-path="energy-use.html"><a href="energy-use.html#body-reserve-change"><i class="fa fa-check"></i><b>9.7</b> Body reserve change</a></li>
+<li class="chapter" data-level="9.8" data-path="energy-use.html"><a href="energy-use.html#frame-gain"><i class="fa fa-check"></i><b>9.8</b> Frame gain</a></li>
+<li class="chapter" data-level="9.9" data-path="energy-use.html"><a href="energy-use.html#total-energy-use"><i class="fa fa-check"></i><b>9.9</b> Total energy use</a></li>
+<li class="chapter" data-level="9.10" data-path="energy-use.html"><a href="energy-use.html#converting-to-nel-basis"><i class="fa fa-check"></i><b>9.10</b> Converting to NEL basis</a></li>
+<li class="chapter" data-level="9.11" data-path="energy-use.html"><a href="energy-use.html#nel-use-simulations"><i class="fa fa-check"></i><b>9.11</b> NEL use simulations</a></li>
+<li class="chapter" data-level="9.12" data-path="energy-use.html"><a href="energy-use.html#questions-7"><i class="fa fa-check"></i><b>9.12</b> Questions</a></li>
+<li class="chapter" data-level="9.13" data-path="energy-use.html"><a href="energy-use.html#examples-2"><i class="fa fa-check"></i><b>9.13</b> Examples</a>
+<ul>
+<li class="chapter" data-level="9.13.1" data-path="energy-use.html"><a href="energy-use.html#nasem-dairy-8-4"><i class="fa fa-check"></i><b>9.13.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="9.13.2" data-path="energy-use.html"><a href="energy-use.html#r-4"><i class="fa fa-check"></i><b>9.13.2</b> R</a></li>
+<li class="chapter" data-level="9.13.3" data-path="energy-use.html"><a href="energy-use.html#python-3"><i class="fa fa-check"></i><b>9.13.3</b> Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="protein-overview.html"><a href="protein-overview.html"><i class="fa fa-check"></i><b>10</b> Protein overview</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="protein-overview.html"><a href="protein-overview.html#biological-definition-of-protein"><i class="fa fa-check"></i><b>10.1</b> Biological definition of protein</a></li>
+<li class="chapter" data-level="10.2" data-path="protein-overview.html"><a href="protein-overview.html#nutritional-definitions-of-protein"><i class="fa fa-check"></i><b>10.2</b> Nutritional definitions of protein</a></li>
+<li class="chapter" data-level="10.3" data-path="protein-overview.html"><a href="protein-overview.html#goals-of-dairy-protein-nutrition"><i class="fa fa-check"></i><b>10.3</b> Goals of dairy protein nutrition</a></li>
+<li class="chapter" data-level="10.4" data-path="protein-overview.html"><a href="protein-overview.html#the-animal-protein-system"><i class="fa fa-check"></i><b>10.4</b> The animal protein system</a></li>
+<li class="chapter" data-level="10.5" data-path="protein-overview.html"><a href="protein-overview.html#amino-acids"><i class="fa fa-check"></i><b>10.5</b> Amino acids</a></li>
+<li class="chapter" data-level="10.6" data-path="protein-overview.html"><a href="protein-overview.html#references-2"><i class="fa fa-check"></i><b>10.6</b> References</a></li>
+<li class="chapter" data-level="10.7" data-path="protein-overview.html"><a href="protein-overview.html#questions-8"><i class="fa fa-check"></i><b>10.7</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html"><i class="fa fa-check"></i><b>11</b> Protein intake and ruminal supplies</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#cp-intake"><i class="fa fa-check"></i><b>11.1</b> CP intake</a></li>
+<li class="chapter" data-level="11.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#ruminal-protein-supplies"><i class="fa fa-check"></i><b>11.2</b> Ruminal protein supplies</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#rdp-and-rup"><i class="fa fa-check"></i><b>11.2.1</b> RDP and RUP</a></li>
+<li class="chapter" data-level="11.2.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#calculating-rdp-and-rup"><i class="fa fa-check"></i><b>11.2.2</b> Calculating RDP and RUP</a></li>
+<li class="chapter" data-level="11.2.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#microbial-protein-synthesis"><i class="fa fa-check"></i><b>11.2.3</b> Microbial protein synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#examples-3"><i class="fa fa-check"></i><b>11.3</b> Examples</a></li>
+<li class="chapter" data-level="11.4" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#questions-9"><i class="fa fa-check"></i><b>11.4</b> Questions</a></li>
+<li class="chapter" data-level="11.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>11.5</b> R code for figures ### NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html"><i class="fa fa-check"></i><b>12</b> Protein postruminal supplies</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-microbial-tp"><i class="fa fa-check"></i><b>12.1</b> Digestion of microbial TP</a></li>
+<li class="chapter" data-level="12.2" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-rup"><i class="fa fa-check"></i><b>12.2</b> Digestion of RUP</a></li>
+<li class="chapter" data-level="12.3" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#metabolizable-protein"><i class="fa fa-check"></i><b>12.3</b> Metabolizable protein</a></li>
+<li class="chapter" data-level="12.4" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-basis"><i class="fa fa-check"></i><b>12.4</b> AA basis</a></li>
+<li class="chapter" data-level="12.5" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-microbial-protein"><i class="fa fa-check"></i><b>12.5</b> AA in microbial protein</a></li>
+<li class="chapter" data-level="12.6" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-rup"><i class="fa fa-check"></i><b>12.6</b> AA in RUP</a></li>
+<li class="chapter" data-level="12.7" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#examples-4"><i class="fa fa-check"></i><b>12.7</b> Examples</a></li>
+<li class="chapter" data-level="12.8" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#questions-10"><i class="fa fa-check"></i><b>12.8</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html"><i class="fa fa-check"></i><b>13</b> Protein use and recommended supplies</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#scurf"><i class="fa fa-check"></i><b>13.1</b> Scurf</a></li>
+<li class="chapter" data-level="13.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#endogenous-urinary-protein"><i class="fa fa-check"></i><b>13.2</b> Endogenous urinary protein</a></li>
+<li class="chapter" data-level="13.3" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#metabolic-fecal-protein"><i class="fa fa-check"></i><b>13.3</b> Metabolic fecal protein</a></li>
+<li class="chapter" data-level="13.4" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#milk-protein"><i class="fa fa-check"></i><b>13.4</b> Milk protein</a></li>
+<li class="chapter" data-level="13.5" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#gestation-protein"><i class="fa fa-check"></i><b>13.5</b> Gestation protein</a></li>
+<li class="chapter" data-level="13.6" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#growth"><i class="fa fa-check"></i><b>13.6</b> Growth</a></li>
+<li class="chapter" data-level="13.7" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#total-np-use"><i class="fa fa-check"></i><b>13.7</b> Total NP use</a></li>
+<li class="chapter" data-level="13.8" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#aa-basis-1"><i class="fa fa-check"></i><b>13.8</b> AA basis</a></li>
+<li class="chapter" data-level="13.9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#recommendations"><i class="fa fa-check"></i><b>13.9</b> Recommendations</a></li>
+<li class="chapter" data-level="13.10" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#examples-5"><i class="fa fa-check"></i><b>13.10</b> Examples</a>
+<ul>
+<li class="chapter" data-level="13.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-5"><i class="fa fa-check"></i><b>13.10.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="13.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-needs-update"><i class="fa fa-check"></i><b>13.10.2</b> R ## NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="13.11" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#questions-11"><i class="fa fa-check"></i><b>13.11</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>14</b> Glossary</a></li>
 <li class="divider"></li>
 <b> Contributors:</b>
 <li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
@@ -371,12 +434,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="protein-intake-and-ruminal-supplies" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Protein intake and ruminal supplies<a href="protein-intake-and-ruminal-supplies.html#protein-intake-and-ruminal-supplies" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-49"></span>
+<div id="protein-intake-and-ruminal-supplies" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Protein intake and ruminal supplies<a href="protein-intake-and-ruminal-supplies.html#protein-intake-and-ruminal-supplies" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-89"></span>
 <img src="images/protein_system_rumen.png" alt="Depiction of protein flows in ruminant animals focused on intake and ruminal flows." width="100%" />
 <p class="caption">
-Figure 7.1: Depiction of protein flows in ruminant animals focused on intake and ruminal flows.
+Figure 11.1: Depiction of protein flows in ruminant animals focused on intake and ruminal flows.
 </p>
 </div>
 <div class="lo">
@@ -385,18 +448,18 @@ Figure 7.1: Depiction of protein flows in ruminant animals focused on intake and
 <li><p>Define RDP and RUP.</p></li>
 <li><p>Explain the possible fates of protein that enters the rumen.</p></li>
 <li><p>Describe experimental methods for determining protein kinetics.</p></li>
-<li><p>Calculate CP, RDP, and RUP for a given feed, and for a diet.</p></li>
+<li><p>Calculate CP, RDP, and RUP for a given feed, and for a diet using NASEM (2021) equations.</p></li>
 </ol>
 </div>
 <p>In the last chapter, we learned basic biological and nutritional definitions of protein. Next, we will discuss how protein nutrition is modeled in dairy cattle. As a first step, this chapter discusses how CP ingested by the animal is transformed in the rumen. Rumen physiology has been studied for centuries. However, we will learn how experimental methods developed in the last half-century influenced thinking about ruminal protein kinetics. Additionally, we will practice with NASEM (2021) equations to illustrate a modern modeling choice.</p>
-<div id="cp-intake" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> CP intake<a href="protein-intake-and-ruminal-supplies.html#cp-intake" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="cp-intake" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> CP intake<a href="protein-intake-and-ruminal-supplies.html#cp-intake" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>CP is a low cost, routine feed analysis that is done on almost all samples sent to commercial laboratories. NASEM (2021) Feed Tables have default values for CP content of many different types of feeds. Notice that fats and vitamins/minerals provide no CP.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-52"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-92"></span>
 <div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f99018b0a1a686763986" style="width:85%;height:600px;"></div>
-<script type="application/json" data-for="htmlwidget-f99018b0a1a686763986">{"x":{"data":[{"x":[0,9.271,0,12.172,0,8.514,7.62,52.644,13.485,4.497,41.492,9.234,13.422,7.707,38.985,0,0,0,22.064,20.471],"y":[1,12,6,13,5,10,8,20,15,7,19,11,14,9,18,2,3,4,17,16],"text":["FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  9.271<br />Fd_SD: 4.362","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean: 12.172<br />Fd_SD: 1.753","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  8.514<br />Fd_SD: 0.83","FD_Mean:  7.620<br />Fd_SD: 2.299","FD_Mean: 52.644<br />Fd_SD: 1.691","FD_Mean: 13.485<br />Fd_SD: 2.361","FD_Mean:  4.497<br />Fd_SD: 1.539","FD_Mean: 41.492<br />Fd_SD: 1.552","FD_Mean:  9.234<br />Fd_SD: 2.491","FD_Mean: 13.422<br />Fd_SD: 2.723","FD_Mean:  7.707<br />Fd_SD: 0.938","FD_Mean: 38.985<br />Fd_SD: 2.841","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean: 22.064<br />Fd_SD: 1.927","FD_Mean: 20.471<br />Fd_SD: 2.194"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","opacity":1,"line":{"color":"transparent"},"error_x":{"array":[null,4.362,null,1.753,null,0.83,2.299,1.691,2.361,1.539,1.552,2.491,2.723,0.938,2.841,null,null,null,1.927,2.194],"arrayminus":[null,4.362,null,1.753,null,0.83,2.299,1.691,2.361,1.539,1.552,2.491,2.723,0.938,2.841,null,null,null,1.927,2.194],"type":"data","width":0.722788759965534,"symmetric":false,"color":"rgba(0,0,0,1)"},"frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":180.456621004566},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2.71675,57.05175],"tickmode":"array","ticktext":["0","20","40"],"tickvals":[0,20,40],"categoryorder":"array","categoryarray":["0","20","40"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,20.6],"tickmode":"array","ticktext":["Calcium carbonate","Fat, canola oil","Fat, corn oil","Fat, soybean oil","Iron oxide","Limestone","Wheat straw","Rye annual hay, mature","Corn silage, typical","Corn grain dry, fine grind","Cool season grass hay, mature","Molasses","Oat grain","Cool season grass silage","Wheat grain","Legume silage, mid-maturity","Legume silage, immature","DDGS, high protein","Canola meal","Soybean meal, solvent 48CP"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"categoryorder":"array","categoryarray":["Calcium carbonate","Fat, canola oil","Fat, corn oil","Fat, soybean oil","Iron oxide","Limestone","Wheat straw","Rye annual hay, mature","Corn silage, typical","Corn grain dry, fine grind","Cool season grass hay, mature","Molasses","Oat grain","Cool season grass silage","Wheat grain","Legume silage, mid-maturity","Legume silage, immature","DDGS, high protein","Canola meal","Soybean meal, solvent 48CP"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"2be332492c":{"x":{},"y":{},"type":"scatter"},"2be36561e7cd":{"x":{},"y":{},"ymin":{},"ymax":{}}},"cur_data":"2be332492c","visdat":{"2be332492c":["function (y) ","x"],"2be36561e7cd":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-f99018b0a1a686763986">{"x":{"data":[{"x":[0,9.271,0,12.172,0,8.514,7.62,52.644,13.485,4.497,41.492,9.234,13.422,7.707,38.985,0,0,0,22.064,20.471],"y":[1,12,6,13,5,10,8,20,15,7,19,11,14,9,18,2,3,4,17,16],"text":["FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  9.271<br />Fd_SD: 4.362","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean: 12.172<br />Fd_SD: 1.753","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  8.514<br />Fd_SD: 0.83","FD_Mean:  7.620<br />Fd_SD: 2.299","FD_Mean: 52.644<br />Fd_SD: 1.691","FD_Mean: 13.485<br />Fd_SD: 2.361","FD_Mean:  4.497<br />Fd_SD: 1.539","FD_Mean: 41.492<br />Fd_SD: 1.552","FD_Mean:  9.234<br />Fd_SD: 2.491","FD_Mean: 13.422<br />Fd_SD: 2.723","FD_Mean:  7.707<br />Fd_SD: 0.938","FD_Mean: 38.985<br />Fd_SD: 2.841","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean:  0.000<br />Fd_SD: NA","FD_Mean: 22.064<br />Fd_SD: 1.927","FD_Mean: 20.471<br />Fd_SD: 2.194"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","opacity":1,"line":{"color":"transparent"},"error_x":{"array":[null,4.362,null,1.753,null,0.83,2.299,1.691,2.361,1.539,1.552,2.491,2.723,0.938,2.841,null,null,null,1.927,2.194],"arrayminus":[null,4.362,null,1.753,null,0.83,2.299,1.691,2.361,1.539,1.552,2.491,2.723,0.938,2.841,null,null,null,1.927,2.194],"type":"data","width":0.722788759965534,"symmetric":false,"color":"rgba(0,0,0,1)"},"frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":180.456621004566},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2.71675,57.05175],"tickmode":"array","ticktext":["0","20","40"],"tickvals":[0,20,40],"categoryorder":"array","categoryarray":["0","20","40"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,20.6],"tickmode":"array","ticktext":["Calcium carbonate","Fat, canola oil","Fat, corn oil","Fat, soybean oil","Iron oxide","Limestone","Wheat straw","Rye annual hay, mature","Corn silage, typical","Corn grain dry, fine grind","Cool season grass hay, mature","Molasses","Oat grain","Cool season grass silage","Wheat grain","Legume silage, mid-maturity","Legume silage, immature","DDGS, high protein","Canola meal","Soybean meal, solvent 48CP"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"categoryorder":"array","categoryarray":["Calcium carbonate","Fat, canola oil","Fat, corn oil","Fat, soybean oil","Iron oxide","Limestone","Wheat straw","Rye annual hay, mature","Corn silage, typical","Corn grain dry, fine grind","Cool season grass hay, mature","Molasses","Oat grain","Cool season grass silage","Wheat grain","Legume silage, mid-maturity","Legume silage, immature","DDGS, high protein","Canola meal","Soybean meal, solvent 48CP"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"498431b27e4":{"x":{},"y":{},"type":"scatter"},"4982bd80c27":{"x":{},"y":{},"ymin":{},"ymax":{}}},"cur_data":"498431b27e4","visdat":{"498431b27e4":["function (y) ","x"],"4982bd80c27":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
-Figure 7.2: Crude protein (% of DM; Mean ± SD)
+Figure 11.2: Crude protein (% of DM; Mean ± SD)
 of selected feeds in the NASEM library
 </p>
 </div>
@@ -413,14 +476,14 @@ DMI of corn grain = 5 kg</p>
 <p><span class="math inline">\(w_i\)</span> is the DMI of feed <span class="math inline">\(i\)</span> in kg
 <span class="math inline">\(CP_i\)</span> is the CP content of feed <span class="math inline">\(i\)</span> as a percent (kg CP / 100 kg DM)</p>
 </div>
-<div id="ruminal-protein-supplies" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> Ruminal protein supplies<a href="protein-intake-and-ruminal-supplies.html#ruminal-protein-supplies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ruminal-protein-supplies" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Ruminal protein supplies<a href="protein-intake-and-ruminal-supplies.html#ruminal-protein-supplies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In ruminants, dietary protein undergoes significant transformations in
 the rumen that affect its nutritive properties. For this reason, all
 dairy nutrition models include some description of protein degradation
 or passage through the rumen, and microbial protein synthesis. In general, the majority of dietary protein in the diet of a lactating cow will be RDP (55 to 75% of CP) and a lesser fraction will be RUP (25 to 45% of CP). This often means that half or more of the cow's protein nutritional needs are often met by microbial protein supply.</p>
-<div id="rdp-and-rup" class="section level3 hasAnchor" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> RDP and RUP<a href="protein-intake-and-ruminal-supplies.html#rdp-and-rup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="rdp-and-rup" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> RDP and RUP<a href="protein-intake-and-ruminal-supplies.html#rdp-and-rup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Protein systems such as NASEM break down CP intake in two fractions: the
 fraction degraded by the rumen microbes (RDP) and the fraction that
 escapes rumen degradation (RUP). Both RDP and RUP contribute to the
@@ -436,10 +499,10 @@ degraded (RDP) or pass out of the rumen (RUP). At this point we have
 reached a question. <em>How do we know how much protein will be degraded in
 the rumen, and how much protein will pass through the rumen?</em></p>
 <p>Many nutritional models (including NASEM) address this problem by modeling the kinetics of ruminal protein degradation and passage for each feed. In other words, they model the rates (amount / time) of intake, degradation, and passage to determine the fates of CP intake (RDP or RUP). K is the generic term used to denote a "rate." Because there is one input and only two possible outputs, the rate of intake (Kd + Kp) is equal to the rate of degradation (Kd) plus the rate of passage (Kp). This is due to the conservation of mass: what goes in, must come out, so over time the inputs = outputs.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-53"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-93"></span>
 <img src="images/KdandKp.png" alt="Diagram of the rumen protein system, showing that CP intake can flow through two possible fates:  degradation or passage." width="100%" />
 <p class="caption">
-Figure 7.3: Diagram of the rumen protein system, showing that CP intake can flow through two possible fates: degradation or passage.
+Figure 11.3: Diagram of the rumen protein system, showing that CP intake can flow through two possible fates: degradation or passage.
 </p>
 </div>
 <p><strong>Rates of Degradation (kd, %/h)</strong><br />
@@ -456,10 +519,10 @@ time. With the proper setup, the disappearance rate from the bag tells
 the digestion rate at any given time.</p>
 In the 1970s, researchers in Aberdeen, U.K. proposed a way of thinking
 about ruminal protein disappearance that is still used today. In a study using <em>in situ</em> techniques, 0rskov and McDonald (1979) took repeated observations of the amount of protein remaining in the rumen for a given feed. Graphically, their observations looked something like this:
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-54"></span>
-<img src="_main_files/figure-html/unnamed-chunk-54-1.png" alt="Ruminal protein degradation kinetics, unlabeled." width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-94"></span>
+<img src="_main_files/figure-html/unnamed-chunk-94-1.png" alt="Ruminal protein degradation kinetics, unlabeled." width="85%" />
 <p class="caption">
-Figure 7.4: Ruminal protein degradation kinetics, unlabeled.
+Figure 11.4: Ruminal protein degradation kinetics, unlabeled.
 </p>
 </div>
 <div class="green">
@@ -477,10 +540,10 @@ total protein)"</p>
 </blockquote>
 <p>In other words, these researchers decided to categorize ruminal protein fractions into three parts based on their rates of degradation. In equation form the amounts of CP (% of DM) can be expressed:</p>
 <p><span class="math display">\[CP = A + B + C\]</span></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-55"></span>
-<img src="_main_files/figure-html/unnamed-chunk-55-1.png" alt="Ruminal protein degradation kinetics. Shows the fraction degraded instantaneously, a fraction degraded at a moderate rate, and a fraction where no degradation occurs." width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-95"></span>
+<img src="_main_files/figure-html/unnamed-chunk-95-1.png" alt="Ruminal protein degradation kinetics. Shows the fraction degraded instantaneously, a fraction degraded at a moderate rate, and a fraction where no degradation occurs." width="85%" />
 <p class="caption">
-Figure 7.5: Ruminal protein degradation kinetics. Shows the fraction degraded instantaneously, a fraction degraded at a moderate rate, and a fraction where no degradation occurs.
+Figure 11.5: Ruminal protein degradation kinetics. Shows the fraction degraded instantaneously, a fraction degraded at a moderate rate, and a fraction where no degradation occurs.
 </p>
 </div>
 <p>The discovery of 0rskov and McDonald (1979) suggested that the rate of
@@ -527,6 +590,19 @@ the competition between rate of degradation (Kd, %/h and rate of passage
 the period of time a feed spends in the rumen, the greater the period of
 time available for microbial action, and the greater the extent of
 degradation of the protein.</p>
+<div class="blue">
+<p><strong>Example</strong></p>
+<p>Using a simple example, if Kd is 4%/h and Kp is 8%/h, then the
+proportion of the B fraction degraded in the rumen is:</p>
+<p>4 / (4 + 8) = 0.33 (or 33%)</p>
+<p>and the proportion of the B fraction that escapes ruminal degradation
+is:</p>
+<p>8 / (4 = 8) = 0.66 (or 66%)</p>
+<p>Note that the sum of Kd and Kp provides an estimate of the rate of
+disappearance of the B fraction from the rumen. In our example, the rate
+of disappearance of the B fraction is 12%/h (8%/h due to passage from
+the rumen plus 4%/h due to the degradation by rumen microbes).</p>
+</div>
 <p>The first step in calculating RDP and RUP is gathering information about
 each feed in the diet. The Feed Tables in NASEM (2021) provide
 parameters for each specific feed ingredient. For example, alfalfa
@@ -542,10 +618,10 @@ A fraction</li>
 </ul>
 <p>The rates of passage (Kp, %/h) are given in the Protein chapter. There
 is one Kp for forages (4.87 %/h) and one for concentrate feeds (%/h).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-56"></span>
-<img src="_main_files/figure-html/unnamed-chunk-56-1.png" alt="Degradation kinetics for the B fraction in four selected feeds from the NASEM (2021) library. Two are concentrates (soybean meal and wheat grain) and two are forages (corn silage and legume silage). Grey boxes show the fractions of CP instantaneously degraded and passing." width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-96"></span>
+<img src="_main_files/figure-html/unnamed-chunk-96-1.png" alt="Degradation kinetics for the B fraction in four selected feeds from the NASEM (2021) library. Two are concentrates (soybean meal and wheat grain) and two are forages (corn silage and legume silage). Grey boxes show the fractions of CP instantaneously degraded and passing." width="85%" />
 <p class="caption">
-Figure 7.6: Degradation kinetics for the B fraction in four selected feeds from the NASEM (2021) library. Two are concentrates (soybean meal and wheat grain) and two are forages (corn silage and legume silage). Grey boxes show the fractions of CP instantaneously degraded and passing.
+Figure 11.6: Degradation kinetics for the B fraction in four selected feeds from the NASEM (2021) library. Two are concentrates (soybean meal and wheat grain) and two are forages (corn silage and legume silage). Grey boxes show the fractions of CP instantaneously degraded and passing.
 </p>
 </div>
 <table>
@@ -685,13 +761,13 @@ Soybean meal, solvent 48CP
 </tbody>
 </table>
 </div>
-<div id="calculating-rdp-and-rup" class="section level3 hasAnchor" number="7.2.2">
-<h3><span class="header-section-number">7.2.2</span> Calculating RDP and RUP<a href="protein-intake-and-ruminal-supplies.html#calculating-rdp-and-rup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="calculating-rdp-and-rup" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> Calculating RDP and RUP<a href="protein-intake-and-ruminal-supplies.html#calculating-rdp-and-rup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now we have all the information needed to calculate the percentage or amount of CP that will become RDP versus RUP.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-58"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-98"></span>
 <img src="images/CP_fractions.png" alt="Partitioning of CP into A, B, C, and sub-fractions" width="85%" />
 <p class="caption">
-Figure 7.7: Partitioning of CP into A, B, C, and sub-fractions
+Figure 11.7: Partitioning of CP into A, B, C, and sub-fractions
 </p>
 </div>
 <p>We start by dividing the quickly-degrading A fraction into TP and NPN. Often, the A fraction is 100% TP.</p>
@@ -725,10 +801,10 @@ the sum of the degraded A and degraded B fractions. This is because RDP from C i
 undegraded B fraction protein with the C fraction. This is because the C
 fraction is 100% undegradable, so all of it contributes to RUP.</p>
 <p><span class="math display">\[ \text{Total RUP} = (\text{RUP from A}) + (\text{RUP from B})+(\text{RUP from C})\]</span></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-59"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-99"></span>
 <img src="images/RDPRUPcalculation.png" alt="Summary of NASEM scheme for calculating RDP and RUP. The details summarized in this figure are listed in the text above." width="100%" />
 <p class="caption">
-Figure 7.8: Summary of NASEM scheme for calculating RDP and RUP. The details summarized in this figure are listed in the text above.
+Figure 11.8: Summary of NASEM scheme for calculating RDP and RUP. The details summarized in this figure are listed in the text above.
 </p>
 </div>
 <div class="blue">
@@ -861,8 +937,8 @@ CP <span class="math inline">\(\approx\)</span> 2.6 kg</p>
 </div>
 </div>
 </div>
-<div id="microbial-protein-synthesis" class="section level3 hasAnchor" number="7.2.3">
-<h3><span class="header-section-number">7.2.3</span> Microbial protein synthesis<a href="protein-intake-and-ruminal-supplies.html#microbial-protein-synthesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="microbial-protein-synthesis" class="section level3 hasAnchor" number="11.2.3">
+<h3><span class="header-section-number">11.2.3</span> Microbial protein synthesis<a href="protein-intake-and-ruminal-supplies.html#microbial-protein-synthesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The next step modeled in the rumen in microbial protein synthesis. Microbial protein synthesis is described as a saturable growth process dependent on available RDP and major rumen-degradable carbohydrates (RDNDF = rumen-degradable neutral detergent fiber, and RDS = rumen-degradable starch). Note that the equation predicts microbial N, which can easily be converted to CP.</p>
 <p>Eq. 6-3, p. 74 (NASEM, 2021)
 <span class="math display">\[
@@ -870,10 +946,10 @@ CP <span class="math inline">\(\approx\)</span> 2.6 kg</p>
 \]</span></p>
 <p>Note that in most of the equations we have seen so far, the coefficients have been numbers, not symbols. In this equation, NASEM (2021) lists coefficients (<span class="math inline">\(\beta_0, \beta_1, \beta_2, \beta_3\)</span>) separately in the text. The equation can be rewritten with the coefficients replaced with their respective values.</p>
 <p>Eq. 6-3 is a Michaelis-Menten function. It suggests that both rumen-fermentable carbohydrates and rumen-degradable protein contribute to microbial protein synthesis. The numerator includes a constant and the maximum velocity of microbial N production in g per day. <span class="math inline">\(V_m = \beta_0 + (\beta_1 * RDP)\)</span>. Terms in the denominator represent the Michaelis constants (<span class="math inline">\(K_m\)</span>) for major pools of rumen-degradable carbohydrates: <span class="math inline">\(\beta_2 = K_m\)</span> for RDNDF <span class="math inline">\(\beta_2 = K_m\)</span> for RDS. Details on calculating RDNDF and RDS are given in the consensus report (NASEM, 2021, p. 74).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-60"></span>
-<img src="_main_files/figure-html/unnamed-chunk-60-1.png" alt="Microbial N synthesis at varying supplies of RDNDF (kg/d), RDS (kg/d), RDP (kg/d)" width="100%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-100"></span>
+<img src="_main_files/figure-html/unnamed-chunk-100-1.png" alt="Microbial N synthesis at varying supplies of RDNDF (kg/d), RDS (kg/d), RDP (kg/d)" width="100%" />
 <p class="caption">
-Figure 7.9: Microbial N synthesis at varying supplies of RDNDF (kg/d), RDS (kg/d), RDP (kg/d)
+Figure 11.9: Microbial N synthesis at varying supplies of RDNDF (kg/d), RDS (kg/d), RDP (kg/d)
 </p>
 </div>
 <p>This figure uses values that are more extreme than those seen in typical diets, for illustration purposes. In it, we can see that low supply of either RDNDF or RDS depresses the effect of RDP on microbial N synthesis. The effect of RDNDF is more drastic because its coefficient is larger.</p>
@@ -896,8 +972,8 @@ click here for explanation
 </div>
 </div>
 </div>
-<div id="examples-1" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Examples<a href="protein-intake-and-ruminal-supplies.html#examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="examples-3" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Examples<a href="protein-intake-and-ruminal-supplies.html#examples-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="webex-solution">
 <button>
 Show NASEM dairy-8 Example
@@ -916,174 +992,174 @@ Show NASEM dairy-8 Example
 Show R Example
 </button>
 <p>Input data (e.g., A, B, C fractions) can be found in the NASEM (2021) consensus report Feed Tables and manually entered into the code below. Alternatively, follow the NASEM dairy-8 example above to generate an Excel spreadsheet export of feed information for a diet. The input data is typed into the code below, but it is also possible to load the spreadsheet directly into R.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="protein-intake-and-ruminal-supplies.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
-<span id="cb8-2"><a href="protein-intake-and-ruminal-supplies.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb8-3"><a href="protein-intake-and-ruminal-supplies.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="do">####        Calculate RDP and RUP for one feed.         ####</span></span>
-<span id="cb8-4"><a href="protein-intake-and-ruminal-supplies.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb8-5"><a href="protein-intake-and-ruminal-supplies.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
-<span id="cb8-6"><a href="protein-intake-and-ruminal-supplies.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="protein-intake-and-ruminal-supplies.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define functions for RUP and RDP </span></span>
-<span id="cb8-8"><a href="protein-intake-and-ruminal-supplies.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># If A, B, and C are inputted as a % of CP, returns % of CP. </span></span>
-<span id="cb8-9"><a href="protein-intake-and-ruminal-supplies.html#cb8-9" aria-hidden="true" tabindex="-1"></a>RUP <span class="ot">&lt;-</span> <span class="cf">function</span>(A, B, C, Kp, Kd) {</span>
-<span id="cb8-10"><a href="protein-intake-and-ruminal-supplies.html#cb8-10" aria-hidden="true" tabindex="-1"></a>  A<span class="sc">*</span>.<span class="dv">064</span> <span class="sc">+</span> C <span class="sc">+</span> B<span class="sc">*</span>(Kp<span class="sc">/</span>(Kd <span class="sc">+</span> Kp))</span>
-<span id="cb8-11"><a href="protein-intake-and-ruminal-supplies.html#cb8-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-12"><a href="protein-intake-and-ruminal-supplies.html#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="protein-intake-and-ruminal-supplies.html#cb8-13" aria-hidden="true" tabindex="-1"></a>RDP <span class="ot">&lt;-</span> <span class="cf">function</span>(A, B, C, Kp, Kd) {</span>
-<span id="cb8-14"><a href="protein-intake-and-ruminal-supplies.html#cb8-14" aria-hidden="true" tabindex="-1"></a>  A<span class="sc">*</span>.<span class="dv">936</span> <span class="sc">+</span> B<span class="sc">*</span>(Kd<span class="sc">/</span>(Kd <span class="sc">+</span> Kp))</span>
-<span id="cb8-15"><a href="protein-intake-and-ruminal-supplies.html#cb8-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-16"><a href="protein-intake-and-ruminal-supplies.html#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the inputs in this section --------------</span></span>
-<span id="cb8-17"><a href="protein-intake-and-ruminal-supplies.html#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># This example was shown by hand above.</span></span>
-<span id="cb8-18"><a href="protein-intake-and-ruminal-supplies.html#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="protein-intake-and-ruminal-supplies.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as a % of CP to return RUP and RDP as a % of CP</span></span>
-<span id="cb8-20"><a href="protein-intake-and-ruminal-supplies.html#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="fu">RUP</span>(<span class="at">A =</span> <span class="dv">31</span>, <span class="at">B =</span> <span class="dv">54</span>, <span class="at">C =</span> <span class="dv">15</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
-<span id="cb8-21"><a href="protein-intake-and-ruminal-supplies.html#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="fu">RDP</span>(<span class="at">A =</span> <span class="dv">31</span>, <span class="at">B =</span> <span class="dv">54</span>, <span class="at">C =</span> <span class="dv">15</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
-<span id="cb8-22"><a href="protein-intake-and-ruminal-supplies.html#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="protein-intake-and-ruminal-supplies.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as kg/d to return RUP and RDP as kg/d</span></span>
-<span id="cb8-24"><a href="protein-intake-and-ruminal-supplies.html#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="fu">RUP</span>(<span class="at">A =</span> <span class="fl">0.47</span>, <span class="at">B =</span> <span class="fl">2.08</span>, <span class="at">C =</span> <span class="fl">0.05</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
-<span id="cb8-25"><a href="protein-intake-and-ruminal-supplies.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="fu">RDP</span>(<span class="at">A =</span> <span class="fl">0.47</span>, <span class="at">B =</span> <span class="fl">2.08</span>, <span class="at">C =</span> <span class="fl">0.05</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
-<span id="cb8-26"><a href="protein-intake-and-ruminal-supplies.html#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-27"><a href="protein-intake-and-ruminal-supplies.html#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co"># To calculate RDP and RUP for an entire diet, create a dataframe </span></span>
-<span id="cb8-28"><a href="protein-intake-and-ruminal-supplies.html#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co"># with columns A, B, C, Kd, and Kp, where each row is a feed.</span></span>
-<span id="cb8-29"><a href="protein-intake-and-ruminal-supplies.html#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-30"><a href="protein-intake-and-ruminal-supplies.html#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co"># inclusion rates as proportions. </span><span class="al">NOTE</span><span class="co">:  unrealistic fictional diet</span></span>
-<span id="cb8-31"><a href="protein-intake-and-ruminal-supplies.html#cb8-31" aria-hidden="true" tabindex="-1"></a>inclusion <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.10</span>, <span class="fl">0.40</span>, <span class="fl">0.20</span>, <span class="fl">0.30</span>)</span>
-<span id="cb8-32"><a href="protein-intake-and-ruminal-supplies.html#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="co"># other inputs</span></span>
-<span id="cb8-33"><a href="protein-intake-and-ruminal-supplies.html#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-34"><a href="protein-intake-and-ruminal-supplies.html#cb8-34" aria-hidden="true" tabindex="-1"></a>feed <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Wheat grain&quot;</span>, <span class="st">&quot;Corn silage, typical&quot;</span>, <span class="st">&quot;Legume silage, mid-maturity&quot;</span>, </span>
-<span id="cb8-35"><a href="protein-intake-and-ruminal-supplies.html#cb8-35" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&quot;Soybean meal, solvent 48CP&quot;</span>)</span>
-<span id="cb8-36"><a href="protein-intake-and-ruminal-supplies.html#cb8-36" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">31</span>, <span class="dv">60</span>, <span class="dv">52</span>, <span class="dv">18</span>)</span>
-<span id="cb8-37"><a href="protein-intake-and-ruminal-supplies.html#cb8-37" aria-hidden="true" tabindex="-1"></a>B <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">54</span>, <span class="dv">24</span>, <span class="dv">39</span>, <span class="dv">80</span>)</span>
-<span id="cb8-38"><a href="protein-intake-and-ruminal-supplies.html#cb8-38" aria-hidden="true" tabindex="-1"></a>C <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">2</span>)</span>
-<span id="cb8-39"><a href="protein-intake-and-ruminal-supplies.html#cb8-39" aria-hidden="true" tabindex="-1"></a>Kd <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.191</span>, <span class="fl">0.04068</span>, <span class="fl">0.08174</span>, <span class="fl">0.09</span>) <span class="co"># kd/100</span></span>
-<span id="cb8-40"><a href="protein-intake-and-ruminal-supplies.html#cb8-40" aria-hidden="true" tabindex="-1"></a>Kp <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.0528</span>, <span class="fl">0.0487</span>, <span class="fl">0.0487</span>, <span class="fl">0.0528</span>) <span class="co">#ifelse feed is concentrate</span></span>
-<span id="cb8-41"><a href="protein-intake-and-ruminal-supplies.html#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-42"><a href="protein-intake-and-ruminal-supplies.html#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP at feed level with vector inputs</span></span>
-<span id="cb8-43"><a href="protein-intake-and-ruminal-supplies.html#cb8-43" aria-hidden="true" tabindex="-1"></a>rup_ests <span class="ot">=</span> <span class="fu">RUP</span>(<span class="at">A =</span> A, <span class="at">B =</span> B, <span class="at">C =</span> C, <span class="at">Kd =</span> Kd, <span class="at">Kp =</span> Kp)</span>
-<span id="cb8-44"><a href="protein-intake-and-ruminal-supplies.html#cb8-44" aria-hidden="true" tabindex="-1"></a>rdp_ests <span class="ot">=</span> <span class="fu">RDP</span>(<span class="at">A =</span> A, <span class="at">B =</span> B, <span class="at">Kd =</span> Kd, <span class="at">Kp =</span> Kp)</span>
-<span id="cb8-45"><a href="protein-intake-and-ruminal-supplies.html#cb8-45" aria-hidden="true" tabindex="-1"></a>rup_ests <span class="sc">+</span> rdp_ests <span class="co"># check that equal 100 if input as % of CP; or equal total CP g/d if input as g/d</span></span>
-<span id="cb8-46"><a href="protein-intake-and-ruminal-supplies.html#cb8-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-47"><a href="protein-intake-and-ruminal-supplies.html#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP (% of CP) at diet level</span></span>
-<span id="cb8-48"><a href="protein-intake-and-ruminal-supplies.html#cb8-48" aria-hidden="true" tabindex="-1"></a>rup_diet <span class="ot">=</span> <span class="fu">weighted.mean</span>(<span class="at">x =</span> rup_ests, <span class="at">w =</span> inclusion)</span>
-<span id="cb8-49"><a href="protein-intake-and-ruminal-supplies.html#cb8-49" aria-hidden="true" tabindex="-1"></a>rdp_diet <span class="ot">=</span> <span class="fu">weighted.mean</span>(<span class="at">x =</span> rdp_ests, <span class="at">w =</span> inclusion)</span>
-<span id="cb8-50"><a href="protein-intake-and-ruminal-supplies.html#cb8-50" aria-hidden="true" tabindex="-1"></a>rup_diet <span class="sc">+</span> rdp_diet <span class="co"># check that equal 100 if input as % of CP; or equal total CP g/d if input as g/d</span></span>
-<span id="cb8-51"><a href="protein-intake-and-ruminal-supplies.html#cb8-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-52"><a href="protein-intake-and-ruminal-supplies.html#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
-<span id="cb8-53"><a href="protein-intake-and-ruminal-supplies.html#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb8-54"><a href="protein-intake-and-ruminal-supplies.html#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="do">####           Estimate microbial N synthesis           ####</span></span>
-<span id="cb8-55"><a href="protein-intake-and-ruminal-supplies.html#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb8-56"><a href="protein-intake-and-ruminal-supplies.html#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
-<span id="cb8-57"><a href="protein-intake-and-ruminal-supplies.html#cb8-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Define function for microbial N, g/d</span></span>
-<span id="cb8-58"><a href="protein-intake-and-ruminal-supplies.html#cb8-58" aria-hidden="true" tabindex="-1"></a>microbialN <span class="ot">&lt;-</span> <span class="cf">function</span>(RDP, RDNDF, RDS) {</span>
-<span id="cb8-59"><a href="protein-intake-and-ruminal-supplies.html#cb8-59" aria-hidden="true" tabindex="-1"></a>  beta_0 <span class="ot">&lt;-</span> <span class="dv">101</span></span>
-<span id="cb8-60"><a href="protein-intake-and-ruminal-supplies.html#cb8-60" aria-hidden="true" tabindex="-1"></a>  beta_1 <span class="ot">&lt;-</span> <span class="fl">82.6</span> </span>
-<span id="cb8-61"><a href="protein-intake-and-ruminal-supplies.html#cb8-61" aria-hidden="true" tabindex="-1"></a>  beta_2 <span class="ot">&lt;-</span> <span class="fl">0.094</span> </span>
-<span id="cb8-62"><a href="protein-intake-and-ruminal-supplies.html#cb8-62" aria-hidden="true" tabindex="-1"></a>  beta_3 <span class="ot">&lt;-</span> <span class="fl">0.027</span> </span>
-<span id="cb8-63"><a href="protein-intake-and-ruminal-supplies.html#cb8-63" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-64"><a href="protein-intake-and-ruminal-supplies.html#cb8-64" aria-hidden="true" tabindex="-1"></a>  numerator <span class="ot">&lt;-</span> beta_0 <span class="sc">+</span> (beta_1 <span class="sc">*</span> RDP)</span>
-<span id="cb8-65"><a href="protein-intake-and-ruminal-supplies.html#cb8-65" aria-hidden="true" tabindex="-1"></a>  denominator <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">+</span> (beta_2 <span class="sc">/</span> RDNDF)) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">+</span> (beta_3 <span class="sc">/</span> RDS))</span>
-<span id="cb8-66"><a href="protein-intake-and-ruminal-supplies.html#cb8-66" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-67"><a href="protein-intake-and-ruminal-supplies.html#cb8-67" aria-hidden="true" tabindex="-1"></a>  microbialN <span class="ot">&lt;-</span> numerator <span class="sc">/</span> denominator</span>
-<span id="cb8-68"><a href="protein-intake-and-ruminal-supplies.html#cb8-68" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-69"><a href="protein-intake-and-ruminal-supplies.html#cb8-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(microbialN)</span>
-<span id="cb8-70"><a href="protein-intake-and-ruminal-supplies.html#cb8-70" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-71"><a href="protein-intake-and-ruminal-supplies.html#cb8-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-72"><a href="protein-intake-and-ruminal-supplies.html#cb8-72" aria-hidden="true" tabindex="-1"></a>MiN <span class="ot">=</span> <span class="fu">microbialN</span>(<span class="at">RDP =</span> <span class="fl">1.04</span>, <span class="at">RDNDF =</span> <span class="fl">1.97</span>, <span class="at">RDS =</span> <span class="fl">1.59</span>)</span>
-<span id="cb8-73"><a href="protein-intake-and-ruminal-supplies.html#cb8-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-74"><a href="protein-intake-and-ruminal-supplies.html#cb8-74" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to microbial CP, g/d</span></span>
-<span id="cb8-75"><a href="protein-intake-and-ruminal-supplies.html#cb8-75" aria-hidden="true" tabindex="-1"></a>MiCP <span class="ot">=</span> MiN<span class="sc">*</span><span class="fl">6.25</span></span>
-<span id="cb8-76"><a href="protein-intake-and-ruminal-supplies.html#cb8-76" aria-hidden="true" tabindex="-1"></a>MiCP</span>
-<span id="cb8-77"><a href="protein-intake-and-ruminal-supplies.html#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-78"><a href="protein-intake-and-ruminal-supplies.html#cb8-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Split TP and NPN</span></span>
-<span id="cb8-79"><a href="protein-intake-and-ruminal-supplies.html#cb8-79" aria-hidden="true" tabindex="-1"></a>MiTP <span class="ot">=</span> MiCP<span class="sc">*</span><span class="fl">0.824</span></span>
-<span id="cb8-80"><a href="protein-intake-and-ruminal-supplies.html#cb8-80" aria-hidden="true" tabindex="-1"></a>MiNPN <span class="ot">=</span> MiCP<span class="sc">*</span>(<span class="dv">1</span><span class="fl">-0.824</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="protein-intake-and-ruminal-supplies.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
+<span id="cb13-2"><a href="protein-intake-and-ruminal-supplies.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb13-3"><a href="protein-intake-and-ruminal-supplies.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="do">####        Calculate RDP and RUP for one feed.         ####</span></span>
+<span id="cb13-4"><a href="protein-intake-and-ruminal-supplies.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb13-5"><a href="protein-intake-and-ruminal-supplies.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
+<span id="cb13-6"><a href="protein-intake-and-ruminal-supplies.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="protein-intake-and-ruminal-supplies.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define functions for RUP and RDP </span></span>
+<span id="cb13-8"><a href="protein-intake-and-ruminal-supplies.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># If A, B, and C are inputted as a % of CP, returns % of CP. </span></span>
+<span id="cb13-9"><a href="protein-intake-and-ruminal-supplies.html#cb13-9" aria-hidden="true" tabindex="-1"></a>RUP <span class="ot">&lt;-</span> <span class="cf">function</span>(A, B, C, Kp, Kd) {</span>
+<span id="cb13-10"><a href="protein-intake-and-ruminal-supplies.html#cb13-10" aria-hidden="true" tabindex="-1"></a>  A<span class="sc">*</span>.<span class="dv">064</span> <span class="sc">+</span> C <span class="sc">+</span> B<span class="sc">*</span>(Kp<span class="sc">/</span>(Kd <span class="sc">+</span> Kp))</span>
+<span id="cb13-11"><a href="protein-intake-and-ruminal-supplies.html#cb13-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-12"><a href="protein-intake-and-ruminal-supplies.html#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="protein-intake-and-ruminal-supplies.html#cb13-13" aria-hidden="true" tabindex="-1"></a>RDP <span class="ot">&lt;-</span> <span class="cf">function</span>(A, B, C, Kp, Kd) {</span>
+<span id="cb13-14"><a href="protein-intake-and-ruminal-supplies.html#cb13-14" aria-hidden="true" tabindex="-1"></a>  A<span class="sc">*</span>.<span class="dv">936</span> <span class="sc">+</span> B<span class="sc">*</span>(Kd<span class="sc">/</span>(Kd <span class="sc">+</span> Kp))</span>
+<span id="cb13-15"><a href="protein-intake-and-ruminal-supplies.html#cb13-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-16"><a href="protein-intake-and-ruminal-supplies.html#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the inputs in this section --------------</span></span>
+<span id="cb13-17"><a href="protein-intake-and-ruminal-supplies.html#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># This example was shown by hand above.</span></span>
+<span id="cb13-18"><a href="protein-intake-and-ruminal-supplies.html#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="protein-intake-and-ruminal-supplies.html#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as a % of CP to return RUP and RDP as a % of CP</span></span>
+<span id="cb13-20"><a href="protein-intake-and-ruminal-supplies.html#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="fu">RUP</span>(<span class="at">A =</span> <span class="dv">31</span>, <span class="at">B =</span> <span class="dv">54</span>, <span class="at">C =</span> <span class="dv">15</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
+<span id="cb13-21"><a href="protein-intake-and-ruminal-supplies.html#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="fu">RDP</span>(<span class="at">A =</span> <span class="dv">31</span>, <span class="at">B =</span> <span class="dv">54</span>, <span class="at">C =</span> <span class="dv">15</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
+<span id="cb13-22"><a href="protein-intake-and-ruminal-supplies.html#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="protein-intake-and-ruminal-supplies.html#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as kg/d to return RUP and RDP as kg/d</span></span>
+<span id="cb13-24"><a href="protein-intake-and-ruminal-supplies.html#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="fu">RUP</span>(<span class="at">A =</span> <span class="fl">0.47</span>, <span class="at">B =</span> <span class="fl">2.08</span>, <span class="at">C =</span> <span class="fl">0.05</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
+<span id="cb13-25"><a href="protein-intake-and-ruminal-supplies.html#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="fu">RDP</span>(<span class="at">A =</span> <span class="fl">0.47</span>, <span class="at">B =</span> <span class="fl">2.08</span>, <span class="at">C =</span> <span class="fl">0.05</span>, <span class="at">Kd =</span> <span class="fl">0.091</span>, <span class="at">Kp =</span> <span class="fl">0.0528</span>)</span>
+<span id="cb13-26"><a href="protein-intake-and-ruminal-supplies.html#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="protein-intake-and-ruminal-supplies.html#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="co"># To calculate RDP and RUP for an entire diet, create a dataframe </span></span>
+<span id="cb13-28"><a href="protein-intake-and-ruminal-supplies.html#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="co"># with columns A, B, C, Kd, and Kp, where each row is a feed.</span></span>
+<span id="cb13-29"><a href="protein-intake-and-ruminal-supplies.html#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-30"><a href="protein-intake-and-ruminal-supplies.html#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="co"># inclusion rates as proportions. </span><span class="al">NOTE</span><span class="co">:  unrealistic fictional diet</span></span>
+<span id="cb13-31"><a href="protein-intake-and-ruminal-supplies.html#cb13-31" aria-hidden="true" tabindex="-1"></a>inclusion <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.10</span>, <span class="fl">0.40</span>, <span class="fl">0.20</span>, <span class="fl">0.30</span>)</span>
+<span id="cb13-32"><a href="protein-intake-and-ruminal-supplies.html#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="co"># other inputs</span></span>
+<span id="cb13-33"><a href="protein-intake-and-ruminal-supplies.html#cb13-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-34"><a href="protein-intake-and-ruminal-supplies.html#cb13-34" aria-hidden="true" tabindex="-1"></a>feed <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Wheat grain&quot;</span>, <span class="st">&quot;Corn silage, typical&quot;</span>, <span class="st">&quot;Legume silage, mid-maturity&quot;</span>, </span>
+<span id="cb13-35"><a href="protein-intake-and-ruminal-supplies.html#cb13-35" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&quot;Soybean meal, solvent 48CP&quot;</span>)</span>
+<span id="cb13-36"><a href="protein-intake-and-ruminal-supplies.html#cb13-36" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">31</span>, <span class="dv">60</span>, <span class="dv">52</span>, <span class="dv">18</span>)</span>
+<span id="cb13-37"><a href="protein-intake-and-ruminal-supplies.html#cb13-37" aria-hidden="true" tabindex="-1"></a>B <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">54</span>, <span class="dv">24</span>, <span class="dv">39</span>, <span class="dv">80</span>)</span>
+<span id="cb13-38"><a href="protein-intake-and-ruminal-supplies.html#cb13-38" aria-hidden="true" tabindex="-1"></a>C <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">2</span>)</span>
+<span id="cb13-39"><a href="protein-intake-and-ruminal-supplies.html#cb13-39" aria-hidden="true" tabindex="-1"></a>Kd <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.191</span>, <span class="fl">0.04068</span>, <span class="fl">0.08174</span>, <span class="fl">0.09</span>) <span class="co"># kd/100</span></span>
+<span id="cb13-40"><a href="protein-intake-and-ruminal-supplies.html#cb13-40" aria-hidden="true" tabindex="-1"></a>Kp <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.0528</span>, <span class="fl">0.0487</span>, <span class="fl">0.0487</span>, <span class="fl">0.0528</span>) <span class="co">#ifelse feed is concentrate</span></span>
+<span id="cb13-41"><a href="protein-intake-and-ruminal-supplies.html#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="protein-intake-and-ruminal-supplies.html#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP at feed level with vector inputs</span></span>
+<span id="cb13-43"><a href="protein-intake-and-ruminal-supplies.html#cb13-43" aria-hidden="true" tabindex="-1"></a>rup_ests <span class="ot">=</span> <span class="fu">RUP</span>(<span class="at">A =</span> A, <span class="at">B =</span> B, <span class="at">C =</span> C, <span class="at">Kd =</span> Kd, <span class="at">Kp =</span> Kp)</span>
+<span id="cb13-44"><a href="protein-intake-and-ruminal-supplies.html#cb13-44" aria-hidden="true" tabindex="-1"></a>rdp_ests <span class="ot">=</span> <span class="fu">RDP</span>(<span class="at">A =</span> A, <span class="at">B =</span> B, <span class="at">Kd =</span> Kd, <span class="at">Kp =</span> Kp)</span>
+<span id="cb13-45"><a href="protein-intake-and-ruminal-supplies.html#cb13-45" aria-hidden="true" tabindex="-1"></a>rup_ests <span class="sc">+</span> rdp_ests <span class="co"># check that equal 100 if input as % of CP; or equal total CP g/d if input as g/d</span></span>
+<span id="cb13-46"><a href="protein-intake-and-ruminal-supplies.html#cb13-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-47"><a href="protein-intake-and-ruminal-supplies.html#cb13-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP (% of CP) at diet level</span></span>
+<span id="cb13-48"><a href="protein-intake-and-ruminal-supplies.html#cb13-48" aria-hidden="true" tabindex="-1"></a>rup_diet <span class="ot">=</span> <span class="fu">weighted.mean</span>(<span class="at">x =</span> rup_ests, <span class="at">w =</span> inclusion)</span>
+<span id="cb13-49"><a href="protein-intake-and-ruminal-supplies.html#cb13-49" aria-hidden="true" tabindex="-1"></a>rdp_diet <span class="ot">=</span> <span class="fu">weighted.mean</span>(<span class="at">x =</span> rdp_ests, <span class="at">w =</span> inclusion)</span>
+<span id="cb13-50"><a href="protein-intake-and-ruminal-supplies.html#cb13-50" aria-hidden="true" tabindex="-1"></a>rup_diet <span class="sc">+</span> rdp_diet <span class="co"># check that equal 100 if input as % of CP; or equal total CP g/d if input as g/d</span></span>
+<span id="cb13-51"><a href="protein-intake-and-ruminal-supplies.html#cb13-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-52"><a href="protein-intake-and-ruminal-supplies.html#cb13-52" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
+<span id="cb13-53"><a href="protein-intake-and-ruminal-supplies.html#cb13-53" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb13-54"><a href="protein-intake-and-ruminal-supplies.html#cb13-54" aria-hidden="true" tabindex="-1"></a><span class="do">####           Estimate microbial N synthesis           ####</span></span>
+<span id="cb13-55"><a href="protein-intake-and-ruminal-supplies.html#cb13-55" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb13-56"><a href="protein-intake-and-ruminal-supplies.html#cb13-56" aria-hidden="true" tabindex="-1"></a><span class="do">##%######################################################%##</span></span>
+<span id="cb13-57"><a href="protein-intake-and-ruminal-supplies.html#cb13-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Define function for microbial N, g/d</span></span>
+<span id="cb13-58"><a href="protein-intake-and-ruminal-supplies.html#cb13-58" aria-hidden="true" tabindex="-1"></a>microbialN <span class="ot">&lt;-</span> <span class="cf">function</span>(RDP, RDNDF, RDS) {</span>
+<span id="cb13-59"><a href="protein-intake-and-ruminal-supplies.html#cb13-59" aria-hidden="true" tabindex="-1"></a>  beta_0 <span class="ot">&lt;-</span> <span class="dv">101</span></span>
+<span id="cb13-60"><a href="protein-intake-and-ruminal-supplies.html#cb13-60" aria-hidden="true" tabindex="-1"></a>  beta_1 <span class="ot">&lt;-</span> <span class="fl">82.6</span> </span>
+<span id="cb13-61"><a href="protein-intake-and-ruminal-supplies.html#cb13-61" aria-hidden="true" tabindex="-1"></a>  beta_2 <span class="ot">&lt;-</span> <span class="fl">0.094</span> </span>
+<span id="cb13-62"><a href="protein-intake-and-ruminal-supplies.html#cb13-62" aria-hidden="true" tabindex="-1"></a>  beta_3 <span class="ot">&lt;-</span> <span class="fl">0.027</span> </span>
+<span id="cb13-63"><a href="protein-intake-and-ruminal-supplies.html#cb13-63" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-64"><a href="protein-intake-and-ruminal-supplies.html#cb13-64" aria-hidden="true" tabindex="-1"></a>  numerator <span class="ot">&lt;-</span> beta_0 <span class="sc">+</span> (beta_1 <span class="sc">*</span> RDP)</span>
+<span id="cb13-65"><a href="protein-intake-and-ruminal-supplies.html#cb13-65" aria-hidden="true" tabindex="-1"></a>  denominator <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">+</span> (beta_2 <span class="sc">/</span> RDNDF)) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">+</span> (beta_3 <span class="sc">/</span> RDS))</span>
+<span id="cb13-66"><a href="protein-intake-and-ruminal-supplies.html#cb13-66" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-67"><a href="protein-intake-and-ruminal-supplies.html#cb13-67" aria-hidden="true" tabindex="-1"></a>  microbialN <span class="ot">&lt;-</span> numerator <span class="sc">/</span> denominator</span>
+<span id="cb13-68"><a href="protein-intake-and-ruminal-supplies.html#cb13-68" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-69"><a href="protein-intake-and-ruminal-supplies.html#cb13-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(microbialN)</span>
+<span id="cb13-70"><a href="protein-intake-and-ruminal-supplies.html#cb13-70" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-71"><a href="protein-intake-and-ruminal-supplies.html#cb13-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-72"><a href="protein-intake-and-ruminal-supplies.html#cb13-72" aria-hidden="true" tabindex="-1"></a>MiN <span class="ot">=</span> <span class="fu">microbialN</span>(<span class="at">RDP =</span> <span class="fl">1.04</span>, <span class="at">RDNDF =</span> <span class="fl">1.97</span>, <span class="at">RDS =</span> <span class="fl">1.59</span>)</span>
+<span id="cb13-73"><a href="protein-intake-and-ruminal-supplies.html#cb13-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-74"><a href="protein-intake-and-ruminal-supplies.html#cb13-74" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to microbial CP, g/d</span></span>
+<span id="cb13-75"><a href="protein-intake-and-ruminal-supplies.html#cb13-75" aria-hidden="true" tabindex="-1"></a>MiCP <span class="ot">=</span> MiN<span class="sc">*</span><span class="fl">6.25</span></span>
+<span id="cb13-76"><a href="protein-intake-and-ruminal-supplies.html#cb13-76" aria-hidden="true" tabindex="-1"></a>MiCP</span>
+<span id="cb13-77"><a href="protein-intake-and-ruminal-supplies.html#cb13-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-78"><a href="protein-intake-and-ruminal-supplies.html#cb13-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Split TP and NPN</span></span>
+<span id="cb13-79"><a href="protein-intake-and-ruminal-supplies.html#cb13-79" aria-hidden="true" tabindex="-1"></a>MiTP <span class="ot">=</span> MiCP<span class="sc">*</span><span class="fl">0.824</span></span>
+<span id="cb13-80"><a href="protein-intake-and-ruminal-supplies.html#cb13-80" aria-hidden="true" tabindex="-1"></a>MiNPN <span class="ot">=</span> MiCP<span class="sc">*</span>(<span class="dv">1</span><span class="fl">-0.824</span>)</span></code></pre></div>
 </div>
 <div class="webex-solution">
 <button>
 Show Python Example
 </button>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="protein-intake-and-ruminal-supplies.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
-<span id="cb9-2"><a href="protein-intake-and-ruminal-supplies.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb9-3"><a href="protein-intake-and-ruminal-supplies.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">####        Calculate RDP and RUP for one feed.         ####</span></span>
-<span id="cb9-4"><a href="protein-intake-and-ruminal-supplies.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb9-5"><a href="protein-intake-and-ruminal-supplies.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
-<span id="cb9-6"><a href="protein-intake-and-ruminal-supplies.html#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="protein-intake-and-ruminal-supplies.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define functions for RUP and RDP</span></span>
-<span id="cb9-8"><a href="protein-intake-and-ruminal-supplies.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># If A, B, and C are inputted as a % of CP, returns % of CP.</span></span>
-<span id="cb9-9"><a href="protein-intake-and-ruminal-supplies.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> RUP(A: <span class="bu">float</span>, B: <span class="bu">float</span>, C: <span class="bu">float</span>, Kp: <span class="bu">float</span>, Kd: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="cb9-10"><a href="protein-intake-and-ruminal-supplies.html#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> A<span class="op">*</span><span class="fl">0.064</span> <span class="op">+</span> C <span class="op">+</span> B<span class="op">*</span>(Kp<span class="op">/</span>(Kd <span class="op">+</span> Kp))</span>
-<span id="cb9-11"><a href="protein-intake-and-ruminal-supplies.html#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="protein-intake-and-ruminal-supplies.html#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> RDP(A: <span class="bu">float</span>, B: <span class="bu">float</span>, C: <span class="bu">float</span>, Kp: <span class="bu">float</span>, Kd: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="cb9-13"><a href="protein-intake-and-ruminal-supplies.html#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> A<span class="op">*</span><span class="fl">0.936</span> <span class="op">+</span> B<span class="op">*</span>(Kd<span class="op">/</span>(Kd <span class="op">+</span> Kp))</span>
-<span id="cb9-14"><a href="protein-intake-and-ruminal-supplies.html#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="protein-intake-and-ruminal-supplies.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the inputs in this section --------------</span></span>
-<span id="cb9-16"><a href="protein-intake-and-ruminal-supplies.html#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># This example was shown by hand above.</span></span>
-<span id="cb9-17"><a href="protein-intake-and-ruminal-supplies.html#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="protein-intake-and-ruminal-supplies.html#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as a % of CP to return RUP and RDP as a % of CP</span></span>
-<span id="cb9-19"><a href="protein-intake-and-ruminal-supplies.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RUP(A<span class="op">=</span><span class="dv">31</span>, B<span class="op">=</span><span class="dv">54</span>, C<span class="op">=</span><span class="dv">15</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
-<span id="cb9-20"><a href="protein-intake-and-ruminal-supplies.html#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RUP(A<span class="op">=</span><span class="dv">31</span>, B<span class="op">=</span><span class="dv">54</span>, C<span class="op">=</span><span class="dv">15</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
-<span id="cb9-21"><a href="protein-intake-and-ruminal-supplies.html#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-22"><a href="protein-intake-and-ruminal-supplies.html#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as kg/d to return RUP and RDP as kg/d</span></span>
-<span id="cb9-23"><a href="protein-intake-and-ruminal-supplies.html#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RUP(A<span class="op">=</span><span class="fl">0.47</span>, B<span class="op">=</span><span class="fl">2.08</span>, C<span class="op">=</span><span class="fl">0.05</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
-<span id="cb9-24"><a href="protein-intake-and-ruminal-supplies.html#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RDP(A<span class="op">=</span><span class="fl">0.47</span>, B<span class="op">=</span><span class="fl">2.08</span>, C<span class="op">=</span><span class="fl">0.05</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
-<span id="cb9-25"><a href="protein-intake-and-ruminal-supplies.html#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-26"><a href="protein-intake-and-ruminal-supplies.html#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co"># To calculate RDP and RUP for an entire diet, create a dataframe</span></span>
-<span id="cb9-27"><a href="protein-intake-and-ruminal-supplies.html#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># with columns A, B, C, Kd, and Kp, where each row is a feed.</span></span>
-<span id="cb9-28"><a href="protein-intake-and-ruminal-supplies.html#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-29"><a href="protein-intake-and-ruminal-supplies.html#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb9-30"><a href="protein-intake-and-ruminal-supplies.html#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-31"><a href="protein-intake-and-ruminal-supplies.html#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co"># inclusion rates as proportions. </span><span class="al">NOTE</span><span class="co">:  unrealistic fictional diet</span></span>
-<span id="cb9-32"><a href="protein-intake-and-ruminal-supplies.html#cb9-32" aria-hidden="true" tabindex="-1"></a>inclusion <span class="op">=</span> [<span class="fl">0.10</span>, <span class="fl">0.40</span>, <span class="fl">0.20</span>, <span class="fl">0.30</span>]</span>
-<span id="cb9-33"><a href="protein-intake-and-ruminal-supplies.html#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="co"># other inputs</span></span>
-<span id="cb9-34"><a href="protein-intake-and-ruminal-supplies.html#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-35"><a href="protein-intake-and-ruminal-supplies.html#cb9-35" aria-hidden="true" tabindex="-1"></a>feed <span class="op">=</span> [<span class="st">&quot;Wheat grain&quot;</span>, <span class="st">&quot;Corn silage, typical&quot;</span>, <span class="st">&quot;Legume silage, mid-maturity&quot;</span>,</span>
-<span id="cb9-36"><a href="protein-intake-and-ruminal-supplies.html#cb9-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Soybean meal, solvent 48CP&quot;</span>]</span>
-<span id="cb9-37"><a href="protein-intake-and-ruminal-supplies.html#cb9-37" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">31</span>, <span class="dv">60</span>, <span class="dv">52</span>, <span class="dv">18</span>]</span>
-<span id="cb9-38"><a href="protein-intake-and-ruminal-supplies.html#cb9-38" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">54</span>, <span class="dv">24</span>, <span class="dv">39</span>, <span class="dv">80</span>]</span>
-<span id="cb9-39"><a href="protein-intake-and-ruminal-supplies.html#cb9-39" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">2</span>]</span>
-<span id="cb9-40"><a href="protein-intake-and-ruminal-supplies.html#cb9-40" aria-hidden="true" tabindex="-1"></a>Kd <span class="op">=</span> [<span class="fl">0.191</span>, <span class="fl">0.04068</span>, <span class="fl">0.08174</span>, <span class="fl">0.09</span>] <span class="co"># kd/100</span></span>
-<span id="cb9-41"><a href="protein-intake-and-ruminal-supplies.html#cb9-41" aria-hidden="true" tabindex="-1"></a>Kp <span class="op">=</span> [<span class="fl">0.0528</span>, <span class="fl">0.0487</span>, <span class="fl">0.0487</span>, <span class="fl">0.0528</span>] <span class="co">#if feed is concentrate</span></span>
-<span id="cb9-42"><a href="protein-intake-and-ruminal-supplies.html#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-43"><a href="protein-intake-and-ruminal-supplies.html#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dataframe with the inputs</span></span>
-<span id="cb9-44"><a href="protein-intake-and-ruminal-supplies.html#cb9-44" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">&quot;A&quot;</span>: A, <span class="st">&quot;B&quot;</span>: B, <span class="st">&quot;C&quot;</span>: C, <span class="st">&quot;Kd&quot;</span>: Kd, <span class="st">&quot;Kp&quot;</span>: Kp}, index<span class="op">=</span>feed)</span>
-<span id="cb9-45"><a href="protein-intake-and-ruminal-supplies.html#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
-<span id="cb9-46"><a href="protein-intake-and-ruminal-supplies.html#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-47"><a href="protein-intake-and-ruminal-supplies.html#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP at feed level with vector inputs</span></span>
-<span id="cb9-48"><a href="protein-intake-and-ruminal-supplies.html#cb9-48" aria-hidden="true" tabindex="-1"></a>rup_ests <span class="op">=</span> RUP(A<span class="op">=</span>df.A, B<span class="op">=</span>df.B, C<span class="op">=</span>df.C, Kd<span class="op">=</span>df.Kd, Kp<span class="op">=</span>df.Kp)</span>
-<span id="cb9-49"><a href="protein-intake-and-ruminal-supplies.html#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rup_ests)</span>
-<span id="cb9-50"><a href="protein-intake-and-ruminal-supplies.html#cb9-50" aria-hidden="true" tabindex="-1"></a>rdp_ests <span class="op">=</span> RDP(A<span class="op">=</span>df.A, B<span class="op">=</span>df.B, C<span class="op">=</span>df.C, Kd<span class="op">=</span>df.Kd, Kp<span class="op">=</span>df.Kp)</span>
-<span id="cb9-51"><a href="protein-intake-and-ruminal-supplies.html#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdp_ests)</span>
-<span id="cb9-52"><a href="protein-intake-and-ruminal-supplies.html#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rup_ests <span class="op">+</span> rdp_ests) <span class="co"># check that equal 100</span></span>
-<span id="cb9-53"><a href="protein-intake-and-ruminal-supplies.html#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-54"><a href="protein-intake-and-ruminal-supplies.html#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP (% of CP) at diet level</span></span>
-<span id="cb9-55"><a href="protein-intake-and-ruminal-supplies.html#cb9-55" aria-hidden="true" tabindex="-1"></a>rup_diet <span class="op">=</span> <span class="bu">sum</span>(rup_ests <span class="op">*</span> inclusion)</span>
-<span id="cb9-56"><a href="protein-intake-and-ruminal-supplies.html#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rup_diet)</span>
-<span id="cb9-57"><a href="protein-intake-and-ruminal-supplies.html#cb9-57" aria-hidden="true" tabindex="-1"></a>rdp_diet <span class="op">=</span> <span class="bu">sum</span>(rdp_ests</span>
-<span id="cb9-58"><a href="protein-intake-and-ruminal-supplies.html#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdp_diet)</span>
-<span id="cb9-59"><a href="protein-intake-and-ruminal-supplies.html#cb9-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-60"><a href="protein-intake-and-ruminal-supplies.html#cb9-60" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
-<span id="cb9-61"><a href="protein-intake-and-ruminal-supplies.html#cb9-61" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb9-62"><a href="protein-intake-and-ruminal-supplies.html#cb9-62" aria-hidden="true" tabindex="-1"></a><span class="co">####                    Microbial N                     ####</span></span>
-<span id="cb9-63"><a href="protein-intake-and-ruminal-supplies.html#cb9-63" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
-<span id="cb9-64"><a href="protein-intake-and-ruminal-supplies.html#cb9-64" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
-<span id="cb9-65"><a href="protein-intake-and-ruminal-supplies.html#cb9-65" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> microbialN(RDP, RDNDF, RDS):</span>
-<span id="cb9-66"><a href="protein-intake-and-ruminal-supplies.html#cb9-66" aria-hidden="true" tabindex="-1"></a>    beta_0, beta_1, beta_2, beta_3 <span class="op">=</span> <span class="dv">101</span>, <span class="fl">82.6</span>, <span class="fl">0.094</span>, <span class="fl">0.027</span></span>
-<span id="cb9-67"><a href="protein-intake-and-ruminal-supplies.html#cb9-67" aria-hidden="true" tabindex="-1"></a>    numerator <span class="op">=</span> beta_0 <span class="op">+</span> (beta_1 <span class="op">*</span> RDP)</span>
-<span id="cb9-68"><a href="protein-intake-and-ruminal-supplies.html#cb9-68" aria-hidden="true" tabindex="-1"></a>    denominator <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> (beta_2 <span class="op">/</span> RDNDF)) <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> (beta_3 <span class="op">/</span> RDS))</span>
-<span id="cb9-69"><a href="protein-intake-and-ruminal-supplies.html#cb9-69" aria-hidden="true" tabindex="-1"></a>    microbialN <span class="op">=</span> numerator <span class="op">/</span> denominator</span>
-<span id="cb9-70"><a href="protein-intake-and-ruminal-supplies.html#cb9-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> microbialN</span>
-<span id="cb9-71"><a href="protein-intake-and-ruminal-supplies.html#cb9-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-72"><a href="protein-intake-and-ruminal-supplies.html#cb9-72" aria-hidden="true" tabindex="-1"></a>MiN <span class="op">=</span> microbialN(RDP<span class="op">=</span><span class="fl">1.04</span>, RDNDF<span class="op">=</span><span class="fl">1.97</span>, RDS<span class="op">=</span><span class="fl">1.59</span>)</span>
-<span id="cb9-73"><a href="protein-intake-and-ruminal-supplies.html#cb9-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiN)</span>
-<span id="cb9-74"><a href="protein-intake-and-ruminal-supplies.html#cb9-74" aria-hidden="true" tabindex="-1"></a>MiCP <span class="op">=</span> MiN <span class="op">*</span> <span class="fl">6.25</span></span>
-<span id="cb9-75"><a href="protein-intake-and-ruminal-supplies.html#cb9-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiCP)</span>
-<span id="cb9-76"><a href="protein-intake-and-ruminal-supplies.html#cb9-76" aria-hidden="true" tabindex="-1"></a>MiTP <span class="op">=</span> MiCP <span class="op">*</span> <span class="fl">0.824</span></span>
-<span id="cb9-77"><a href="protein-intake-and-ruminal-supplies.html#cb9-77" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiTP)</span>
-<span id="cb9-78"><a href="protein-intake-and-ruminal-supplies.html#cb9-78" aria-hidden="true" tabindex="-1"></a>MiNPN <span class="op">=</span> MiCP <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> <span class="fl">0.824</span>)</span>
-<span id="cb9-79"><a href="protein-intake-and-ruminal-supplies.html#cb9-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiNPN)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="protein-intake-and-ruminal-supplies.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
+<span id="cb14-2"><a href="protein-intake-and-ruminal-supplies.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb14-3"><a href="protein-intake-and-ruminal-supplies.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">####        Calculate RDP and RUP for one feed.         ####</span></span>
+<span id="cb14-4"><a href="protein-intake-and-ruminal-supplies.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb14-5"><a href="protein-intake-and-ruminal-supplies.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
+<span id="cb14-6"><a href="protein-intake-and-ruminal-supplies.html#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="protein-intake-and-ruminal-supplies.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define functions for RUP and RDP</span></span>
+<span id="cb14-8"><a href="protein-intake-and-ruminal-supplies.html#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># If A, B, and C are inputted as a % of CP, returns % of CP.</span></span>
+<span id="cb14-9"><a href="protein-intake-and-ruminal-supplies.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> RUP(A: <span class="bu">float</span>, B: <span class="bu">float</span>, C: <span class="bu">float</span>, Kp: <span class="bu">float</span>, Kd: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb14-10"><a href="protein-intake-and-ruminal-supplies.html#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> A<span class="op">*</span><span class="fl">0.064</span> <span class="op">+</span> C <span class="op">+</span> B<span class="op">*</span>(Kp<span class="op">/</span>(Kd <span class="op">+</span> Kp))</span>
+<span id="cb14-11"><a href="protein-intake-and-ruminal-supplies.html#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="protein-intake-and-ruminal-supplies.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> RDP(A: <span class="bu">float</span>, B: <span class="bu">float</span>, C: <span class="bu">float</span>, Kp: <span class="bu">float</span>, Kd: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb14-13"><a href="protein-intake-and-ruminal-supplies.html#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> A<span class="op">*</span><span class="fl">0.936</span> <span class="op">+</span> B<span class="op">*</span>(Kd<span class="op">/</span>(Kd <span class="op">+</span> Kp))</span>
+<span id="cb14-14"><a href="protein-intake-and-ruminal-supplies.html#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="protein-intake-and-ruminal-supplies.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the inputs in this section --------------</span></span>
+<span id="cb14-16"><a href="protein-intake-and-ruminal-supplies.html#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># This example was shown by hand above.</span></span>
+<span id="cb14-17"><a href="protein-intake-and-ruminal-supplies.html#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="protein-intake-and-ruminal-supplies.html#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as a % of CP to return RUP and RDP as a % of CP</span></span>
+<span id="cb14-19"><a href="protein-intake-and-ruminal-supplies.html#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RUP(A<span class="op">=</span><span class="dv">31</span>, B<span class="op">=</span><span class="dv">54</span>, C<span class="op">=</span><span class="dv">15</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
+<span id="cb14-20"><a href="protein-intake-and-ruminal-supplies.html#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RUP(A<span class="op">=</span><span class="dv">31</span>, B<span class="op">=</span><span class="dv">54</span>, C<span class="op">=</span><span class="dv">15</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
+<span id="cb14-21"><a href="protein-intake-and-ruminal-supplies.html#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="protein-intake-and-ruminal-supplies.html#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Input A, B, C as kg/d to return RUP and RDP as kg/d</span></span>
+<span id="cb14-23"><a href="protein-intake-and-ruminal-supplies.html#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RUP(A<span class="op">=</span><span class="fl">0.47</span>, B<span class="op">=</span><span class="fl">2.08</span>, C<span class="op">=</span><span class="fl">0.05</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
+<span id="cb14-24"><a href="protein-intake-and-ruminal-supplies.html#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RDP(A<span class="op">=</span><span class="fl">0.47</span>, B<span class="op">=</span><span class="fl">2.08</span>, C<span class="op">=</span><span class="fl">0.05</span>, Kd<span class="op">=</span><span class="fl">0.091</span>, Kp<span class="op">=</span><span class="fl">0.0528</span>))</span>
+<span id="cb14-25"><a href="protein-intake-and-ruminal-supplies.html#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="protein-intake-and-ruminal-supplies.html#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="co"># To calculate RDP and RUP for an entire diet, create a dataframe</span></span>
+<span id="cb14-27"><a href="protein-intake-and-ruminal-supplies.html#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="co"># with columns A, B, C, Kd, and Kp, where each row is a feed.</span></span>
+<span id="cb14-28"><a href="protein-intake-and-ruminal-supplies.html#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="protein-intake-and-ruminal-supplies.html#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-30"><a href="protein-intake-and-ruminal-supplies.html#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="protein-intake-and-ruminal-supplies.html#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co"># inclusion rates as proportions. </span><span class="al">NOTE</span><span class="co">:  unrealistic fictional diet</span></span>
+<span id="cb14-32"><a href="protein-intake-and-ruminal-supplies.html#cb14-32" aria-hidden="true" tabindex="-1"></a>inclusion <span class="op">=</span> [<span class="fl">0.10</span>, <span class="fl">0.40</span>, <span class="fl">0.20</span>, <span class="fl">0.30</span>]</span>
+<span id="cb14-33"><a href="protein-intake-and-ruminal-supplies.html#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="co"># other inputs</span></span>
+<span id="cb14-34"><a href="protein-intake-and-ruminal-supplies.html#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="protein-intake-and-ruminal-supplies.html#cb14-35" aria-hidden="true" tabindex="-1"></a>feed <span class="op">=</span> [<span class="st">&quot;Wheat grain&quot;</span>, <span class="st">&quot;Corn silage, typical&quot;</span>, <span class="st">&quot;Legume silage, mid-maturity&quot;</span>,</span>
+<span id="cb14-36"><a href="protein-intake-and-ruminal-supplies.html#cb14-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Soybean meal, solvent 48CP&quot;</span>]</span>
+<span id="cb14-37"><a href="protein-intake-and-ruminal-supplies.html#cb14-37" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">31</span>, <span class="dv">60</span>, <span class="dv">52</span>, <span class="dv">18</span>]</span>
+<span id="cb14-38"><a href="protein-intake-and-ruminal-supplies.html#cb14-38" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">54</span>, <span class="dv">24</span>, <span class="dv">39</span>, <span class="dv">80</span>]</span>
+<span id="cb14-39"><a href="protein-intake-and-ruminal-supplies.html#cb14-39" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">2</span>]</span>
+<span id="cb14-40"><a href="protein-intake-and-ruminal-supplies.html#cb14-40" aria-hidden="true" tabindex="-1"></a>Kd <span class="op">=</span> [<span class="fl">0.191</span>, <span class="fl">0.04068</span>, <span class="fl">0.08174</span>, <span class="fl">0.09</span>] <span class="co"># kd/100</span></span>
+<span id="cb14-41"><a href="protein-intake-and-ruminal-supplies.html#cb14-41" aria-hidden="true" tabindex="-1"></a>Kp <span class="op">=</span> [<span class="fl">0.0528</span>, <span class="fl">0.0487</span>, <span class="fl">0.0487</span>, <span class="fl">0.0528</span>] <span class="co">#if feed is concentrate</span></span>
+<span id="cb14-42"><a href="protein-intake-and-ruminal-supplies.html#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="protein-intake-and-ruminal-supplies.html#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dataframe with the inputs</span></span>
+<span id="cb14-44"><a href="protein-intake-and-ruminal-supplies.html#cb14-44" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">&quot;A&quot;</span>: A, <span class="st">&quot;B&quot;</span>: B, <span class="st">&quot;C&quot;</span>: C, <span class="st">&quot;Kd&quot;</span>: Kd, <span class="st">&quot;Kp&quot;</span>: Kp}, index<span class="op">=</span>feed)</span>
+<span id="cb14-45"><a href="protein-intake-and-ruminal-supplies.html#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb14-46"><a href="protein-intake-and-ruminal-supplies.html#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="protein-intake-and-ruminal-supplies.html#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP at feed level with vector inputs</span></span>
+<span id="cb14-48"><a href="protein-intake-and-ruminal-supplies.html#cb14-48" aria-hidden="true" tabindex="-1"></a>rup_ests <span class="op">=</span> RUP(A<span class="op">=</span>df.A, B<span class="op">=</span>df.B, C<span class="op">=</span>df.C, Kd<span class="op">=</span>df.Kd, Kp<span class="op">=</span>df.Kp)</span>
+<span id="cb14-49"><a href="protein-intake-and-ruminal-supplies.html#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rup_ests)</span>
+<span id="cb14-50"><a href="protein-intake-and-ruminal-supplies.html#cb14-50" aria-hidden="true" tabindex="-1"></a>rdp_ests <span class="op">=</span> RDP(A<span class="op">=</span>df.A, B<span class="op">=</span>df.B, C<span class="op">=</span>df.C, Kd<span class="op">=</span>df.Kd, Kp<span class="op">=</span>df.Kp)</span>
+<span id="cb14-51"><a href="protein-intake-and-ruminal-supplies.html#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdp_ests)</span>
+<span id="cb14-52"><a href="protein-intake-and-ruminal-supplies.html#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rup_ests <span class="op">+</span> rdp_ests) <span class="co"># check that equal 100</span></span>
+<span id="cb14-53"><a href="protein-intake-and-ruminal-supplies.html#cb14-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-54"><a href="protein-intake-and-ruminal-supplies.html#cb14-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RDP and RUP (% of CP) at diet level</span></span>
+<span id="cb14-55"><a href="protein-intake-and-ruminal-supplies.html#cb14-55" aria-hidden="true" tabindex="-1"></a>rup_diet <span class="op">=</span> <span class="bu">sum</span>(rup_ests <span class="op">*</span> inclusion)</span>
+<span id="cb14-56"><a href="protein-intake-and-ruminal-supplies.html#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rup_diet)</span>
+<span id="cb14-57"><a href="protein-intake-and-ruminal-supplies.html#cb14-57" aria-hidden="true" tabindex="-1"></a>rdp_diet <span class="op">=</span> <span class="bu">sum</span>(rdp_ests</span>
+<span id="cb14-58"><a href="protein-intake-and-ruminal-supplies.html#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdp_diet)</span>
+<span id="cb14-59"><a href="protein-intake-and-ruminal-supplies.html#cb14-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-60"><a href="protein-intake-and-ruminal-supplies.html#cb14-60" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
+<span id="cb14-61"><a href="protein-intake-and-ruminal-supplies.html#cb14-61" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb14-62"><a href="protein-intake-and-ruminal-supplies.html#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="co">####                    Microbial N                     ####</span></span>
+<span id="cb14-63"><a href="protein-intake-and-ruminal-supplies.html#cb14-63" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                          #</span></span>
+<span id="cb14-64"><a href="protein-intake-and-ruminal-supplies.html#cb14-64" aria-hidden="true" tabindex="-1"></a><span class="co">##%######################################################%##</span></span>
+<span id="cb14-65"><a href="protein-intake-and-ruminal-supplies.html#cb14-65" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> microbialN(RDP, RDNDF, RDS):</span>
+<span id="cb14-66"><a href="protein-intake-and-ruminal-supplies.html#cb14-66" aria-hidden="true" tabindex="-1"></a>    beta_0, beta_1, beta_2, beta_3 <span class="op">=</span> <span class="dv">101</span>, <span class="fl">82.6</span>, <span class="fl">0.094</span>, <span class="fl">0.027</span></span>
+<span id="cb14-67"><a href="protein-intake-and-ruminal-supplies.html#cb14-67" aria-hidden="true" tabindex="-1"></a>    numerator <span class="op">=</span> beta_0 <span class="op">+</span> (beta_1 <span class="op">*</span> RDP)</span>
+<span id="cb14-68"><a href="protein-intake-and-ruminal-supplies.html#cb14-68" aria-hidden="true" tabindex="-1"></a>    denominator <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> (beta_2 <span class="op">/</span> RDNDF)) <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> (beta_3 <span class="op">/</span> RDS))</span>
+<span id="cb14-69"><a href="protein-intake-and-ruminal-supplies.html#cb14-69" aria-hidden="true" tabindex="-1"></a>    microbialN <span class="op">=</span> numerator <span class="op">/</span> denominator</span>
+<span id="cb14-70"><a href="protein-intake-and-ruminal-supplies.html#cb14-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> microbialN</span>
+<span id="cb14-71"><a href="protein-intake-and-ruminal-supplies.html#cb14-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-72"><a href="protein-intake-and-ruminal-supplies.html#cb14-72" aria-hidden="true" tabindex="-1"></a>MiN <span class="op">=</span> microbialN(RDP<span class="op">=</span><span class="fl">1.04</span>, RDNDF<span class="op">=</span><span class="fl">1.97</span>, RDS<span class="op">=</span><span class="fl">1.59</span>)</span>
+<span id="cb14-73"><a href="protein-intake-and-ruminal-supplies.html#cb14-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiN)</span>
+<span id="cb14-74"><a href="protein-intake-and-ruminal-supplies.html#cb14-74" aria-hidden="true" tabindex="-1"></a>MiCP <span class="op">=</span> MiN <span class="op">*</span> <span class="fl">6.25</span></span>
+<span id="cb14-75"><a href="protein-intake-and-ruminal-supplies.html#cb14-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiCP)</span>
+<span id="cb14-76"><a href="protein-intake-and-ruminal-supplies.html#cb14-76" aria-hidden="true" tabindex="-1"></a>MiTP <span class="op">=</span> MiCP <span class="op">*</span> <span class="fl">0.824</span></span>
+<span id="cb14-77"><a href="protein-intake-and-ruminal-supplies.html#cb14-77" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiTP)</span>
+<span id="cb14-78"><a href="protein-intake-and-ruminal-supplies.html#cb14-78" aria-hidden="true" tabindex="-1"></a>MiNPN <span class="op">=</span> MiCP <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> <span class="fl">0.824</span>)</span>
+<span id="cb14-79"><a href="protein-intake-and-ruminal-supplies.html#cb14-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MiNPN)</span></code></pre></div>
 </div>
 </div>
-<div id="questions-5" class="section level2 hasAnchor" number="7.4">
-<h2><span class="header-section-number">7.4</span> Questions<a href="protein-intake-and-ruminal-supplies.html#questions-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="questions-9" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Questions<a href="protein-intake-and-ruminal-supplies.html#questions-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>What is a typical range of RUP and RDP for a lactating dairy cow ration (% of CP)?</li>
 <li>What would happen if an animal were fed too much RDP? Or RUP?</li>
@@ -1095,86 +1171,86 @@ Show Python Example
 <li>Tell about a method used to estimate protein digestibility for the whole digestive tract.</li>
 </ol>
 </div>
-<div id="r-code-for-figures-needs-update" class="section level2 hasAnchor" number="7.5">
-<h2><span class="header-section-number">7.5</span> R code for figures ### NEEDS UPDATE<a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="r-code-for-figures-needs-update" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> R code for figures ### NEEDS UPDATE<a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="webex-solution">
 <button>
 Show R code for Figures
 </button>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="protein-intake-and-ruminal-supplies.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the necessary packages</span></span>
-<span id="cb10-2"><a href="protein-intake-and-ruminal-supplies.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-3"><a href="protein-intake-and-ruminal-supplies.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb10-4"><a href="protein-intake-and-ruminal-supplies.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb10-5"><a href="protein-intake-and-ruminal-supplies.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb10-6"><a href="protein-intake-and-ruminal-supplies.html#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="protein-intake-and-ruminal-supplies.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
-<span id="cb10-8"><a href="protein-intake-and-ruminal-supplies.html#cb10-8" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb10-9"><a href="protein-intake-and-ruminal-supplies.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the data</span></span>
-<span id="cb10-10"><a href="protein-intake-and-ruminal-supplies.html#cb10-10" aria-hidden="true" tabindex="-1"></a>time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">48</span>, <span class="at">by =</span> <span class="dv">4</span>))</span>
-<span id="cb10-11"><a href="protein-intake-and-ruminal-supplies.html#cb10-11" aria-hidden="true" tabindex="-1"></a>protein <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">71</span>, <span class="dv">51</span>, <span class="dv">37</span>, <span class="dv">26</span>, <span class="dv">19</span>, <span class="dv">14</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
-<span id="cb10-12"><a href="protein-intake-and-ruminal-supplies.html#cb10-12" aria-hidden="true" tabindex="-1"></a>frac <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>)</span>
-<span id="cb10-13"><a href="protein-intake-and-ruminal-supplies.html#cb10-13" aria-hidden="true" tabindex="-1"></a>a_frac <span class="ot">&lt;-</span> <span class="dv">80</span></span>
-<span id="cb10-14"><a href="protein-intake-and-ruminal-supplies.html#cb10-14" aria-hidden="true" tabindex="-1"></a>b_frac <span class="ot">&lt;-</span> <span class="dv">15</span></span>
-<span id="cb10-15"><a href="protein-intake-and-ruminal-supplies.html#cb10-15" aria-hidden="true" tabindex="-1"></a>c_frac <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb10-16"><a href="protein-intake-and-ruminal-supplies.html#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="protein-intake-and-ruminal-supplies.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with the data</span></span>
-<span id="cb10-18"><a href="protein-intake-and-ruminal-supplies.html#cb10-18" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">time =</span> time, <span class="at">protein =</span> protein)</span>
-<span id="cb10-19"><a href="protein-intake-and-ruminal-supplies.html#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="protein-intake-and-ruminal-supplies.html#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot using ggplot</span></span>
-<span id="cb10-21"><a href="protein-intake-and-ruminal-supplies.html#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> protein)) <span class="sc">+</span></span>
-<span id="cb10-22"><a href="protein-intake-and-ruminal-supplies.html#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
-<span id="cb10-23"><a href="protein-intake-and-ruminal-supplies.html#cb10-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> frac), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb10-24"><a href="protein-intake-and-ruminal-supplies.html#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">110</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb10-25"><a href="protein-intake-and-ruminal-supplies.html#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time (hours)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Protein remaining (%)&quot;</span>, <span class="at">title =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb10-26"><a href="protein-intake-and-ruminal-supplies.html#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">5</span>, <span class="at">y =</span> <span class="dv">85</span>, <span class="at">label =</span> <span class="st">&quot;A fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#F8766D&quot;</span>) <span class="sc">+</span></span>
-<span id="cb10-27"><a href="protein-intake-and-ruminal-supplies.html#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">20</span>, <span class="at">y =</span> <span class="dv">45</span>, <span class="at">label =</span> <span class="st">&quot;B fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#00BA38&quot;</span>) <span class="sc">+</span></span>
-<span id="cb10-28"><a href="protein-intake-and-ruminal-supplies.html#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">35</span>, <span class="at">y =</span> <span class="dv">20</span>, <span class="at">label =</span> <span class="st">&quot;C fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#619CFF&quot;</span>) <span class="sc">+</span></span>
-<span id="cb10-29"><a href="protein-intake-and-ruminal-supplies.html#cb10-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb10-30"><a href="protein-intake-and-ruminal-supplies.html#cb10-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb10-31"><a href="protein-intake-and-ruminal-supplies.html#cb10-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))</span>
-<span id="cb10-32"><a href="protein-intake-and-ruminal-supplies.html#cb10-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-33"><a href="protein-intake-and-ruminal-supplies.html#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
-<span id="cb10-34"><a href="protein-intake-and-ruminal-supplies.html#cb10-34" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb10-35"><a href="protein-intake-and-ruminal-supplies.html#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-36"><a href="protein-intake-and-ruminal-supplies.html#cb10-36" aria-hidden="true" tabindex="-1"></a>feed <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Wheat grain&quot;</span>, <span class="st">&quot;Corn silage, typical&quot;</span>, <span class="st">&quot;Legume silage, mid-maturity&quot;</span>, </span>
-<span id="cb10-37"><a href="protein-intake-and-ruminal-supplies.html#cb10-37" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&quot;Soybean meal, solvent 48CP&quot;</span>)</span>
-<span id="cb10-38"><a href="protein-intake-and-ruminal-supplies.html#cb10-38" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">31</span>, <span class="dv">60</span>, <span class="dv">52</span>, <span class="dv">18</span>)</span>
-<span id="cb10-39"><a href="protein-intake-and-ruminal-supplies.html#cb10-39" aria-hidden="true" tabindex="-1"></a>B <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">54</span>, <span class="dv">24</span>, <span class="dv">39</span>, <span class="dv">80</span>)</span>
-<span id="cb10-40"><a href="protein-intake-and-ruminal-supplies.html#cb10-40" aria-hidden="true" tabindex="-1"></a>C <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">2</span>)</span>
-<span id="cb10-41"><a href="protein-intake-and-ruminal-supplies.html#cb10-41" aria-hidden="true" tabindex="-1"></a>Kd <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.191</span>, <span class="fl">0.04068</span>, <span class="fl">0.08174</span>, <span class="fl">0.09</span>) <span class="co"># kd/100</span></span>
-<span id="cb10-42"><a href="protein-intake-and-ruminal-supplies.html#cb10-42" aria-hidden="true" tabindex="-1"></a>Kp <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.0528</span>, <span class="fl">0.0487</span>, <span class="fl">0.0487</span>, <span class="fl">0.0528</span>) <span class="co">#ifelse feed is concentrate</span></span>
-<span id="cb10-43"><a href="protein-intake-and-ruminal-supplies.html#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-44"><a href="protein-intake-and-ruminal-supplies.html#cb10-44" aria-hidden="true" tabindex="-1"></a>RUP <span class="ot">=</span> A<span class="sc">*</span>.<span class="dv">064</span> <span class="sc">+</span> C <span class="sc">+</span> B<span class="sc">*</span>(Kp<span class="sc">/</span>(Kd <span class="sc">+</span> Kp)) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
-<span id="cb10-45"><a href="protein-intake-and-ruminal-supplies.html#cb10-45" aria-hidden="true" tabindex="-1"></a>RDP <span class="ot">=</span> A<span class="sc">*</span>.<span class="dv">936</span> <span class="sc">+</span> B<span class="sc">*</span>(Kd<span class="sc">/</span>(Kd <span class="sc">+</span> Kp)) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
-<span id="cb10-46"><a href="protein-intake-and-ruminal-supplies.html#cb10-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-47"><a href="protein-intake-and-ruminal-supplies.html#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-48"><a href="protein-intake-and-ruminal-supplies.html#cb10-48" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">feed =</span> feed,</span>
-<span id="cb10-49"><a href="protein-intake-and-ruminal-supplies.html#cb10-49" aria-hidden="true" tabindex="-1"></a>                <span class="at">A =</span> A,</span>
-<span id="cb10-50"><a href="protein-intake-and-ruminal-supplies.html#cb10-50" aria-hidden="true" tabindex="-1"></a>                <span class="at">B =</span> B,</span>
-<span id="cb10-51"><a href="protein-intake-and-ruminal-supplies.html#cb10-51" aria-hidden="true" tabindex="-1"></a>                <span class="at">C =</span> C,</span>
-<span id="cb10-52"><a href="protein-intake-and-ruminal-supplies.html#cb10-52" aria-hidden="true" tabindex="-1"></a>                <span class="at">Kd =</span> Kd,</span>
-<span id="cb10-53"><a href="protein-intake-and-ruminal-supplies.html#cb10-53" aria-hidden="true" tabindex="-1"></a>                <span class="at">Kp =</span> Kp, </span>
-<span id="cb10-54"><a href="protein-intake-and-ruminal-supplies.html#cb10-54" aria-hidden="true" tabindex="-1"></a>                <span class="at">RUP =</span> RUP,</span>
-<span id="cb10-55"><a href="protein-intake-and-ruminal-supplies.html#cb10-55" aria-hidden="true" tabindex="-1"></a>                <span class="at">RDP =</span> RDP) </span>
-<span id="cb10-56"><a href="protein-intake-and-ruminal-supplies.html#cb10-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-57"><a href="protein-intake-and-ruminal-supplies.html#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="co"># create time data.frame</span></span>
-<span id="cb10-58"><a href="protein-intake-and-ruminal-supplies.html#cb10-58" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, .<span class="dv">5</span>)</span>
-<span id="cb10-59"><a href="protein-intake-and-ruminal-supplies.html#cb10-59" aria-hidden="true" tabindex="-1"></a>tdf <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">t =</span> <span class="fu">rep</span>(t, <span class="at">each =</span> <span class="fu">length</span>(feed)),</span>
-<span id="cb10-60"><a href="protein-intake-and-ruminal-supplies.html#cb10-60" aria-hidden="true" tabindex="-1"></a>                 <span class="at">feed =</span> feed)</span>
-<span id="cb10-61"><a href="protein-intake-and-ruminal-supplies.html#cb10-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-62"><a href="protein-intake-and-ruminal-supplies.html#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="co"># use the rate of disappearance, Kd + Kp</span></span>
-<span id="cb10-63"><a href="protein-intake-and-ruminal-supplies.html#cb10-63" aria-hidden="true" tabindex="-1"></a>plotdf <span class="ot">=</span> <span class="fu">left_join</span>(df, tdf) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-64"><a href="protein-intake-and-ruminal-supplies.html#cb10-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">remaining_cp =</span> A<span class="sc">*</span><span class="fl">0.064</span> <span class="sc">+</span> B<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>(Kd<span class="sc">+</span>Kp)<span class="sc">*</span>t)<span class="sc">+</span> C)</span>
-<span id="cb10-65"><a href="protein-intake-and-ruminal-supplies.html#cb10-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-66"><a href="protein-intake-and-ruminal-supplies.html#cb10-66" aria-hidden="true" tabindex="-1"></a><span class="co"># use two df is easier</span></span>
-<span id="cb10-67"><a href="protein-intake-and-ruminal-supplies.html#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb10-68"><a href="protein-intake-and-ruminal-supplies.html#cb10-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> plotdf, </span>
-<span id="cb10-69"><a href="protein-intake-and-ruminal-supplies.html#cb10-69" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> remaining_cp)) <span class="sc">+</span></span>
-<span id="cb10-70"><a href="protein-intake-and-ruminal-supplies.html#cb10-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">100</span>) <span class="sc">+</span></span>
-<span id="cb10-71"><a href="protein-intake-and-ruminal-supplies.html#cb10-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time, h&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Remaining CP, %&quot;</span> )<span class="sc">+</span></span>
-<span id="cb10-72"><a href="protein-intake-and-ruminal-supplies.html#cb10-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> (C<span class="sc">+</span>A<span class="sc">*</span>.<span class="dv">064</span>), <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>), <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb10-73"><a href="protein-intake-and-ruminal-supplies.html#cb10-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">ymin =</span> (<span class="dv">100</span> <span class="sc">-</span> A<span class="sc">*</span>.<span class="dv">936</span>), <span class="at">ymax =</span> <span class="cn">Inf</span>, <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>), <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb10-74"><a href="protein-intake-and-ruminal-supplies.html#cb10-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>feed) <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="protein-intake-and-ruminal-supplies.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the necessary packages</span></span>
+<span id="cb15-2"><a href="protein-intake-and-ruminal-supplies.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-3"><a href="protein-intake-and-ruminal-supplies.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb15-4"><a href="protein-intake-and-ruminal-supplies.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb15-5"><a href="protein-intake-and-ruminal-supplies.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb15-6"><a href="protein-intake-and-ruminal-supplies.html#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="protein-intake-and-ruminal-supplies.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
+<span id="cb15-8"><a href="protein-intake-and-ruminal-supplies.html#cb15-8" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb15-9"><a href="protein-intake-and-ruminal-supplies.html#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the data</span></span>
+<span id="cb15-10"><a href="protein-intake-and-ruminal-supplies.html#cb15-10" aria-hidden="true" tabindex="-1"></a>time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">48</span>, <span class="at">by =</span> <span class="dv">4</span>))</span>
+<span id="cb15-11"><a href="protein-intake-and-ruminal-supplies.html#cb15-11" aria-hidden="true" tabindex="-1"></a>protein <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">71</span>, <span class="dv">51</span>, <span class="dv">37</span>, <span class="dv">26</span>, <span class="dv">19</span>, <span class="dv">14</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb15-12"><a href="protein-intake-and-ruminal-supplies.html#cb15-12" aria-hidden="true" tabindex="-1"></a>frac <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>)</span>
+<span id="cb15-13"><a href="protein-intake-and-ruminal-supplies.html#cb15-13" aria-hidden="true" tabindex="-1"></a>a_frac <span class="ot">&lt;-</span> <span class="dv">80</span></span>
+<span id="cb15-14"><a href="protein-intake-and-ruminal-supplies.html#cb15-14" aria-hidden="true" tabindex="-1"></a>b_frac <span class="ot">&lt;-</span> <span class="dv">15</span></span>
+<span id="cb15-15"><a href="protein-intake-and-ruminal-supplies.html#cb15-15" aria-hidden="true" tabindex="-1"></a>c_frac <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb15-16"><a href="protein-intake-and-ruminal-supplies.html#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="protein-intake-and-ruminal-supplies.html#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with the data</span></span>
+<span id="cb15-18"><a href="protein-intake-and-ruminal-supplies.html#cb15-18" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">time =</span> time, <span class="at">protein =</span> protein)</span>
+<span id="cb15-19"><a href="protein-intake-and-ruminal-supplies.html#cb15-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-20"><a href="protein-intake-and-ruminal-supplies.html#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot using ggplot</span></span>
+<span id="cb15-21"><a href="protein-intake-and-ruminal-supplies.html#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> protein)) <span class="sc">+</span></span>
+<span id="cb15-22"><a href="protein-intake-and-ruminal-supplies.html#cb15-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb15-23"><a href="protein-intake-and-ruminal-supplies.html#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> frac), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb15-24"><a href="protein-intake-and-ruminal-supplies.html#cb15-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">110</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb15-25"><a href="protein-intake-and-ruminal-supplies.html#cb15-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time (hours)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Protein remaining (%)&quot;</span>, <span class="at">title =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb15-26"><a href="protein-intake-and-ruminal-supplies.html#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">5</span>, <span class="at">y =</span> <span class="dv">85</span>, <span class="at">label =</span> <span class="st">&quot;A fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#F8766D&quot;</span>) <span class="sc">+</span></span>
+<span id="cb15-27"><a href="protein-intake-and-ruminal-supplies.html#cb15-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">20</span>, <span class="at">y =</span> <span class="dv">45</span>, <span class="at">label =</span> <span class="st">&quot;B fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#00BA38&quot;</span>) <span class="sc">+</span></span>
+<span id="cb15-28"><a href="protein-intake-and-ruminal-supplies.html#cb15-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">35</span>, <span class="at">y =</span> <span class="dv">20</span>, <span class="at">label =</span> <span class="st">&quot;C fraction&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">&quot;#619CFF&quot;</span>) <span class="sc">+</span></span>
+<span id="cb15-29"><a href="protein-intake-and-ruminal-supplies.html#cb15-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb15-30"><a href="protein-intake-and-ruminal-supplies.html#cb15-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb15-31"><a href="protein-intake-and-ruminal-supplies.html#cb15-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))</span>
+<span id="cb15-32"><a href="protein-intake-and-ruminal-supplies.html#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-33"><a href="protein-intake-and-ruminal-supplies.html#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
+<span id="cb15-34"><a href="protein-intake-and-ruminal-supplies.html#cb15-34" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb15-35"><a href="protein-intake-and-ruminal-supplies.html#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="protein-intake-and-ruminal-supplies.html#cb15-36" aria-hidden="true" tabindex="-1"></a>feed <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Wheat grain&quot;</span>, <span class="st">&quot;Corn silage, typical&quot;</span>, <span class="st">&quot;Legume silage, mid-maturity&quot;</span>, </span>
+<span id="cb15-37"><a href="protein-intake-and-ruminal-supplies.html#cb15-37" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&quot;Soybean meal, solvent 48CP&quot;</span>)</span>
+<span id="cb15-38"><a href="protein-intake-and-ruminal-supplies.html#cb15-38" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">31</span>, <span class="dv">60</span>, <span class="dv">52</span>, <span class="dv">18</span>)</span>
+<span id="cb15-39"><a href="protein-intake-and-ruminal-supplies.html#cb15-39" aria-hidden="true" tabindex="-1"></a>B <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">54</span>, <span class="dv">24</span>, <span class="dv">39</span>, <span class="dv">80</span>)</span>
+<span id="cb15-40"><a href="protein-intake-and-ruminal-supplies.html#cb15-40" aria-hidden="true" tabindex="-1"></a>C <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">2</span>)</span>
+<span id="cb15-41"><a href="protein-intake-and-ruminal-supplies.html#cb15-41" aria-hidden="true" tabindex="-1"></a>Kd <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.191</span>, <span class="fl">0.04068</span>, <span class="fl">0.08174</span>, <span class="fl">0.09</span>) <span class="co"># kd/100</span></span>
+<span id="cb15-42"><a href="protein-intake-and-ruminal-supplies.html#cb15-42" aria-hidden="true" tabindex="-1"></a>Kp <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.0528</span>, <span class="fl">0.0487</span>, <span class="fl">0.0487</span>, <span class="fl">0.0528</span>) <span class="co">#ifelse feed is concentrate</span></span>
+<span id="cb15-43"><a href="protein-intake-and-ruminal-supplies.html#cb15-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-44"><a href="protein-intake-and-ruminal-supplies.html#cb15-44" aria-hidden="true" tabindex="-1"></a>RUP <span class="ot">=</span> A<span class="sc">*</span>.<span class="dv">064</span> <span class="sc">+</span> C <span class="sc">+</span> B<span class="sc">*</span>(Kp<span class="sc">/</span>(Kd <span class="sc">+</span> Kp)) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb15-45"><a href="protein-intake-and-ruminal-supplies.html#cb15-45" aria-hidden="true" tabindex="-1"></a>RDP <span class="ot">=</span> A<span class="sc">*</span>.<span class="dv">936</span> <span class="sc">+</span> B<span class="sc">*</span>(Kd<span class="sc">/</span>(Kd <span class="sc">+</span> Kp)) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb15-46"><a href="protein-intake-and-ruminal-supplies.html#cb15-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-47"><a href="protein-intake-and-ruminal-supplies.html#cb15-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-48"><a href="protein-intake-and-ruminal-supplies.html#cb15-48" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">feed =</span> feed,</span>
+<span id="cb15-49"><a href="protein-intake-and-ruminal-supplies.html#cb15-49" aria-hidden="true" tabindex="-1"></a>                <span class="at">A =</span> A,</span>
+<span id="cb15-50"><a href="protein-intake-and-ruminal-supplies.html#cb15-50" aria-hidden="true" tabindex="-1"></a>                <span class="at">B =</span> B,</span>
+<span id="cb15-51"><a href="protein-intake-and-ruminal-supplies.html#cb15-51" aria-hidden="true" tabindex="-1"></a>                <span class="at">C =</span> C,</span>
+<span id="cb15-52"><a href="protein-intake-and-ruminal-supplies.html#cb15-52" aria-hidden="true" tabindex="-1"></a>                <span class="at">Kd =</span> Kd,</span>
+<span id="cb15-53"><a href="protein-intake-and-ruminal-supplies.html#cb15-53" aria-hidden="true" tabindex="-1"></a>                <span class="at">Kp =</span> Kp, </span>
+<span id="cb15-54"><a href="protein-intake-and-ruminal-supplies.html#cb15-54" aria-hidden="true" tabindex="-1"></a>                <span class="at">RUP =</span> RUP,</span>
+<span id="cb15-55"><a href="protein-intake-and-ruminal-supplies.html#cb15-55" aria-hidden="true" tabindex="-1"></a>                <span class="at">RDP =</span> RDP) </span>
+<span id="cb15-56"><a href="protein-intake-and-ruminal-supplies.html#cb15-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-57"><a href="protein-intake-and-ruminal-supplies.html#cb15-57" aria-hidden="true" tabindex="-1"></a><span class="co"># create time data.frame</span></span>
+<span id="cb15-58"><a href="protein-intake-and-ruminal-supplies.html#cb15-58" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, .<span class="dv">5</span>)</span>
+<span id="cb15-59"><a href="protein-intake-and-ruminal-supplies.html#cb15-59" aria-hidden="true" tabindex="-1"></a>tdf <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">t =</span> <span class="fu">rep</span>(t, <span class="at">each =</span> <span class="fu">length</span>(feed)),</span>
+<span id="cb15-60"><a href="protein-intake-and-ruminal-supplies.html#cb15-60" aria-hidden="true" tabindex="-1"></a>                 <span class="at">feed =</span> feed)</span>
+<span id="cb15-61"><a href="protein-intake-and-ruminal-supplies.html#cb15-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-62"><a href="protein-intake-and-ruminal-supplies.html#cb15-62" aria-hidden="true" tabindex="-1"></a><span class="co"># use the rate of disappearance, Kd + Kp</span></span>
+<span id="cb15-63"><a href="protein-intake-and-ruminal-supplies.html#cb15-63" aria-hidden="true" tabindex="-1"></a>plotdf <span class="ot">=</span> <span class="fu">left_join</span>(df, tdf) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-64"><a href="protein-intake-and-ruminal-supplies.html#cb15-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">remaining_cp =</span> A<span class="sc">*</span><span class="fl">0.064</span> <span class="sc">+</span> B<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>(Kd<span class="sc">+</span>Kp)<span class="sc">*</span>t)<span class="sc">+</span> C)</span>
+<span id="cb15-65"><a href="protein-intake-and-ruminal-supplies.html#cb15-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-66"><a href="protein-intake-and-ruminal-supplies.html#cb15-66" aria-hidden="true" tabindex="-1"></a><span class="co"># use two df is easier</span></span>
+<span id="cb15-67"><a href="protein-intake-and-ruminal-supplies.html#cb15-67" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb15-68"><a href="protein-intake-and-ruminal-supplies.html#cb15-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> plotdf, </span>
+<span id="cb15-69"><a href="protein-intake-and-ruminal-supplies.html#cb15-69" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> remaining_cp)) <span class="sc">+</span></span>
+<span id="cb15-70"><a href="protein-intake-and-ruminal-supplies.html#cb15-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">100</span>) <span class="sc">+</span></span>
+<span id="cb15-71"><a href="protein-intake-and-ruminal-supplies.html#cb15-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time, h&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Remaining CP, %&quot;</span> )<span class="sc">+</span></span>
+<span id="cb15-72"><a href="protein-intake-and-ruminal-supplies.html#cb15-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> (C<span class="sc">+</span>A<span class="sc">*</span>.<span class="dv">064</span>), <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>), <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb15-73"><a href="protein-intake-and-ruminal-supplies.html#cb15-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">ymin =</span> (<span class="dv">100</span> <span class="sc">-</span> A<span class="sc">*</span>.<span class="dv">936</span>), <span class="at">ymax =</span> <span class="cn">Inf</span>, <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>), <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb15-74"><a href="protein-intake-and-ruminal-supplies.html#cb15-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>feed) <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
 </div>
 
 </div>

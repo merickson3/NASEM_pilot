@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Energy overview | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
+  <meta name="description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  <meta name="generator" content="bookdown 0.33.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Energy overview | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Energy overview | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  
+  <meta name="twitter:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+<meta name="author" content="MaryGrace Erickson, University of Wisconsin--Madison" />
+<meta name="author" content="Michel A. Wattiaux, University of Wisconsin--Madison" />
+<meta name="author" content="Mark D. Hanigan, Virginia Polytechnic Institute and State University" />
+<meta name="author" content="Marina A.C. Danes, Universidade Federal de Lavras" />
+
+
+<meta name="date" content="2023-05-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="dry-matter-intake.html"/>
+<link rel="next" href="energy-supply.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/d3-3.3.8/d3.min.js"></script>
+<script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<link href="libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+<script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/chromatography-0.1/chromatography.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script>
+  function unrolltab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "none";
+    evt.currentTarget.className += "none";
+  }
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="www/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Learning NASEM Dairy (2021)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this interactive textbook</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#information-for-educators"><i class="fa fa-check"></i><b>1.2</b> Information for educators</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#nasem-components"><i class="fa fa-check"></i><b>1.3</b> NASEM Components</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.3.1</b> Accessing the NASEM (2021) book</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#accessing-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.3.2</b> Accessing NASEM-dairy-8 software</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#examples"><i class="fa fa-check"></i><b>1.4</b> Examples</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#nasem-dairy-8"><i class="fa fa-check"></i><b>1.4.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#r"><i class="fa fa-check"></i><b>1.4.2</b> R</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#python"><i class="fa fa-check"></i><b>1.4.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#helpful-information"><i class="fa fa-check"></i><b>1.5</b> Helpful information</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#contribute-edits-and-suggestions"><i class="fa fa-check"></i><b>1.6</b> Contribute edits and suggestions</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#license-citation-information"><i class="fa fa-check"></i><b>1.7</b> License &amp; Citation Information</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html"><i class="fa fa-check"></i><b>2</b> Introduction to nutritional models</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#a-brief-history"><i class="fa fa-check"></i><b>2.1</b> A brief history</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#definition"><i class="fa fa-check"></i><b>2.2</b> Definition</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#usefulness"><i class="fa fa-check"></i><b>2.3</b> Usefulness</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#nasem-2021-and-other-dairy-nutrition-models"><i class="fa fa-check"></i><b>2.4</b> NASEM (2021) and other dairy nutrition models</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#lets-develop-a-simple-nutritional-model"><i class="fa fa-check"></i><b>2.5</b> Let's develop a simple nutritional model</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#hypothesis-generation"><i class="fa fa-check"></i><b>2.5.1</b> Hypothesis generation</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#data-collection-through-observation-or-experimentation"><i class="fa fa-check"></i><b>2.5.2</b> Data collection through observation (or experimentation)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-development"><i class="fa fa-check"></i><b>2.5.3</b> Model development</a></li>
+<li class="chapter" data-level="2.5.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-verification"><i class="fa fa-check"></i><b>2.5.4</b> Model verification</a></li>
+<li class="chapter" data-level="2.5.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process"><i class="fa fa-check"></i><b>2.5.5</b> Model refinement (re-starting the process)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#reflecting-on-our-example-model"><i class="fa fa-check"></i><b>2.5.6</b> Reflecting on our example model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#scaling-up-and-adding-complexity"><i class="fa fa-check"></i><b>2.6</b> Scaling up and adding complexity</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusion"><i class="fa fa-check"></i><b>2.7</b> Conclusion</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#questions"><i class="fa fa-check"></i><b>2.8</b> Questions</a></li>
+<li class="chapter" data-level="2.9" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#r-code-for-figures"><i class="fa fa-check"></i><b>2.9</b> R code for figures</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="systems-concepts.html"><a href="systems-concepts.html"><i class="fa fa-check"></i><b>3</b> Systems concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="systems-concepts.html"><a href="systems-concepts.html#the-animal-nutritional-system"><i class="fa fa-check"></i><b>3.1</b> The animal nutritional system</a></li>
+<li class="chapter" data-level="3.2" data-path="systems-concepts.html"><a href="systems-concepts.html#ways-of-understanding-nutritional-systems"><i class="fa fa-check"></i><b>3.2</b> Ways of understanding nutritional systems</a></li>
+<li class="chapter" data-level="3.3" data-path="systems-concepts.html"><a href="systems-concepts.html#systems-concepts-1"><i class="fa fa-check"></i><b>3.3</b> Systems concepts</a></li>
+<li class="chapter" data-level="3.4" data-path="systems-concepts.html"><a href="systems-concepts.html#single-animal-nutritional-system"><i class="fa fa-check"></i><b>3.4</b> Single-animal nutritional system</a></li>
+<li class="chapter" data-level="3.5" data-path="systems-concepts.html"><a href="systems-concepts.html#physicalchemical-principles-mass-energy-balance"><i class="fa fa-check"></i><b>3.5</b> Physical/chemical principles: Mass &amp; energy balance</a></li>
+<li class="chapter" data-level="3.6" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-ordered-processes"><i class="fa fa-check"></i><b>3.6</b> Biological principles: ordered processes</a></li>
+<li class="chapter" data-level="3.7" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-context-dependence"><i class="fa fa-check"></i><b>3.7</b> Biological principles: context-dependence</a></li>
+<li class="chapter" data-level="3.8" data-path="systems-concepts.html"><a href="systems-concepts.html#conclusions"><i class="fa fa-check"></i><b>3.8</b> Conclusions</a></li>
+<li class="chapter" data-level="3.9" data-path="systems-concepts.html"><a href="systems-concepts.html#questions-1"><i class="fa fa-check"></i><b>3.9</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="requirements.html"><a href="requirements.html"><i class="fa fa-check"></i><b>4</b> Requirements</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-flows"><i class="fa fa-check"></i><b>4.1</b> Defining nutrient flows</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#supplies-requirements-and-balances"><i class="fa fa-check"></i><b>4.1.1</b> Supplies, requirements, and balances</a></li>
+<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.2</b> Requirement definitions in human and dairy nutrition</a></li>
+<li class="chapter" data-level="4.1.3" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.3</b> Absorbed and metabolizable amounts</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="requirements.html"><a href="requirements.html#dietary-reference-intakes"><i class="fa fa-check"></i><b>4.2</b> Dietary reference intakes</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="requirements.html"><a href="requirements.html#protecting-against-underfeeding-with-safety-factors"><i class="fa fa-check"></i><b>4.2.1</b> Protecting against underfeeding with "safety factors"</a></li>
+<li class="chapter" data-level="4.2.2" data-path="requirements.html"><a href="requirements.html#protecting-against-overfeeding"><i class="fa fa-check"></i><b>4.2.2</b> Protecting against overfeeding</a></li>
+<li class="chapter" data-level="4.2.3" data-path="requirements.html"><a href="requirements.html#accounting-for-uncertainty"><i class="fa fa-check"></i><b>4.2.3</b> Accounting for uncertainty</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#nasem-estimates-of-requirements"><i class="fa fa-check"></i><b>4.3</b> NASEM estimates of requirements</a></li>
+<li class="chapter" data-level="4.4" data-path="requirements.html"><a href="requirements.html#types-of-literature-used-by-nasem-2021"><i class="fa fa-check"></i><b>4.4</b> Types of literature used by NASEM (2021)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="requirements.html"><a href="requirements.html#measuring-composition-of-inputs-body-tissues-and-outputs"><i class="fa fa-check"></i><b>4.4.1</b> Measuring composition of inputs, body tissues, and outputs</a></li>
+<li class="chapter" data-level="4.4.2" data-path="requirements.html"><a href="requirements.html#measuring-losses-when-intake-is-minimal"><i class="fa fa-check"></i><b>4.4.2</b> Measuring losses when intake is minimal</a></li>
+<li class="chapter" data-level="4.4.3" data-path="requirements.html"><a href="requirements.html#studying-symptoms-of-deficiency-and-toxicity"><i class="fa fa-check"></i><b>4.4.3</b> Studying symptoms of deficiency and toxicity</a></li>
+<li class="chapter" data-level="4.4.4" data-path="requirements.html"><a href="requirements.html#regression-on-productive-performance"><i class="fa fa-check"></i><b>4.4.4</b> Regression on productive performance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#questions-2"><i class="fa fa-check"></i><b>4.5</b> Questions</a></li>
+<li class="chapter" data-level="4.6" data-path="requirements.html"><a href="requirements.html#r-code-for-figures-1"><i class="fa fa-check"></i><b>4.6</b> R code for figures</a></li>
+<li class="chapter" data-level="4.7" data-path="requirements.html"><a href="requirements.html#references"><i class="fa fa-check"></i><b>4.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-machinery.html"><a href="model-machinery.html#basic-nutrition-math"><i class="fa fa-check"></i><b>5.1</b> Basic nutrition math</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="model-machinery.html"><a href="model-machinery.html#using-ratios-percentages-proportions"><i class="fa fa-check"></i><b>5.1.1</b> Using ratios, percentages, proportions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="model-machinery.html"><a href="model-machinery.html#converting-units"><i class="fa fa-check"></i><b>5.1.2</b> Converting units</a></li>
+<li class="chapter" data-level="5.1.3" data-path="model-machinery.html"><a href="model-machinery.html#converting-basis"><i class="fa fa-check"></i><b>5.1.3</b> Converting basis</a></li>
+<li class="chapter" data-level="5.1.4" data-path="model-machinery.html"><a href="model-machinery.html#scaling"><i class="fa fa-check"></i><b>5.1.4</b> Scaling</a></li>
+<li class="chapter" data-level="5.1.5" data-path="model-machinery.html"><a href="model-machinery.html#weighting"><i class="fa fa-check"></i><b>5.1.5</b> Weighting</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="model-machinery.html"><a href="model-machinery.html#predictive-models"><i class="fa fa-check"></i><b>5.2</b> Predictive models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#predictive-model-descriptors"><i class="fa fa-check"></i><b>5.2.1</b> Predictive model descriptors</a></li>
+<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#simple-linear-model-empirical-input-output"><i class="fa fa-check"></i><b>5.2.2</b> Simple linear model (empirical, input-output)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetic-model-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.3</b> Exponential growth kinetic model (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.4</b> Saturable growth kinetics (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="model-machinery.html"><a href="model-machinery.html#dmi-prediction-in-nasem"><i class="fa fa-check"></i><b>5.2.5</b> DMI prediction in NASEM</a></li>
+<li class="chapter" data-level="5.2.6" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.6</b> Prediction using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="model-machinery.html"><a href="model-machinery.html#optimization"><i class="fa fa-check"></i><b>5.3</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="model-machinery.html"><a href="model-machinery.html#optimization-using-software"><i class="fa fa-check"></i><b>5.3.1</b> Optimization using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="model-machinery.html"><a href="model-machinery.html#other-important-concepts"><i class="fa fa-check"></i><b>5.4</b> Other important concepts</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.4.1</b> Allometric equations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="model-machinery.html"><a href="model-machinery.html#conclusions-1"><i class="fa fa-check"></i><b>5.5</b> Conclusions</a></li>
+<li class="chapter" data-level="5.6" data-path="model-machinery.html"><a href="model-machinery.html#questions-3"><i class="fa fa-check"></i><b>5.6</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html"><i class="fa fa-check"></i><b>6</b> Dry matter intake</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#introduction-to-dmi"><i class="fa fa-check"></i><b>6.1</b> Introduction to DMI</a></li>
+<li class="chapter" data-level="6.2" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#two-theories-of-dmi-regulation"><i class="fa fa-check"></i><b>6.2</b> Two theories of DMI regulation</a></li>
+<li class="chapter" data-level="6.3" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#animal-factors"><i class="fa fa-check"></i><b>6.3</b> Animal factors</a></li>
+<li class="chapter" data-level="6.4" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#diet-factors"><i class="fa fa-check"></i><b>6.4</b> Diet factors</a></li>
+<li class="chapter" data-level="6.5" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#other-factors"><i class="fa fa-check"></i><b>6.5</b> Other factors</a></li>
+<li class="chapter" data-level="6.6" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#dmi-in-nasem-2021"><i class="fa fa-check"></i><b>6.6</b> DMI in NASEM (2021)</a></li>
+<li class="chapter" data-level="6.7" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#examples-1"><i class="fa fa-check"></i><b>6.7</b> Examples</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#nasem-dairy-8-2"><i class="fa fa-check"></i><b>6.7.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="6.7.2" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#r-2"><i class="fa fa-check"></i><b>6.7.2</b> R</a></li>
+<li class="chapter" data-level="6.7.3" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#python-2"><i class="fa fa-check"></i><b>6.7.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#questions-4"><i class="fa fa-check"></i><b>6.8</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="energy-overview.html"><a href="energy-overview.html"><i class="fa fa-check"></i><b>7</b> Energy overview</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="energy-overview.html"><a href="energy-overview.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="energy-overview.html"><a href="energy-overview.html#chemicalphysical-laws"><i class="fa fa-check"></i><b>7.2</b> Chemical/physical laws</a></li>
+<li class="chapter" data-level="7.3" data-path="energy-overview.html"><a href="energy-overview.html#measuring-energy-with-calorimetry"><i class="fa fa-check"></i><b>7.3</b> Measuring energy with calorimetry</a></li>
+<li class="chapter" data-level="7.4" data-path="energy-overview.html"><a href="energy-overview.html#biological-importance-of-energy"><i class="fa fa-check"></i><b>7.4</b> Biological importance of energy</a></li>
+<li class="chapter" data-level="7.5" data-path="energy-overview.html"><a href="energy-overview.html#energy-in-nutritional-processes"><i class="fa fa-check"></i><b>7.5</b> Energy in nutritional processes</a></li>
+<li class="chapter" data-level="7.6" data-path="energy-overview.html"><a href="energy-overview.html#conclusions-2"><i class="fa fa-check"></i><b>7.6</b> Conclusions</a></li>
+<li class="chapter" data-level="7.7" data-path="energy-overview.html"><a href="energy-overview.html#questions-5"><i class="fa fa-check"></i><b>7.7</b> Questions</a></li>
+<li class="chapter" data-level="7.8" data-path="energy-overview.html"><a href="energy-overview.html#references-1"><i class="fa fa-check"></i><b>7.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="energy-supply.html"><a href="energy-supply.html"><i class="fa fa-check"></i><b>8</b> Energy supply</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="energy-supply.html"><a href="energy-supply.html#energy-intake-gross-energy"><i class="fa fa-check"></i><b>8.1</b> Energy intake (gross energy)</a></li>
+<li class="chapter" data-level="8.2" data-path="energy-supply.html"><a href="energy-supply.html#ge-from-om-fractions"><i class="fa fa-check"></i><b>8.2</b> GE from OM fractions</a></li>
+<li class="chapter" data-level="8.3" data-path="energy-supply.html"><a href="energy-supply.html#base-digestibilities-of-om-fractions"><i class="fa fa-check"></i><b>8.3</b> Base digestibilities of OM fractions</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="energy-supply.html"><a href="energy-supply.html#ndf"><i class="fa fa-check"></i><b>8.3.1</b> NDF</a></li>
+<li class="chapter" data-level="8.3.2" data-path="energy-supply.html"><a href="energy-supply.html#starch"><i class="fa fa-check"></i><b>8.3.2</b> Starch</a></li>
+<li class="chapter" data-level="8.3.3" data-path="energy-supply.html"><a href="energy-supply.html#cp"><i class="fa fa-check"></i><b>8.3.3</b> CP</a></li>
+<li class="chapter" data-level="8.3.4" data-path="energy-supply.html"><a href="energy-supply.html#snpncpe"><i class="fa fa-check"></i><b>8.3.4</b> sNPNCPE</a></li>
+<li class="chapter" data-level="8.3.5" data-path="energy-supply.html"><a href="energy-supply.html#rom"><i class="fa fa-check"></i><b>8.3.5</b> ROM</a></li>
+<li class="chapter" data-level="8.3.6" data-path="energy-supply.html"><a href="energy-supply.html#fa"><i class="fa fa-check"></i><b>8.3.6</b> FA</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="energy-supply.html"><a href="energy-supply.html#summing-to-diet-level"><i class="fa fa-check"></i><b>8.4</b> Summing to diet level</a></li>
+<li class="chapter" data-level="8.5" data-path="energy-supply.html"><a href="energy-supply.html#diet-level-de-adjustments"><i class="fa fa-check"></i><b>8.5</b> Diet-level DE adjustments</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="energy-supply.html"><a href="energy-supply.html#dndf_ndf-adjustment"><i class="fa fa-check"></i><b>8.5.1</b> dNDF_NDF adjustment</a></li>
+<li class="chapter" data-level="8.5.2" data-path="energy-supply.html"><a href="energy-supply.html#dstarch_starch-adjustment"><i class="fa fa-check"></i><b>8.5.2</b> dStarch_Starch adjustment</a></li>
+<li class="chapter" data-level="8.5.3" data-path="energy-supply.html"><a href="energy-supply.html#other-adjustments"><i class="fa fa-check"></i><b>8.5.3</b> Other adjustments</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="energy-supply.html"><a href="energy-supply.html#de-calculation"><i class="fa fa-check"></i><b>8.6</b> DE calculation</a></li>
+<li class="chapter" data-level="8.7" data-path="energy-supply.html"><a href="energy-supply.html#de-to-me"><i class="fa fa-check"></i><b>8.7</b> DE to ME</a></li>
+<li class="chapter" data-level="8.8" data-path="energy-supply.html"><a href="energy-supply.html#conclusions-3"><i class="fa fa-check"></i><b>8.8</b> Conclusions</a></li>
+<li class="chapter" data-level="8.9" data-path="energy-supply.html"><a href="energy-supply.html#examples."><i class="fa fa-check"></i><b>8.9</b> Examples.</a>
+<ul>
+<li class="chapter" data-level="8.9.1" data-path="energy-supply.html"><a href="energy-supply.html#nasem-dairy-8-3"><i class="fa fa-check"></i><b>8.9.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="8.9.2" data-path="energy-supply.html"><a href="energy-supply.html#r-3"><i class="fa fa-check"></i><b>8.9.2</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="8.10" data-path="energy-supply.html"><a href="energy-supply.html#questions-6"><i class="fa fa-check"></i><b>8.10</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="energy-use.html"><a href="energy-use.html"><i class="fa fa-check"></i><b>9</b> Energy use</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="energy-use.html"><a href="energy-use.html#body-functions-in-the-energy-model"><i class="fa fa-check"></i><b>9.1</b> Body functions in the energy model</a></li>
+<li class="chapter" data-level="9.2" data-path="energy-use.html"><a href="energy-use.html#maintenance"><i class="fa fa-check"></i><b>9.2</b> Maintenance</a></li>
+<li class="chapter" data-level="9.3" data-path="energy-use.html"><a href="energy-use.html#lactation"><i class="fa fa-check"></i><b>9.3</b> Lactation</a></li>
+<li class="chapter" data-level="9.4" data-path="energy-use.html"><a href="energy-use.html#activity"><i class="fa fa-check"></i><b>9.4</b> Activity</a></li>
+<li class="chapter" data-level="9.5" data-path="energy-use.html"><a href="energy-use.html#environmental-effects"><i class="fa fa-check"></i><b>9.5</b> Environmental effects</a></li>
+<li class="chapter" data-level="9.6" data-path="energy-use.html"><a href="energy-use.html#gestation"><i class="fa fa-check"></i><b>9.6</b> Gestation</a></li>
+<li class="chapter" data-level="9.7" data-path="energy-use.html"><a href="energy-use.html#body-reserve-change"><i class="fa fa-check"></i><b>9.7</b> Body reserve change</a></li>
+<li class="chapter" data-level="9.8" data-path="energy-use.html"><a href="energy-use.html#frame-gain"><i class="fa fa-check"></i><b>9.8</b> Frame gain</a></li>
+<li class="chapter" data-level="9.9" data-path="energy-use.html"><a href="energy-use.html#total-energy-use"><i class="fa fa-check"></i><b>9.9</b> Total energy use</a></li>
+<li class="chapter" data-level="9.10" data-path="energy-use.html"><a href="energy-use.html#converting-to-nel-basis"><i class="fa fa-check"></i><b>9.10</b> Converting to NEL basis</a></li>
+<li class="chapter" data-level="9.11" data-path="energy-use.html"><a href="energy-use.html#nel-use-simulations"><i class="fa fa-check"></i><b>9.11</b> NEL use simulations</a></li>
+<li class="chapter" data-level="9.12" data-path="energy-use.html"><a href="energy-use.html#questions-7"><i class="fa fa-check"></i><b>9.12</b> Questions</a></li>
+<li class="chapter" data-level="9.13" data-path="energy-use.html"><a href="energy-use.html#examples-2"><i class="fa fa-check"></i><b>9.13</b> Examples</a>
+<ul>
+<li class="chapter" data-level="9.13.1" data-path="energy-use.html"><a href="energy-use.html#nasem-dairy-8-4"><i class="fa fa-check"></i><b>9.13.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="9.13.2" data-path="energy-use.html"><a href="energy-use.html#r-4"><i class="fa fa-check"></i><b>9.13.2</b> R</a></li>
+<li class="chapter" data-level="9.13.3" data-path="energy-use.html"><a href="energy-use.html#python-3"><i class="fa fa-check"></i><b>9.13.3</b> Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="protein-overview.html"><a href="protein-overview.html"><i class="fa fa-check"></i><b>10</b> Protein overview</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="protein-overview.html"><a href="protein-overview.html#biological-definition-of-protein"><i class="fa fa-check"></i><b>10.1</b> Biological definition of protein</a></li>
+<li class="chapter" data-level="10.2" data-path="protein-overview.html"><a href="protein-overview.html#nutritional-definitions-of-protein"><i class="fa fa-check"></i><b>10.2</b> Nutritional definitions of protein</a></li>
+<li class="chapter" data-level="10.3" data-path="protein-overview.html"><a href="protein-overview.html#goals-of-dairy-protein-nutrition"><i class="fa fa-check"></i><b>10.3</b> Goals of dairy protein nutrition</a></li>
+<li class="chapter" data-level="10.4" data-path="protein-overview.html"><a href="protein-overview.html#the-animal-protein-system"><i class="fa fa-check"></i><b>10.4</b> The animal protein system</a></li>
+<li class="chapter" data-level="10.5" data-path="protein-overview.html"><a href="protein-overview.html#amino-acids"><i class="fa fa-check"></i><b>10.5</b> Amino acids</a></li>
+<li class="chapter" data-level="10.6" data-path="protein-overview.html"><a href="protein-overview.html#references-2"><i class="fa fa-check"></i><b>10.6</b> References</a></li>
+<li class="chapter" data-level="10.7" data-path="protein-overview.html"><a href="protein-overview.html#questions-8"><i class="fa fa-check"></i><b>10.7</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html"><i class="fa fa-check"></i><b>11</b> Protein intake and ruminal supplies</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#cp-intake"><i class="fa fa-check"></i><b>11.1</b> CP intake</a></li>
+<li class="chapter" data-level="11.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#ruminal-protein-supplies"><i class="fa fa-check"></i><b>11.2</b> Ruminal protein supplies</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#rdp-and-rup"><i class="fa fa-check"></i><b>11.2.1</b> RDP and RUP</a></li>
+<li class="chapter" data-level="11.2.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#calculating-rdp-and-rup"><i class="fa fa-check"></i><b>11.2.2</b> Calculating RDP and RUP</a></li>
+<li class="chapter" data-level="11.2.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#microbial-protein-synthesis"><i class="fa fa-check"></i><b>11.2.3</b> Microbial protein synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#examples-3"><i class="fa fa-check"></i><b>11.3</b> Examples</a></li>
+<li class="chapter" data-level="11.4" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#questions-9"><i class="fa fa-check"></i><b>11.4</b> Questions</a></li>
+<li class="chapter" data-level="11.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>11.5</b> R code for figures ### NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html"><i class="fa fa-check"></i><b>12</b> Protein postruminal supplies</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-microbial-tp"><i class="fa fa-check"></i><b>12.1</b> Digestion of microbial TP</a></li>
+<li class="chapter" data-level="12.2" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-rup"><i class="fa fa-check"></i><b>12.2</b> Digestion of RUP</a></li>
+<li class="chapter" data-level="12.3" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#metabolizable-protein"><i class="fa fa-check"></i><b>12.3</b> Metabolizable protein</a></li>
+<li class="chapter" data-level="12.4" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-basis"><i class="fa fa-check"></i><b>12.4</b> AA basis</a></li>
+<li class="chapter" data-level="12.5" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-microbial-protein"><i class="fa fa-check"></i><b>12.5</b> AA in microbial protein</a></li>
+<li class="chapter" data-level="12.6" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-rup"><i class="fa fa-check"></i><b>12.6</b> AA in RUP</a></li>
+<li class="chapter" data-level="12.7" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#examples-4"><i class="fa fa-check"></i><b>12.7</b> Examples</a></li>
+<li class="chapter" data-level="12.8" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#questions-10"><i class="fa fa-check"></i><b>12.8</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html"><i class="fa fa-check"></i><b>13</b> Protein use and recommended supplies</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#scurf"><i class="fa fa-check"></i><b>13.1</b> Scurf</a></li>
+<li class="chapter" data-level="13.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#endogenous-urinary-protein"><i class="fa fa-check"></i><b>13.2</b> Endogenous urinary protein</a></li>
+<li class="chapter" data-level="13.3" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#metabolic-fecal-protein"><i class="fa fa-check"></i><b>13.3</b> Metabolic fecal protein</a></li>
+<li class="chapter" data-level="13.4" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#milk-protein"><i class="fa fa-check"></i><b>13.4</b> Milk protein</a></li>
+<li class="chapter" data-level="13.5" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#gestation-protein"><i class="fa fa-check"></i><b>13.5</b> Gestation protein</a></li>
+<li class="chapter" data-level="13.6" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#growth"><i class="fa fa-check"></i><b>13.6</b> Growth</a></li>
+<li class="chapter" data-level="13.7" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#total-np-use"><i class="fa fa-check"></i><b>13.7</b> Total NP use</a></li>
+<li class="chapter" data-level="13.8" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#aa-basis-1"><i class="fa fa-check"></i><b>13.8</b> AA basis</a></li>
+<li class="chapter" data-level="13.9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#recommendations"><i class="fa fa-check"></i><b>13.9</b> Recommendations</a></li>
+<li class="chapter" data-level="13.10" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#examples-5"><i class="fa fa-check"></i><b>13.10</b> Examples</a>
+<ul>
+<li class="chapter" data-level="13.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-5"><i class="fa fa-check"></i><b>13.10.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="13.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-needs-update"><i class="fa fa-check"></i><b>13.10.2</b> R ## NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="13.11" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#questions-11"><i class="fa fa-check"></i><b>13.11</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>14</b> Glossary</a></li>
+<li class="divider"></li>
+<b> Contributors:</b>
+<li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
+<li><a href="https://andysci.wisc.edu/directory/michel-wattiaux/" target="blank">Michel A. Wattiaux</a></li>
+<li><a href="https://www.dasc.vt.edu/people/faculty/hanigan.html" target="blank">Mark D. Hanigan</a></li>
+<li><a href="https://www.marinadanes.com" target="blank">Marina A.C. Danes </a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="energy-overview" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Energy overview<a href="energy-overview.html#energy-overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-48"></span>
+<img src="images/energy_overview.png" alt="Two energy sources and two energy reactors" width="100%" />
+<p class="caption">
+Figure 7.1: Two energy sources and two energy reactors
+</p>
+</div>
+<div class="lo">
+<p><strong>Learning Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Give a definition of energy in physics/chemistry.</li>
+<li>Explain how energy affects biological systems.</li>
+<li>Describe a technique to measure energy content.</li>
+<li>Discuss why chemical compounds differ in their potential metabolic/combustion energy.</li>
+</ol>
+</div>
+<div id="introduction" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Introduction<a href="energy-overview.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The opening picture for this chapter shows sawdust, ground corn, a dairy cow, and a fire. This is to illustrate two energy sources (sawdust and ground corn) and two energy reactors (dairy cow and fire). By combining a source and reactor, we create a system. We can explore a few hypothetical options.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Burn the sawdust and ground corn.</strong> If you burnt a similar amount of both substances in a fire, which substance would give off more heat?</p></li>
+<li><p><strong>Feed the sawdust and ground corn to a lactating dairy cow.</strong> If you fed the sawdust and ground corn to a lactating dairy cow, which substance could the cow derive more energy from?</p></li>
+</ol>
+<p>Potential energy is a property of a <em>system</em>, not just one substance. In physics, energy is often discussed in relation to mechanical work (movement). A system could consist of a ball at the top of a hill, which has potential energy. In chemistry, we discuss chemical potential energy, the energy "contained" in chemical bonds. Here, a system could involve reactants at certain temperature, pressure, and other conditions. Chemical potential energy refers to the energy that could be released during reactions, when bonds are broken and formed. In nutrition, we generally discuss chemical potential energy and the system is always animal metabolism. Nutritionists categorize various chemicals based on their potential to produce energy within the metabolic reactions occurring inside animals.</p>
+<p>In this chapter, we will discuss some basic principles of energy from chemistry, physics, and biology. Then, we'll delve into their application to animal nutrition. The chapter will also provide some hints about how energy is considered in the NASEM (2021) dairy nutrition model.</p>
+<div class="green">
+<p><strong>Test Yourself: </strong>
+True or false: energy is a nutrient. <select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></p>
+<div class="webex-solution">
+<button>
+click here for an explanation
+</button>
+<p>Although energy is required by the dairy cow, it is not a nutrient. The nutrients fat, carbohydrate, and protein yield energy.</p>
+</div>
+</div>
+</div>
+<div id="chemicalphysical-laws" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Chemical/physical laws<a href="energy-overview.html#chemicalphysical-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Animals, like everything else on earth, must follow the Laws of Thermodynamics:</p>
+<ul>
+<li><p><strong>The First Law of Thermodynamics</strong> states that energy cannot be created or destroyed. Energy can be transferred or converted from one form to another. As it pertains to animal nutrition, Weiss (2008) summarized this as "energy input must equal energy output plus or minus any change in body energy." This is the "conservation of energy" principle discussed in the Systems Concepts chapter of this textbook. In nutrition, this principle is built-into the energy scheme where the total input energy (gross energy) must equal the sum of the energy in output and transformation flows (NE, and energy in heat, urine, feces, and gas emissions).</p></li>
+<li><p><strong>The Second Law of Thermodynamics</strong> states that the entropy, or disorder, of a system tends to increase over time. Increases in entropy always result in the release of heat. In nutrition, this means that some loss of energy (from the animal) as heat during metabolism is inevitable. This law also applies in other situations. When a person drives a gasoline-powered car, the potential energy contained in the fuel cannot be perfectly turned into mechanical energy, and some is released as heat. It is also important to remember that this law applies to closed systems.</p></li>
+</ul>
+</div>
+<div id="measuring-energy-with-calorimetry" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Measuring energy with calorimetry<a href="energy-overview.html#measuring-energy-with-calorimetry" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For several hundred years, calorimetry has been the main way used to measure energy involved in chemical processes. In <strong>direct calorimetry,</strong> a container of water is placed around a small chamber. Inside the chamber, a substance is burned. When substances burn in open air, they release energy in several forms, including heat, light, and sound. The amount of heat production is directly proportional to (not equal to) the potential energy content of the substance when oxidized. The researcher measures the temperature change in the surrounding water. Calorimetry works because of the conservation of energy. The energy released by burning a substance is not created or destroyed...it is transferred to the surrounding water.</p>
+<div class="orange">
+<p><strong>Indirect calorimetry</strong><br />
+Another way to study energy metabolism is through indirect calorimetry. In this method, heat production is not <em>directly</em> measured. Instead, the composition of exhaled gas is analyzed to estimate the consumption of <span class="math inline">\(O_2\)</span> and production of <span class="math inline">\(CO_2\)</span> over time. From these quantities, it is possible to infer the amount of heat production as well as the types of fuels being used.</p>
+<p>In human medicine, a device called a metabolic cart is used for indirect calorimetry. The patient rests quietly while breathing into a face mask or other device that measures their exhaled gases. This type of analysis can be used to estimate resting metabolic rate (sometimes called basal metabolic rate).</p>
+<p>In dairy cattle nutrition, face masks are not practical. Instead, researchers create stalls for animals inside sealed rooms called respiratory chambers. By measuring the gas entering and leaving the respiratory chamber, they can make predictions about metabolism.</p>
+</div>
+<p>Calorimetry was invented more than 200 years ago by a French nobleman named Antoine Lavoisier (1743-1794) and French mathematician Pierre-Simon Laplace (1749-1827). These two were the first to propose an interesting question:</p>
+<blockquote>
+<p>Is an animal's energy metabolism analogous to a fire?</p>
+</blockquote>
+<p>Lavoisier and Laplace did experiments to test this hypothesis using calorimeters. First, they burnt feeds in the calorimeters with a small flame. This reaction consumed oxygen (<span class="math inline">\(O_2\)</span>) and produced (<span class="math inline">\(CO_2\)</span>), water (<span class="math inline">\(H_2O\)</span>), heat, light, and sound. Then, they found an animal small enough to sit inside the calorimeter--a mouse! As the mouse sat inside the calorimeter, its metabolic reactions consumed (<span class="math inline">\(O_2\)</span>) and produced (<span class="math inline">\(CO_2\)</span>), water (<span class="math inline">\(H_2O\)</span>), heat, and movement.</p>
+<p>As a result of these experiments, it became clear that burning substances (combustion, an oxidation process) was similar to metabolism (which involves other oxidation processes). The equations for metabolism and combustion of energy-containing nutrients (carbohydrates, fats, amino acids, etc.) are similar in form. Both processes can be described simply as follows:</p>
+<p><span class="math display">\[Fuel + O_2 \rightarrow CO_2 + H_2O + energy\]</span>
+Another interesting result from early calorimetry studies was the finding that certain substances released more heat when burned compared to others. This led to another question...</p>
+<blockquote>
+<p>During oxidation, why do some substances seem to release more energy than others?</p>
+</blockquote>
+<p>To figure this out, we need to delve into a little chemistry. What's happening when we combust a substance? First, the initial supply of heat applied to the substance (a match or bunsen burner) decomposes the substance's chemical macrostructure, breaking larger molecules (polymers) into smaller molecules (monomers). Then, the smaller molecules can chemically react with oxygen as shown in the equation above. The amount of energy produced by the combustion reaction depends on which monomers are reacting with oxygen, and what bonds are they contain.</p>
+<p>With respect to nutrition, you may have heard that fats provide more energy than carbohydrates or proteins when metabolized. A common rule of thumb states that the kilocalories per gram supplied by fats <span class="math inline">\(\approx\)</span> 9, proteins <span class="math inline">\(\approx\)</span> 4, and carbohydrates <span class="math inline">\(\approx\)</span> 4. To see why, we can compare a fat monomer (palmitic acid) with a carbohydrate monomer (glucose).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-49"></span>
+<img src="images/energy_comparison.png" alt="Comparison of bonds in a fat monomer, palmitic acid (A), with a carbohydrate monomer (B) glucose, and a protein monomer, lysine (C)." width="100%" />
+<p class="caption">
+Figure 7.2: Comparison of bonds in a fat monomer, palmitic acid (A), with a carbohydrate monomer (B) glucose, and a protein monomer, lysine (C).
+</p>
+</div>
+<div class="green">
+<p><strong>Test Yourself: </strong><br />
+What do you notice about these molecules?
+Which molecule has the greatest percentage of C-C and C-H bonds? <select class='webex-select'><option value='blank'></option><option value='answer'>palmitic acid</option><option value=''>glucose</option><option value=''>lysine</option></select></p>
+</div>
+<p>Palmitic acid contains a large percentage of C-C and C-H bonds:
+C-C 15<br />
+C-H 31<br />
+C=0 1<br />
+C-O 1<br />
+O-H 1</p>
+<p>In contrast, glucose contains a mixture of C-C, C-H, C-O, C=O bonds:
+C-C 5<br />
+C-O 5<br />
+C=O 1<br />
+O-H 5<br />
+C-H 7</p>
+<p>When molecules containing lots of C-C and C-H are combusted, many C-C and C-H bonds are broken, and many C=O and O-H bonds are formed in the <span class="math inline">\(CO_2\)</span> and <span class="math inline">\(H_2O\)</span> products. In relation to oxidation, C-C and C-H bonds have more potential energy than some other types of bonds (e.g., C-O). Another way to think of this is that C-H and C-C bonds are less stable than C-O bonds. This is because O is more electronegative and has a stronger "desire" for electrons than C or H (C, H, and O; 2.5, 2.2, and 3.4 electronegativity respectively, on Pauling scale). Therefore, a C-C or C-H bond is like a ball at the top of a hill...it is unstable (weak bond) and has a lot of potential energy. A C-O bond is like a ball at the bottom of a hill. It is more stable (strong bond) and has less potential energy. Moving from the less-stable to more-stable state releases energy, like a ball rolling down a hill.
+Another way to think about heat production is through bond enthalpies. Through experiments, chemists have determined the average energy associated with dissociation of certain bonds at standard temperature and pressure, in a gas phase. The table gives some examples of the energy associated with different types of bonds. Importantly, these must be interpreted with respect to a <em>system</em> (i.e., a reaction in certain conditions).</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Bond
+</th>
+<th style="text-align:right;">
+Average Bond Enthalpy (kJ/mol)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+C-H
+</td>
+<td style="text-align:right;">
+413
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+C-C
+</td>
+<td style="text-align:right;">
+348
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+C-O
+</td>
+<td style="text-align:right;">
+358
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O=O
+</td>
+<td style="text-align:right;">
+498
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+C=O
+</td>
+<td style="text-align:right;">
+805
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O-H
+</td>
+<td style="text-align:right;">
+464
+</td>
+</tr>
+</tbody>
+</table>
+<div class="blue">
+<p><strong>Combustion of methane</strong></p>
+<p>If your house has a gas stove, you have probably combusted methane to produce heat. The reaction can be described like this:</p>
+<p><span class="math display">\[CH_4 (g) + 2O_2 (g) \rightarrow CO_2 (g) + 2H_2O (l)\]</span></p>
+<p>In this reaction, some bonds are broken:<br />
+4 mol C-H<br />
+2 mol O=O</p>
+<p>and some bonds are formed:<br />
+2 mol C=O<br />
+4 mol H-O</p>
+<p>It is possible to estimate the heat produced by this reaction using average bond enthalpies. Importantly, average bond enthalpies apply to gases. If one of the reactants or products is a liquid, the calculation must include an extra step to account for the enthalpy change of vaporization.</p>
+<p>Bond enthalpies (<span class="math inline">\(kJ \space mol^{-1}\)</span>)
+C-H +413
+O=O +498
+C=O in carbon dioxide +805
+O-H +464
+Conversion of water from liquid to gas +41 (enthalpy change of vaporization)</p>
+<p>Enthalpy change = bonds broken - bonds formed
+Enthalpy change = <span class="math inline">\([4*413 + 2*498] - [2*805 + 4*464 + 2*41]\)</span>
+= <span class="math inline">\(-900 \space kJ\)</span></p>
+<p>This means that approximately 900 kJ of heat are given off (applied to the surroundings) as a result of this reaction. Here, we can also see that going from weaker C-H bonds to stronger C=O and O-H bonds releases energy to the surroundings.</p>
+</div>
+</div>
+<div id="biological-importance-of-energy" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Biological importance of energy<a href="energy-overview.html#biological-importance-of-energy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Energy is involved in every chemical reaction in the body. Collectively, the entire sum of reactions that maintain an organism's life is referred to as <strong>Metabolism</strong>. During metabolism, energy is transferred through oxidation and reduction reactions. Metabolism includes catabolic and anabolic reactions.</p>
+<p>In <strong>catabolism</strong>, larger molecules such as proteins, fats, and carbohydrates are gradually broken down and oxidized, producing carbon dioxide and water, and releasing energy to the surroundings. Examples of catabolism include proteolysis, glycogenolysis, and lipolysis. The processes of digesting feed and mobilizing body reserves are catabolic. As a whole, catabolism is exergonic, i.e., it releases energy to its surroundings.</p>
+<p>In <strong>anabolism</strong>, larger molecules are built from smaller molecules. This results in storage of energy within the animal system. Overall, anabolism is endergonic--storing energy. Examples of anabolism include protein synthesis, glycogenesis, and lipogenesis. In dairy cattle, the synthesis of fats, proteins, and lactose in milk are anabolic processes that requires a great deal of energy.</p>
+<p>Energy is required to maintain the constant balance of catabolic and anabolic processes that maintains life. These reactions not only grow and remodel the body's physical form, they also produce the heat that maintains the animal's body temperature at the conditions required to survive in its environment. In skeletal muscle, chemical energy is converted to mechanical energy so the animal can move around. In summary, energy is central to nearly every process involved in an organism's function.</p>
+</div>
+<div id="energy-in-nutritional-processes" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Energy in nutritional processes<a href="energy-overview.html#energy-in-nutritional-processes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In human and animal nutrition, energy is defined in relation to ordered nutritional processes. This conceptualization of energy has existed for decades and is not particular to the NASEM (2021) model.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-51"></span>
+<img src="images/energy_scheme.png" alt="Fractionation of energy within an animal nutritional system." width="85%" />
+<p class="caption">
+Figure 7.3: Fractionation of energy within an animal nutritional system.
+</p>
+</div>
+<div class="DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f99018b0a1a686763986" style="width:8px;height:6px;"></div>
+<script type="application/json" data-for="htmlwidget-f99018b0a1a686763986">{"x":{"diagram":"\ngraph TD;\nGE[__________________Gross Energy, 100%__________________] --> \nDE[__________Digestible Energy, 60 to 70%__________];\n    GE -.-> FE[Fecal Energy Loss];\n    DE --> ME[______Metabolizable Energy, 50 to 60%______];\n    DE -.-> GEloss[Gas & Urine Energy Loss];\n    ME --> NE[______Net Energy, 30 to 40%______];\n    ME -.-> HE[Heat Energy Loss]; \n\n    style GE fill:#BFD7EA,stroke:#555,stroke-width:2px;\n    style DE fill:#F9CFA7,stroke:#555,stroke-width:2px;\n    style ME fill:#CBE1C0,stroke:#555,stroke-width:2px;\n    style NE fill:#F5B1AC,stroke:#555,stroke-width:2px"},"evals":[],"jsHooks":[]}</script>
+<p><strong>Gross Energy (GE)</strong> represents the total amount of chemical energy in a feed before undergoing any digestive processes. The amount of GE depends solely on the chemical composition (i.e., nutrient fractions) of the feed, so GE does not change for different animal characteristics. For this reason, estimation of GE is very precise. However, GE is not very useful for diet formulation because not all the energy can be digested, metabolized, or used for body functions.</p>
+<p><strong>Digestible Energy (DE)</strong> is the energy remaining after subtracting fecal energy losses. DE requires estimation of the digestibility of feed nutrients ([intake - fecal excretion]/intake), which depends on animal factors. Therefore, DE is estimated using animal trials where feed energy intakes and fecal energy outputs are recorded. Additionally, scientists have developed in vitro assays that mimic digestion processes and can be used to estimate DE. Because DE is affected by animal factors, DE estimates are less precise than GE.</p>
+<p><strong>Metabolizable Energy (ME)</strong> is the energy that <u><em>can</em></u> support body functions such as growth, movement, lactation, and accretion of body reserves. ME is calculated as the energy remaining after accounting for losses in feces, urine, and gas. Compounds excreted in urine contain some energy (urea,<span class="math inline">\(CH_4N_2O\)</span> accounts for a large fraction of urine energy), and enteric fermentation releases gases that contain some energy (methane, <span class="math inline">\(CH_4\)</span>). These are counted as energetic losses because the body has not completely oxidized the compound to <span class="math inline">\(CO_2\)</span> and there is still some energy remaining. Measuring ME involves not only measuring DE, but also collecting and conducting calorimetry on urine samples, and measuring gas production. Because of these additional sources of error, ME estimates are even less precise than DE.</p>
+<p><strong>Net Energy (NE)</strong> is the energy that is actually <u><em>does</em></u> support body functions such as growth, movement, lactation, and accretion of body reserves. NE is calculated as ME minus the heat released in metabolic reactions. Although it is possible to measure the heat produced by an animal in a whole-animal calorimeter, this is rarely done in practice (Weiss, 2008). Although NE estimates are less precise, it is perhaps the most useful energy quantity for nutritionists, because we are focused on predicting animal health and performance outcomes.</p>
+<blockquote>
+<p>Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.
+John Tukey, The future of data analysis. Annals of Mathematical Statistics 33 (1), (1962), page 13.</p>
+</blockquote>
+<div class="green">
+<p><strong>Test Yourself: </strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Which of the fractions above could you determine using only a calorimeter and feed, without an animal or other laboratory equipment? <select class='webex-select'><option value='blank'></option><option value='answer'>GE</option><option value=''>DE</option><option value=''>ME</option><option value=''>NE</option></select></p></li>
+<li><p>Which fraction requires using calorimetry to determine urine energy losses? <select class='webex-select'><option value='blank'></option><option value=''>GE</option><option value=''>DE</option><option value='answer'>ME</option></select></p></li>
+<li><p>True or false: you could determine DE by burning feed and feces in a calorimeter. <select class='webex-select'><option value='blank'></option><option value='answer'>TRUE</option><option value=''>FALSE</option></select></p></li>
+<li><p>Which of the fractions above accounts for energy lost as heat? <select class='webex-select'><option value='blank'></option><option value=''>GE</option><option value=''>DE</option><option value=''>ME</option><option value='answer'>NE</option></select></p></li>
+<li><p>True or false: GE is the most useful fraction for ration formulation. <select class='webex-select'><option value='blank'></option><option value=''>TRUE</option><option value='answer'>FALSE</option></select></p></li>
+</ol>
+</div>
+</div>
+<div id="conclusions-2" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Conclusions<a href="energy-overview.html#conclusions-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let's return to the hypothetical scenarios originally posed at the beginning of the chapter. Use what you learned in this chapter to try to answer the questions.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Scenario: Burn sawdust and ground corn.</strong> Assume you are given sawdust and ground corn that had similar GE values on a DM basis (Mcal GE per g DM). If you burnt the same amount (g of DM) of both substances in a fire, which substance would give off more heat? Why?</li>
+</ol>
+<div class="webex-solution">
+<button>
+click here for an answer
+</button>
+<p>Both substances have similar GE values. This means that they will produce a similar amount of heat when burnt. Neither will produce more heat...the amount of heat produced for each will be similar.</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Feed the sawdust and ground corn to a lactating dairy cow.</strong> If you fed the same GE-equivalent sawdust and ground corn to a lactating dairy cow, which substance could the cow derive more energy from? You can assume the sawdust is less digestible than the corn grain. Explain your reasoning in terms of GE, DE, ME, and NE.</li>
+</ol>
+<div class="webex-solution">
+<button>
+click here for an answer
+</button>
+<p>Although both substances have similar GE values, the lower digestibility of sawdust means that its value to the animal is less than that of corn grain. Because DE for sawdust will be lower than corn grain, ME and NE will also be lower. Thus, the sawdust has less energy value to the cow than the corn grain, despite both substances having similar GE values.</p>
+</div>
+<div class="orange">
+<p><strong>Just for fun: </strong></p>
+<p>Look at the "Nutrition Facts" label on a human food item. The label shows the grams of metabolizable fat, protein, and carbohydrates in the food. Use the macronutrient composition to get a rough approximation of the kilocalorie content of the food, using the rule of thumb: kilocalories per gram supplied by fats <span class="math inline">\(\approx\)</span> 9, proteins <span class="math inline">\(\approx\)</span> 4, and carbohydrates <span class="math inline">\(\approx\)</span> 4. Note that kcal are often abbreviated as "calories" in human nutrition.</p>
+<p>Check against the calorie content reported on the label. Do they match?</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-53"></span>
+<img src="images/nutrition_facts.png" alt="Nutrition facts for human food label." width="30%" />
+<p class="caption">
+Figure 7.4: Nutrition facts for human food label.
+</p>
+</div>
+</div>
+</div>
+<div id="questions-5" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Questions<a href="energy-overview.html#questions-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Describe a technique used to measure the energy associated with chemical processes.</li>
+<li>Differentiate direct and indirect calorimetry.</li>
+<li>How does energy affect biological systems?</li>
+<li>What is the First Law of Thermodynamics? How does it apply to nutrition?</li>
+<li>What is the Second Law of Thermodynamics? How does it apply to nutrition?</li>
+<li>What is a general equation that describes both combustion and metabolism, with respect to calorimetry?</li>
+<li>Why do some substances release more energy than others during oxidation?</li>
+<li>Define GE.</li>
+<li>Define DE and list sources of error in DE estimation.</li>
+<li>Define ME and list sources of error in ME estimation.</li>
+<li>Define NE and list sources of error in NE estimation.</li>
+</ol>
+</div>
+<div id="references-1" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> References<a href="energy-overview.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Weiss, W.P. (2008). Feed Energy Applications. Paper originally published in the 2008 Proceedings of 4-State Dairy Nutrition Conference, p. 22-27.</p>
+<p>Bond enthalpy table from:
+<a href="https://chem.libretexts.org/Courses/Mount_Royal_University/Chem_1202/Unit_5%3A_Fundamentals_of_Thermochemistry/5.8%3A_Standard_Enthalpies_of_Formation" class="uri">https://chem.libretexts.org/Courses/Mount_Royal_University/Chem_1202/Unit_5%3A_Fundamentals_of_Thermochemistry/5.8%3A_Standard_Enthalpies_of_Formation</a></p>
+
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+    
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+  
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+  
+  var cl = this.classList
+  
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+  
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+  
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+  
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="dry-matter-intake.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="energy-supply.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"highlight": "espresso",
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

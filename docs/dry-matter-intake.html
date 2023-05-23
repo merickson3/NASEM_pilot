@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Dry matter intake | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</title>
+  <meta name="description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  <meta name="generator" content="bookdown 0.33.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Dry matter intake | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Dry matter intake | Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'" />
+  
+  <meta name="twitter:description" content="This book is intended to help independent learners, students, and instructors interacting with the NASEM (2021) dairy nutrition model, especially in undergraduate courses." />
+  
+
+<meta name="author" content="MaryGrace Erickson, University of Wisconsin--Madison" />
+<meta name="author" content="Michel A. Wattiaux, University of Wisconsin--Madison" />
+<meta name="author" content="Mark D. Hanigan, Virginia Polytechnic Institute and State University" />
+<meta name="author" content="Marina A.C. Danes, Universidade Federal de Lavras" />
+
+
+<meta name="date" content="2023-05-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="model-machinery.html"/>
+<link rel="next" href="energy-overview.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/d3-3.3.8/d3.min.js"></script>
+<script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<link href="libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+<script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/chromatography-0.1/chromatography.js"></script>
+<script src="libs/DiagrammeR-binding-1.0.9/DiagrammeR.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script>
+  function unrolltab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "none";
+    evt.currentTarget.className += "none";
+  }
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="www/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Learning NASEM Dairy (2021)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this interactive textbook</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#information-for-educators"><i class="fa fa-check"></i><b>1.2</b> Information for educators</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#nasem-components"><i class="fa fa-check"></i><b>1.3</b> NASEM Components</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#accessing-the-nasem-2021-book"><i class="fa fa-check"></i><b>1.3.1</b> Accessing the NASEM (2021) book</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#accessing-nasem-dairy-8-software"><i class="fa fa-check"></i><b>1.3.2</b> Accessing NASEM-dairy-8 software</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#examples"><i class="fa fa-check"></i><b>1.4</b> Examples</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#nasem-dairy-8"><i class="fa fa-check"></i><b>1.4.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#r"><i class="fa fa-check"></i><b>1.4.2</b> R</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#python"><i class="fa fa-check"></i><b>1.4.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#helpful-information"><i class="fa fa-check"></i><b>1.5</b> Helpful information</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#contribute-edits-and-suggestions"><i class="fa fa-check"></i><b>1.6</b> Contribute edits and suggestions</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#license-citation-information"><i class="fa fa-check"></i><b>1.7</b> License &amp; Citation Information</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html"><i class="fa fa-check"></i><b>2</b> Introduction to nutritional models</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#a-brief-history"><i class="fa fa-check"></i><b>2.1</b> A brief history</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#definition"><i class="fa fa-check"></i><b>2.2</b> Definition</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#usefulness"><i class="fa fa-check"></i><b>2.3</b> Usefulness</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#nasem-2021-and-other-dairy-nutrition-models"><i class="fa fa-check"></i><b>2.4</b> NASEM (2021) and other dairy nutrition models</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#lets-develop-a-simple-nutritional-model"><i class="fa fa-check"></i><b>2.5</b> Let's develop a simple nutritional model</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#hypothesis-generation"><i class="fa fa-check"></i><b>2.5.1</b> Hypothesis generation</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#data-collection-through-observation-or-experimentation"><i class="fa fa-check"></i><b>2.5.2</b> Data collection through observation (or experimentation)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-development"><i class="fa fa-check"></i><b>2.5.3</b> Model development</a></li>
+<li class="chapter" data-level="2.5.4" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-verification"><i class="fa fa-check"></i><b>2.5.4</b> Model verification</a></li>
+<li class="chapter" data-level="2.5.5" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#model-refinement-re-starting-the-process"><i class="fa fa-check"></i><b>2.5.5</b> Model refinement (re-starting the process)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#reflecting-on-our-example-model"><i class="fa fa-check"></i><b>2.5.6</b> Reflecting on our example model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#scaling-up-and-adding-complexity"><i class="fa fa-check"></i><b>2.6</b> Scaling up and adding complexity</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#conclusion"><i class="fa fa-check"></i><b>2.7</b> Conclusion</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#questions"><i class="fa fa-check"></i><b>2.8</b> Questions</a></li>
+<li class="chapter" data-level="2.9" data-path="introduction-to-nutritional-models.html"><a href="introduction-to-nutritional-models.html#r-code-for-figures"><i class="fa fa-check"></i><b>2.9</b> R code for figures</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="systems-concepts.html"><a href="systems-concepts.html"><i class="fa fa-check"></i><b>3</b> Systems concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="systems-concepts.html"><a href="systems-concepts.html#the-animal-nutritional-system"><i class="fa fa-check"></i><b>3.1</b> The animal nutritional system</a></li>
+<li class="chapter" data-level="3.2" data-path="systems-concepts.html"><a href="systems-concepts.html#ways-of-understanding-nutritional-systems"><i class="fa fa-check"></i><b>3.2</b> Ways of understanding nutritional systems</a></li>
+<li class="chapter" data-level="3.3" data-path="systems-concepts.html"><a href="systems-concepts.html#systems-concepts-1"><i class="fa fa-check"></i><b>3.3</b> Systems concepts</a></li>
+<li class="chapter" data-level="3.4" data-path="systems-concepts.html"><a href="systems-concepts.html#single-animal-nutritional-system"><i class="fa fa-check"></i><b>3.4</b> Single-animal nutritional system</a></li>
+<li class="chapter" data-level="3.5" data-path="systems-concepts.html"><a href="systems-concepts.html#physicalchemical-principles-mass-energy-balance"><i class="fa fa-check"></i><b>3.5</b> Physical/chemical principles: Mass &amp; energy balance</a></li>
+<li class="chapter" data-level="3.6" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-ordered-processes"><i class="fa fa-check"></i><b>3.6</b> Biological principles: ordered processes</a></li>
+<li class="chapter" data-level="3.7" data-path="systems-concepts.html"><a href="systems-concepts.html#biological-principles-context-dependence"><i class="fa fa-check"></i><b>3.7</b> Biological principles: context-dependence</a></li>
+<li class="chapter" data-level="3.8" data-path="systems-concepts.html"><a href="systems-concepts.html#conclusions"><i class="fa fa-check"></i><b>3.8</b> Conclusions</a></li>
+<li class="chapter" data-level="3.9" data-path="systems-concepts.html"><a href="systems-concepts.html#questions-1"><i class="fa fa-check"></i><b>3.9</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="requirements.html"><a href="requirements.html"><i class="fa fa-check"></i><b>4</b> Requirements</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="requirements.html"><a href="requirements.html#defining-nutrient-flows"><i class="fa fa-check"></i><b>4.1</b> Defining nutrient flows</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="requirements.html"><a href="requirements.html#supplies-requirements-and-balances"><i class="fa fa-check"></i><b>4.1.1</b> Supplies, requirements, and balances</a></li>
+<li class="chapter" data-level="4.1.2" data-path="requirements.html"><a href="requirements.html#requirement-definitions-in-human-and-dairy-nutrition"><i class="fa fa-check"></i><b>4.1.2</b> Requirement definitions in human and dairy nutrition</a></li>
+<li class="chapter" data-level="4.1.3" data-path="requirements.html"><a href="requirements.html#absorbed-and-metabolizable-amounts"><i class="fa fa-check"></i><b>4.1.3</b> Absorbed and metabolizable amounts</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="requirements.html"><a href="requirements.html#dietary-reference-intakes"><i class="fa fa-check"></i><b>4.2</b> Dietary reference intakes</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="requirements.html"><a href="requirements.html#protecting-against-underfeeding-with-safety-factors"><i class="fa fa-check"></i><b>4.2.1</b> Protecting against underfeeding with "safety factors"</a></li>
+<li class="chapter" data-level="4.2.2" data-path="requirements.html"><a href="requirements.html#protecting-against-overfeeding"><i class="fa fa-check"></i><b>4.2.2</b> Protecting against overfeeding</a></li>
+<li class="chapter" data-level="4.2.3" data-path="requirements.html"><a href="requirements.html#accounting-for-uncertainty"><i class="fa fa-check"></i><b>4.2.3</b> Accounting for uncertainty</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="requirements.html"><a href="requirements.html#nasem-estimates-of-requirements"><i class="fa fa-check"></i><b>4.3</b> NASEM estimates of requirements</a></li>
+<li class="chapter" data-level="4.4" data-path="requirements.html"><a href="requirements.html#types-of-literature-used-by-nasem-2021"><i class="fa fa-check"></i><b>4.4</b> Types of literature used by NASEM (2021)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="requirements.html"><a href="requirements.html#measuring-composition-of-inputs-body-tissues-and-outputs"><i class="fa fa-check"></i><b>4.4.1</b> Measuring composition of inputs, body tissues, and outputs</a></li>
+<li class="chapter" data-level="4.4.2" data-path="requirements.html"><a href="requirements.html#measuring-losses-when-intake-is-minimal"><i class="fa fa-check"></i><b>4.4.2</b> Measuring losses when intake is minimal</a></li>
+<li class="chapter" data-level="4.4.3" data-path="requirements.html"><a href="requirements.html#studying-symptoms-of-deficiency-and-toxicity"><i class="fa fa-check"></i><b>4.4.3</b> Studying symptoms of deficiency and toxicity</a></li>
+<li class="chapter" data-level="4.4.4" data-path="requirements.html"><a href="requirements.html#regression-on-productive-performance"><i class="fa fa-check"></i><b>4.4.4</b> Regression on productive performance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="requirements.html"><a href="requirements.html#questions-2"><i class="fa fa-check"></i><b>4.5</b> Questions</a></li>
+<li class="chapter" data-level="4.6" data-path="requirements.html"><a href="requirements.html#r-code-for-figures-1"><i class="fa fa-check"></i><b>4.6</b> R code for figures</a></li>
+<li class="chapter" data-level="4.7" data-path="requirements.html"><a href="requirements.html#references"><i class="fa fa-check"></i><b>4.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-machinery.html"><a href="model-machinery.html"><i class="fa fa-check"></i><b>5</b> Model machinery</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="model-machinery.html"><a href="model-machinery.html#basic-nutrition-math"><i class="fa fa-check"></i><b>5.1</b> Basic nutrition math</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="model-machinery.html"><a href="model-machinery.html#using-ratios-percentages-proportions"><i class="fa fa-check"></i><b>5.1.1</b> Using ratios, percentages, proportions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="model-machinery.html"><a href="model-machinery.html#converting-units"><i class="fa fa-check"></i><b>5.1.2</b> Converting units</a></li>
+<li class="chapter" data-level="5.1.3" data-path="model-machinery.html"><a href="model-machinery.html#converting-basis"><i class="fa fa-check"></i><b>5.1.3</b> Converting basis</a></li>
+<li class="chapter" data-level="5.1.4" data-path="model-machinery.html"><a href="model-machinery.html#scaling"><i class="fa fa-check"></i><b>5.1.4</b> Scaling</a></li>
+<li class="chapter" data-level="5.1.5" data-path="model-machinery.html"><a href="model-machinery.html#weighting"><i class="fa fa-check"></i><b>5.1.5</b> Weighting</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="model-machinery.html"><a href="model-machinery.html#predictive-models"><i class="fa fa-check"></i><b>5.2</b> Predictive models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="model-machinery.html"><a href="model-machinery.html#predictive-model-descriptors"><i class="fa fa-check"></i><b>5.2.1</b> Predictive model descriptors</a></li>
+<li class="chapter" data-level="5.2.2" data-path="model-machinery.html"><a href="model-machinery.html#simple-linear-model-empirical-input-output"><i class="fa fa-check"></i><b>5.2.2</b> Simple linear model (empirical, input-output)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="model-machinery.html"><a href="model-machinery.html#exponential-growth-kinetic-model-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.3</b> Exponential growth kinetic model (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.4" data-path="model-machinery.html"><a href="model-machinery.html#saturable-growth-kinetics-theoretical-mechanistic"><i class="fa fa-check"></i><b>5.2.4</b> Saturable growth kinetics (theoretical, mechanistic)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="model-machinery.html"><a href="model-machinery.html#dmi-prediction-in-nasem"><i class="fa fa-check"></i><b>5.2.5</b> DMI prediction in NASEM</a></li>
+<li class="chapter" data-level="5.2.6" data-path="model-machinery.html"><a href="model-machinery.html#prediction-using-software"><i class="fa fa-check"></i><b>5.2.6</b> Prediction using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="model-machinery.html"><a href="model-machinery.html#optimization"><i class="fa fa-check"></i><b>5.3</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="model-machinery.html"><a href="model-machinery.html#optimization-using-software"><i class="fa fa-check"></i><b>5.3.1</b> Optimization using software</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="model-machinery.html"><a href="model-machinery.html#other-important-concepts"><i class="fa fa-check"></i><b>5.4</b> Other important concepts</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="model-machinery.html"><a href="model-machinery.html#allometric-equations"><i class="fa fa-check"></i><b>5.4.1</b> Allometric equations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="model-machinery.html"><a href="model-machinery.html#conclusions-1"><i class="fa fa-check"></i><b>5.5</b> Conclusions</a></li>
+<li class="chapter" data-level="5.6" data-path="model-machinery.html"><a href="model-machinery.html#questions-3"><i class="fa fa-check"></i><b>5.6</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html"><i class="fa fa-check"></i><b>6</b> Dry matter intake</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#introduction-to-dmi"><i class="fa fa-check"></i><b>6.1</b> Introduction to DMI</a></li>
+<li class="chapter" data-level="6.2" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#two-theories-of-dmi-regulation"><i class="fa fa-check"></i><b>6.2</b> Two theories of DMI regulation</a></li>
+<li class="chapter" data-level="6.3" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#animal-factors"><i class="fa fa-check"></i><b>6.3</b> Animal factors</a></li>
+<li class="chapter" data-level="6.4" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#diet-factors"><i class="fa fa-check"></i><b>6.4</b> Diet factors</a></li>
+<li class="chapter" data-level="6.5" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#other-factors"><i class="fa fa-check"></i><b>6.5</b> Other factors</a></li>
+<li class="chapter" data-level="6.6" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#dmi-in-nasem-2021"><i class="fa fa-check"></i><b>6.6</b> DMI in NASEM (2021)</a></li>
+<li class="chapter" data-level="6.7" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#examples-1"><i class="fa fa-check"></i><b>6.7</b> Examples</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#nasem-dairy-8-2"><i class="fa fa-check"></i><b>6.7.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="6.7.2" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#r-2"><i class="fa fa-check"></i><b>6.7.2</b> R</a></li>
+<li class="chapter" data-level="6.7.3" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#python-2"><i class="fa fa-check"></i><b>6.7.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="dry-matter-intake.html"><a href="dry-matter-intake.html#questions-4"><i class="fa fa-check"></i><b>6.8</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="energy-overview.html"><a href="energy-overview.html"><i class="fa fa-check"></i><b>7</b> Energy overview</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="energy-overview.html"><a href="energy-overview.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="energy-overview.html"><a href="energy-overview.html#chemicalphysical-laws"><i class="fa fa-check"></i><b>7.2</b> Chemical/physical laws</a></li>
+<li class="chapter" data-level="7.3" data-path="energy-overview.html"><a href="energy-overview.html#measuring-energy-with-calorimetry"><i class="fa fa-check"></i><b>7.3</b> Measuring energy with calorimetry</a></li>
+<li class="chapter" data-level="7.4" data-path="energy-overview.html"><a href="energy-overview.html#biological-importance-of-energy"><i class="fa fa-check"></i><b>7.4</b> Biological importance of energy</a></li>
+<li class="chapter" data-level="7.5" data-path="energy-overview.html"><a href="energy-overview.html#energy-in-nutritional-processes"><i class="fa fa-check"></i><b>7.5</b> Energy in nutritional processes</a></li>
+<li class="chapter" data-level="7.6" data-path="energy-overview.html"><a href="energy-overview.html#conclusions-2"><i class="fa fa-check"></i><b>7.6</b> Conclusions</a></li>
+<li class="chapter" data-level="7.7" data-path="energy-overview.html"><a href="energy-overview.html#questions-5"><i class="fa fa-check"></i><b>7.7</b> Questions</a></li>
+<li class="chapter" data-level="7.8" data-path="energy-overview.html"><a href="energy-overview.html#references-1"><i class="fa fa-check"></i><b>7.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="energy-supply.html"><a href="energy-supply.html"><i class="fa fa-check"></i><b>8</b> Energy supply</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="energy-supply.html"><a href="energy-supply.html#energy-intake-gross-energy"><i class="fa fa-check"></i><b>8.1</b> Energy intake (gross energy)</a></li>
+<li class="chapter" data-level="8.2" data-path="energy-supply.html"><a href="energy-supply.html#ge-from-om-fractions"><i class="fa fa-check"></i><b>8.2</b> GE from OM fractions</a></li>
+<li class="chapter" data-level="8.3" data-path="energy-supply.html"><a href="energy-supply.html#base-digestibilities-of-om-fractions"><i class="fa fa-check"></i><b>8.3</b> Base digestibilities of OM fractions</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="energy-supply.html"><a href="energy-supply.html#ndf"><i class="fa fa-check"></i><b>8.3.1</b> NDF</a></li>
+<li class="chapter" data-level="8.3.2" data-path="energy-supply.html"><a href="energy-supply.html#starch"><i class="fa fa-check"></i><b>8.3.2</b> Starch</a></li>
+<li class="chapter" data-level="8.3.3" data-path="energy-supply.html"><a href="energy-supply.html#cp"><i class="fa fa-check"></i><b>8.3.3</b> CP</a></li>
+<li class="chapter" data-level="8.3.4" data-path="energy-supply.html"><a href="energy-supply.html#snpncpe"><i class="fa fa-check"></i><b>8.3.4</b> sNPNCPE</a></li>
+<li class="chapter" data-level="8.3.5" data-path="energy-supply.html"><a href="energy-supply.html#rom"><i class="fa fa-check"></i><b>8.3.5</b> ROM</a></li>
+<li class="chapter" data-level="8.3.6" data-path="energy-supply.html"><a href="energy-supply.html#fa"><i class="fa fa-check"></i><b>8.3.6</b> FA</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="energy-supply.html"><a href="energy-supply.html#summing-to-diet-level"><i class="fa fa-check"></i><b>8.4</b> Summing to diet level</a></li>
+<li class="chapter" data-level="8.5" data-path="energy-supply.html"><a href="energy-supply.html#diet-level-de-adjustments"><i class="fa fa-check"></i><b>8.5</b> Diet-level DE adjustments</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="energy-supply.html"><a href="energy-supply.html#dndf_ndf-adjustment"><i class="fa fa-check"></i><b>8.5.1</b> dNDF_NDF adjustment</a></li>
+<li class="chapter" data-level="8.5.2" data-path="energy-supply.html"><a href="energy-supply.html#dstarch_starch-adjustment"><i class="fa fa-check"></i><b>8.5.2</b> dStarch_Starch adjustment</a></li>
+<li class="chapter" data-level="8.5.3" data-path="energy-supply.html"><a href="energy-supply.html#other-adjustments"><i class="fa fa-check"></i><b>8.5.3</b> Other adjustments</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="energy-supply.html"><a href="energy-supply.html#de-calculation"><i class="fa fa-check"></i><b>8.6</b> DE calculation</a></li>
+<li class="chapter" data-level="8.7" data-path="energy-supply.html"><a href="energy-supply.html#de-to-me"><i class="fa fa-check"></i><b>8.7</b> DE to ME</a></li>
+<li class="chapter" data-level="8.8" data-path="energy-supply.html"><a href="energy-supply.html#conclusions-3"><i class="fa fa-check"></i><b>8.8</b> Conclusions</a></li>
+<li class="chapter" data-level="8.9" data-path="energy-supply.html"><a href="energy-supply.html#examples."><i class="fa fa-check"></i><b>8.9</b> Examples.</a>
+<ul>
+<li class="chapter" data-level="8.9.1" data-path="energy-supply.html"><a href="energy-supply.html#nasem-dairy-8-3"><i class="fa fa-check"></i><b>8.9.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="8.9.2" data-path="energy-supply.html"><a href="energy-supply.html#r-3"><i class="fa fa-check"></i><b>8.9.2</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="8.10" data-path="energy-supply.html"><a href="energy-supply.html#questions-6"><i class="fa fa-check"></i><b>8.10</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="energy-use.html"><a href="energy-use.html"><i class="fa fa-check"></i><b>9</b> Energy use</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="energy-use.html"><a href="energy-use.html#body-functions-in-the-energy-model"><i class="fa fa-check"></i><b>9.1</b> Body functions in the energy model</a></li>
+<li class="chapter" data-level="9.2" data-path="energy-use.html"><a href="energy-use.html#maintenance"><i class="fa fa-check"></i><b>9.2</b> Maintenance</a></li>
+<li class="chapter" data-level="9.3" data-path="energy-use.html"><a href="energy-use.html#lactation"><i class="fa fa-check"></i><b>9.3</b> Lactation</a></li>
+<li class="chapter" data-level="9.4" data-path="energy-use.html"><a href="energy-use.html#activity"><i class="fa fa-check"></i><b>9.4</b> Activity</a></li>
+<li class="chapter" data-level="9.5" data-path="energy-use.html"><a href="energy-use.html#environmental-effects"><i class="fa fa-check"></i><b>9.5</b> Environmental effects</a></li>
+<li class="chapter" data-level="9.6" data-path="energy-use.html"><a href="energy-use.html#gestation"><i class="fa fa-check"></i><b>9.6</b> Gestation</a></li>
+<li class="chapter" data-level="9.7" data-path="energy-use.html"><a href="energy-use.html#body-reserve-change"><i class="fa fa-check"></i><b>9.7</b> Body reserve change</a></li>
+<li class="chapter" data-level="9.8" data-path="energy-use.html"><a href="energy-use.html#frame-gain"><i class="fa fa-check"></i><b>9.8</b> Frame gain</a></li>
+<li class="chapter" data-level="9.9" data-path="energy-use.html"><a href="energy-use.html#total-energy-use"><i class="fa fa-check"></i><b>9.9</b> Total energy use</a></li>
+<li class="chapter" data-level="9.10" data-path="energy-use.html"><a href="energy-use.html#converting-to-nel-basis"><i class="fa fa-check"></i><b>9.10</b> Converting to NEL basis</a></li>
+<li class="chapter" data-level="9.11" data-path="energy-use.html"><a href="energy-use.html#nel-use-simulations"><i class="fa fa-check"></i><b>9.11</b> NEL use simulations</a></li>
+<li class="chapter" data-level="9.12" data-path="energy-use.html"><a href="energy-use.html#questions-7"><i class="fa fa-check"></i><b>9.12</b> Questions</a></li>
+<li class="chapter" data-level="9.13" data-path="energy-use.html"><a href="energy-use.html#examples-2"><i class="fa fa-check"></i><b>9.13</b> Examples</a>
+<ul>
+<li class="chapter" data-level="9.13.1" data-path="energy-use.html"><a href="energy-use.html#nasem-dairy-8-4"><i class="fa fa-check"></i><b>9.13.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="9.13.2" data-path="energy-use.html"><a href="energy-use.html#r-4"><i class="fa fa-check"></i><b>9.13.2</b> R</a></li>
+<li class="chapter" data-level="9.13.3" data-path="energy-use.html"><a href="energy-use.html#python-3"><i class="fa fa-check"></i><b>9.13.3</b> Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="protein-overview.html"><a href="protein-overview.html"><i class="fa fa-check"></i><b>10</b> Protein overview</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="protein-overview.html"><a href="protein-overview.html#biological-definition-of-protein"><i class="fa fa-check"></i><b>10.1</b> Biological definition of protein</a></li>
+<li class="chapter" data-level="10.2" data-path="protein-overview.html"><a href="protein-overview.html#nutritional-definitions-of-protein"><i class="fa fa-check"></i><b>10.2</b> Nutritional definitions of protein</a></li>
+<li class="chapter" data-level="10.3" data-path="protein-overview.html"><a href="protein-overview.html#goals-of-dairy-protein-nutrition"><i class="fa fa-check"></i><b>10.3</b> Goals of dairy protein nutrition</a></li>
+<li class="chapter" data-level="10.4" data-path="protein-overview.html"><a href="protein-overview.html#the-animal-protein-system"><i class="fa fa-check"></i><b>10.4</b> The animal protein system</a></li>
+<li class="chapter" data-level="10.5" data-path="protein-overview.html"><a href="protein-overview.html#amino-acids"><i class="fa fa-check"></i><b>10.5</b> Amino acids</a></li>
+<li class="chapter" data-level="10.6" data-path="protein-overview.html"><a href="protein-overview.html#references-2"><i class="fa fa-check"></i><b>10.6</b> References</a></li>
+<li class="chapter" data-level="10.7" data-path="protein-overview.html"><a href="protein-overview.html#questions-8"><i class="fa fa-check"></i><b>10.7</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html"><i class="fa fa-check"></i><b>11</b> Protein intake and ruminal supplies</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#cp-intake"><i class="fa fa-check"></i><b>11.1</b> CP intake</a></li>
+<li class="chapter" data-level="11.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#ruminal-protein-supplies"><i class="fa fa-check"></i><b>11.2</b> Ruminal protein supplies</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#rdp-and-rup"><i class="fa fa-check"></i><b>11.2.1</b> RDP and RUP</a></li>
+<li class="chapter" data-level="11.2.2" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#calculating-rdp-and-rup"><i class="fa fa-check"></i><b>11.2.2</b> Calculating RDP and RUP</a></li>
+<li class="chapter" data-level="11.2.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#microbial-protein-synthesis"><i class="fa fa-check"></i><b>11.2.3</b> Microbial protein synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#examples-3"><i class="fa fa-check"></i><b>11.3</b> Examples</a></li>
+<li class="chapter" data-level="11.4" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#questions-9"><i class="fa fa-check"></i><b>11.4</b> Questions</a></li>
+<li class="chapter" data-level="11.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>11.5</b> R code for figures ### NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html"><i class="fa fa-check"></i><b>12</b> Protein postruminal supplies</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-microbial-tp"><i class="fa fa-check"></i><b>12.1</b> Digestion of microbial TP</a></li>
+<li class="chapter" data-level="12.2" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#digestion-of-rup"><i class="fa fa-check"></i><b>12.2</b> Digestion of RUP</a></li>
+<li class="chapter" data-level="12.3" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#metabolizable-protein"><i class="fa fa-check"></i><b>12.3</b> Metabolizable protein</a></li>
+<li class="chapter" data-level="12.4" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-basis"><i class="fa fa-check"></i><b>12.4</b> AA basis</a></li>
+<li class="chapter" data-level="12.5" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-microbial-protein"><i class="fa fa-check"></i><b>12.5</b> AA in microbial protein</a></li>
+<li class="chapter" data-level="12.6" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#aa-in-rup"><i class="fa fa-check"></i><b>12.6</b> AA in RUP</a></li>
+<li class="chapter" data-level="12.7" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#examples-4"><i class="fa fa-check"></i><b>12.7</b> Examples</a></li>
+<li class="chapter" data-level="12.8" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html#questions-10"><i class="fa fa-check"></i><b>12.8</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html"><i class="fa fa-check"></i><b>13</b> Protein use and recommended supplies</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#scurf"><i class="fa fa-check"></i><b>13.1</b> Scurf</a></li>
+<li class="chapter" data-level="13.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#endogenous-urinary-protein"><i class="fa fa-check"></i><b>13.2</b> Endogenous urinary protein</a></li>
+<li class="chapter" data-level="13.3" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#metabolic-fecal-protein"><i class="fa fa-check"></i><b>13.3</b> Metabolic fecal protein</a></li>
+<li class="chapter" data-level="13.4" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#milk-protein"><i class="fa fa-check"></i><b>13.4</b> Milk protein</a></li>
+<li class="chapter" data-level="13.5" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#gestation-protein"><i class="fa fa-check"></i><b>13.5</b> Gestation protein</a></li>
+<li class="chapter" data-level="13.6" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#growth"><i class="fa fa-check"></i><b>13.6</b> Growth</a></li>
+<li class="chapter" data-level="13.7" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#total-np-use"><i class="fa fa-check"></i><b>13.7</b> Total NP use</a></li>
+<li class="chapter" data-level="13.8" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#aa-basis-1"><i class="fa fa-check"></i><b>13.8</b> AA basis</a></li>
+<li class="chapter" data-level="13.9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#recommendations"><i class="fa fa-check"></i><b>13.9</b> Recommendations</a></li>
+<li class="chapter" data-level="13.10" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#examples-5"><i class="fa fa-check"></i><b>13.10</b> Examples</a>
+<ul>
+<li class="chapter" data-level="13.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-5"><i class="fa fa-check"></i><b>13.10.1</b> NASEM dairy-8</a></li>
+<li class="chapter" data-level="13.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-needs-update"><i class="fa fa-check"></i><b>13.10.2</b> R ## NEEDS UPDATE</a></li>
+</ul></li>
+<li class="chapter" data-level="13.11" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#questions-11"><i class="fa fa-check"></i><b>13.11</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>14</b> Glossary</a></li>
+<li class="divider"></li>
+<b> Contributors:</b>
+<li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
+<li><a href="https://andysci.wisc.edu/directory/michel-wattiaux/" target="blank">Michel A. Wattiaux</a></li>
+<li><a href="https://www.dasc.vt.edu/people/faculty/hanigan.html" target="blank">Mark D. Hanigan</a></li>
+<li><a href="https://www.marinadanes.com" target="blank">Marina A.C. Danes </a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dry-matter-intake" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Dry matter intake<a href="dry-matter-intake.html#dry-matter-intake" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-42"></span>
+<img src="images/jerseys_eating.jpeg" alt="Jersey cattle eating." width="85%" />
+<p class="caption">
+Figure 6.1: Jersey cattle eating.
+</p>
+</div>
+<div class="lo">
+<p><strong>Learning Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>List and explain two major theories of intake regulation.</li>
+<li>Discuss how animal, diet, and other factors influence dry matter intake.</li>
+<li>Use NASEM (2021) equations to predict dry matter intake.</li>
+</ol>
+</div>
+<div id="introduction-to-dmi" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Introduction to DMI<a href="dry-matter-intake.html#introduction-to-dmi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dry matter intake (DMI) is critically important in animal nutrition because it establishes the amount of nutrients available to the animal. When balancing rations, the nutritionist must predict the amount of dry matter the animal will consume. The accurate prediction of DMI is formulate balanced rations. If actual DMI is less than expected, the animal will be underfed nutrients and fed a ration that is too "diluted" to meet its needs. This may have implications on health and productivity. If DMI is greater than predicted, the animal will be fed a ration that is too "concentrated" in nutrients. Over-consumption of nutrients is typically more expensive and can increase environmental outputs.</p>
+</div>
+<div id="two-theories-of-dmi-regulation" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Two theories of DMI regulation<a href="dry-matter-intake.html#two-theories-of-dmi-regulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>NASEM (2021) alludes to two major theories of intake regulation in ruminants: physical fill feedback and fuel-sensing. These theories explain why certain animal, diet, and environmental factors affect DMI.</p>
+<p><strong>Physical fill limitations</strong></p>
+<p>The physical fill (distension) of the gastrointestinal tract can signal satiety the the body. For example, researchers have inflated balloons in the stomachs of humans and other animals and shown that it decreased hunger (reviewed by Allen, 1996). The gastrointestinal tract only has room for a certain amount of digesta, so there are limitations to DMI based on the degree of physical fullness.</p>
+<p><strong>Fuel-sensing</strong></p>
+<p>Allen (2014) explained that ruminants can sense the body energy status that the ruminant liver can sense the body's energy status and send signals (afferents) to the brain to stimulate or inhibit feeding. This is referred to as hepatic oxidation theory (hepatic = related to the liver; oxidation = breakdown of fuels).</p>
+<div class="grey">
+<p><strong>Literature Deep Dive: </strong></p>
+<p>One of the articles mentioned by the NASEM (2021) committee is a famous study done by Conrad (1964). This figure from Conrad (1964) shows how DMI rises as digestibility improves from 52 to about 67% of DM. This could correspond to feeding "higher quality" feeds, which result in less rumen distension and pass through the digestive tract more quickly. If gut fill is not a limitation, the animal is able to eat progressively more as digestibility increases. However, there is a point (here, estimated at 67% digestibility), after which feed intake declines with increasing digestibility. One possible reason is that the animal's hunger and satiety signals stop them from eating more. This is referred to as "fuel-sensing."</p>
+<p><img src="images/image-1323641746.png" /></p>
+<p>Source: Conrad, H. R., Pratt, A. D., &amp; Hibbs, J. W. (1964). Regulation of feed intake in dairy cows. I. Change in importance of physical and physiological factors with increasing digestibility. Journal of Dairy Science, 47(1), 54-62. <a href="https://doi.org/10.3168/jds.S0022-0302(64)88581-7" class="uri">https://doi.org/10.3168/jds.S0022-0302(64)88581-7</a></p>
+</div>
+<div class="orange">
+<p><strong>Analogy to humans: </strong> 🥬 vs. 🥜</p>
+<p>If you prefer to think in human terms, picture a very unrealistic situation, in which a person loves lettuce (a high fiber, low digestibility food). This person loves lettuce so much that they are trying to meet their caloric needs by eating a lettuce-only diet. This person would have to eat a massive amount of lettuce...something like 30-50 pounds...to meet their requirement for kilocalories. But the gastrointestinal tract (GIT) will only physically hold a certain volume of digesta. Additionally, lettuce is difficult to digest, so it passes through the GIT slowly. Therefore, this person would probably reach a physical fill limitation to their DMI before their energy needs were met. Note that we have only discussed energy requirements, although there could likely be a shortage of nutrients too.</p>
+<p>The lettuce-loving person is analogous to a ruminant consuming low-digestibility diet (sometimes referred to as "low-quality diet").</p>
+<p>Now picture a person who loves peanut butter (a low-fiber, high-digestibility food). This person can meet their energy requirement by eating a small volume of peanut butter. Because it is easily digested, it will move more quickly through the GIT. Therefore, the physical fill of the GIT does not limit their DMI. Instead, fuel-sensing signals will regulate intake. This person could have a relatively non-distended GIT and not feel hungry, because the liver senses an influx in energy and sends satiety signals to the brain.</p>
+<p>The peanut-butter-eating person is analogous to an animal consuming a high-digestibility diet.</p>
+</div>
+</div>
+<div id="animal-factors" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Animal factors<a href="dry-matter-intake.html#animal-factors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Thinking about the theories of intake regulation, we can see why certain animal factors affect DMI. Body weight increases the size of the digestive tract, allowing a greater volume of feed intake before physical fill limitations occur. Greater body weight also increases the animal's demand for nutrients, meaning that more feed will be required before satiety signals are triggered. Greater body condition score (BCS) near calving is associated with greater oxidation fatty acids derived from body reserves. As explained by the hepatic oxidation theory, this can lead to satiety signaling and decreased intake, potentially throughout the postpartum period.</p>
+<p>Milk production is another important factor in determining DMI. Milk production demands a tremendous amount of nutrients and energy. The need for nutrients and energy can sometimes cause the animal to feel hungrier, because the body senses that energy supply is insufficient relative to energy demand (Allen and Bradford, 2012).</p>
+<p>The consensus report does not explain why Parity affects DMI. However, there are several potential reasons. Compared to primiparous cows, multiparous cows have a larger digestive tract relative to their body size. This anatomical difference may affect their DMI independent of BW. Additionally, multiparous cows may have differences in satiety signaling compared to primiparous cows.</p>
+</div>
+<div id="diet-factors" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Diet factors<a href="dry-matter-intake.html#diet-factors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Various aspects of diet composition can affect DMI. For example, diets that are too dry (hay only) or wet (fresh pasture) can negatively affect DMI. Certain nutrient imbalances (e.g., too much fat or quickly-fermentable carbohydrates) can suppress the function of rumen microbes, causing feed to stay longer in the rumen and suppressing intake. These factors are discussed in greater detail in NASEM (2021), but not included in predictive equations.</p>
+<p>Originally, researchers thought that dietary fiber (NDF) was the most important factor to determining DMI (Mertens, 1994). This is a reasonable theory for a few reasons. First, the volume of a ration (or any particular feed ingredient) is closely related to its fiber content. Long-chopped forages are sources of fiber that have a large volume per unit of weight (low density). In contrast, concentrates are generally lower in fiber and have a low volume per unit of weight (high density). This difference in density means that higher fiber rations create more physical fill per unit of DMI. Second, fiber takes longer to digest than other nutrients, so it often passes more slowly through the digestive tract. High fiber diets could lead to physical fill limitations because they would decrease the rate of passage and increase the amount of digesta in the animal at any given point in time. Both of these principles have been tested over several decades of research and seem to be true.</p>
+<p>However, eventually researchers also found that the physical form of fibrous feeds affected DMI (Dado and Allen, 1995). For example, fiber from forages (fNDF) was less dense and passed slowly through the digestive tract, and limited intake. Conversely, fiber from concentrate sources such as byproducts (non-forage NDF) was fairly dense, passed relatively quickly through the digestive tract, and did not affect physical fill to the same extent. Therefore, it became important to differentiate between forage and non-forage fiber in determining DMI.</p>
+</div>
+<div id="other-factors" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Other factors<a href="dry-matter-intake.html#other-factors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The NASEM (2021) committee also discussed several other factors affecting DMI. Although these factors were not included in predictive equations, they mentioned a few important points:</p>
+<ul>
+<li><strong>Eating habits and cow behavior</strong> - Feed availability affects how much cows eat. When cows have 24/7 access to feed, they may change their eating habits. Additionally, DMI can be affected by social interactions. Cows that are socially dominant tend to out-compete less-dominant peers to access the feed bunk. If bunk space is limited, this can drastically affect DMI.</li>
+<li><strong>Feeding frequency</strong> - Increasing the frequency of feeding or pushing up feed (moving feed closer to cows) has been shown to affect eating behavior, which may affect DMI.</li>
+<li><strong>Sorting</strong> - Sorting is when animals selectively consume some parts of the ration and not others. Typically, animals may sort out longer particles or dust, and selectively consume energy-dense or shorter-particle fractions. This means that the ration actually consumed by the animal can be different than the ration fed.</li>
+<li><strong>Weather</strong> - Cold ambient temperatures are predicted to increase DMI, whereas heat stress typically decreases DMI.</li>
+</ul>
+</div>
+<div id="dmi-in-nasem-2021" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> DMI in NASEM (2021)<a href="dry-matter-intake.html#dmi-in-nasem-2021" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>NASEM (2021) gives the following equation to predict DMI for lactating Holsteins:</p>
+<p>Eq. 2-1, p. 12
+<span class="math display">\[\begin{aligned}
+DMI (kg/d) &amp;= [3.7 + (5.7*Parity) + \\
+&amp;\quad (0.305*MilkE) + \\
+&amp;\quad (0.022*BW) + \\
+&amp;\quad   (-0.689-1.87*Parity)*BCS]*\\
+&amp;\quad  [1-(0.212+0.136*Parity)*e^{(-0.053*DIM)}]
+\end{aligned}\]</span></p>
+<p><span class="math inline">\(Parity\)</span> is the proportion of cows that are multiparous (ranges from 0
+to 1)<br />
+<span class="math inline">\(BCS\)</span> is the body condition score from 1 (thin) to 5 (obese)<br />
+<span class="math inline">\(BW\)</span> is the bodyweight in kg<br />
+<span class="math inline">\(MilkE\)</span> is the energy produced in milk, in Mcal/d<br />
+<span class="math inline">\(DIM\)</span> is the day in milk, an integer number of days since the start of
+lactation</p>
+<p>Although various aspects of the diet can affect DMI, NASEM (2021) considers mainly fiber and forage fiber content in determining physical fill limitations. NASEM (2021) gives the following equation to predict DMI for lactating Holsteins based on both animal and diet factors:</p>
+<p>Eq. 2-2, p. 13
+<span class="math display">\[\begin{aligned}
+DMI (kg/d) &amp;= 12.0-(0.107*fNDF) + \\
+&amp;\quad (8.17*ADF/NDF) + \\
+&amp;\quad (0.0253*fNDFD) + \\
+&amp;\quad   (-0.328*(ADF/NDF-0.602)) * (fNDFD-48.3) +\\
+&amp;\quad  (0.225*MY) +\\
+&amp;\quad 0.00390*(fNDFD-48.3)*(MY-33.1)
+\end{aligned}\]</span></p>
+<p><span class="math inline">\(fNDF\)</span> is the forage NDF content of the diet as a percentage of diet DM<br />
+<span class="math inline">\(ADF/NDF\)</span> is the ADF content of the diet (% of DM) divided by the NDF content of the diet (% of DM)<br />
+<span class="math inline">\(fNDFD\)</span> is the digestibility of forage NDF measured <em>in vitro</em> or <em>in situ</em><br />
+<span class="math inline">\(MY\)</span> is the milk yield, in kg/d</p>
+<p>Forage NDF is determined by summing the NDF from forage sources. Starting with a list of ingredients and inclusion rates (% of DM), 1) Find out which ingredients are forages. This is listed in the NASEM (2021) Feed Library. 2) Determine the NDF content of the forage feeds as a percentage of ingredient DM. 3) Compute a weighted sum of forage ingredient NDF, where the weights are the inclusion rates of each forage ingredient <span class="math inline">\(i\)</span> in the diet.</p>
+<p><span class="math display">\[fNDF =  \sum_{i = 1}^{\text{n forages in diet}} w_i(NDF_i)\]</span></p>
+<p><span class="math inline">\(fNDF\)</span> is the sum of forage ingredient NDF, expressed as a percentage of diet DM (kg NDF from forages / 100 kg diet DM).
+<span class="math inline">\(w_i\)</span> is the weighting factor, the inclusion rate of feed <span class="math inline">\(i\)</span> in the diet as a proportion (kg ingredient / 1 kg diet).
+<span class="math inline">\(NDF_i\)</span> is the NDF content of the forage ingredient <span class="math inline">\(i\)</span> as a percentage of DM (kg NDF / 100 kg ingredient).</p>
+<div class="orange">
+<p><strong>Example fNDF calculation: </strong></p>
+<p><strong>Inclusion of ingredients in diet</strong> (<span class="math inline">\(w_i\)</span>, proportion of diet DM)<br />
+Corn silage 0.4
+Alfalfa silage 0.2
+Other non-forage ingredients 0.4</p>
+<p><strong>NDF content of ingredients</strong> (<span class="math inline">\(NDF_i\)</span>, % of ingredient DM)
+Corn silage 45%<br />
+Alfalfa silage 42%</p>
+<p><span class="math display">\[(0.4*45)+(0.2*42)\\fNDF = 26.4\text{% of diet DM} \]</span></p>
+</div>
+<p>Importantly, the fNDFD is expressed as a percentage of forage NDF, in other words, the kg of digestible forage NDF per 100 kg of forage NDF. The ADF/NDF ratio is included as a proxy for forage fragility. Fragility is a measure of how readily the feed breaks apart when chewed by the animal, which affects its behavior throughout the digestive tract.</p>
+<p><strong><em>Which equation should I use?</em></strong>
+It is up to the nutritionist to decide which DMI equation is most appropriate. For example, when a diet with a large amount of forage NDF is fed, it may be reasonable to use Eq. 2-2 because physical fill limitations may play a large role in determining DMI. In contrast, Eq. 2-1 may be useful when trying to estimate DMI separately for groupings based on animal factors. For example, farms may group primiparous and multiparous cattle separately and feed them separate rations. It is also common to feed a separate ration for cows with very high milk production. Determining DMI for these groups requires an equation that accounts for animal effects.</p>
+</div>
+<div id="examples-1" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Examples<a href="dry-matter-intake.html#examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="nasem-dairy-8-2" class="section level3 hasAnchor" number="6.7.1">
+<h3><span class="header-section-number">6.7.1</span> NASEM dairy-8<a href="dry-matter-intake.html#nasem-dairy-8-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="webex-solution">
+<button>
+Show NASEM dairy 8 example
+</button>
+<ol style="list-style-type: decimal">
+<li>Open NASEM dairy-8.</li>
+<li>Load one of the default simulations, for example by clicking File &gt; Load Simulation &gt; "Example-Lactating-Cow-DIM-050." <em>NOTE: The equations in this chapter only apply to lactating cows, so please be sure you select an appropriate simulation.</em></li>
+<li>Under Inputs (tile) &gt; Animal Description/Management, take a look at the body weight, body condition score, and parity inputs.</li>
+<li>Under Inputs &gt; Production, look to see which milk production is expected for this default simulation.</li>
+<li>Under the Feeds tile, look at what is included in the ration.</li>
+<li>Click "Reports" tile in the top menu.</li>
+<li>Check "All" under "Select one or more reports," or select only "Report 1" for a shorter output. Then hit the button "Generate Selected Reports." A Word Document will appear for download.</li>
+<li>In the report, Table 1.2 shows "Entered Performance" with "Estimated DMI Based on Animal" (Eq. 2-1) and "Estimated DMI Based on Animal/Fiber" (Eq 2-2).</li>
+<li>Another way get the Eq. 2-2 DMI prediction is to click the Ration tile and look near the bottom left of the screen to see "Estimated Intake Based on Animal and Diet."</li>
+</ol>
+</div>
+</div>
+<div id="r-2" class="section level3 hasAnchor" number="6.7.2">
+<h3><span class="header-section-number">6.7.2</span> R<a href="dry-matter-intake.html#r-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="webex-solution">
+<button>
+Show R example
+</button>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="dry-matter-intake.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function for DMI Eq 2-1</span></span>
+<span id="cb8-2"><a href="dry-matter-intake.html#cb8-2" aria-hidden="true" tabindex="-1"></a>DMI_2_1 <span class="ot">&lt;-</span> <span class="cf">function</span>(Parity, MilkE, BW, BCS, DIM) {</span>
+<span id="cb8-3"><a href="dry-matter-intake.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  DMI <span class="ot">&lt;-</span> (<span class="fl">3.7</span> <span class="sc">+</span> (<span class="fl">5.7</span> <span class="sc">*</span> Parity) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="dry-matter-intake.html#cb8-4" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">0.305</span> <span class="sc">*</span> MilkE) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="dry-matter-intake.html#cb8-5" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">0.022</span> <span class="sc">*</span> BW) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="dry-matter-intake.html#cb8-6" aria-hidden="true" tabindex="-1"></a>    (<span class="sc">-</span><span class="fl">0.689</span> <span class="sc">-</span> <span class="fl">1.87</span> <span class="sc">*</span> Parity) <span class="sc">*</span> BCS) <span class="sc">*</span></span>
+<span id="cb8-7"><a href="dry-matter-intake.html#cb8-7" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">-</span> (<span class="fl">0.212</span> <span class="sc">+</span> <span class="fl">0.136</span> <span class="sc">*</span> Parity) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.053</span> <span class="sc">*</span> DIM))</span>
+<span id="cb8-8"><a href="dry-matter-intake.html#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="dry-matter-intake.html#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(DMI)</span>
+<span id="cb8-10"><a href="dry-matter-intake.html#cb8-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-11"><a href="dry-matter-intake.html#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="dry-matter-intake.html#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Parity is the proportion of cows that are multiparous (ranges from 0 to 1)  </span></span>
+<span id="cb8-13"><a href="dry-matter-intake.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># BCS is the body condition score from 1 (thin) to 5 (obese)   </span></span>
+<span id="cb8-14"><a href="dry-matter-intake.html#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># BW is the bodyweight in kg  </span></span>
+<span id="cb8-15"><a href="dry-matter-intake.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># MilkE is the energy produced in milk, in Mcal/d  </span></span>
+<span id="cb8-16"><a href="dry-matter-intake.html#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># DIM is the day in milk, an integer number of days since the start of lactation  </span></span>
+<span id="cb8-17"><a href="dry-matter-intake.html#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="dry-matter-intake.html#cb8-18" aria-hidden="true" tabindex="-1"></a>Parity <span class="ot">=</span> <span class="fl">0.5</span> <span class="co"># half multiparous</span></span>
+<span id="cb8-19"><a href="dry-matter-intake.html#cb8-19" aria-hidden="true" tabindex="-1"></a>MilkE <span class="ot">=</span> <span class="dv">25</span></span>
+<span id="cb8-20"><a href="dry-matter-intake.html#cb8-20" aria-hidden="true" tabindex="-1"></a>BW <span class="ot">=</span> <span class="dv">650</span></span>
+<span id="cb8-21"><a href="dry-matter-intake.html#cb8-21" aria-hidden="true" tabindex="-1"></a>BCS <span class="ot">=</span> <span class="fl">3.5</span></span>
+<span id="cb8-22"><a href="dry-matter-intake.html#cb8-22" aria-hidden="true" tabindex="-1"></a>DIM <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb8-23"><a href="dry-matter-intake.html#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="dry-matter-intake.html#cb8-24" aria-hidden="true" tabindex="-1"></a>result <span class="ot">=</span> <span class="fu">DMI_2_1</span>(Parity, MilkE, BW, BCS, DIM)</span>
+<span id="cb8-25"><a href="dry-matter-intake.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;DMI 2-1:&quot;</span>, <span class="fu">round</span>(result, <span class="dv">3</span>))</span>
+<span id="cb8-26"><a href="dry-matter-intake.html#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="dry-matter-intake.html#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
+<span id="cb8-28"><a href="dry-matter-intake.html#cb8-28" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb8-29"><a href="dry-matter-intake.html#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function for DMI Eq 2-2</span></span>
+<span id="cb8-30"><a href="dry-matter-intake.html#cb8-30" aria-hidden="true" tabindex="-1"></a>DMI_2_2 <span class="ot">&lt;-</span> <span class="cf">function</span>(fNDF, ADF_NDF, fNDFD, MY) {</span>
+<span id="cb8-31"><a href="dry-matter-intake.html#cb8-31" aria-hidden="true" tabindex="-1"></a>  DMI <span class="ot">&lt;-</span> <span class="fl">12.0</span> <span class="sc">-</span> (<span class="fl">0.107</span> <span class="sc">*</span> fNDF) <span class="sc">+</span></span>
+<span id="cb8-32"><a href="dry-matter-intake.html#cb8-32" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">8.17</span> <span class="sc">*</span> ADF_NDF) <span class="sc">+</span></span>
+<span id="cb8-33"><a href="dry-matter-intake.html#cb8-33" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">0.0253</span> <span class="sc">*</span> fNDFD) <span class="sc">+</span></span>
+<span id="cb8-34"><a href="dry-matter-intake.html#cb8-34" aria-hidden="true" tabindex="-1"></a>    (<span class="sc">-</span><span class="fl">0.328</span> <span class="sc">*</span> (ADF_NDF <span class="sc">-</span> <span class="fl">0.602</span>)) <span class="sc">*</span> (fNDFD <span class="sc">-</span> <span class="fl">48.3</span>) <span class="sc">+</span></span>
+<span id="cb8-35"><a href="dry-matter-intake.html#cb8-35" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">0.225</span> <span class="sc">*</span> MY) <span class="sc">+</span></span>
+<span id="cb8-36"><a href="dry-matter-intake.html#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.00390</span> <span class="sc">*</span> (fNDFD <span class="sc">-</span> <span class="fl">48.3</span>) <span class="sc">*</span> (MY <span class="sc">-</span> <span class="fl">33.1</span>)</span>
+<span id="cb8-37"><a href="dry-matter-intake.html#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="dry-matter-intake.html#cb8-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(DMI)</span>
+<span id="cb8-39"><a href="dry-matter-intake.html#cb8-39" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-40"><a href="dry-matter-intake.html#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="co"># fNDF is the forage NDF content of the diet as a percentage of diet DM  </span></span>
+<span id="cb8-41"><a href="dry-matter-intake.html#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="co"># ADF/NDF is the ADF content of the diet (% of DM) divided by the NDF content of the diet (% of DM)   </span></span>
+<span id="cb8-42"><a href="dry-matter-intake.html#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="co"># fNDFD is the digestibility of forage NDF measured *in vitro* or *in situ*  </span></span>
+<span id="cb8-43"><a href="dry-matter-intake.html#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="co"># MY is the milk yield, in kg/d  </span></span>
+<span id="cb8-44"><a href="dry-matter-intake.html#cb8-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-45"><a href="dry-matter-intake.html#cb8-45" aria-hidden="true" tabindex="-1"></a>ADF_NDF <span class="ot">=</span> <span class="fl">0.75</span></span>
+<span id="cb8-46"><a href="dry-matter-intake.html#cb8-46" aria-hidden="true" tabindex="-1"></a>fNDF <span class="ot">=</span> <span class="dv">30</span></span>
+<span id="cb8-47"><a href="dry-matter-intake.html#cb8-47" aria-hidden="true" tabindex="-1"></a>fNDFD <span class="ot">=</span> <span class="dv">50</span></span>
+<span id="cb8-48"><a href="dry-matter-intake.html#cb8-48" aria-hidden="true" tabindex="-1"></a>MY <span class="ot">=</span> <span class="dv">35</span></span>
+<span id="cb8-49"><a href="dry-matter-intake.html#cb8-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-50"><a href="dry-matter-intake.html#cb8-50" aria-hidden="true" tabindex="-1"></a>result <span class="ot">=</span> <span class="fu">DMI_2_2</span>(fNDF, ADF_NDF, fNDFD, MY)</span>
+<span id="cb8-51"><a href="dry-matter-intake.html#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;DMI 2-2:&quot;</span>, <span class="fu">round</span>(result, <span class="dv">3</span>))</span></code></pre></div>
+</div>
+</div>
+<div id="python-2" class="section level3 hasAnchor" number="6.7.3">
+<h3><span class="header-section-number">6.7.3</span> Python<a href="dry-matter-intake.html#python-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="webex-solution">
+<button>
+Show Python example
+</button>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="dry-matter-intake.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import package to use exp. </span></span>
+<span id="cb9-2"><a href="dry-matter-intake.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb9-3"><a href="dry-matter-intake.html#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="dry-matter-intake.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function for DMI Eq 2-1</span></span>
+<span id="cb9-5"><a href="dry-matter-intake.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DMI_2_1(Parity, MilkE, BW, BCS, DIM):</span>
+<span id="cb9-6"><a href="dry-matter-intake.html#cb9-6" aria-hidden="true" tabindex="-1"></a>    DMI <span class="op">=</span> (<span class="fl">3.7</span> <span class="op">+</span> (<span class="fl">5.7</span> <span class="op">*</span> Parity) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-7"><a href="dry-matter-intake.html#cb9-7" aria-hidden="true" tabindex="-1"></a>           (<span class="fl">0.305</span> <span class="op">*</span> MilkE) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-8"><a href="dry-matter-intake.html#cb9-8" aria-hidden="true" tabindex="-1"></a>           (<span class="fl">0.022</span> <span class="op">*</span> BW) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-9"><a href="dry-matter-intake.html#cb9-9" aria-hidden="true" tabindex="-1"></a>           (<span class="op">-</span><span class="fl">0.689</span> <span class="op">-</span> <span class="fl">1.87</span> <span class="op">*</span> Parity) <span class="op">*</span> BCS) <span class="op">*</span> <span class="op">\</span></span>
+<span id="cb9-10"><a href="dry-matter-intake.html#cb9-10" aria-hidden="true" tabindex="-1"></a>          (<span class="dv">1</span> <span class="op">-</span> (<span class="fl">0.212</span> <span class="op">+</span> <span class="fl">0.136</span> <span class="op">*</span> Parity) <span class="op">*</span> math.exp(<span class="op">-</span><span class="fl">0.053</span> <span class="op">*</span> DIM))</span>
+<span id="cb9-11"><a href="dry-matter-intake.html#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> DMI</span>
+<span id="cb9-12"><a href="dry-matter-intake.html#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="dry-matter-intake.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Parity is the proportion of cows that are multiparous (ranges from 0 to 1)</span></span>
+<span id="cb9-14"><a href="dry-matter-intake.html#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># BCS is the body condition score from 1 (thin) to 5 (obese)</span></span>
+<span id="cb9-15"><a href="dry-matter-intake.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># BW is the bodyweight in kg</span></span>
+<span id="cb9-16"><a href="dry-matter-intake.html#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># MilkE is the energy produced in milk, in Mcal/d</span></span>
+<span id="cb9-17"><a href="dry-matter-intake.html#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># DIM is the day in milk, an integer number of days since the start of lactation</span></span>
+<span id="cb9-18"><a href="dry-matter-intake.html#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="dry-matter-intake.html#cb9-19" aria-hidden="true" tabindex="-1"></a>Parity <span class="op">=</span> <span class="fl">0.5</span> <span class="co"># half multiparous</span></span>
+<span id="cb9-20"><a href="dry-matter-intake.html#cb9-20" aria-hidden="true" tabindex="-1"></a>MilkE <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb9-21"><a href="dry-matter-intake.html#cb9-21" aria-hidden="true" tabindex="-1"></a>BW <span class="op">=</span> <span class="dv">650</span></span>
+<span id="cb9-22"><a href="dry-matter-intake.html#cb9-22" aria-hidden="true" tabindex="-1"></a>BCS <span class="op">=</span> <span class="fl">3.5</span></span>
+<span id="cb9-23"><a href="dry-matter-intake.html#cb9-23" aria-hidden="true" tabindex="-1"></a>DIM <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb9-24"><a href="dry-matter-intake.html#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="dry-matter-intake.html#cb9-25" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> DMI_2_1(Parity, MilkE, BW, BCS, DIM)</span>
+<span id="cb9-26"><a href="dry-matter-intake.html#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;DMI 2-1:&quot;</span>, result)</span>
+<span id="cb9-27"><a href="dry-matter-intake.html#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="dry-matter-intake.html#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="co">##################################</span></span>
+<span id="cb9-29"><a href="dry-matter-intake.html#cb9-29" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb9-30"><a href="dry-matter-intake.html#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="dry-matter-intake.html#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function for DMI Eq 2-2</span></span>
+<span id="cb9-32"><a href="dry-matter-intake.html#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DMI_2_2(fNDF, ADF_NDF, fNDFD, MY):</span>
+<span id="cb9-33"><a href="dry-matter-intake.html#cb9-33" aria-hidden="true" tabindex="-1"></a>    DMI <span class="op">=</span> <span class="fl">12.0</span> <span class="op">-</span> (<span class="fl">0.107</span> <span class="op">*</span> fNDF) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-34"><a href="dry-matter-intake.html#cb9-34" aria-hidden="true" tabindex="-1"></a>          (<span class="fl">8.17</span> <span class="op">*</span> ADF_NDF) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-35"><a href="dry-matter-intake.html#cb9-35" aria-hidden="true" tabindex="-1"></a>          (<span class="fl">0.0253</span> <span class="op">*</span> fNDFD) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-36"><a href="dry-matter-intake.html#cb9-36" aria-hidden="true" tabindex="-1"></a>          (<span class="op">-</span><span class="fl">0.328</span> <span class="op">*</span> (ADF_NDF <span class="op">-</span> <span class="fl">0.602</span>)) <span class="op">*</span> (fNDFD <span class="op">-</span> <span class="fl">48.3</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-37"><a href="dry-matter-intake.html#cb9-37" aria-hidden="true" tabindex="-1"></a>          (<span class="fl">0.225</span> <span class="op">*</span> MY) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-38"><a href="dry-matter-intake.html#cb9-38" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.00390</span> <span class="op">*</span> (fNDFD <span class="op">-</span> <span class="fl">48.3</span>) <span class="op">*</span> (MY <span class="op">-</span> <span class="fl">33.1</span>)</span>
+<span id="cb9-39"><a href="dry-matter-intake.html#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> DMI</span>
+<span id="cb9-40"><a href="dry-matter-intake.html#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-41"><a href="dry-matter-intake.html#cb9-41" aria-hidden="true" tabindex="-1"></a><span class="co"># fNDF is the forage NDF content of the diet as a percentage of diet DM</span></span>
+<span id="cb9-42"><a href="dry-matter-intake.html#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="co"># ADF/NDF is the ADF content of the diet (% of DM) divided by the NDF content of the diet (% of DM)</span></span>
+<span id="cb9-43"><a href="dry-matter-intake.html#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="co"># fNDFD is the digestibility of forage NDF measured *in vitro* or *in situ*</span></span>
+<span id="cb9-44"><a href="dry-matter-intake.html#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="co"># MY is the milk yield, in kg/d</span></span>
+<span id="cb9-45"><a href="dry-matter-intake.html#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="dry-matter-intake.html#cb9-46" aria-hidden="true" tabindex="-1"></a>ADF_NDF <span class="op">=</span> <span class="fl">0.75</span></span>
+<span id="cb9-47"><a href="dry-matter-intake.html#cb9-47" aria-hidden="true" tabindex="-1"></a>fNDF <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb9-48"><a href="dry-matter-intake.html#cb9-48" aria-hidden="true" tabindex="-1"></a>fNDFD <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb9-49"><a href="dry-matter-intake.html#cb9-49" aria-hidden="true" tabindex="-1"></a>MY <span class="op">=</span> <span class="dv">35</span></span>
+<span id="cb9-50"><a href="dry-matter-intake.html#cb9-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-51"><a href="dry-matter-intake.html#cb9-51" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> DMI_2_2(fNDF, ADF_NDF, fNDFD, MY)</span>
+<span id="cb9-52"><a href="dry-matter-intake.html#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;DMI 2-2:&quot;</span>, result)</span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="questions-4" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Questions<a href="dry-matter-intake.html#questions-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>What is DMI and why is it important in animal nutrition?</li>
+<li>What are two theories explaining DMI? Give an example of each.</li>
+<li>How do body weight, body condition, and milk production affect DMI?</li>
+<li>What aspects of diet composition affect DMI?</li>
+<li>Describe other factors mentioned by the NASEM (2021) committee as important to DMI.</li>
+<li>Describe the two equations for DMI given in NASEM (2021) and give an example of when each might be useful.</li>
+</ol>
+
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+    
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+  
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+  
+  var cl = this.classList
+  
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+  
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+  
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+  
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="model-machinery.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="energy-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"highlight": "espresso",
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

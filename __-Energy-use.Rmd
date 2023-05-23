@@ -1,0 +1,104 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+::: {.lo}
+
+**Learning Objectives**
+
+1. 
+
+::: 
+
+# Energy use
+
+> Why is everything on an NEL basis not just NE
+
+In protein, everything is expressed as NP for that particular use. 
+
+In the NASEM (2021) energy system, predicted net uses of energy are expressed in units of NEL, the net energy of lactation. This is different than the protein system. 
+
+In the protein system, net protein use is expressed as the protein used for the body function in question. 
+
+This can be confusing, because the requirements for other body functions (e.g., maintenance, gestation) are given in units of NEL, creating a "net energy of lactation requirement for gestation" 
+
+Metabolizable energy (ME) is used with differing efficiencies for various body functions. 
+
+NEL is a unit. When requirements are expressed in NEL, they communicate the amount of energy on the same basis 
+
+The choice of using NEL places all net uses on the same basis, making them more comparable. 
+
+An alternative to using an NEL basis would be to compare energy use on an ME basis. This is similar to the approach used in protein use. Protein recommendations are typically communicated on the basis of metabolizable protein. 
+
+Does dietary NEL include energy used for activity, gestation, and maintenance? YES. 
+
+## Maintenance
+
+$$ MaintenanceNEL = 0.10 * BW^{0.75}$$
+Where MaintenanceNEL is in Mcal/d and BW is in kg. 
+
+NASEM (2021) explains that the maintenance energy use rate of dairy cattle has seemingly increased in the past century, possibly due to selective breeding for productivity. The committee also discussed how the maintenance requirements were estimated using cattle in respiratory chambers. Because respiratory chambers temporarily limit the animal's normal movements in order to do indirect calorimetry, these values do not reflect the energy expenditures of cattle moving around normally. The committee has adjusted predicted maintenance use to try to account for this in past editions. 
+
+## Lactation
+
+Because milk composition is often measured, the NASEM (2021) consensus report provides a method to estimate the energy contained in milk based on its composition. This equation adjusts up the coefficient for true protein to account for the energy contained in milk urea, assuming milk urea is 5.5% of milk CP. 
+
+$$
+\text{MilkNELcontent} =( 9.29*Fat)  + (5.85*TP) + (3.95*Lactose)
+$$
+
+Where MilkNELcontent is in Mcal/kg of milk and Fat, TP, and Lactose are the kg of component per kg of milk. To convert this to the total use of NEL for milk production per day (LactationNEL), the NEL content of milk must be multiplied by the milk production in kg per day. 
+
+$$
+LactationNEL = MilkNEL*Milk
+$$
+
+## Activity
+
+Requirements for activity are included in the maintenance requirement. These equations are appropriate for most confinement operations. For grazing operations where animals have substantially greater activity, equations are provided in Chapter 13 (NASEM, 2021). 
+
+## Environmental effects
+
+The Nutrient Requirements of Beef Cattle includes equations to predict energy requirements for thermal regulation (i.e., maintaining the body temperature in different environmental conditions). For dairy cattle, the NASEM (2021) committee explained that there was insufficient data to create similar equations for dairy cattle, although they acknowledged that thermal regulation affects energy balance. This probably reflects an important difference between beef and dairy systems:  whereas certain beef production systems provide animals extensive outdoor access (e.g., rangeland or feedlot), many U.S. dairy production systems confine cattle to barns that are environmentally controlled.   
+
+
+## Gestation
+The energy requirements for gestation are estimated based on the predicted weight of the gravid uterus (uterus + fetus + reproductive tissues). 
+
+$$ GestationNEL = GrUterWtGain * 4.16$$ 
+
+Where GestationNEL is in Mcal/d, and the gain in the gravid uterus is in kg of as-is weight per d. 
+
+Predicted energy use for gestation also accounts for the involution of maternal reproductive tissues after parturition. As the maternal tissues return to their non-reproductive state, they release some energy that the animal can use. 
+
+
+## Body reserve gain
+
+For lactating cows, the NEL required to gain body reserves:
+
+$$ ReserveGainNEL = 5.6 * BWGain$$
+Where the reserve gain is in Mcal/d and the BW gain is in kg/d. The animal demands energy from the diet to gain body reserves. 
+
+On the other hand, mobilizing body reserves releases energy:
+$$ReserveLossNEL = -5.6* BWLoss$$
+Where the reserve loss is in Mcal/d and the BW loss is in kg/d. The reserve loss is a negative use (i.e., it supplies energy that the animal can use).
+
+## Frame gain
+
+The NASEM (2021) committee used the following approach to calculate energy requirements for frame gain. First, they determined the fat and protein content of "frame gain" as cattle grow. These are discussed extensively in Chapter 11 (NASEM, 2021). This was important, because the fat and protein content of the animal's body changes as they mature. Based on the protein and fat content, the committee suggested the following equation:
+
+$$\text{FrameGainNEL} = (9.4*FatADG + 5.55*ProteinADG)/0.61$$
+
+Where FrameGainNEL is in Mcal/d and FatADG and ProteinADG are the kg of Fat and Protein gained as the animal's frame grows, per day. 
+
+## Total energy use
+
+The total energy use is predicted as the sum of energy used for maintenance, lactation, gestation, body reserve gain/loss, and frame gain. 
+
+$$ TotalNEL = MaintenanceNEL + LactationNEL + GestationNEL + InvolutionNEL + \\[16pt]  ReserveGainNEL + ReserveLossNEL + FrameGainNEL$$
+This equation sums up the positive (Maintenance, Gestation, Reserve Gain, Frame Gain) and negative (Involution, Reserve Loss) uses of energy to estimate the total energy demand. 
+
+

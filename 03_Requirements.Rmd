@@ -42,7 +42,7 @@ In this chapter, we will get very specific about what is meant by the term "requ
 
 ### Requirement definitions in human and dairy nutrition
 
-Previous editions of “Nutrient Requirements for Dairy Cattle” did not explicitly define the term **nutrient requirement**, but NASEM includes an entire chapter delineating nutrient requirements and related terms. Much of this work is based on definitions used in human nutrition. NASEM's Food and Nutrition Board in the Institute of Medicine [@iom2006] defined a series of terms outlining what **nutrient requirement** means in the human nutrition context. The dairy nutrition committee selected from these terms for use with dairy cattle. 
+Previous editions of “Nutrient Requirements for Dairy Cattle” did not explicitly define the term **nutrient requirement**, but NASEM includes an entire chapter delineating nutrient requirements and related terms. Much of this work is based on definitions used in human nutrition. NASEM's Food and Nutrition Board in the Institute of Medicine (2006) defined a series of terms outlining what **nutrient requirement** means in the human nutrition context. The dairy nutrition committee selected from these terms for use with dairy cattle. 
 
 The NASEM book defines a nutrient requirement as **“the daily amount of a nutrient necessary to meet a healthy animal’s needs for maintenance, activity, growth, reproduction, and lactation without any changes in body reserves or status”** (NASEM, 2021, p. 4). Let's break down each part of this definition. 
 
