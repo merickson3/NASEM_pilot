@@ -53,13 +53,14 @@ Allen (2014) explained that ruminants can sense the body energy status that the 
 
 One of the articles mentioned by the NASEM (2021) committee is a famous study done by Conrad (1964). This figure from Conrad (1964) shows how DMI rises as digestibility improves from 52 to about 67% of DM. This could correspond to feeding "higher quality" feeds, which result in less rumen distension and pass through the digestive tract more quickly. If gut fill is not a limitation, the animal is able to eat progressively more as digestibility increases. However, there is a point (here, estimated at 67% digestibility), after which feed intake declines with increasing digestibility. One possible reason is that the animal's hunger and satiety signals stop them from eating more. This is referred to as "fuel-sensing."
 
-![](images/image-1323641746.png)
+```{r, echo = F, out.width = '50%', fig.align = "center", fig.cap = "Figure from Conrad et al., (1964) depicting the transition from physical fill determination of DMI to fuel-sensing."}
+knitr::include_graphics("images/image-1323641746.png")
+```
+
+
 
 Source: Conrad, H. R., Pratt, A. D., & Hibbs, J. W. (1964). Regulation of feed intake in dairy cows. I. Change in importance of physical and physiological factors with increasing digestibility. Journal of Dairy Science, 47(1), 54-62. [https://doi.org/10.3168/jds.S0022-0302(64)88581-7](https://doi.org/10.3168/jds.S0022-0302(64)88581-7){.uri}
-
-:::  
-
-
+:::
 ::: {.orange}
 
 **Analogy to humans: ** `r emo::ji("leafy_green")` vs. `r emo::ji("peanuts")`
@@ -134,32 +135,34 @@ DMI (kg/d) &= 12.0-(0.107*fNDF) + \\
 &\quad 0.00390*(fNDFD-48.3)*(MY-33.1)
 \end{aligned}$$
 
-$fNDF$ is the forage NDF content of the diet as a percentage of diet DM  
+$fNDF$ is the forage NDF content of the diet as a percentage of diet DM   
 $ADF/NDF$ is the ADF content of the diet (% of DM) divided by the NDF content of the diet (% of DM)   
-$fNDFD$ is the digestibility of forage NDF measured *in vitro* or *in situ*  
-$MY$ is the milk yield, in kg/d  
+$fNDFD$ is the digestibility of forage NDF measured *in vitro* or *in situ*   
+$MY$ is the milk yield, in kg/d   
 
 Forage NDF is determined by summing the NDF from forage sources. Starting with a list of ingredients and inclusion rates (% of DM), 1) Find out which ingredients are forages. This is listed in the NASEM (2021) Feed Library. 2) Determine the NDF content of the forage feeds as a percentage of ingredient DM. 3) Compute a weighted sum of forage ingredient NDF, where the weights are the inclusion rates of each forage ingredient $i$ in the diet. 
 
 
-$$fNDF =  \sum_{i = 1}^{\text{n forages in diet}} w_i(NDF_i)$$
+$$fNDF =  \sum_{i = 1}^{\text{n forages in diet}} w_i(NDF_i)$$ 
 
-$fNDF$ is the sum of forage ingredient NDF, expressed as a percentage of diet DM (kg NDF from forages / 100 kg diet DM). 
-$w_i$ is the weighting factor, the inclusion rate of feed $i$ in the diet as a proportion (kg ingredient / 1 kg diet). 
-$NDF_i$ is the NDF content of the forage ingredient $i$ as a percentage of DM (kg NDF / 100 kg ingredient). 
+$fNDF$ is the sum of forage ingredient NDF, expressed as a percentage of diet DM (kg NDF from forages / 100 kg diet DM).  
+$w_i$ is the weighting factor, the inclusion rate of feed $i$ in the diet as a proportion (kg ingredient / 1 kg diet).   
+$NDF_i$ is the NDF content of the forage ingredient $i$ as a percentage of DM (kg NDF / 100 kg ingredient).   
 
 ::: {.orange}
 
 **Example fNDF calculation: **  
 
-**Inclusion of ingredients in diet** ($w_i$, proportion of diet DM)  
-Corn silage 0.4
-Alfalfa silage 0.2
-Other non-forage ingredients 0.4
+**Inclusion of ingredients in diet**  
+($w_i$, proportion of diet DM)  
+Corn silage 0.4  
+Alfalfa silage 0.2  
+Other non-forage ingredients 0.4  
 
-**NDF content of ingredients** ($NDF_i$, % of ingredient DM) 
-Corn silage 45%  
-Alfalfa silage 42%
+**NDF content of ingredients**  
+($NDF_i$, % of ingredient DM)  
+Corn silage 45%   
+Alfalfa silage 42% 
 
 $$(0.4*45)+(0.2*42)\\fNDF = 26.4\text{% of diet DM} $$
 
@@ -186,7 +189,7 @@ Importantly, the fNDFD is expressed as a percentage of forage NDF, in other word
 ```
 
 
-***Which equation should I use?***
+***Which equation should I use?***  
 It is up to the nutritionist to decide which DMI equation is most appropriate. For example, when a diet with a large amount of forage NDF is fed, it may be reasonable to use Eq. 2-2 because physical fill limitations may play a large role in determining DMI. In contrast, Eq. 2-1 may be useful when trying to estimate DMI separately for groupings based on animal factors. For example, farms may group primiparous and multiparous cattle separately and feed them separate rations. It is also common to feed a separate ration for cows with very high milk production. Determining DMI for these groups requires an equation that accounts for animal effects. 
 
 ## Examples

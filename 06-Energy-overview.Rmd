@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r, echo = F, out.width = '100%', fig.align = "center", fig.cap = "Two energy sources and two energy reactors"}
+```{r, echo = F, out.width = '100%', fig.align = "center", fig.cap = "Two energy sources and two energy reactors to be discussed in this chapter!"}
 knitr::include_graphics("images/energy_overview.png")
 library(webexercises)
 ```
@@ -33,7 +33,7 @@ library(webexercises)
 
 ## Introduction
 
-The opening picture for this chapter shows sawdust, ground corn, a dairy cow, and a fire. This is to illustrate two energy sources (sawdust and ground corn) and two energy reactors (dairy cow and fire). By combining a source and reactor, we create a system. We can explore a few hypothetical options. 
+The opening picture for this chapter shows sawdust, ground corn, a dairy cow, and a fire. This is to illustrate two energy sources (sawdust and ground corn) and two energy reactors (dairy cow and fire). By combining a source and reactor within certain environmental conditions, we create a system. Assuming similar environmental conditions, we can explore a few hypothetical options. 
 
 1. **Burn the sawdust and ground corn.** If you burnt a similar amount of both substances in a fire, which substance would give off more heat?
 
@@ -110,14 +110,14 @@ Which molecule has the greatest percentage of C-C and C-H bonds? `r mcq(c(answer
 
 :::  
 
-Palmitic acid contains a large percentage of C-C and C-H bonds: 
+Palmitic acid contains a large percentage of C-C and C-H bonds:  
 C-C 15  
 C-H 31  
 C=0 1  
 C-O 1  
 O-H 1  
 
-In contrast, glucose contains a mixture of C-C, C-H, C-O, C=O bonds: 
+In contrast, glucose contains a mixture of C-C, C-H, C-O, C=O bonds:  
 C-C 5  
 C-O 5  
 C=O 1  
@@ -125,7 +125,7 @@ O-H 5
 C-H 7  
 
 When molecules containing lots of C-C and C-H are combusted, many C-C and C-H bonds are broken, and many C=O and O-H bonds are formed in the $CO_2$ and $H_2O$ products. In relation to oxidation, C-C and C-H bonds have more potential energy than some other types of bonds (e.g., C-O). Another way to think of this is that C-H and C-C bonds are less stable than C-O bonds. This is because O is more electronegative and has a stronger "desire" for electrons than C or H (C, H, and O; 2.5, 2.2, and 3.4 electronegativity respectively, on Pauling scale). Therefore, a C-C or C-H bond is like a ball at the top of a hill...it is unstable (weak bond) and has a lot of potential energy. A C-O bond is like a ball at the bottom of a hill. It is more stable (strong bond) and has less potential energy. Moving from the less-stable to more-stable state releases energy, like a ball rolling down a hill. 
-Another way to think about heat production is through bond enthalpies. Through experiments, chemists have determined the average energy associated with dissociation of certain bonds at standard temperature and pressure, in a gas phase. The table gives some examples of the energy associated with different types of bonds. Importantly, these must be interpreted with respect to a *system* (i.e., a reaction in certain conditions). 
+Another way to think about heat production is through bond enthalpies. Through experiments, chemists have determined the average energy associated with dissociation of certain bonds at standard temperature and pressure, in a gas phase. The table gives some examples of the energy associated with different types of bonds. Importantly, these must be interpreted with respect to a *system* (i.e., a reaction in certain conditions, typically standard temperature and pressure and gaseous phase reactants). 
 
 ```{r}
 # https://courses.lumenlearning.com/wm-biology1/chapter/reading-electrons-and-energy/
@@ -144,7 +144,7 @@ If your house has a gas stove, you have probably combusted methane to produce he
 
 $$CH_4 (g) + 2O_2 (g) \rightarrow CO_2 (g) + 2H_2O (l)$$
 
-In this reaction, some bonds are broken:  
+In this reaction, some bonds are broken:   
 4 mol C-H  
 2 mol O=O  
 
@@ -154,16 +154,16 @@ and some bonds are formed:
 
 It is possible to estimate the heat produced by this reaction using average bond enthalpies. Importantly, average bond enthalpies apply to gases. If one of the reactants or products is a liquid, the calculation must include an extra step to account for the enthalpy change of vaporization. 
 
-Bond enthalpies ($kJ \space mol^{-1}$)
-C-H	+413
-O=O	+498
-C=O in carbon dioxide	+805
-O-H	+464
-Conversion of water from liquid to gas +41 (enthalpy change of vaporization)
+Bond enthalpies ($kJ \space mol^{-1}$)  
+C-H	+413  
+O=O	+498  
+C=O in carbon dioxide	+805  
+O-H	+464  
+Conversion of water from liquid to gas +41 (enthalpy change of vaporization)  
 
-Enthalpy change = bonds broken - bonds formed
+Enthalpy change = bonds broken - bonds formed  
 Enthalpy change = $[4*413 + 2*498] - [2*805 + 4*464 + 2*41]$
-= $-900 \space kJ$
+= $-900 \space kJ$  
 
 This means that approximately 900 kJ of heat are given off (applied to the surroundings) as a result of this reaction. Here, we can also see that going from weaker C-H bonds to stronger C=O and O-H bonds releases energy to the surroundings. 
 
@@ -189,31 +189,6 @@ In human and animal nutrition, energy is defined in relation to ordered nutritio
 knitr::include_graphics("images/energy_scheme.png")
 ```
 
-```{r, echo = FALSE, out.height = 6, out.width = 8}
-library(DiagrammeR)
-# TD top to bottom, LR left right
-# https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/
-mermaid("
-graph TD;
-GE[__________________Gross Energy, 100%__________________] --> 
-DE[__________Digestible Energy, 60 to 70%__________];
-    GE -.-> FE[Fecal Energy Loss];
-    DE --> ME[______Metabolizable Energy, 50 to 60%______];
-    DE -.-> GEloss[Gas & Urine Energy Loss];
-    ME --> NE[______Net Energy, 30 to 40%______];
-    ME -.-> HE[Heat Energy Loss]; 
-
-    style GE fill:#BFD7EA,stroke:#555,stroke-width:2px;
-    style DE fill:#F9CFA7,stroke:#555,stroke-width:2px;
-    style ME fill:#CBE1C0,stroke:#555,stroke-width:2px;
-    style NE fill:#F5B1AC,stroke:#555,stroke-width:2px")
-
- #c("#BFD7EA", "#F9CFA7", "#CBE1C0", "#F5B1AC")
- #Tips1["<p style='width:250px;height:25px;margin:0px;'>centered</p>"]
-# Tips2["<p style='width:250px;height:25px;margin:0px;text-align:right'>right align</p>"]
-# Tips3["<p style='width:250px;height:25px;margin:0px;text-align:left'>left align</p>"]
-
-```
 
 
 **Gross Energy (GE)** represents the total amount of chemical energy in a feed before undergoing any digestive processes. The amount of GE depends solely on the chemical composition (i.e., nutrient fractions) of the feed, so GE does not change for different animal characteristics. For this reason, estimation of GE is very precise. However, GE is not very useful for diet formulation because not all the energy can be digested, metabolized, or used for body functions.
