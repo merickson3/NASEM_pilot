@@ -297,7 +297,7 @@ gest_use %>%
 ```
 
 
-## Growth
+## Body growth
 
 NASEM (2021) divides body growth into two categories:  frame growth and body reserve gain. Whereas frame growth is true growth in the size (frame) of a maturing animal, body reserve gain represents changes to body stores including muscle and adipose tissue. The growth requirement is the sum of frame growth and body reserve gain needs. 
 
@@ -308,8 +308,8 @@ $$\text{NPGrowth (g/d)} = (\text{NP frame gain} )+(\text{NP reserve gain} )$$
 Chapter 11 of NASEM (2021, p. 255) discusses growth in much greater detail, including a description of how body composition changes as the animal grows closer to mature body weight. Protein requirements for youngstock are discussed in Chapter 10. Still, lactating cattle continue to grow during the first and second lactation, therefore, Chapter 6 includes an equation to estimate the NP used for frame growth. 
 
 Eq 6-12, p. 87
-$$\text{NP frame gain (g/d)} = \text{Frame weight gain (g/d)} * 0.11 *0.86$$
-This is because frame growth is assumed to include 11% CP on an as-is basis, with 86% TP. According to NASEM (2021), 0.19 and 0.15 kg/d of frame growth rates are reasonable targets for frame growth in first and second lactation Holsteins. After the second lactation, frame growth is typically assumed to be zero. Frame growth is assumed to represent 85% of live weight growth.
+$$\text{NP frame gain (g/d)} = \text{Frame weight gain (g/d)} * 0.11 *0.86 * 0.82$$
+This is because frame growth is assumed to include 11% CP on an as-is basis, with 86% TP. It includes a correction factor of 0.82 to account for gut fill. In other words, 18% of frame gain weight gain is assumed to result from the growing mass of digesta in the digestive tract, so it should not be counted in AA requirements. According to NASEM (2021), 0.19 and 0.15 kg/d (NOTE:  kg not g) of frame growth rates are reasonable targets for frame growth in first and second lactation Holsteins. After the second lactation, frame growth is typically assumed to be zero. Frame growth is assumed to represent 85% of live weight growth.
 
 ```{r, fig.cap="Frame growth targets in NASEM (2021) for first, second, and third or greater lactations"}
 lact = c(rep(1, 365), rep(2, 365), rep(3, 365*2))
@@ -335,7 +335,7 @@ framegain %>%
 
 **Body reserve gain**
 
-The equation for body reserve gain is similar, except that body reserves are assumed to contain 8% CP. Target body reserve gain is specified by the user based on the animal's current and target body reserve status. 
+The equation for body reserve gain is similar, except that body reserves are assumed to contain 8% CP. It is assumed that body reserve gain is 100% "empty body weight" and that gut fill is 0%. Target body reserve gain is specified by the user based on the animal's current and target body reserve status. 
 
 Eq 6-12, p. 87
 $$\text{NP reserve gain (g/d)} = \text{Body reserve gain (g/d)} * 0.08 * 0.86$$  
@@ -523,38 +523,89 @@ patch + plot_layout(heights = c(2, 1))
 
 ## Examples
 
-### NASEM dairy-8
+### NASEM dairy-8 (NEEDS UPDATE)
 
-### R ## NEEDS UPDATE
+### R
 ```{r, echo = T, eval = F}
-# Animal information
+# Animal information (Change these to see the impacts)
 BW = 700 # body weight, kg
 DMI = 25 # dry matter intake, kg/d
-
+FrameGain = .25 # first lactation frame gain, kg as-is per d
+ReserveGain = 0.10 # kg/d target
 
 # Diet information
 NDF = 30 # % of DM, not divided by 100!!!
 
+# Other inputs (these are not typically inputted to the program, instead the program calculates them)
+GainGrUter = 0.7 # kg/d realistic value for late gestation
 
 # Define functions to predict use of NP
 NPScurf <- function(BW) {
   0.20*BW^0.60*0.85
 }
+
+
 NPEndUrinary <- function(BW) {
   53*6.25*BW*0.001
 }
+
 NPMFP <- function(NDF, DMI) {
   ((11.62 +0.134 * NDF)*DMI)*0.73
 }
+
 NPGestation <- function(GainGrUter) {
   GainGrUter*125
 }
+
 NPFrame <- function(FrameGain) {
-  FrameGain*0.11*0.86
+  FrameGain*0.11*0.86*1000
 }
+
 NPReserve <- function(ReserveGain) {
-  ReserveGain*0.08*0.86
+  ReserveGain*0.08*0.86*.82*1000
 }
+
+# Use functions to get predicted NP use
+pred_NPScurf = NPScurf(BW); pred_NPScurf
+pred_NPEndUrinary = NPEndUrinary(BW); pred_NPEndUrinary
+pred_NPMFP = NPMFP(NDF, DMI); pred_NPMFP
+pred_NPGestation = NPGestation(GainGrUter); pred_NPGestation
+pred_NPFrame = NPFrame(FrameGain); pred_NPFrame
+pred_NPReserve = NPReserve(ReserveGain); pred_NPReserve
+
+##%######################################################%##
+#                                                          #
+####               AA as a percent of TP                ####
+#                                                          #
+##%######################################################%##
+
+AAname <- c("Arg", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val")
+
+# Body protein AA
+Body_AA <- c(8.20, 3.04, 3.69, 8.27, 7.90, 2.37, 4.41, 4.84, 1.05, 5.15)
+# Milk Protein AA Composition, g/100 g of TP
+Milk_AA <- c(3.74, 2.92, 6.18, 10.56, 8.82, 3.03, 5.26, 4.62, 1.65, 6.90)
+# Metabolic Fecal Protein AA Composition, g/100 g of TP
+Metabolic_Fecal_AA <- c(5.90, 3.54, 5.39, 9.19, 7.61, 1.73, 5.28, 7.36, 1.79, 7.01)
+# Scurf Protein AA Composition, g/100 g of TP
+Scurf_AA <- c(9.60, 1.75, 2.96, 6.93, 5.64, 1.40, 3.61, 4.01, 0.73, 4.66)
+# Endogenous Urinary Protein AA Composition, g/100 g of TP; these are set equal to body protein AA comp
+Urine_End_AA <- Body_AA
+# Gestation AA Composition, g/100 g of TP; these are set equal to body protein AA comp
+Gest_AA <- Body_AA
+# target efficiencies from table 6-4, p. 88 to convert MP and EAA to export proteins and body gain
+Trg_AA_Eff <- c(0.69, 0.75, 0.71, 0.73, 0.72, 0.73, 0.60, 0.64, 0.86, 0.74)
+
+
+# Convert predictions to AA basis
+
+cbind(AAname, "Net AA, g/d" = pred_NPScurf*Scurf_AA/100)
+cbind(AAname, "Net AA, g/d" = pred_NPEndUrinary*Urine_End_AA/100)
+cbind(AAname, "Net AA, g/d" = pred_NPMFP*Metabolic_Fecal_AA/100)
+cbind(AAname, "Net AA, g/d" = pred_NPGestation*Gest_AA/100)
+cbind(AAname, "Net AA, g/d" = pred_NPFrame*Body_AA/100)
+cbind(AAname, "Net AA, g/d" = pred_NPReserve*Body_AA/100)
+
 ```
 
 ## Questions

@@ -299,18 +299,131 @@ feed_aa_rup_info <- structure(list(Fd_Name = c(
 # The resulting calculations are new columns in the dataframe
 # Each result is specific to FEED, or specific to FEED and AA (AAgperd)
 feed_aa_rup_info %>% 
-  mutate(CPgperd = DMI*Inclusion*(Fd_CP/100),
-         RUPgperd = DMI*Inclusion*(Fd_CP/100)*(Fd_RUP_base/100),
-         dRUPgperd = DMI*Inclusion*(Fd_CP/100)*(Fd_RUP_base/100)*(Fd_dcRUP/100)*1000,
-         dRUPEAAgperd = dRUPgperd*(AApercentofCP/100))
+  mutate(CPgperd = DMI*Inclusion*(Fd_CP/100), # NOTE this is repeated across AA
+         RUPgperd = DMI*Inclusion*(Fd_CP/100)*(Fd_RUP_base/100),  # NOTE this is repeated across AA
+         dRUPgperd = DMI*Inclusion*(Fd_CP/100)*(Fd_RUP_base/100)*(Fd_dcRUP/100)*1000, # NOTE this is repeated across AA
+         dRUPEAAgperd = dRUPgperd*(AApercentofCP/100)) # grams of individual AA. 
   
   
 ```
 `r unhide()` 
 
-`r hide("Show Python example NEEDS UPDATE")`
+`r hide("Show Python example")`
 ```{python, eval = F}
-# Note - must use list evaluation:  dRUP = [dcRUP[i] * rup_ests[i] for i in range(len(rup_ests))]
+# Note - must use list evaluation:  dRUP = [dcRUP[i] * rup_ests[i] for i in range(len(rup_ests))] or the alternative. 
+import pandas as pd
+
+# Inputs - these were generated in examples for last chapter
+MiTP = 903.3779  # g/d
+Feed = ['Wheat grain', 'Corn silage, typical', 'Legume silage, mid-maturity', 'Soybean meal, solvent 48CP']
+rup_ests = [28.6788318293683, 32.9167509509957, 26.8887175712971, 32.7318319327731]
+dcRUP = [87.734, 70, 70, 91]
+
+# Calculate microbial TP and digestible MiTP and RUP, calculate MP
+dMiTP = 0.80 * MiTP
+dRUP = [r * e for r, e in zip(dcRUP, rup_ests)]
+MP = [dMiTP + r for r in dRUP]
+
+# Dataframe with selected feeds
+# Fd_CP is a percent of DM
+# Fd_RUP_base is the RUP as a % of CP
+# Fd_dcRUP is the digestibility coefficient of RUP
+# AAname is the name of AA
+# AApercent of CP is the percent of CP from that AA
+# Inclusion is the proportion of the diet DM made up by this ingredient.
+# Diet DMI is the kg/d intake of the entire diet
+
+Fd_Name = [
+  "Wheat grain", "Wheat grain", "Wheat grain",
+  "Wheat grain", "Wheat grain", "Wheat grain", "Wheat grain", "Wheat grain",
+  "Wheat grain", "Wheat grain", "Corn silage, typical", "Corn silage, typical",
+  "Corn silage, typical", "Corn silage, typical", "Corn silage, typical",
+  "Corn silage, typical", "Corn silage, typical", "Corn silage, typical",
+  "Corn silage, typical", "Corn silage, typical", "Legume silage, mid-maturity",
+  "Legume silage, mid-maturity", "Legume silage, mid-maturity",
+  "Legume silage, mid-maturity", "Legume silage, mid-maturity",
+  "Legume silage, mid-maturity", "Legume silage, mid-maturity",
+  "Legume silage, mid-maturity", "Legume silage, mid-maturity",
+  "Legume silage, mid-maturity", "Soybean meal, solvent 48CP",
+  "Soybean meal, solvent 48CP", "Soybean meal, solvent 48CP", "Soybean meal, solvent 48CP",
+  "Soybean meal, solvent 48CP", "Soybean meal, solvent 48CP", "Soybean meal, solvent 48CP",
+  "Soybean meal, solvent 48CP", "Soybean meal, solvent 48CP", "Soybean meal, solvent 48CP"
+]
+Fd_CP = [
+  13.485, 13.485, 13.485, 13.485, 13.485, 13.485,
+  13.485, 13.485, 13.485, 13.485, 7.707, 7.707, 7.707, 7.707, 7.707,
+  7.707, 7.707, 7.707, 7.707, 7.707, 20.471, 20.471, 20.471, 20.471,
+  20.471, 20.471, 20.471, 20.471, 20.471, 20.471, 52.644, 52.644,
+  52.644, 52.644, 52.644, 52.644, 52.644, 52.644, 52.644, 52.644
+  ]
+
+Fd_RUP_base =  [ 
+  28.686, 28.686, 28.686, 28.686, 28.686, 28.686,
+  28.686, 28.686, 28.686, 28.686, 32.917, 32.917, 32.917, 32.917,
+  32.917, 32.917, 32.917, 32.917, 32.917, 32.917, 26.89, 26.89,
+  26.89, 26.89, 26.89, 26.89, 26.89, 26.89, 26.89, 26.89, 32.746,
+  32.746, 32.746, 32.746, 32.746, 32.746, 32.746, 32.746, 32.746,
+  32.746
+  ]
+
+Fd_dcRUP = [
+  87.734, 87.734, 87.734, 87.734, 87.734,
+  87.734, 87.734, 87.734, 87.734, 87.734, 70, 70, 70, 70, 70, 70,
+  70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 91, 91,
+  91, 91, 91, 91, 91, 91, 91, 91]
+
+AAname = [
+  "Fd_Arg_CP", "Fd_His_CP",
+  "Fd_Ile_CP", "Fd_Leu_CP", "Fd_Lys_CP", "Fd_Met_CP", "Fd_Phe_CP",
+  "Fd_Thr_CP", "Fd_Trp_CP", "Fd_Val_CP", "Fd_Arg_CP", "Fd_His_CP",
+  "Fd_Ile_CP", "Fd_Leu_CP", "Fd_Lys_CP", "Fd_Met_CP", "Fd_Phe_CP",
+  "Fd_Thr_CP", "Fd_Trp_CP", "Fd_Val_CP", "Fd_Arg_CP", "Fd_His_CP",
+  "Fd_Ile_CP", "Fd_Leu_CP", "Fd_Lys_CP", "Fd_Met_CP", "Fd_Phe_CP",
+  "Fd_Thr_CP", "Fd_Trp_CP", "Fd_Val_CP", "Fd_Arg_CP", "Fd_His_CP",
+  "Fd_Ile_CP", "Fd_Leu_CP", "Fd_Lys_CP", "Fd_Met_CP", "Fd_Phe_CP",
+  "Fd_Thr_CP", "Fd_Trp_CP", "Fd_Val_CP"
+]
+AApercentofCP = [
+  4.794,
+  2.154, 3.445, 6.537, 2.761, 1.537, 4.447, 2.946, 1.357, 4.444,
+  2.317, 1.707, 3.415, 8.537, 2.805, 1.585, 3.902, 3.415, 0.732,
+  4.512, 1.762, 1.917, 4.145, 6.736, 4.715, 1.347, 4.352, 3.834,
+  1.192, 5.078, 7.291, 2.641, 4.537, 7.63, 6.163, 1.377, 5.034,
+  3.95, 1.377, 4.763]
+Inclusion = [
+  0.1, 0.1, 0.1, 0.1, 0.1, 0.1,
+  0.1, 0.1, 0.1, 0.1, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4,
+  0.4, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.3,
+  0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3]
+
+DMI = [
+  25, 25, 25,
+  25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25,
+  25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25,
+  25, 25, 25, 25, 25
+]
+data = {
+    'Fd_Name': Fd_Name,
+    'Fd_CP': Fd_CP,
+    'Fd_RUP_base': Fd_RUP_base,
+    'Fd_dcRUP': Fd_dcRUP,
+    'AAname': AAname,
+    'AApercentofCP': AApercentofCP,
+    'Inclusion': Inclusion,
+    'DMI': DMI
+}
+
+feed_aa_rup_info = pd.DataFrame(data)
+
+# Calculate AA flows in digestible RUP, g/d for each feed
+# The resulting calculations are new columns in the dataframe
+# Each result is specific to FEED, or specific to FEED and AA (AAgperd)
+
+feed_aa_rup_info['CPgperd'] = feed_aa_rup_info['DMI'] * feed_aa_rup_info['Inclusion'] * (feed_aa_rup_info['Fd_CP'] / 100)
+feed_aa_rup_info['RUPgperd'] = feed_aa_rup_info['DMI'] * feed_aa_rup_info['Inclusion'] * (feed_aa_rup_info['Fd_CP'] / 100) * (feed_aa_rup_info['Fd_RUP_base'] / 100)
+feed_aa_rup_info['dRUPgperd'] = feed_aa_rup_info['DMI'] * feed_aa_rup_info['Inclusion'] * (feed_aa_rup_info['Fd_CP'] / 100) * (feed_aa_rup_info['Fd_RUP_base'] / 100) * (feed_aa_rup_info['Fd_dcRUP'] / 100) * 1000
+feed_aa_rup_info['dRUPEAAgperd'] = feed_aa_rup_info['dRUPgperd'] * (feed_aa_rup_info['AApercentofCP'] / 100)
+
 
 ```
 
