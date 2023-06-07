@@ -99,6 +99,25 @@ protein) that are metabolized. In other words, the nutrients used by tissues are
 
 
 ## AA in microbial protein
+
+NASEM (2021) gives an average AA composition of microbial protein that is used across dietary and animal conditions. After estimating the microbial true protein supply, it can be multiplied by the AA composition to determine the amounts of each AA supplied per day. For example, 
+
+$$
+\text{MiTP_AA, g/d} = \text{MiTP, g/d} *
+\begin{bmatrix} 
+\text{Arg % of TP} \\ 
+\text{His % of TP} \\ 
+\text{Ile % of TP} \\ 
+\text{Leu % of TP} \\ 
+\text{Lys % of TP} \\ 
+\text{Met % of TP} \\ 
+\text{Phe % of TP} \\ 
+\text{Thr % of TP} \\ 
+\text{Trp % of TP} \\ 
+\text{Val % of TP} \\ 
+\end{bmatrix}
+$$
+
 ```{r, fig.height = 3, fig.width = 4, out.width = '60%', fig.cap = "Essential amino acid profile (% of true protein) of microbial true protein in NASEM (2021, p. 79)."}
 library(ggplot2)
 library(dplyr)
@@ -183,7 +202,7 @@ $$
 \end{bmatrix}
 $$
 ```{r}
-# spacer
+# spacer, do not delete
 ```
 
 ::: {.green}
@@ -431,6 +450,27 @@ feed_aa_rup_info['dRUPEAAgperd'] = feed_aa_rup_info['dRUPgperd'] * (feed_aa_rup_
 `r unhide()` 
 
 ```{r, echo=F, eval = F}
+# R CODE FOR FIGURES???
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+AAname <- c("Arg", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val")
+AAname = factor(AAname, levels = AAname)
+
+Microbial_AA<- c(5.47, 2.21, 6.99, 9.23, 9.44, 2.63, 6.30, 6.23, 1.37, 6.88)
+micr_AA = data.frame(  AAname,  Microbial_AA)
+
+
+micr_AA %>% 
+  ggplot(aes(x = AAname, y = Microbial_AA, fill = AAname)) + 
+  geom_bar(stat = "identity") + 
+  geom_label(aes(label = round(Microbial_AA, 1)), fill = "white", label.padding = unit(.1, "lines"), size = 4)+  theme_bw() + theme(legend.position = "none") + labs(x =NULL, y = NULL)
+
+
+
+
+
  # CODE TO GENERATE EXAMPLE DF
 Fd_Name = c('Wheat grain','Corn silage, typical','Legume silage, mid-maturity','Soybean meal, solvent 48CP')
 Inclusion = c(0.1, 0.4, 0.2, 0.3)

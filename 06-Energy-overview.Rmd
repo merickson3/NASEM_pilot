@@ -69,10 +69,11 @@ Animals, like everything else on earth, must follow the Laws of Thermodynamics:
 
 For several hundred years, calorimetry has been the main way used to measure energy involved in chemical processes. In **direct calorimetry,** a container of water is placed around a small chamber. Inside the chamber, a substance is burned. When substances burn in open air, they release energy in several forms, including heat, light, and sound. The amount of heat production is directly proportional to (not equal to) the potential energy content of the substance when oxidized. The researcher measures the temperature change in the surrounding water. Calorimetry works because of the conservation of energy. The energy released by burning a substance is not created or destroyed...it is transferred to the surrounding water.
 
+Another way to study energy metabolism is through **indirect calorimetry**. In this method, heat production is not *directly* measured. Instead, the composition of exhaled gas is analyzed to estimate the consumption of $O_2$ and production of $CO_2$ over time. From these quantities, it is possible to infer the amount of heat production as well as the types of fuels being used.
+
 ::: {.orange}
 
-**Indirect calorimetry**  
-Another way to study energy metabolism is through indirect calorimetry. In this method, heat production is not *directly* measured. Instead, the composition of exhaled gas is analyzed to estimate the consumption of $O_2$ and production of $CO_2$ over time. From these quantities, it is possible to infer the amount of heat production as well as the types of fuels being used.
+**How is indirect calorimetry done with humans and animals?**  
 
 In human medicine, a device called a metabolic cart is used for indirect calorimetry. The patient rests quietly while breathing into a face mask or other device that measures their exhaled gases. This type of analysis can be used to estimate resting metabolic rate (sometimes called basal metabolic rate).
 

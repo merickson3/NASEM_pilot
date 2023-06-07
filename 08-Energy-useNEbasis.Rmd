@@ -382,6 +382,7 @@ ne_frame/0.40*0.66 # convert NEFrame to NEL
 `r unhide()` 
 
 ### Python
+
 `r hide("Show Python example")`
 ```{python, echo = T, eval = F}
 # NEMaintenance, Mcal/d #—————————————————————
