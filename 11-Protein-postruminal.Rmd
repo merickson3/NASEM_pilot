@@ -20,7 +20,7 @@ library(kableExtra)
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
-  comment = '', echo = F, message = F, warning = F, cache = TRUE,
+  comment = '', echo = F, message = F, warning = F, cache = FALSE,
   out.width = '85%', fig.align = 'center', dpi = 300
 )
 ```
@@ -309,7 +309,8 @@ feed_aa_rup_info %>%
 `r unhide()` 
 
 `r hide("Show Python example")`
-```{python, eval = F}
+
+```{python, eval = F, echo = T}
 # Note - must use list evaluation:  dRUP = [dcRUP[i] * rup_ests[i] for i in range(len(rup_ests))] or the alternative. 
 import pandas as pd
 
