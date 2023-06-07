@@ -230,12 +230,12 @@ endogenous-urinary-protein
 metabolic-fecal-protein
 milk-protein
 gestation-protein
-growth
+body-growth
 total-np-use
 aa-basis-1
 recommendations
 examples-5
-nasem-dairy-8-5
-r-needs-update
+nasem-dairy-8-needs-update
+r-5
 questions-11
 glossary

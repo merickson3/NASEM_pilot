@@ -26,7 +26,7 @@
 <meta name="author" content="Marina A.C. Danes, Universidade Federal de Lavras" />
 
 
-<meta name="date" content="2023-05-23" />
+<meta name="date" content="2023-06-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -398,14 +398,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.3" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#metabolic-fecal-protein"><i class="fa fa-check"></i><b>13.3</b> Metabolic fecal protein</a></li>
 <li class="chapter" data-level="13.4" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#milk-protein"><i class="fa fa-check"></i><b>13.4</b> Milk protein</a></li>
 <li class="chapter" data-level="13.5" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#gestation-protein"><i class="fa fa-check"></i><b>13.5</b> Gestation protein</a></li>
-<li class="chapter" data-level="13.6" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#growth"><i class="fa fa-check"></i><b>13.6</b> Growth</a></li>
+<li class="chapter" data-level="13.6" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#body-growth"><i class="fa fa-check"></i><b>13.6</b> Body growth</a></li>
 <li class="chapter" data-level="13.7" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#total-np-use"><i class="fa fa-check"></i><b>13.7</b> Total NP use</a></li>
 <li class="chapter" data-level="13.8" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#aa-basis-1"><i class="fa fa-check"></i><b>13.8</b> AA basis</a></li>
 <li class="chapter" data-level="13.9" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#recommendations"><i class="fa fa-check"></i><b>13.9</b> Recommendations</a></li>
 <li class="chapter" data-level="13.10" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#examples-5"><i class="fa fa-check"></i><b>13.10</b> Examples</a>
 <ul>
-<li class="chapter" data-level="13.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-5"><i class="fa fa-check"></i><b>13.10.1</b> NASEM dairy-8</a></li>
-<li class="chapter" data-level="13.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-needs-update"><i class="fa fa-check"></i><b>13.10.2</b> R ## NEEDS UPDATE</a></li>
+<li class="chapter" data-level="13.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-needs-update"><i class="fa fa-check"></i><b>13.10.1</b> NASEM dairy-8 (NEEDS UPDATE)</a></li>
+<li class="chapter" data-level="13.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-5"><i class="fa fa-check"></i><b>13.10.2</b> R</a></li>
 </ul></li>
 <li class="chapter" data-level="13.11" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#questions-11"><i class="fa fa-check"></i><b>13.11</b> Questions</a></li>
 </ul></li>
@@ -693,14 +693,14 @@ Show R example
 <span id="cb16-87"><a href="protein-postruminal-supplies.html#cb16-87" aria-hidden="true" tabindex="-1"></a><span class="co"># The resulting calculations are new columns in the dataframe</span></span>
 <span id="cb16-88"><a href="protein-postruminal-supplies.html#cb16-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Each result is specific to FEED, or specific to FEED and AA (AAgperd)</span></span>
 <span id="cb16-89"><a href="protein-postruminal-supplies.html#cb16-89" aria-hidden="true" tabindex="-1"></a>feed_aa_rup_info <span class="sc">%&gt;%</span> </span>
-<span id="cb16-90"><a href="protein-postruminal-supplies.html#cb16-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CPgperd =</span> DMI<span class="sc">*</span>Inclusion<span class="sc">*</span>(Fd_CP<span class="sc">/</span><span class="dv">100</span>),</span>
-<span id="cb16-91"><a href="protein-postruminal-supplies.html#cb16-91" aria-hidden="true" tabindex="-1"></a>         <span class="at">RUPgperd =</span> DMI<span class="sc">*</span>Inclusion<span class="sc">*</span>(Fd_CP<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span>(Fd_RUP_base<span class="sc">/</span><span class="dv">100</span>),</span>
-<span id="cb16-92"><a href="protein-postruminal-supplies.html#cb16-92" aria-hidden="true" tabindex="-1"></a>         <span class="at">dRUPgperd =</span> DMI<span class="sc">*</span>Inclusion<span class="sc">*</span>(Fd_CP<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span>(Fd_RUP_base<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span>(Fd_dcRUP<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span><span class="dv">1000</span>,</span>
-<span id="cb16-93"><a href="protein-postruminal-supplies.html#cb16-93" aria-hidden="true" tabindex="-1"></a>         <span class="at">dRUPEAAgperd =</span> dRUPgperd<span class="sc">*</span>(AApercentofCP<span class="sc">/</span><span class="dv">100</span>))</span></code></pre></div>
+<span id="cb16-90"><a href="protein-postruminal-supplies.html#cb16-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CPgperd =</span> DMI<span class="sc">*</span>Inclusion<span class="sc">*</span>(Fd_CP<span class="sc">/</span><span class="dv">100</span>), <span class="co"># </span><span class="al">NOTE</span><span class="co"> this is repeated across AA</span></span>
+<span id="cb16-91"><a href="protein-postruminal-supplies.html#cb16-91" aria-hidden="true" tabindex="-1"></a>         <span class="at">RUPgperd =</span> DMI<span class="sc">*</span>Inclusion<span class="sc">*</span>(Fd_CP<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span>(Fd_RUP_base<span class="sc">/</span><span class="dv">100</span>),  <span class="co"># </span><span class="al">NOTE</span><span class="co"> this is repeated across AA</span></span>
+<span id="cb16-92"><a href="protein-postruminal-supplies.html#cb16-92" aria-hidden="true" tabindex="-1"></a>         <span class="at">dRUPgperd =</span> DMI<span class="sc">*</span>Inclusion<span class="sc">*</span>(Fd_CP<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span>(Fd_RUP_base<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span>(Fd_dcRUP<span class="sc">/</span><span class="dv">100</span>)<span class="sc">*</span><span class="dv">1000</span>, <span class="co"># </span><span class="al">NOTE</span><span class="co"> this is repeated across AA</span></span>
+<span id="cb16-93"><a href="protein-postruminal-supplies.html#cb16-93" aria-hidden="true" tabindex="-1"></a>         <span class="at">dRUPEAAgperd =</span> dRUPgperd<span class="sc">*</span>(AApercentofCP<span class="sc">/</span><span class="dv">100</span>)) <span class="co"># grams of individual AA. </span></span></code></pre></div>
 </div>
 <div class="webex-solution">
 <button>
-Show Python example NEEDS UPDATE
+Show Python example
 </button>
 </div>
 </div>
