@@ -37,7 +37,6 @@ bookdown::gitbook:
         <li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>
         <li><a href="https://andysci.wisc.edu/directory/michel-wattiaux/" target="blank">Michel A. Wattiaux</a></li>
         <li><a href="https://www.dasc.vt.edu/people/faculty/hanigan.html" target="blank">Mark D. Hanigan</a></li>
-        <li><a href="https://www.marinadanes.com" target="blank">Marina A.C. Danes </a></li>
   includes:
     in_header: www/tabs.js
     after_body: www/webex.js

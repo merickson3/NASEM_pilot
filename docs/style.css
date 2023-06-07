@@ -234,6 +234,8 @@ main ol > li:first-child, main ul > li:first-child {
   padding-right: .2em;
   font-weight: 500;
 }
+
+
 .level1 .header-section-number {
   display: inline-block;
   border-bottom: 3px solid;

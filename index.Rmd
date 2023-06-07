@@ -5,7 +5,7 @@ author:
 - "MaryGrace Erickson, University of Wisconsin--Madison"
 - "Michel A. Wattiaux, University of Wisconsin--Madison"
 - Mark D. Hanigan, Virginia Polytechnic Institute and State University
-- Marina A.C. Danes, Universidade Federal de Lavras
+
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
