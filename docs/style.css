@@ -16,6 +16,27 @@ pre code {
 
 
 /* mg additions */
+
+
+
+.summary a:hover {
+ color: #8b0000 !important; 
+   font-weight: 500;
+} 
+.book .book-summary { /*testing different Css selectors*/
+  background-color: white;
+}
+.book .book-summary ul.summary li.active { /*testing different Css selectors*/
+  background-color: #F5F5F5;
+}
+.book .book-summary ul.summary li.active>a { /*active TOC links rstudio4edu; https://higgi13425.github.io/medical_r/posts/2020-12-12-publishing-a-bookdown-book-on-bookdownorg/#8b0000*/ 
+  color: black !important;
+  font-weight: 500;
+  border-left: solid 4px;
+  border-color: #8b0000;
+  padding-left: 11px !important;
+}  
+
 .figure {
   margin: 40px;
 }
@@ -229,3 +250,4 @@ h1.title {
 .smallcaps {
   font-variant: small-caps;
 }
+
