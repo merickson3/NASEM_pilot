@@ -405,7 +405,7 @@ knitr::include_graphics("images/energyDEtoME.png")
 
 In this chapter, we discussed how GE intake is fractionated into DE, ME, and energy losses in NASEM (2021). In the next chapter, we will discuss how ME supply contributes to meeting body needs as NE. 
 
-## Examples. 
+## Examples
 
 `r hide("Show NASEM dairy-8 example")`
 1. Open NASEM dairy-8. 
