@@ -16,7 +16,19 @@ pre code {
 
 
 /* mg additions */
+/*----------LOGO above TOC-
+.toc-logo---https://rstudio4edu.github.io/rstudio4edu-book/rmd-fancy.html---had to add to yaml--*/
 
+#TOC::before {
+  content: "";
+  display: block;
+  height: 20px;
+  margin: 2em 20px 40px 20px;
+  background-image: url("/images/lightbulb.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 
 .summary a:hover {

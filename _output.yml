@@ -31,7 +31,8 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">Learning NASEM Dairy (2021)</a></li>
+        <li><a href="./">Decoding Dairy Diets</a></li>
+        <li class="toc-logo"><a href="./"><img src="images/ddd.png" width="220" height="220"></a></li>
       after: |
         <b> Contributors:</b>
         <li><a href="https://merickson3.github.io" target="blank">MaryGrace Erickson</a></li>

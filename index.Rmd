@@ -1,10 +1,10 @@
 --- 
-title: Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements
+title: Decoding dairy diets with NASEM (2021) 'Nutrient Requirements
   of Dairy Cattle'
 author:
 - "MaryGrace Erickson, University of Wisconsin--Madison"
 - "Michel A. Wattiaux, University of Wisconsin--Madison"
-- Mark D. Hanigan, Virginia Polytechnic Institute and State University
+- "Mark D. Hanigan, Virginia Polytechnic Institute and State University"
 
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
