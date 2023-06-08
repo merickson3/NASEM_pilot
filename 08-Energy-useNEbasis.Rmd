@@ -299,16 +299,6 @@ What 3-5 main points (about NEL use) would you conclude based on these figures? 
 
 As the figures show, milk production can often be the largest use of NEL for lactating cows, followed by maintenance. Comparatively, frame size and body reserve energy use is relatively minor. Energy use for gestation is also relatively small in these simulations, and is slightly negative during involution of reproductive tissues (30 DIM). 
 
-## Questions
-
-1. Explain what factors are involved in calculating maintenance energy use.  
-1. How would you calculate the energy content of milk (Mcal/kg milk) and the total milk energy output (Mcal/d) using production data?.  
-1. Describe how energy use is estimated during 1-283 days of gestation, and 1-100 days of lactation. 
-1. Does the environmental temperature affect predicted energy use in the NASEM model? Explain your answer.  
-1. How are energy requirements for frame gain different from body reserve gain/loss? Explain the differences in terms of predictive equations. 
-1. What is the base energy unit in NASEM (2021)?
-1. How can net energy values for different body functions be converted to NEL?
-
 ## Examples
 
 
@@ -432,4 +422,14 @@ print(ne_frame/0.40*0.66)  # convert NEFrame to NEL
 ```
 
 `r unhide()` 
+
+## Questions
+
+1. Explain what factors are involved in calculating maintenance energy use.  
+1. How would you calculate the energy content of milk (Mcal/kg milk) and the total milk energy output (Mcal/d) using production data?.  
+1. Describe how energy use is estimated during 1-283 days of gestation, and 1-100 days of lactation. 
+1. Does the environmental temperature affect predicted energy use in the NASEM model? Explain your answer.  
+1. How are energy requirements for frame gain different from body reserve gain/loss? Explain the differences in terms of predictive equations. 
+1. What is the base energy unit in NASEM (2021)?
+1. How can net energy values for different body functions be converted to NEL?
 
