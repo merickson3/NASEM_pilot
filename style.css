@@ -19,15 +19,24 @@ pre code {
 /*----------LOGO above TOC-
 .toc-logo---https://rstudio4edu.github.io/rstudio4edu-book/rmd-fancy.html---had to add to yaml--*/
 
-#TOC::before {
-  content: "";
-  display: block;
-  height: 20px;
-  margin: 2em 20px 40px 20px;
-  background-image: url("/images/lightbulb.png");
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+.header-section-number {
+    padding-right: .2em;
+    border-bottom: 3px solid;
+      font-weight: 800;
+      border-color: #FE5757;
+}
+
+
+
+.book .book-body .page-wrapper .page-inner section.normal h1 {
+  border-bottom:  1px;
+}/* does not work  
+  border-bottom: 1px solid;*/
+h1, h2, h3, h4 {
+  font-weight: 700;
+  padding 0em;
+  margin: 0px 5.6px 0px 0px;
+  border-bottom:  1px;
 }
 
 
@@ -45,7 +54,7 @@ pre code {
   color: black !important;
   font-weight: 500;
   border-left: solid 4px;
-  border-color: #8b0000;
+  border-color: #FE5757;
   padding-left: 11px !important;
 }  
 
@@ -158,13 +167,6 @@ pre code {
   margin-bottom: 0;
 }
 
-@media (max-width: 767.98px) {
-  .rmdnote, .rmdcaution, .rmdimportant, .rmdtip, .rmdwarning {
-    margin: 1rem -1rem;
-    border-width: 4px;
-  }
-}
-
 .rmdnote {
   border-color: var(--primary);
 }
@@ -242,26 +244,8 @@ main ol > li:first-child, main ul > li:first-child {
   border-top: none;
 }
 
-.header-section-number {
-  padding-right: .2em;
-  font-weight: 500;
-}
 
 
-.level1 .header-section-number {
-  display: inline-block;
-  border-bottom: 3px solid;
-}
-.level1 h1 {
-  border-bottom: 1px solid;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-h1.title {
-  font-weight: 700;
-}
-.smallcaps {
-  font-variant: small-caps;
-}
+
+
 
