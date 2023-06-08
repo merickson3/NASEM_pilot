@@ -1,6 +1,6 @@
 --- 
-title: Decoding dairy diets with NASEM (2021) 'Nutrient Requirements
-  of Dairy Cattle'
+title: Learning from the narrative and model in NASEM (2021) 'Nutrient Requirements of Dairy Cattle'
+
 author:
 - "MaryGrace Erickson, University of Wisconsin--Madison"
 - "Michel A. Wattiaux, University of Wisconsin--Madison"
