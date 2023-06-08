@@ -435,7 +435,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="energy-supply" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Chapter 8</span> Energy supply<a href="energy-supply.html#energy-supply" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-56"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-57"></span>
 <div id="htmlwidget-f99018b0a1a686763986" style="width:99%;height:99%;" class="DiagrammeR html-widget "></div>
 <script type="application/json" data-for="htmlwidget-f99018b0a1a686763986">{"x":{"diagram":"\ngraph TD;\nGE[__________________Gross Energy, 100%__________________] --> \nDE[__________Digestible Energy, 60 to 70%__________];\n    GE -.-> FE[Fecal Energy Loss];\n    DE --> ME[______Metabolizable Energy, 50 to 60%______];\n    DE -.-> GEloss[Gas & Urine Energy Loss];\n    ME --> NE[______Net Energy, 30 to 40%______];\n    ME -.-> HE[Heat Energy Loss]; \n\n    style GE fill:#BFD7EA,stroke:#555,stroke-width:2px;\n    style DE fill:#F9CFA7,stroke:#555,stroke-width:2px;\n    style ME fill:#CBE1C0,stroke:#555,stroke-width:2px;\n    style NE fill:#F5B1AC,stroke:#555,stroke-width:2px"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
@@ -454,8 +454,8 @@ Figure 8.1: Animal nutrition energy scheme as a flow diagram.
 <div id="energy-intake-gross-energy" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Energy intake (gross energy)<a href="energy-supply.html#energy-intake-gross-energy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In NASEM (2021), the first step in determining the energy value of a feed is estimating its gross energy (GE) content. As discussed in the last chapter, GE can be measured using a calorimeter. However, it is also possible to estimate GE using the feed chemical composition. Estimating GE from a feed's chemical composition is the first step in predicting energy supplies in the NASEM (2021) model.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-58"></span>
-<img src="_main_files/figure-html/unnamed-chunk-58-1.png" alt="Gross energy content of selected feeds. Source:  NASEM (2021) Library" width="100%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-59"></span>
+<img src="_main_files/figure-html/unnamed-chunk-59-1.png" alt="Gross energy content of selected feeds. Source:  NASEM (2021) Library" width="100%" />
 <p class="caption">
 Figure 8.2: Gross energy content of selected feeds. Source: NASEM (2021) Library
 </p>
@@ -612,8 +612,8 @@ This suggests that the digestibility of starch decreases as DMI increases above 
 \]</span></p>
 <p>The total DE intake (Mcal/d) can be calculated by multiplying the DE content of the diet (Mcal/kg of diet DM) by the animal's DMI (kg/d). This operation cancels out the "kg" leaving behind "Mcal/d."</p>
 <p><span class="math display">\[ \text{DE, Mcal/d} = DE\_DM * DMI\]</span></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-62"></span>
-<img src="_main_files/figure-html/unnamed-chunk-62-1.png" alt="Base digestible energy content (Mcal/kg) of selected feeds, and the percentage of GE that is DE (grey rectangle). Source:  NASEM (2021) Library" width="100%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-63"></span>
+<img src="_main_files/figure-html/unnamed-chunk-63-1.png" alt="Base digestible energy content (Mcal/kg) of selected feeds, and the percentage of GE that is DE (grey rectangle). Source:  NASEM (2021) Library" width="100%" />
 <p class="caption">
 Figure 8.3: Base digestible energy content (Mcal/kg) of selected feeds, and the percentage of GE that is DE (grey rectangle). Source: NASEM (2021) Library
 </p>
@@ -624,7 +624,7 @@ Figure 8.3: Base digestible energy content (Mcal/kg) of selected feeds, and the 
 <div class="orange">
 <p><strong>Why is it important to account for energy losses in feces? </strong></p>
 <p>Energy losses in feces can represent about a third of GE intake, depending on the diet and animal characteristics. This makes fecal losses the largest loss of GE in the energy fractionation scheme. We can see clearly that fecal dry matter contains a fair amount of energy, because dried animal dung will readily burn, a renewable energy source that has been used for centuries!</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-63"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-64"></span>
 <img src="images/image-1499089655.png" alt="Dung cooking fire in Pushkar, India. Source: Wikipedia. https://commons.wikimedia.org/wiki/File:Dung_cooking_fire._Pushkar_India.JPG" width="30%" />
 <p class="caption">
 Figure 8.4: Dung cooking fire in Pushkar, India. Source: Wikipedia. <a href="https://commons.wikimedia.org/wiki/File:Dung_cooking_fire._Pushkar_India.JPG" class="uri">https://commons.wikimedia.org/wiki/File:Dung_cooking_fire._Pushkar_India.JPG</a>
@@ -641,7 +641,7 @@ ME\_DM = DE\_DM - GasE\_DM - UE\_DM
 \]</span>
 Where all terms are expressed as Mcal/kg DMI. To convert this to the total amount of ME supplied by a diet, multiply ME_DM by the animal's DMI.</p>
 <p><span class="math display">\[\text{ME, Mcal/d}  = ME\_DM *DMI\]</span></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-64"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-65"></span>
 <img src="images/energyDEtoME.png" alt="Energy scheme discussed in last chapter, focused on DE to ME." width="85%" />
 <p class="caption">
 Figure 8.5: Energy scheme discussed in last chapter, focused on DE to ME.

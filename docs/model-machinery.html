@@ -435,7 +435,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="model-machinery" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Model machinery<a href="model-machinery.html#model-machinery" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-28"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
 <img src="images/image-1217922456.png" alt="Re-creating a dairy cow with machinery is not as easy as you might think. Source: &lt;http://blog.modernmechanix.com&gt;" width="85%" />
 <p class="caption">
 Figure 5.1: Re-creating a dairy cow with machinery is not as easy as you might think. Source: <a href="http://blog.modernmechanix.com" class="uri">http://blog.modernmechanix.com</a>
@@ -636,7 +636,7 @@ some feeds, it makes an enormous difference whether nutrient composition
 is expressed on a DM basis vs. as-is basis (e.g., corn silage, grass
 silage). For other feeds, it makes no difference at all (e.g.,
 limestone, iron oxide) because the feed contains very minimal water.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="85%" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="85%" style="display: block; margin: auto;" /></p>
 <p>To convert nutrient content from an as-is basis to a DM basis, we need
 to know:</p>
 <ol style="list-style-type: decimal">
@@ -851,7 +851,7 @@ mass (<span class="math inline">\(M\)</span>) is multiplied by a scalar <span cl
 mass grows, the "growth machinery" also grows. In other words, an animal
 that weighs 50 lbs might grow 0.5 lbs per day, but an animal at 500 lbs
 would grow at a faster rate (5 lbs per day) proportional to its mass.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="85%" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="85%" style="display: block; margin: auto;" /></p>
 <p>Integrating the rate:state equation (finding the area underneath it)
 allows us to find the mass at any point in time. We find the definite
 integral from the start of the process <span class="math inline">\(t = 0\)</span> to another point in time
@@ -897,7 +897,7 @@ where
 <p><span class="math inline">\(K_m\)</span> is the Michaelis constant, which is the concentration of substrate when the reaction velocity is 50% of the <span class="math inline">\(V_{max}\)</span></p>
 <p>At low concentrations the velocity is proportional to the concentration of substrate <span class="math inline">\(S\)</span>. One way to think of this is that <span class="math inline">\(K_m\)</span> is larger than <span class="math inline">\([S]\)</span>, so <span class="math inline">\(K_m + [S] \approx K_m\)</span>, so the velocity is affected by the ratio of <span class="math inline">\(\frac{[S]}{K_m}\)</span> times the maximum velocity. This is similar to first-order kinetics, where the growth rate (velocity) is a linear function of the growth machinery (e.g., the substrate concentration). At this point, the growth is not saturated.</p>
 <p>At high concentrations of substrate <span class="math inline">\(S\)</span>, the rate approaches a maximum velocity. This is because <span class="math inline">\([S]\)</span> has become larger than <span class="math inline">\(K_m\)</span>, and <span class="math inline">\(K_m + [S] \approx [S]\)</span>. The rate is <span class="math inline">\(\frac{[S]}{[S]}\)</span> times the maximum velocity ($ * V_{max}$. This is more similar to zeroth-order kinetics, because the growth rate is constant. The growth process becomes saturated as it gets closer and closer to <span class="math inline">\(V_{max}\)</span>.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="85%" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="85%" style="display: block; margin: auto;" /></p>
 <div class="orange">
 <p><strong>Feeling confused? Click below for a more practical example.</strong> 🍞</p>
 <div class="webex-solution">
@@ -1200,8 +1200,8 @@ metabolic scaling of <span class="math inline">\(BW^{0.75}\)</span> in most anim
 animals, they proposed that blood viscosity increasingly determines
 blood flow, leading to a scaling of metabolic rate closer to
 <span class="math inline">\(BW^{0.67}\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
-<img src="_main_files/figure-html/unnamed-chunk-36-1.png" alt="Surface area and volume for cubes with increasing side length" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
+<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="Surface area and volume for cubes with increasing side length" width="85%" />
 <p class="caption">
 Figure 5.2: Surface area and volume for cubes with increasing side length
 </p>
@@ -1270,15 +1270,15 @@ Figure 5.2: Surface area and volume for cubes with increasing side length
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
-<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="Allometric scaling example for cattle" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-38"></span>
+<img src="_main_files/figure-html/unnamed-chunk-38-1.png" alt="Allometric scaling example for cattle" width="85%" />
 <p class="caption">
 Figure 5.3: Allometric scaling example for cattle
 </p>
 </div>
 <p>West and Brown's (2005) BW^0.75 concept is somewhat harder to visualize. Still, we can picture somewhat how it works by imagining the fractal branching of the circulatory system.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-38"></span>
-<img src="_main_files/figure-html/unnamed-chunk-38-1.png" alt="A fractal tree illustrating branching similar to circulation in the animal. Source code for this fractal tree thanks to Martin Stefan:  https://rpubs.com/mstefan-rpubs/fractals" width="85%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-39"></span>
+<img src="_main_files/figure-html/unnamed-chunk-39-1.png" alt="A fractal tree illustrating branching similar to circulation in the animal. Source code for this fractal tree thanks to Martin Stefan:  https://rpubs.com/mstefan-rpubs/fractals" width="85%" />
 <p class="caption">
 Figure 5.4: A fractal tree illustrating branching similar to circulation in the animal. Source code for this fractal tree thanks to Martin Stefan: <a href="https://rpubs.com/mstefan-rpubs/fractals" class="uri">https://rpubs.com/mstefan-rpubs/fractals</a>
 </p>

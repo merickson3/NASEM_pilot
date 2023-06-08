@@ -19,7 +19,12 @@ link-citations: yes
 
 # About this interactive textbook
 
-```{r, echo = F, fig.align = "center", fig.cap = "Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'" }
+```{r, echo = F, fig.align = "center", fig.cap = "Decoding Dairy Diets using NASEM (2021) 'Nutrient Requirements of Dairy Cattle, 8th edition'" }
+knitr::include_graphics("images/ddd.png")
+
+```
+
+```{r, echo = F, eval = F, fig.align = "center", fig.cap = "Cover of 'Nutrient Requirements of Dairy Cattle, 8th edition'" }
 knitr::include_graphics("images/nasem_book.jpg")
 
 ```
