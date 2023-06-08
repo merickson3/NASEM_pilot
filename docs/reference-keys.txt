@@ -146,9 +146,6 @@ diet-factors
 other-factors
 dmi-in-nasem-2021
 examples-1
-nasem-dairy-8-2
-r-2
-python-2
 questions-4
 energy-overview
 introduction
@@ -178,8 +175,6 @@ de-calculation
 de-to-me
 conclusions-3
 examples.
-nasem-dairy-8-3
-r-3
 questions-6
 energy-use
 body-functions-in-the-energy-model
@@ -195,9 +190,6 @@ converting-to-nel-basis
 nel-use-simulations
 questions-7
 examples-2
-nasem-dairy-8-4
-r-4
-python-3
 protein-overview
 biological-definition-of-protein
 nutritional-definitions-of-protein
@@ -235,8 +227,5 @@ total-np-use
 aa-basis-1
 recommendations
 examples-5
-nasem-dairy-8-needs-update
-r-5
-python-4
 questions-11
 glossary

@@ -311,7 +311,6 @@ As the figures show, milk production can often be the largest use of NEL for lac
 
 ## Examples
 
-### NASEM dairy-8
 
 `r hide("Show NASEM dairy-8 example")`
 
@@ -324,7 +323,6 @@ As the figures show, milk production can often be the largest use of NEL for lac
 
 `r unhide()` 
 
-### R
 
 `r hide("Show R example")`
 
@@ -381,7 +379,6 @@ ne_frame/0.40*0.66 # convert NEFrame to NEL
 
 `r unhide()` 
 
-### Python
 
 `r hide("Show Python example")`
 ```{python, echo = T, eval = F}

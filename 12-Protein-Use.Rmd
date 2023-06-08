@@ -523,9 +523,8 @@ patch + plot_layout(heights = c(2, 1))
 
 ## Examples
 
-### NASEM dairy-8 (NEEDS UPDATE)
+ NASEM dairy-8 (NEEDS UPDATE)
 
-### R
 
 `r hide("Show R example")`
 
@@ -612,7 +611,6 @@ cbind(AAname, "Net AA, g/d" = pred_NPReserve*Body_AA/100)
 ```
 `r unhide()` 
 
-### Python
 
 `r hide("Show Python example")`
 ```{python, eval = F, echo = T}

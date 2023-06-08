@@ -194,7 +194,6 @@ It is up to the nutritionist to decide which DMI equation is most appropriate. F
 
 ## Examples
 
-### NASEM dairy-8
 
 `r hide("Show NASEM dairy 8 example")`
 
@@ -210,7 +209,6 @@ It is up to the nutritionist to decide which DMI equation is most appropriate. F
 
 `r unhide()` 
 
-### R 
 
 `r hide("Show R example")`
 
@@ -270,7 +268,6 @@ paste("DMI 2-2:", round(result, 3))
 
 `r unhide()` 
 
-### Python
 
 `r hide("Show Python example")`
 

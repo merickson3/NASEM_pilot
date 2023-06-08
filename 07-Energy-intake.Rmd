@@ -407,8 +407,7 @@ In this chapter, we discussed how GE intake is fractionated into DE, ME, and ene
 
 ## Examples. 
 
-### NASEM dairy-8
-
+`r hide("Show NASEM dairy-8 example")`
 1. Open NASEM dairy-8. 
 1. Load one of the default simulations, for example by clicking File > Load Simulation > "Example-Lactating-Cow-DIM-150." The default simulation is pre-populated with inputs.
 1. Click "Reports" tile in the top menu. 
@@ -416,9 +415,9 @@ In this chapter, we discussed how GE intake is fractionated into DE, ME, and ene
 1. In the Word Document, find "Table 4-1," shows the breakdown of energy values for this simulation. 
 1. Change the animal and diet inputs and re-run simulations to see how the energy predictions change!
 
-### R
+`r unhide()` 
 
-Try it for yourself
+`r hide("Show R example")`
 
 ```{r, eval = F, echo = TRUE}
 NDF_DM = 0.4
@@ -441,6 +440,9 @@ GE_DM(NDF_DM = NDF_DM,
       CP_DM = CP_DM,
       sNPNCPE_DM = sNPNCPE_DM)
 ```
+
+`r unhide()` 
+
 
 ## Questions
 
