@@ -526,6 +526,9 @@ patch + plot_layout(heights = c(2, 1))
 ### NASEM dairy-8 (NEEDS UPDATE)
 
 ### R
+
+`r hide("Show R example")`
+
 ```{r, echo = T, eval = F}
 # Animal information (Change these to see the impacts)
 BW = 700 # body weight, kg
@@ -607,6 +610,91 @@ cbind(AAname, "Net AA, g/d" = pred_NPFrame*Body_AA/100)
 cbind(AAname, "Net AA, g/d" = pred_NPReserve*Body_AA/100)
 
 ```
+`r unhide()` 
+
+### Python
+
+`r hide("Show Python example")`
+```{python, eval = F, echo = T}
+import pandas as pd
+
+# Animal information (Change these to see the impacts)
+BW = 700  # body weight, kg
+DMI = 25  # dry matter intake, kg/d
+FrameGain = 0.25  # first lactation frame gain, kg as-is per d
+ReserveGain = 0.10  # kg/d target
+
+# Diet information
+NDF = 30  # % of DM, not divided by 100!!!
+
+# Other inputs (these are not typically inputted to the program, instead the program calculates them)
+GainGrUter = 0.7  # kg/d realistic value for late gestation
+
+# Define functions to predict use of NP
+def NPScurf(BW):
+    return 0.20 * BW**0.60 * 0.85
+
+def NPEndUrinary(BW):
+    return 53 * 6.25 * BW * 0.001
+
+def NPMFP(NDF, DMI):
+    return ((11.62 + 0.134 * NDF) * DMI) * 0.73
+
+def NPGestation(GainGrUter):
+    return GainGrUter * 125
+
+def NPFrame(FrameGain):
+    return FrameGain * 0.11 * 0.86 * 1000
+
+def NPReserve(ReserveGain):
+    return ReserveGain * 0.08 * 0.86 * 0.82 * 1000
+
+# Use functions to get predicted NP use
+pred_NPScurf = NPScurf(BW); print(pred_NPScurf)
+pred_NPEndUrinary = NPEndUrinary(BW); print(pred_NPEndUrinary)
+pred_NPMFP = NPMFP(NDF, DMI); print(pred_NPMFP)
+pred_NPGestation = NPGestation(GainGrUter); print(pred_NPGestation)
+pred_NPFrame = NPFrame(FrameGain); print(pred_NPFrame)
+pred_NPReserve = NPReserve(ReserveGain); print(pred_NPReserve)
+
+# AA as a percent of TP
+AAname = ["Arg", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val"]
+
+# Body protein AA
+Body_AA = [8.20, 3.04, 3.69, 8.27, 7.90, 2.37, 4.41, 4.84, 1.05, 5.15]
+# Milk Protein AA Composition, g/100 g of TP
+Milk_AA = [3.74, 2.92, 6.18, 10.56, 8.82, 3.03, 5.26, 4.62, 1.65, 6.90]
+# Metabolic Fecal Protein AA Composition, g/100 g of TP
+Metabolic_Fecal_AA = [5.90, 3.54, 5.39, 9.19, 7.61, 1.73, 5.28, 7.36, 1.79, 7.01]
+# Scurf Protein AA Composition, g/100 g of TP
+Scurf_AA = [9.60, 1.75, 2.96, 6.93, 5.64, 1.40, 3.61, 4.01, 0.73, 4.66]
+# Endogenous Urinary Protein AA Composition, g/100 g of TP; these are set equal to body protein AA comp
+Urine_End_AA = Body_AA
+# Gestation AA Composition, g/100 of TP; these are set equal to body protein AA comp
+Gest_AA = Body_AA
+# target efficiencies from table 6-4, p. 88 to convert MP and EAA to export proteins and body gain
+Trg_AA_Eff = [0.69, 0.75, 0.71, 0.73, 0.72, 0.73, 0.60, 0.64, 0.86, 0.74]
+
+# Convert predictions to AA basis; must indicate external vectors with pd.Series
+df_NPScurf = pd.DataFrame({'AAname': AAname, 'Net AA, g/d': pred_NPScurf * (pd.Series(Scurf_AA) / 100)})
+df_NPEndUrinary = pd.DataFrame({'AAname': AAname, 'Net AA, g/d': pred_NPEndUrinary * (pd.Series(Urine_End_AA) / 100)})
+df_NPMFP = pd.DataFrame({'AAname': AAname, 'Net AA, g/d': pred_NPMFP * (pd.Series(Metabolic_Fecal_AA) / 100)})
+df_NPGestation = pd.DataFrame({'AAname': AAname, 'Net AA, g/d': pred_NPGestation * (pd.Series(Gest_AA) / 100)})
+df_NPFrame = pd.DataFrame({'AAname': AAname, 'Net AA, g/d': pred_NPFrame * (pd.Series(Body_AA) / 100)})
+df_NPReserve = pd.DataFrame({'AAname': AAname, 'Net AA, g/d': pred_NPReserve * (pd.Series(Body_AA) / 100)})
+
+# Print the results
+print(df_NPScurf)
+print(df_NPEndUrinary)
+print(df_NPMFP)
+print(df_NPGestation)
+print(df_NPFrame)
+print(df_NPReserve)
+
+```
+
+`r unhide()` 
+
 
 ## Questions
 

@@ -406,6 +406,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="13.10.1" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#nasem-dairy-8-needs-update"><i class="fa fa-check"></i><b>13.10.1</b> NASEM dairy-8 (NEEDS UPDATE)</a></li>
 <li class="chapter" data-level="13.10.2" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#r-5"><i class="fa fa-check"></i><b>13.10.2</b> R</a></li>
+<li class="chapter" data-level="13.10.3" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#python-4"><i class="fa fa-check"></i><b>13.10.3</b> Python</a></li>
 </ul></li>
 <li class="chapter" data-level="13.11" data-path="protein-use-and-recommended-supplies.html"><a href="protein-use-and-recommended-supplies.html#questions-11"><i class="fa fa-check"></i><b>13.11</b> Questions</a></li>
 </ul></li>
@@ -895,6 +896,10 @@ Figure 13.6: Approach to calculating target efficiencies based on NASEM (2021)
 </div>
 <div id="r-5" class="section level3 hasAnchor" number="13.10.2">
 <h3><span class="header-section-number">13.10.2</span> R<a href="protein-use-and-recommended-supplies.html#r-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="webex-solution">
+<button>
+Show R example
+</button>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="protein-use-and-recommended-supplies.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Animal information (Change these to see the impacts)</span></span>
 <span id="cb18-2"><a href="protein-use-and-recommended-supplies.html#cb18-2" aria-hidden="true" tabindex="-1"></a>BW <span class="ot">=</span> <span class="dv">700</span> <span class="co"># body weight, kg</span></span>
 <span id="cb18-3"><a href="protein-use-and-recommended-supplies.html#cb18-3" aria-hidden="true" tabindex="-1"></a>DMI <span class="ot">=</span> <span class="dv">25</span> <span class="co"># dry matter intake, kg/d</span></span>
@@ -973,6 +978,89 @@ Figure 13.6: Approach to calculating target efficiencies based on NASEM (2021)
 <span id="cb18-76"><a href="protein-use-and-recommended-supplies.html#cb18-76" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(AAname, <span class="st">&quot;Net AA, g/d&quot;</span> <span class="ot">=</span> pred_NPGestation<span class="sc">*</span>Gest_AA<span class="sc">/</span><span class="dv">100</span>)</span>
 <span id="cb18-77"><a href="protein-use-and-recommended-supplies.html#cb18-77" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(AAname, <span class="st">&quot;Net AA, g/d&quot;</span> <span class="ot">=</span> pred_NPFrame<span class="sc">*</span>Body_AA<span class="sc">/</span><span class="dv">100</span>)</span>
 <span id="cb18-78"><a href="protein-use-and-recommended-supplies.html#cb18-78" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(AAname, <span class="st">&quot;Net AA, g/d&quot;</span> <span class="ot">=</span> pred_NPReserve<span class="sc">*</span>Body_AA<span class="sc">/</span><span class="dv">100</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="python-4" class="section level3 hasAnchor" number="13.10.3">
+<h3><span class="header-section-number">13.10.3</span> Python<a href="protein-use-and-recommended-supplies.html#python-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="webex-solution">
+<button>
+Show Python example
+</button>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="protein-use-and-recommended-supplies.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb19-2"><a href="protein-use-and-recommended-supplies.html#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="protein-use-and-recommended-supplies.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Animal information (Change these to see the impacts)</span></span>
+<span id="cb19-4"><a href="protein-use-and-recommended-supplies.html#cb19-4" aria-hidden="true" tabindex="-1"></a>BW <span class="op">=</span> <span class="dv">700</span>  <span class="co"># body weight, kg</span></span>
+<span id="cb19-5"><a href="protein-use-and-recommended-supplies.html#cb19-5" aria-hidden="true" tabindex="-1"></a>DMI <span class="op">=</span> <span class="dv">25</span>  <span class="co"># dry matter intake, kg/d</span></span>
+<span id="cb19-6"><a href="protein-use-and-recommended-supplies.html#cb19-6" aria-hidden="true" tabindex="-1"></a>FrameGain <span class="op">=</span> <span class="fl">0.25</span>  <span class="co"># first lactation frame gain, kg as-is per d</span></span>
+<span id="cb19-7"><a href="protein-use-and-recommended-supplies.html#cb19-7" aria-hidden="true" tabindex="-1"></a>ReserveGain <span class="op">=</span> <span class="fl">0.10</span>  <span class="co"># kg/d target</span></span>
+<span id="cb19-8"><a href="protein-use-and-recommended-supplies.html#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="protein-use-and-recommended-supplies.html#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Diet information</span></span>
+<span id="cb19-10"><a href="protein-use-and-recommended-supplies.html#cb19-10" aria-hidden="true" tabindex="-1"></a>NDF <span class="op">=</span> <span class="dv">30</span>  <span class="co"># % of DM, not divided by 100!!!</span></span>
+<span id="cb19-11"><a href="protein-use-and-recommended-supplies.html#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="protein-use-and-recommended-supplies.html#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Other inputs (these are not typically inputted to the program, instead the program calculates them)</span></span>
+<span id="cb19-13"><a href="protein-use-and-recommended-supplies.html#cb19-13" aria-hidden="true" tabindex="-1"></a>GainGrUter <span class="op">=</span> <span class="fl">0.7</span>  <span class="co"># kg/d realistic value for late gestation</span></span>
+<span id="cb19-14"><a href="protein-use-and-recommended-supplies.html#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="protein-use-and-recommended-supplies.html#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Define functions to predict use of NP</span></span>
+<span id="cb19-16"><a href="protein-use-and-recommended-supplies.html#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NPScurf(BW):</span>
+<span id="cb19-17"><a href="protein-use-and-recommended-supplies.html#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.20</span> <span class="op">*</span> BW<span class="op">**</span><span class="fl">0.60</span> <span class="op">*</span> <span class="fl">0.85</span></span>
+<span id="cb19-18"><a href="protein-use-and-recommended-supplies.html#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="protein-use-and-recommended-supplies.html#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NPEndUrinary(BW):</span>
+<span id="cb19-20"><a href="protein-use-and-recommended-supplies.html#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">53</span> <span class="op">*</span> <span class="fl">6.25</span> <span class="op">*</span> BW <span class="op">*</span> <span class="fl">0.001</span></span>
+<span id="cb19-21"><a href="protein-use-and-recommended-supplies.html#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="protein-use-and-recommended-supplies.html#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NPMFP(NDF, DMI):</span>
+<span id="cb19-23"><a href="protein-use-and-recommended-supplies.html#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ((<span class="fl">11.62</span> <span class="op">+</span> <span class="fl">0.134</span> <span class="op">*</span> NDF) <span class="op">*</span> DMI) <span class="op">*</span> <span class="fl">0.73</span></span>
+<span id="cb19-24"><a href="protein-use-and-recommended-supplies.html#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="protein-use-and-recommended-supplies.html#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NPGestation(GainGrUter):</span>
+<span id="cb19-26"><a href="protein-use-and-recommended-supplies.html#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> GainGrUter <span class="op">*</span> <span class="dv">125</span></span>
+<span id="cb19-27"><a href="protein-use-and-recommended-supplies.html#cb19-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-28"><a href="protein-use-and-recommended-supplies.html#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NPFrame(FrameGain):</span>
+<span id="cb19-29"><a href="protein-use-and-recommended-supplies.html#cb19-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> FrameGain <span class="op">*</span> <span class="fl">0.11</span> <span class="op">*</span> <span class="fl">0.86</span> <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb19-30"><a href="protein-use-and-recommended-supplies.html#cb19-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-31"><a href="protein-use-and-recommended-supplies.html#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> NPReserve(ReserveGain):</span>
+<span id="cb19-32"><a href="protein-use-and-recommended-supplies.html#cb19-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ReserveGain <span class="op">*</span> <span class="fl">0.08</span> <span class="op">*</span> <span class="fl">0.86</span> <span class="op">*</span> <span class="fl">0.82</span> <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb19-33"><a href="protein-use-and-recommended-supplies.html#cb19-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-34"><a href="protein-use-and-recommended-supplies.html#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Use functions to get predicted NP use</span></span>
+<span id="cb19-35"><a href="protein-use-and-recommended-supplies.html#cb19-35" aria-hidden="true" tabindex="-1"></a>pred_NPScurf <span class="op">=</span> NPScurf(BW)<span class="op">;</span> <span class="bu">print</span>(pred_NPScurf)</span>
+<span id="cb19-36"><a href="protein-use-and-recommended-supplies.html#cb19-36" aria-hidden="true" tabindex="-1"></a>pred_NPEndUrinary <span class="op">=</span> NPEndUrinary(BW)<span class="op">;</span> <span class="bu">print</span>(pred_NPEndUrinary)</span>
+<span id="cb19-37"><a href="protein-use-and-recommended-supplies.html#cb19-37" aria-hidden="true" tabindex="-1"></a>pred_NPMFP <span class="op">=</span> NPMFP(NDF, DMI)<span class="op">;</span> <span class="bu">print</span>(pred_NPMFP)</span>
+<span id="cb19-38"><a href="protein-use-and-recommended-supplies.html#cb19-38" aria-hidden="true" tabindex="-1"></a>pred_NPGestation <span class="op">=</span> NPGestation(GainGrUter)<span class="op">;</span> <span class="bu">print</span>(pred_NPGestation)</span>
+<span id="cb19-39"><a href="protein-use-and-recommended-supplies.html#cb19-39" aria-hidden="true" tabindex="-1"></a>pred_NPFrame <span class="op">=</span> NPFrame(FrameGain)<span class="op">;</span> <span class="bu">print</span>(pred_NPFrame)</span>
+<span id="cb19-40"><a href="protein-use-and-recommended-supplies.html#cb19-40" aria-hidden="true" tabindex="-1"></a>pred_NPReserve <span class="op">=</span> NPReserve(ReserveGain)<span class="op">;</span> <span class="bu">print</span>(pred_NPReserve)</span>
+<span id="cb19-41"><a href="protein-use-and-recommended-supplies.html#cb19-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-42"><a href="protein-use-and-recommended-supplies.html#cb19-42" aria-hidden="true" tabindex="-1"></a><span class="co"># AA as a percent of TP</span></span>
+<span id="cb19-43"><a href="protein-use-and-recommended-supplies.html#cb19-43" aria-hidden="true" tabindex="-1"></a>AAname <span class="op">=</span> [<span class="st">&quot;Arg&quot;</span>, <span class="st">&quot;His&quot;</span>, <span class="st">&quot;Ile&quot;</span>, <span class="st">&quot;Leu&quot;</span>, <span class="st">&quot;Lys&quot;</span>, <span class="st">&quot;Met&quot;</span>, <span class="st">&quot;Phe&quot;</span>, <span class="st">&quot;Thr&quot;</span>, <span class="st">&quot;Trp&quot;</span>, <span class="st">&quot;Val&quot;</span>]</span>
+<span id="cb19-44"><a href="protein-use-and-recommended-supplies.html#cb19-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-45"><a href="protein-use-and-recommended-supplies.html#cb19-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Body protein AA</span></span>
+<span id="cb19-46"><a href="protein-use-and-recommended-supplies.html#cb19-46" aria-hidden="true" tabindex="-1"></a>Body_AA <span class="op">=</span> [<span class="fl">8.20</span>, <span class="fl">3.04</span>, <span class="fl">3.69</span>, <span class="fl">8.27</span>, <span class="fl">7.90</span>, <span class="fl">2.37</span>, <span class="fl">4.41</span>, <span class="fl">4.84</span>, <span class="fl">1.05</span>, <span class="fl">5.15</span>]</span>
+<span id="cb19-47"><a href="protein-use-and-recommended-supplies.html#cb19-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Milk Protein AA Composition, g/100 g of TP</span></span>
+<span id="cb19-48"><a href="protein-use-and-recommended-supplies.html#cb19-48" aria-hidden="true" tabindex="-1"></a>Milk_AA <span class="op">=</span> [<span class="fl">3.74</span>, <span class="fl">2.92</span>, <span class="fl">6.18</span>, <span class="fl">10.56</span>, <span class="fl">8.82</span>, <span class="fl">3.03</span>, <span class="fl">5.26</span>, <span class="fl">4.62</span>, <span class="fl">1.65</span>, <span class="fl">6.90</span>]</span>
+<span id="cb19-49"><a href="protein-use-and-recommended-supplies.html#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Metabolic Fecal Protein AA Composition, g/100 g of TP</span></span>
+<span id="cb19-50"><a href="protein-use-and-recommended-supplies.html#cb19-50" aria-hidden="true" tabindex="-1"></a>Metabolic_Fecal_AA <span class="op">=</span> [<span class="fl">5.90</span>, <span class="fl">3.54</span>, <span class="fl">5.39</span>, <span class="fl">9.19</span>, <span class="fl">7.61</span>, <span class="fl">1.73</span>, <span class="fl">5.28</span>, <span class="fl">7.36</span>, <span class="fl">1.79</span>, <span class="fl">7.01</span>]</span>
+<span id="cb19-51"><a href="protein-use-and-recommended-supplies.html#cb19-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Scurf Protein AA Composition, g/100 g of TP</span></span>
+<span id="cb19-52"><a href="protein-use-and-recommended-supplies.html#cb19-52" aria-hidden="true" tabindex="-1"></a>Scurf_AA <span class="op">=</span> [<span class="fl">9.60</span>, <span class="fl">1.75</span>, <span class="fl">2.96</span>, <span class="fl">6.93</span>, <span class="fl">5.64</span>, <span class="fl">1.40</span>, <span class="fl">3.61</span>, <span class="fl">4.01</span>, <span class="fl">0.73</span>, <span class="fl">4.66</span>]</span>
+<span id="cb19-53"><a href="protein-use-and-recommended-supplies.html#cb19-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Endogenous Urinary Protein AA Composition, g/100 g of TP; these are set equal to body protein AA comp</span></span>
+<span id="cb19-54"><a href="protein-use-and-recommended-supplies.html#cb19-54" aria-hidden="true" tabindex="-1"></a>Urine_End_AA <span class="op">=</span> Body_AA</span>
+<span id="cb19-55"><a href="protein-use-and-recommended-supplies.html#cb19-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Gestation AA Composition, g/100 of TP; these are set equal to body protein AA comp</span></span>
+<span id="cb19-56"><a href="protein-use-and-recommended-supplies.html#cb19-56" aria-hidden="true" tabindex="-1"></a>Gest_AA <span class="op">=</span> Body_AA</span>
+<span id="cb19-57"><a href="protein-use-and-recommended-supplies.html#cb19-57" aria-hidden="true" tabindex="-1"></a><span class="co"># target efficiencies from table 6-4, p. 88 to convert MP and EAA to export proteins and body gain</span></span>
+<span id="cb19-58"><a href="protein-use-and-recommended-supplies.html#cb19-58" aria-hidden="true" tabindex="-1"></a>Trg_AA_Eff <span class="op">=</span> [<span class="fl">0.69</span>, <span class="fl">0.75</span>, <span class="fl">0.71</span>, <span class="fl">0.73</span>, <span class="fl">0.72</span>, <span class="fl">0.73</span>, <span class="fl">0.60</span>, <span class="fl">0.64</span>, <span class="fl">0.86</span>, <span class="fl">0.74</span>]</span>
+<span id="cb19-59"><a href="protein-use-and-recommended-supplies.html#cb19-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-60"><a href="protein-use-and-recommended-supplies.html#cb19-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert predictions to AA basis; must indicate external vectors with pd.Series</span></span>
+<span id="cb19-61"><a href="protein-use-and-recommended-supplies.html#cb19-61" aria-hidden="true" tabindex="-1"></a>df_NPScurf <span class="op">=</span> pd.DataFrame({<span class="st">&#39;AAname&#39;</span>: AAname, <span class="st">&#39;Net AA, g/d&#39;</span>: pred_NPScurf <span class="op">*</span> (pd.Series(Scurf_AA) <span class="op">/</span> <span class="dv">100</span>)})</span>
+<span id="cb19-62"><a href="protein-use-and-recommended-supplies.html#cb19-62" aria-hidden="true" tabindex="-1"></a>df_NPEndUrinary <span class="op">=</span> pd.DataFrame({<span class="st">&#39;AAname&#39;</span>: AAname, <span class="st">&#39;Net AA, g/d&#39;</span>: pred_NPEndUrinary <span class="op">*</span> (pd.Series(Urine_End_AA) <span class="op">/</span> <span class="dv">100</span>)})</span>
+<span id="cb19-63"><a href="protein-use-and-recommended-supplies.html#cb19-63" aria-hidden="true" tabindex="-1"></a>df_NPMFP <span class="op">=</span> pd.DataFrame({<span class="st">&#39;AAname&#39;</span>: AAname, <span class="st">&#39;Net AA, g/d&#39;</span>: pred_NPMFP <span class="op">*</span> (pd.Series(Metabolic_Fecal_AA) <span class="op">/</span> <span class="dv">100</span>)})</span>
+<span id="cb19-64"><a href="protein-use-and-recommended-supplies.html#cb19-64" aria-hidden="true" tabindex="-1"></a>df_NPGestation <span class="op">=</span> pd.DataFrame({<span class="st">&#39;AAname&#39;</span>: AAname, <span class="st">&#39;Net AA, g/d&#39;</span>: pred_NPGestation <span class="op">*</span> (pd.Series(Gest_AA) <span class="op">/</span> <span class="dv">100</span>)})</span>
+<span id="cb19-65"><a href="protein-use-and-recommended-supplies.html#cb19-65" aria-hidden="true" tabindex="-1"></a>df_NPFrame <span class="op">=</span> pd.DataFrame({<span class="st">&#39;AAname&#39;</span>: AAname, <span class="st">&#39;Net AA, g/d&#39;</span>: pred_NPFrame <span class="op">*</span> (pd.Series(Body_AA) <span class="op">/</span> <span class="dv">100</span>)})</span>
+<span id="cb19-66"><a href="protein-use-and-recommended-supplies.html#cb19-66" aria-hidden="true" tabindex="-1"></a>df_NPReserve <span class="op">=</span> pd.DataFrame({<span class="st">&#39;AAname&#39;</span>: AAname, <span class="st">&#39;Net AA, g/d&#39;</span>: pred_NPReserve <span class="op">*</span> (pd.Series(Body_AA) <span class="op">/</span> <span class="dv">100</span>)})</span>
+<span id="cb19-67"><a href="protein-use-and-recommended-supplies.html#cb19-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-68"><a href="protein-use-and-recommended-supplies.html#cb19-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the results</span></span>
+<span id="cb19-69"><a href="protein-use-and-recommended-supplies.html#cb19-69" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_NPScurf)</span>
+<span id="cb19-70"><a href="protein-use-and-recommended-supplies.html#cb19-70" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_NPEndUrinary)</span>
+<span id="cb19-71"><a href="protein-use-and-recommended-supplies.html#cb19-71" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_NPMFP)</span>
+<span id="cb19-72"><a href="protein-use-and-recommended-supplies.html#cb19-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_NPGestation)</span>
+<span id="cb19-73"><a href="protein-use-and-recommended-supplies.html#cb19-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_NPFrame)</span>
+<span id="cb19-74"><a href="protein-use-and-recommended-supplies.html#cb19-74" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_NPReserve)</span></code></pre></div>
+</div>
 </div>
 </div>
 <div id="questions-11" class="section level2 hasAnchor" number="13.11">
