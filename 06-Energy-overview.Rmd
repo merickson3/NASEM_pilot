@@ -126,6 +126,7 @@ O-H 5
 C-H 7  
 
 When molecules containing lots of C-C and C-H are combusted, many C-C and C-H bonds are broken, and many C=O and O-H bonds are formed in the $CO_2$ and $H_2O$ products. In relation to oxidation, C-C and C-H bonds have more potential energy than some other types of bonds (e.g., C-O). Another way to think of this is that C-H and C-C bonds are less stable than C-O bonds. This is because O is more electronegative and has a stronger "desire" for electrons than C or H (C, H, and O; 2.5, 2.2, and 3.4 electronegativity respectively, on Pauling scale). Therefore, a C-C or C-H bond is like a ball at the top of a hill...it is unstable (weak bond) and has a lot of potential energy. A C-O bond is like a ball at the bottom of a hill. It is more stable (strong bond) and has less potential energy. Moving from the less-stable to more-stable state releases energy, like a ball rolling down a hill. 
+  
 Another way to think about heat production is through bond enthalpies. Through experiments, chemists have determined the average energy associated with dissociation of certain bonds at standard temperature and pressure, in a gas phase. The table gives some examples of the energy associated with different types of bonds. Importantly, these must be interpreted with respect to a *system* (i.e., a reaction in certain conditions, typically standard temperature and pressure and gaseous phase reactants). 
 
 ```{r}

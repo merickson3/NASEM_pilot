@@ -73,6 +73,7 @@ library(readxl)
 fdlib = dairynasem::default_library
 linlib = read_excel("~/Library/CloudStorage/OneDrive-UW-Madison/Documents/2022-Fall/NASEM Teaching/Linear_Library.xlsx")
 
+
 cp = linlib %>% 
   filter(Fd_Nutrient_Label == "CP") %>% 
   filter(Fd_Name %in% selected_feeds)
@@ -92,6 +93,7 @@ cpp = cp %>%
 
 ggplotly(cpp, tooltip = c("FD_Mean", "Fd_SD"))
   
+
 ```
 
 
@@ -905,7 +907,7 @@ print(MiNPN)
 1. Tell about a method used to estimate protein digestibility for the whole digestive tract. 
 
 
-## R code for figures ### NEEDS UPDATE###
+## R code for figures
 
 `r hide("Show R code for Figures")`
 
@@ -915,8 +917,81 @@ library(ggplot2)
 library(tidyr)
 library(knitr)
 library(dplyr)
+##%######################################################%##
+#                                                          #
+####                CP Content of feeds                 ####
+#                                                          #
+##%######################################################%##
 
-##################################
+structure(list(Fd_Libr = c("NRC 2020", "NRC 2020", "NRC 2020", 
+"NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020", 
+"NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020", 
+"NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020", "NRC 2020"), 
+    UID = c("NRC16F1003", "NRC16F101", "NRC16F1013", "NRC16F102", 
+    "NRC16F1052", "NRC16F1070", "NRC16F127", "NRC16F134", "NRC16F170", 
+    "NRC16F176", "NRC16F28", "NRC16F33", "NRC16F35", "NRC16F48", 
+    "NRC16F60", "NRC16F65", "NRC16F66", "NRC16F71", "NRC16F94", 
+    "NRC16F95"), Fd_Index = c(187, 99, 197, 100, 236, 254, 125, 
+    141, 167, 173, 28, 33, 35, 48, 60, 65, 66, 71, 92, 93), Fd_Name = c("Calcium carbonate", 
+    "Molasses", "Limestone", "Oat grain", "Iron oxide", "Corn grain dry, fine grind", 
+    "Rye annual hay, mature", "Soybean meal, solvent 48CP", "Wheat grain", 
+    "Wheat straw", "Canola meal", "Cool season grass hay, mature", 
+    "Cool season grass silage", "Corn silage, typical", "DDGS, high protein", 
+    "Fat, canola oil", "Fat, corn oil", "Fat, soybean oil", "Legume silage, immature", 
+    "Legume silage, mid-maturity"), Fd_Category = c("Vitamin/Mineral", 
+    "Energy Source", "Vitamin/Mineral", "Energy Source", "Vitamin/Mineral", 
+    "Energy Source", "Grain Crop Forage", "Plant Protein", "Energy Source", 
+    "Grain Crop Forage", "Plant Protein", "Grass/Legume Forage", 
+    "Grass/Legume Forage", "Grain Crop Forage", "By-Product/Other", 
+    "Fat Supplement", "Fat Supplement", "Fat Supplement", "Grass/Legume Forage", 
+    "Grass/Legume Forage"), Fd_Type = c("Concentrate", "Concentrate", 
+    "Concentrate", "Concentrate", "Concentrate", "Concentrate", 
+    "Forage", "Concentrate", "Concentrate", "Forage", "Concentrate", 
+    "Forage", "Forage", "Forage", "Concentrate", "Concentrate", 
+    "Concentrate", "Concentrate", "Forage", "Forage"), Fd_Nutrient = c("Fd_CP", 
+    "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", 
+    "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", 
+    "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP", "Fd_CP"), Fd_Nutrient_Label = c("CP", 
+    "CP", "CP", "CP", "CP", "CP", "CP", "CP", "CP", "CP", "CP", 
+    "CP", "CP", "CP", "CP", "CP", "CP", "CP", "CP", "CP"), Fd_Unit = c("% DM", 
+    "% DM", "% DM", "% DM", "% DM", "% DM", "% DM", "% DM", "% DM", 
+    "% DM", "% DM", "% DM", "% DM", "% DM", "% DM", "% DM", "% DM", 
+    "% DM", "% DM", "% DM"), Fd_N = c(NA, 32, NA, 910, NA, 11326, 
+    459, 1400, 2120, 7936, 3437, 28463, 19702, 536303, 671, NA, 
+    NA, NA, 103311, 99680), FD_Mean = c(0, 9.271, 0, 12.172, 
+    0, 8.514, 7.62, 52.644, 13.485, 4.497, 41.492, 9.234, 13.422, 
+    7.707, 38.985, 0, 0, 0, 22.064, 20.471), Fd_SD = c(NA, 4.362, 
+    NA, 1.753, NA, 0.83, 2.299, 1.691, 2.361, 1.539, 1.552, 2.491, 
+    2.723, 0.938, 2.841, NA, NA, NA, 1.927, 2.194), Fd_Min = c(NA, 
+    1.55, NA, 6.6, NA, 5.6, 2.1, 46, 7.5, 0.9, 36.022, 1.5, 2.6, 
+    4.11, 35, NA, NA, NA, 15.1, 12.43), Fd_10PctTitle = c(NA, 
+    3.39, NA, 10.123, NA, 7.656, 5.08, 50.609, 10.753, 2.87, 
+    39.474, 6.413, 9.129, 6.667, 35.283, NA, NA, NA, 21.213, 
+    17.667), Fd_90PctTitle = c(NA, 15.314, NA, 14.421, NA, 9.692, 
+    10.82, 54.463, 16.653, 6.497, 43.902, 12.585, 16.156, 8.988, 
+    40.296, NA, NA, NA, 26.181, 22.907), Fd_Max = c(NA, 19.18, 
+    NA, 18.01, NA, 12.913, 15.5, 59, 21.745, 13.1, 47.41, 19.3, 
+    20, 11.7, 47.793, NA, NA, NA, 33.4, 31)), class = c("tbl_df", 
+"tbl", "data.frame"), row.names = c(NA, -20L))
+
+cpp = cp %>% 
+  data.frame(.) %>% 
+  ggplot(data = ., aes(x = reorder(Fd_Name, FD_Mean), y = FD_Mean, group = Fd_SD)) +  
+  geom_point() + 
+  labs(x = NULL, y = NULL, title = NULL)+
+  geom_errorbar(aes(ymin = FD_Mean - Fd_SD, ymax = FD_Mean + Fd_SD)) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        axis.title.y = element_blank()) +
+  coord_flip() + theme_minimal()
+
+ggplotly(cpp, tooltip = c("FD_Mean", "Fd_SD"))
+
+
+##%######################################################%##
+#                                                          #
+####             Rumen protein degradation              ####
+#                                                          #
+##%######################################################%##
  
 # Set up the data
 time <- c(1, seq(1, 48, by = 4))
@@ -985,6 +1060,56 @@ ggplot() +
   geom_rect(data = df, aes(ymin = (100 - A*.936), ymax = Inf, xmin = 0, xmax = Inf), alpha = .3) +
   facet_wrap(~feed) + theme_minimal()
 
+##%######################################################%##
+#                                                          #
+####               Microbial N synthesis                ####
+#                                                          #
+##%######################################################%##
+
+# Define the Eq 6-3 as a function
+microbialN <- function(RDP, RDNDF, RDS) {
+  beta_0 <- 101
+  beta_1 <- 82.6 
+  beta_2 <- 0.094 
+  beta_3 <- 0.027 
+  
+  numerator <- beta_0 + (beta_1 * RDP)
+  denominator <- (1 + (beta_2 / RDNDF)) * (1 + (beta_3 / RDS))
+  
+  microbialN <- numerator / denominator
+  
+  return(microbialN)
+}
+
+# assume 25 kg DMI at 11% RDP in DM to 13%
+# 25*.11
+# 25*.13
+
+# Create a data frame with input values
+RDP = seq(1, 4, length.out = 20)
+RDS = c(.2, 2.5, 5)
+RDNDF = c(.2, 2.5, 5)
+combos = expand.grid("RDS" = RDS, "RDNDF" = RDNDF, "RDP" = RDP) 
+# More RDS leads to a very small increase in microbial N at same RDP. (row)
+# More RDNDF leads to more microbial N at same RDP. (col)
+
+combos = combos %>% 
+  mutate(microbialN = microbialN(RDP, RDNDF, RDS))
+  
+# Set up low, high RDNDF combos
+
+# labels
+labs = combos %>% 
+  filter(RDP >2.73 & RDP < 2.8) %>% 
+  mutate(microbialN = round(microbialN, 0),
+         label = paste("Microbial N \n at RDP = 2.7:  ", microbialN))
+
+# Create the ggplot
+ggplot() +
+  geom_line(data = combos, aes(x = RDP, y = microbialN) ) +
+  facet_grid(RDS ~ RDNDF, scales = "free",  labeller = labeller(RDNDF = label_both, RDS = label_both)) + 
+  labs(       x = "RDP, kg/d", y = "Microbial N, g/d") + theme_bw() + 
+  geom_label(data = labs, aes(label = label, y = max(microbialN)-40), x = 2.5, stat = "unique", size = 3)
 
 
 

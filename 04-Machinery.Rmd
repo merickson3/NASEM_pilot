@@ -618,7 +618,7 @@ $K_m$ is the Michaelis constant, which is the concentration of substrate when th
 
 At low concentrations the velocity is proportional to the concentration of substrate $S$. One way to think of this is that $K_m$ is larger than $[S]$, so $K_m + [S] \approx K_m$, so the velocity is affected by the ratio of $\frac{[S]}{K_m}$ times the maximum velocity. This is similar to first-order kinetics, where the growth rate (velocity) is a linear function of the growth machinery (e.g., the substrate concentration). At this point, the growth is not saturated. 
 
-At high concentrations of substrate $S$, the rate approaches a maximum velocity. This is because $[S]$ has become larger than $K_m$, and $K_m + [S] \approx [S]$. The rate is $\frac{[S]}{[S]}$ times the maximum velocity ($ \approx 1 * V_{max}$. This is more similar to zeroth-order kinetics, because the growth rate is constant. The growth process becomes saturated as it gets closer and closer to $V_{max}$.
+At high concentrations of substrate $S$, the rate approaches a maximum velocity. This is because $[S]$ has become larger than $K_m$, and $K_m + [S] \approx [S]$. The rate is $\frac{[S]}{[S]}$ times the maximum velocity ($\approx 1 * V_{max}$. This is more similar to zeroth-order kinetics, because the growth rate is constant. The growth process becomes saturated as it gets closer and closer to $V_{max}$.
 
 
 ```{r}
@@ -823,7 +823,7 @@ $$
 $$
 In other words if we have several feeds numbered 1 to $n$, we want to minimize the sum of the total diet cost. The total diet cost is calculated by weighting the feed ingredient costs ($c_i$) by the feed ingredient inclusion rate $x_i$. 
 
-$$= \text{minimize  }   c_1x_1 + c_2x_2 + ... + c_nx_n $$
+$$= \text{minimize  }   c_1x_1 + c_2x_2 + ... + c_nx_n$$
 
 Next, we can write some constraints that express mathematically what we consider feasible diets. For example, we may want the nutrient composition to fall within a certain range. On a DM basis, we know that:
 
@@ -835,7 +835,7 @@ Next, we can write some constraints that express mathematically what we consider
 
 Weighting by the inclusion rates, we can write an equation for the protein and NDF concentration in the diet: 
 Diet protein concentration (% of DM) = $10x_1 + 30x_2 + 50x_3$ 
-Diet NDF concentration (% of DM) = $40x_1 + 10x_2 + 30x_3 $
+Diet NDF concentration (% of DM) = $40x_1 + 10x_2 + 30x_3$
 Then we can set these equations to be greater or less than certain numbers to constrain the diet composition.
 
 We want our inclusion rates to add up to 1 so we have the proportion of each feed entering the diet.  Clearly, we cannot have negative inclusion rates for any feeds, so we need to add constraints to make sure all inclusion rates are greater than or equal to zero.
@@ -980,6 +980,26 @@ In the 1930s, Kleiber originally empirically derived the $BW^{0.75}$
     animals, they proposed that blood viscosity increasingly determines
     blood flow, leading to a scaling of metabolic rate closer to
     $BW^{0.67}$.
+
+
+The idea of surface area and volume scaling differently might make more sense if we consider a cube of increasing size.
+
+$Surface \space Area \space (A) = 6s^2$
+
+$Volume \space (V) = s^3$
+
+| **Side Length (s)** | **Surface Area (A)** | **Volume (V)** |
+|---------------------|----------------------|----------------|
+| 1                   | 6                    | 1              |
+| 2                   | 24                   | 8              |
+| 3                   | 54                   | 27             |
+| 4                   | 96                   | 64             |
+| 5                   | 150                  | 125            |
+| 6                   | 216                  | 216            |
+| 7                   | 294                  | 343            |
+| 8                   | 384                  | 512            |
+| 9                   | 486                  | 729            |
+| 10                  | 600                  | 1000           |
     
 ```{r, fig.cap = "Surface area and volume for cubes with increasing side length"}
 # Load required packages
@@ -1001,24 +1021,16 @@ ggplot(cube_data, aes(x = side_length)) +
 
 ```
 
-The idea of surface area and volume scaling differently might make more sense if we consider a cube of increasing size.
+::: {.green}
 
-$Surface \space Area \space (A) = 6s^2$
+**Think to yourself: **
+How do you interpret what you see in the figure? List at least two or three of your impressions. 
 
-$Volume \space (V) = s^3$
+:::  
 
-| **Side Length (s)** | **Surface Area (A)** | **Volume (V)** |
-|---------------------|----------------------|----------------|
-| 1                   | 6                    | 1              |
-| 2                   | 24                   | 8              |
-| 3                   | 54                   | 27             |
-| 4                   | 96                   | 64             |
-| 5                   | 150                  | 125            |
-| 6                   | 216                  | 216            |
-| 7                   | 294                  | 343            |
-| 8                   | 384                  | 512            |
-| 9                   | 486                  | 729            |
-| 10                  | 600                  | 1000           |
+From this figure, we can see that as the size of the cube increases, the ratio of surface area to volume decreases. The same is true for complex shaped objects such as animal bodies! This fact, according to Rubner, affected many of the animal's metabolic processes. 
+
+Still, within the range of weights for adult dairy cattle, the differences in using BW and BW^0.75 can be relatively small. For example, this figure shows the close relationship between BW and BW^0.75 across a range of realistic weights for cattle (dots). The red line illustrates that the relationship is nearly linear, but has a slight curvature.  
 
 ```{r, fig.cap = "Allometric scaling example for cattle"}
 

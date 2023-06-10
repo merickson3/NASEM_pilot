@@ -48,8 +48,11 @@ height = '99%', width = '99%')
 **Learning Objectives**
 
 1. Estimate GE from feed fractions using NASEM (2021) equations. 
+
 1. Discuss how base DE values are calculated for different feed fractions. 
+
 1. Explain adjustments to base DE done at the diet level. 
+
 1. Explain the steps to calculate ME from DE in NASEM (2021). 
 ::: 
 

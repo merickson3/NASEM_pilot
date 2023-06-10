@@ -29,7 +29,9 @@ knitr::include_graphics("images/energyNE.png")
 **Learning Objectives**
 
 1. List the body functions that are accounted for in the NASEM (2021) energy model. 
+
 1. Explain how energy use is predicted within the NASEM (2021) model for various body functions. 
+
 1. Convert ME to NEL, and convert different NE uses to an NEL basis. 
 
 ::: 

@@ -448,7 +448,7 @@ $$
 
 The NASEM (2021) adopted a factorial approach to calculate total NP use, which means that the daily NP use is determined as the sum of the protein use for each relevant body function (maintenance, tissue growth, lactation and reproduction). The last step in evaluating the adequacy of protein nutrition for a diet is determining if the circulating MP (or metabolizable AA) supplied by the diet is sufficient given the predicted total NP (or Net AA) use. 
 
-**MP to NP**
+**MP to NP**  
 MP is used with less than perfect efficiency (<1.0 ratio of NP to MP). When considering MP as a whole (not individual AA), the efficiencies of converting MP to NP depend on the body function. Scurf, metabolic fecal protein, milk, and growth share the same target efficiency of MP use (0.69; NASEM, 2021). The use of MP for gestation is much less efficient, so an efficiency of 0.33 is used. Finally, endogenous urinary N losses are endproducts of N metabolism, so they are assigned an efficiency of 1.0 (NASEM, 2021, p. 87). In summary, the total recommended MP supply (g/d) can be calculated using the predicted NP uses (g/d) for each body function:
 
 Eq. 6-14a, p. 89, NASEM (2021)
@@ -468,8 +468,8 @@ $$
 \end{aligned}
 $$
 
- 
- <p style="text-align: center;"> **Table 9.1. ** Target efficiencies for EAA conversion from MP to milk, growth, scurf, and metabolic fecal protein accretion/export from NASEM (2021)" </p>
+ \vskip[0.6in]
+ <p style="text-align: center;"> **Table 9.1. ** Target efficiencies for EAA conversion from MP to milk, growth, scurf, and metabolic fecal protein accretion/export from NASEM (2021) </p>
 ```{r}
 AA <- c("Arg", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val")
 TargetEff <- c("NA", "0.75", "0.71", "0.73", "0.72", "0.73", "0.60", "0.64", "0.86", "0.74")

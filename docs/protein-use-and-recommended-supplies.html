@@ -25,7 +25,7 @@
 <meta name="author" content="Mark D. Hanigan, Virginia Polytechnic Institute and State University" />
 
 
-<meta name="date" content="2023-06-08" />
+<meta name="date" content="2023-06-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -364,7 +364,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#examples-4"><i class="fa fa-check"></i><b>11.3</b> Examples</a></li>
 <li class="chapter" data-level="11.4" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#questions-9"><i class="fa fa-check"></i><b>11.4</b> Questions</a></li>
-<li class="chapter" data-level="11.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>11.5</b> R code for figures ### NEEDS UPDATE</a></li>
+<li class="chapter" data-level="11.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-2"><i class="fa fa-check"></i><b>11.5</b> R code for figures</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html"><i class="fa fa-check"></i><b>12</b> Protein postruminal supplies</a>
 <ul>
@@ -735,7 +735,7 @@ NetAA use = \begin{bmatrix}
 <div id="recommendations" class="section level2 hasAnchor" number="13.9">
 <h2><span class="header-section-number">13.9</span> Recommendations<a href="protein-use-and-recommended-supplies.html#recommendations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The NASEM (2021) adopted a factorial approach to calculate total NP use, which means that the daily NP use is determined as the sum of the protein use for each relevant body function (maintenance, tissue growth, lactation and reproduction). The last step in evaluating the adequacy of protein nutrition for a diet is determining if the circulating MP (or metabolizable AA) supplied by the diet is sufficient given the predicted total NP (or Net AA) use.</p>
-<p><strong>MP to NP</strong>
+<p><strong>MP to NP</strong><br />
 MP is used with less than perfect efficiency (&lt;1.0 ratio of NP to MP). When considering MP as a whole (not individual AA), the efficiencies of converting MP to NP depend on the body function. Scurf, metabolic fecal protein, milk, and growth share the same target efficiency of MP use (0.69; NASEM, 2021). The use of MP for gestation is much less efficient, so an efficiency of 0.33 is used. Finally, endogenous urinary N losses are endproducts of N metabolism, so they are assigned an efficiency of 1.0 (NASEM, 2021, p. 87). In summary, the total recommended MP supply (g/d) can be calculated using the predicted NP uses (g/d) for each body function:</p>
 <p>Eq. 6-14a, p. 89, NASEM (2021)
 <span class="math display">\[
@@ -751,8 +751,9 @@ MP is used with less than perfect efficiency (&lt;1.0 ratio of NP to MP). When c
 \text{Recommended metabolizable supply of }AA_i &amp;= \frac{(NetAA_iScurf + NetAA_iMFP + NetAA_iMilk + NetAA_iGrowth)}{TargetEffAA_i} + \\[16pt] &amp;\quad \frac{NetAA_iGestation}{0.33} + \frac{NetAA_iEndogenousUrinary}{1.0}
 \end{aligned}
 \]</span></p>
+
 <p style="text-align: center;">
-<strong>Table 9.1. </strong> Target efficiencies for EAA conversion from MP to milk, growth, scurf, and metabolic fecal protein accretion/export from NASEM (2021)"
+<strong>Table 9.1. </strong> Target efficiencies for EAA conversion from MP to milk, growth, scurf, and metabolic fecal protein accretion/export from NASEM (2021)
 </p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>

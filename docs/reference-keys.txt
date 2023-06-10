@@ -206,7 +206,7 @@ calculating-rdp-and-rup
 microbial-protein-synthesis
 examples-4
 questions-9
-r-code-for-figures-needs-update
+r-code-for-figures-2
 protein-postruminal-supplies
 digestion-of-microbial-tp
 digestion-of-rup

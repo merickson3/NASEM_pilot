@@ -25,7 +25,7 @@
 <meta name="author" content="Mark D. Hanigan, Virginia Polytechnic Institute and State University" />
 
 
-<meta name="date" content="2023-06-08" />
+<meta name="date" content="2023-06-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -364,7 +364,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.3" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#examples-4"><i class="fa fa-check"></i><b>11.3</b> Examples</a></li>
 <li class="chapter" data-level="11.4" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#questions-9"><i class="fa fa-check"></i><b>11.4</b> Questions</a></li>
-<li class="chapter" data-level="11.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-needs-update"><i class="fa fa-check"></i><b>11.5</b> R code for figures ### NEEDS UPDATE</a></li>
+<li class="chapter" data-level="11.5" data-path="protein-intake-and-ruminal-supplies.html"><a href="protein-intake-and-ruminal-supplies.html#r-code-for-figures-2"><i class="fa fa-check"></i><b>11.5</b> R code for figures</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="protein-postruminal-supplies.html"><a href="protein-postruminal-supplies.html"><i class="fa fa-check"></i><b>12</b> Protein postruminal supplies</a>
 <ul>
@@ -878,7 +878,7 @@ where
 <p><span class="math inline">\(V_{max}\)</span> is the maximum velocity (max. reaction rate) and <span class="math inline">\(V_{max}/2\)</span> is half the maximum velocity. The velocity is <span class="math inline">\(V_{max}/2\)</span> when <span class="math inline">\(K_m = [S]\)</span>.</p>
 <p><span class="math inline">\(K_m\)</span> is the Michaelis constant, which is the concentration of substrate when the reaction velocity is 50% of the <span class="math inline">\(V_{max}\)</span></p>
 <p>At low concentrations the velocity is proportional to the concentration of substrate <span class="math inline">\(S\)</span>. One way to think of this is that <span class="math inline">\(K_m\)</span> is larger than <span class="math inline">\([S]\)</span>, so <span class="math inline">\(K_m + [S] \approx K_m\)</span>, so the velocity is affected by the ratio of <span class="math inline">\(\frac{[S]}{K_m}\)</span> times the maximum velocity. This is similar to first-order kinetics, where the growth rate (velocity) is a linear function of the growth machinery (e.g., the substrate concentration). At this point, the growth is not saturated.</p>
-<p>At high concentrations of substrate <span class="math inline">\(S\)</span>, the rate approaches a maximum velocity. This is because <span class="math inline">\([S]\)</span> has become larger than <span class="math inline">\(K_m\)</span>, and <span class="math inline">\(K_m + [S] \approx [S]\)</span>. The rate is <span class="math inline">\(\frac{[S]}{[S]}\)</span> times the maximum velocity ($ * V_{max}$. This is more similar to zeroth-order kinetics, because the growth rate is constant. The growth process becomes saturated as it gets closer and closer to <span class="math inline">\(V_{max}\)</span>.</p>
+<p>At high concentrations of substrate <span class="math inline">\(S\)</span>, the rate approaches a maximum velocity. This is because <span class="math inline">\([S]\)</span> has become larger than <span class="math inline">\(K_m\)</span>, and <span class="math inline">\(K_m + [S] \approx [S]\)</span>. The rate is <span class="math inline">\(\frac{[S]}{[S]}\)</span> times the maximum velocity (<span class="math inline">\(\approx 1 * V_{max}\)</span>. This is more similar to zeroth-order kinetics, because the growth rate is constant. The growth process becomes saturated as it gets closer and closer to <span class="math inline">\(V_{max}\)</span>.</p>
 <p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="85%" style="display: block; margin: auto;" /></p>
 <div class="orange">
 <p><strong>Feeling confused? Click below for a more practical example.</strong> 🍞</p>
@@ -1044,7 +1044,7 @@ solution(s). As an example, we could write an objective function that minimizes 
 \end{equation*}
 \]</span>
 In other words if we have several feeds numbered 1 to <span class="math inline">\(n\)</span>, we want to minimize the sum of the total diet cost. The total diet cost is calculated by weighting the feed ingredient costs (<span class="math inline">\(c_i\)</span>) by the feed ingredient inclusion rate <span class="math inline">\(x_i\)</span>.</p>
-<p><span class="math display">\[= \text{minimize  }   c_1x_1 + c_2x_2 + ... + c_nx_n \]</span></p>
+<p><span class="math display">\[= \text{minimize  }   c_1x_1 + c_2x_2 + ... + c_nx_n\]</span></p>
 <p>Next, we can write some constraints that express mathematically what we consider feasible diets. For example, we may want the nutrient composition to fall within a certain range. On a DM basis, we know that:</p>
 <ul>
 <li><p>Feed 1 is 10% protein and 40% NDF.</p></li>
@@ -1053,7 +1053,7 @@ In other words if we have several feeds numbered 1 to <span class="math inline">
 </ul>
 <p>Weighting by the inclusion rates, we can write an equation for the protein and NDF concentration in the diet:
 Diet protein concentration (% of DM) = <span class="math inline">\(10x_1 + 30x_2 + 50x_3\)</span>
-Diet NDF concentration (% of DM) = $40x_1 + 10x_2 + 30x_3 $
+Diet NDF concentration (% of DM) = <span class="math inline">\(40x_1 + 10x_2 + 30x_3\)</span>
 Then we can set these equations to be greater or less than certain numbers to constrain the diet composition.</p>
 <p>We want our inclusion rates to add up to 1 so we have the proportion of each feed entering the diet. Clearly, we cannot have negative inclusion rates for any feeds, so we need to add constraints to make sure all inclusion rates are greater than or equal to zero.</p>
 <p>To summarize the constraints:</p>
@@ -1182,12 +1182,6 @@ metabolic scaling of <span class="math inline">\(BW^{0.75}\)</span> in most anim
 animals, they proposed that blood viscosity increasingly determines
 blood flow, leading to a scaling of metabolic rate closer to
 <span class="math inline">\(BW^{0.67}\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
-<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="Surface area and volume for cubes with increasing side length" width="85%" />
-<p class="caption">
-Figure 5.2: Surface area and volume for cubes with increasing side length
-</p>
-</div>
 <p>The idea of surface area and volume scaling differently might make more sense if we consider a cube of increasing size.</p>
 <p><span class="math inline">\(Surface \space Area \space (A) = 6s^2\)</span></p>
 <p><span class="math inline">\(Volume \space (V) = s^3\)</span></p>
@@ -1252,6 +1246,18 @@ Figure 5.2: Surface area and volume for cubes with increasing side length
 </tr>
 </tbody>
 </table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
+<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="Surface area and volume for cubes with increasing side length" width="85%" />
+<p class="caption">
+Figure 5.2: Surface area and volume for cubes with increasing side length
+</p>
+</div>
+<div class="green">
+<p><strong>Think to yourself: </strong>
+How do you interpret what you see in the figure? List at least two or three of your impressions.</p>
+</div>
+<p>From this figure, we can see that as the size of the cube increases, the ratio of surface area to volume decreases. The same is true for complex shaped objects such as animal bodies! This fact, according to Rubner, affected many of the animal's metabolic processes.</p>
+<p>Still, within the range of weights for adult dairy cattle, the differences in using BW and BW^0.75 can be relatively small. For example, this figure shows the close relationship between BW and BW^0.75 across a range of realistic weights for cattle (dots). The red line illustrates that the relationship is nearly linear, but has a slight curvature.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-38"></span>
 <img src="_main_files/figure-html/unnamed-chunk-38-1.png" alt="Allometric scaling example for cattle" width="85%" />
 <p class="caption">
